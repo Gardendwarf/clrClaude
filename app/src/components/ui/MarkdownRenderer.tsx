@@ -6,6 +6,8 @@ import type { CSSProperties } from 'react';
 
 interface MarkdownRendererProps {
   content: string;
+  /** Base path for resolving relative URLs (e.g. "/content/01-slash-commands") */
+  basePath?: string;
 }
 
 const containerStyle: CSSProperties = {
@@ -16,12 +18,26 @@ const containerStyle: CSSProperties = {
   color: 'var(--text-primary)',
 };
 
-export function MarkdownRenderer({ content }: MarkdownRendererProps) {
+export function MarkdownRenderer({ content, basePath }: MarkdownRendererProps) {
+  // Rewrite relative URLs so images and links resolve to /content/... paths
+  const urlTransform = (url: string) => {
+    // Skip absolute URLs, anchors, and data URIs
+    if (!url || url.startsWith('http') || url.startsWith('#') || url.startsWith('data:') || url.startsWith('/')) {
+      return url;
+    }
+    // Relative URL -- prepend the content base path
+    if (basePath) {
+      return `${basePath}/${url}`;
+    }
+    return url;
+  };
+
   return (
     <div style={containerStyle} className="md-content">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeHighlight, rehypeRaw]}
+        urlTransform={urlTransform}
       >
         {content}
       </ReactMarkdown>
@@ -115,7 +131,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
           font-size: 0.8125rem;
         }
 
-        /* Syntax highlighting overrides -- subtle, not distracting */
+        /* Syntax highlighting overrides */
         .md-content .hljs {
           background: var(--surface-azure);
           color: var(--text-primary);

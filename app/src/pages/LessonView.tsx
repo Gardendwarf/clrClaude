@@ -103,7 +103,12 @@ export default function LessonView() {
             {error}
           </div>
         )}
-        {!loading && !error && <MarkdownRenderer content={content} />}
+        {!loading && !error && (
+          <MarkdownRenderer
+            content={content}
+            basePath={lesson.contentPath ? '/content' + lesson.contentPath.substring(0, lesson.contentPath.lastIndexOf('/')) : undefined}
+          />
+        )}
       </GlassCard>
 
       {/* Completion + navigation */}

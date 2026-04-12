@@ -15,6 +15,7 @@ import {
   LogOut,
   Heart,
   Star,
+  Briefcase,
 } from 'lucide-react';
 import type { CSSProperties, ReactNode } from 'react';
 import { modules } from '../../lib/courseData';
@@ -237,6 +238,17 @@ export function Sidebar({ onSignOut }: SidebarProps) {
 
       {/* Bottom nav */}
       <div style={{ borderTop: '1px solid var(--border)', paddingTop: 'var(--space-md)' }}>
+        <NavLink
+          to="/services"
+          style={({ isActive }) => ({
+            ...navItemBase,
+            color: isActive ? 'var(--coral)' : 'var(--text-secondary)',
+            borderLeftColor: isActive ? 'var(--coral)' : 'transparent',
+          })}
+        >
+          <Briefcase size={18} />
+          Services
+        </NavLink>
         <NavLink
           to="/profile"
           style={({ isActive }) => ({

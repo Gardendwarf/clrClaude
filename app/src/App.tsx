@@ -12,6 +12,7 @@ const Profile = lazy(() => import('./pages/Profile'));
 const Login = lazy(() => import('./pages/Login'));
 const AuthCallback = lazy(() => import('./pages/AuthCallback'));
 const ResetPassword = lazy(() => import('./pages/ResetPassword'));
+const Services = lazy(() => import('./pages/Services'));
 
 function PageLoader() {
   return (
@@ -66,6 +67,7 @@ function App() {
             <Route path="/module/:moduleSlug" element={<ModuleView />} />
             <Route path="/module/:moduleSlug/lesson/:lessonSlug" element={<LessonView />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/services" element={<Services />} />
           </Route>
         </Routes>
       </Suspense>

@@ -5,6 +5,7 @@ import { getModuleBySlug, getLessonBySlug, getAdjacentLessons } from '../lib/cou
 import { useProgressStore } from '../lib/store';
 import { GlassCard, Button } from '../components/ui';
 import { MarkdownRenderer } from '../components/ui/MarkdownRenderer';
+import { AudioPlayer } from '../components/ui/AudioPlayer';
 import { LessonCompleteButton } from '../components/progress';
 
 export default function LessonView() {
@@ -84,6 +85,11 @@ export default function LessonView() {
         <div className="section-label">Module {mod.number} -- Lesson {lesson.order}</div>
         <h1 style={{ fontWeight: 100, margin: 0 }}>{lesson.title}</h1>
       </div>
+
+      {/* Audio player */}
+      {!loading && !error && content && (
+        <AudioPlayer content={content} />
+      )}
 
       {/* Content */}
       <GlassCard style={{ padding: 'var(--space-xl)' }}>

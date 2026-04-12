@@ -23,8 +23,9 @@ RUN npm run build
 # Stage 2: Nginx to serve the static build
 FROM nginx:1.27-alpine
 
-# Copy custom nginx config
+# Copy custom nginx config and security headers
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY security-headers.conf /etc/nginx/security-headers.conf
 
 # Copy built assets
 COPY --from=builder /app/dist /usr/share/nginx/html

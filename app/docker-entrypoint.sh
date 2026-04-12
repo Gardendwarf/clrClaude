@@ -1,20 +1,23 @@
 #!/bin/sh
 # Runtime env var injection for Vite builds.
-# Vite bakes env vars at build time, but we want to set them at container start.
-# This replaces placeholder strings in the built JS files with actual env values.
+# Replaces placeholder strings in the built JS with actual env values at startup.
+# Uses envsubst-style approach to avoid sed injection risks.
 
 set -e
 
-# Only replace if env vars are set (not empty)
-if [ -n "$VITE_SUPABASE_URL" ]; then
-  find /usr/share/nginx/html/assets -name '*.js' -exec \
-    sed -i "s|__VITE_SUPABASE_URL__|${VITE_SUPABASE_URL}|g" {} +
-fi
+replace_placeholder() {
+  PLACEHOLDER="$1"
+  VALUE="$2"
+  if [ -n "$VALUE" ]; then
+    # Escape special characters in the value to prevent sed injection
+    ESCAPED_VALUE=$(printf '%s\n' "$VALUE" | sed 's/[&/\]/\\&/g')
+    find /usr/share/nginx/html/assets -name '*.js' -exec \
+      sed -i "s|${PLACEHOLDER}|${ESCAPED_VALUE}|g" {} +
+  fi
+}
 
-if [ -n "$VITE_SUPABASE_ANON_KEY" ]; then
-  find /usr/share/nginx/html/assets -name '*.js' -exec \
-    sed -i "s|__VITE_SUPABASE_ANON_KEY__|${VITE_SUPABASE_ANON_KEY}|g" {} +
-fi
+replace_placeholder "__VITE_SUPABASE_URL__" "$VITE_SUPABASE_URL"
+replace_placeholder "__VITE_SUPABASE_ANON_KEY__" "$VITE_SUPABASE_ANON_KEY"
 
 echo "clrClaude starting..."
 echo "  Supabase URL: ${VITE_SUPABASE_URL:-not configured (offline mode)}"

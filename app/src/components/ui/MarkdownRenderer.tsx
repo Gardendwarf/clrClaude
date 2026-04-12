@@ -2,7 +2,18 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeRaw from 'rehype-raw';
+import rehypeSanitize, { defaultSchema } from 'rehype-sanitize';
 import type { CSSProperties } from 'react';
+
+// Extend default sanitize schema to allow safe HTML elements
+// used in the tutorial markdown (details, summary, kbd, etc.)
+const sanitizeSchema = {
+  ...defaultSchema,
+  tagNames: [
+    ...(defaultSchema.tagNames || []),
+    'details', 'summary', 'kbd', 'mark', 'abbr',
+  ],
+};
 
 interface MarkdownRendererProps {
   content: string;
@@ -36,7 +47,7 @@ export function MarkdownRenderer({ content, basePath }: MarkdownRendererProps) {
     <div style={containerStyle} className="md-content">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
-        rehypePlugins={[rehypeHighlight, rehypeRaw]}
+        rehypePlugins={[rehypeRaw, [rehypeSanitize, sanitizeSchema], rehypeHighlight]}
         urlTransform={urlTransform}
       >
         {content}

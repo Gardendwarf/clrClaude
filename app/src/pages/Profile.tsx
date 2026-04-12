@@ -82,12 +82,24 @@ export default function Profile() {
     fetchProfile();
   }, [user]);
 
+  const MAX_SHORT = 100;
+  const MAX_LONG = 500;
+
   const handleSave = async () => {
     setSaving(true);
     setSaved(false);
 
+    // Trim and enforce length limits
+    const trimmed = {
+      displayName: profile.displayName.trim().slice(0, MAX_SHORT),
+      jobTitle: profile.jobTitle.trim().slice(0, MAX_SHORT),
+      aiInterest: profile.aiInterest.trim().slice(0, MAX_LONG),
+      toolsWanted: profile.toolsWanted.trim().slice(0, MAX_LONG),
+    };
+    setProfile(trimmed);
+
     if (!isSupabaseConfigured || !supabase || !user) {
-      saveLocalProfile(profile);
+      saveLocalProfile(trimmed);
       setSaving(false);
       setSaved(true);
       setTimeout(() => setSaved(false), 2000);
@@ -98,10 +110,10 @@ export default function Profile() {
       .from('user_profiles')
       .upsert({
         user_id: user.id,
-        display_name: profile.displayName,
-        job_title: profile.jobTitle,
-        ai_interest: profile.aiInterest,
-        tools_wanted: profile.toolsWanted,
+        display_name: trimmed.displayName,
+        job_title: trimmed.jobTitle,
+        ai_interest: trimmed.aiInterest,
+        tools_wanted: trimmed.toolsWanted,
       }, { onConflict: 'user_id' });
 
     setSaving(false);

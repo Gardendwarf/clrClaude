@@ -9,10 +9,11 @@ services:
       dockerfile: Dockerfile
     container_name: clrclaude
     restart: unless-stopped
+    env_file:
+      - .env.production
     environment:
       # Supabase URL points to ourselves -- Nginx proxies /supabase/* to Kong
       - VITE_SUPABASE_URL=https://clrclaude.clrtech.xyz/supabase
-      - VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlzcyI6InN1cGFiYXNlIiwiaWF0IjoxNzY5ODgzNTc5LCJleHAiOjIwODUyNDM1Nzl9.CAlr-nfDlIr7Z4KOvty0THpj6LwwG9NBrc2d1SigaSE
     networks:
       - proxy
       - supabase_supabase

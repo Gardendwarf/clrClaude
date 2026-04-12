@@ -11,8 +11,8 @@ function getInitialTheme(): Theme {
   } catch {
     // localStorage unavailable
   }
-  // Default to light per clr design system
-  return 'light';
+  // Default to dark for clrClaude training platform
+  return 'dark';
 }
 
 export function useTheme() {

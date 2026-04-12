@@ -87,3 +87,9 @@ promo-video/
 *.mp4
 
 update-plan*.md
+
+# clrClaude app
+app/node_modules/
+app/dist/
+app/.env
+app/.env.local

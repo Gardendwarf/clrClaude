@@ -1,0 +1,158 @@
+@import './styles/design-tokens.css';
+
+/* -- Global Reset & Base -- */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--surface-base);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: 1.875rem;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+p {
+  margin: 0 0 var(--space-md);
+}
+
+a {
+  color: var(--azure);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--coral);
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: var(--azure-tint);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--text-primary);
+}
+
+pre {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  background: var(--surface-azure);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+  overflow-x: auto;
+  line-height: 1.5;
+  margin: 0 0 var(--space-md);
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* -- Utility Classes -- */
+
+.section-label {
+  font-family: var(--font-primary);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--azure);
+  margin-bottom: 12px;
+}
+
+.display-text {
+  font-size: 2.5rem;
+  font-weight: 100;
+  letter-spacing: -0.01em;
+}
+
+/* -- Glass Panels -- */
+
+.glass-panel {
+  background: var(--surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-lg);
+}
+
+.glass-panel-elevated {
+  background: var(--surface-elevated);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-xl);
+}
+
+/* -- Scrollbar -- */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--azure-tint);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--azure);
+}
+
+/* -- Selection -- */
+
+::selection {
+  background: rgba(255, 79, 40, 0.15);
+  color: var(--text-primary);
+}

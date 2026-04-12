@@ -1,0 +1,96 @@
+/* -- clrClaude Design System Tokens -- */
+/* Based on clr Design System v1.3 -- Liquid Glass aesthetic */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* -- Surfaces -- */
+  --surface-base: #FAFBFC;
+  --surface-glass: rgba(255, 255, 255, 0.7);
+  --surface-elevated: rgba(255, 255, 255, 0.85);
+  --surface-azure: #EDF2F5;
+  --border: rgba(0, 0, 0, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.5);
+
+  /* -- Text -- */
+  --text-primary: #1A1D21;
+  --text-secondary: #5C6370;
+  --text-tertiary: #9CA3AF;
+
+  /* -- Brand -- */
+  --coral: #FF4F28;
+  --coral-dim: #CC3E1F;
+  --coral-tint: rgba(255, 79, 40, 0.08);
+  --azure: #69859E;
+  --azure-tint: rgba(105, 133, 158, 0.08);
+  --azure-light: #EDF2F5;
+
+  /* -- Semantic -- */
+  --success: #059669;
+  --warning: #D97706;
+  --error: #B91C1C;
+  --info: #69859E;
+
+  /* -- Radius -- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+
+  /* -- Shadows -- */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 24px 48px rgba(0, 0, 0, 0.12);
+
+  /* -- Spacing -- */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  /* -- Typography -- */
+  --font-primary: 'Roboto Condensed', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* -- Transitions -- */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* -- Layout -- */
+  --sidebar-width: 280px;
+  --header-height: 64px;
+  --content-max-width: 1200px;
+  --reading-max-width: 720px;
+}
+
+/* -- Dark theme tokens -- */
+[data-theme="dark"] {
+  --surface-base: #131C26;
+  --surface-glass: rgba(105, 133, 158, 0.08);
+  --surface-elevated: rgba(105, 133, 158, 0.12);
+  --surface-raised: #1C2533;
+  --surface-azure: #252F3D;
+  --border: rgba(105, 133, 158, 0.18);
+  --border-strong: rgba(105, 133, 158, 0.32);
+  --glass-border: rgba(105, 133, 158, 0.18);
+
+  --text-primary: #F0F4F8;
+  --text-secondary: rgba(240, 244, 248, 0.60);
+  --text-tertiary: rgba(240, 244, 248, 0.30);
+
+  --coral-tint: rgba(255, 79, 40, 0.15);
+  --azure-tint: rgba(105, 133, 158, 0.12);
+
+  --success: #34D399;
+  --warning: #FBBF24;
+  --error: #F87171;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.40);
+  --shadow-lg: 0 24px 48px rgba(0, 0, 0, 0.55);
+}

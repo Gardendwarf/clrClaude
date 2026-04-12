@@ -1,0 +1,32 @@
+# clrClaude -- Dokploy/Traefik deployment
+# Frontend served via Nginx, Supabase API proxied through /supabase/ path.
+# This avoids Cloudflare stripping the apikey header.
+
+services:
+  clrclaude:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: clrclaude
+    restart: unless-stopped
+    environment:
+      # Supabase URL points to ourselves -- Nginx proxies /supabase/* to Kong
+      - VITE_SUPABASE_URL=https://clrclaude.clrtech.xyz/supabase
+      - VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlzcyI6InN1cGFiYXNlIiwiaWF0IjoxNzY5ODgzNTc5LCJleHAiOjIwODUyNDM1Nzl9.CAlr-nfDlIr7Z4KOvty0THpj6LwwG9NBrc2d1SigaSE
+    networks:
+      - proxy
+      - supabase_supabase
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=proxy"
+      - "traefik.http.routers.clrclaude.rule=Host(`clrclaude.clrtech.xyz`)"
+      - "traefik.http.routers.clrclaude.entrypoints=websecure"
+      - "traefik.http.routers.clrclaude.tls=true"
+      - "traefik.http.routers.clrclaude.tls.certresolver=letsencrypt"
+      - "traefik.http.services.clrclaude.loadbalancer.server.port=80"
+
+networks:
+  proxy:
+    external: true
+  supabase_supabase:
+    external: true

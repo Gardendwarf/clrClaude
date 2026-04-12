@@ -11,6 +11,7 @@ const LessonView = lazy(() => import('./pages/LessonView'));
 const Profile = lazy(() => import('./pages/Profile'));
 const Login = lazy(() => import('./pages/Login'));
 const AuthCallback = lazy(() => import('./pages/AuthCallback'));
+const ResetPassword = lazy(() => import('./pages/ResetPassword'));
 
 function PageLoader() {
   return (
@@ -51,6 +52,7 @@ function App() {
           {/* Public routes */}
           <Route path="/login" element={<Login />} />
           <Route path="/auth/callback" element={<AuthCallback />} />
+          <Route path="/auth/reset" element={<ResetPassword />} />
 
           {/* Protected routes */}
           <Route

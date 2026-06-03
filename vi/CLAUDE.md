@@ -4,7 +4,7 @@ File này cung cấp hướng dẫn cho Claude Code (claude.ai/code) khi làm vi
 
 ## Tổng Quan Dự Án
 
-Claude How To là một repository tutorial về các tính năng của Claude Code. Đây là **documentation-as-code** — sản phẩm chính là các file markdown được tổ chức thành các module học tập đánh số (01-10), không phải một ứng dụng thực thi.
+Claude How To là một repository tutorial về các tính năng của Claude Code. Đây là **documentation-as-code** - sản phẩm chính là các file markdown được tổ chức thành các module học tập đánh số (01-10), không phải một ứng dụng thực thi.
 
 **Kiến trúc**: Mỗi module (01-10) bao phủ một tính năng cụ thể của Claude Code với các template copy-paste, sơ đồ Mermaid, và ví dụ. Hệ thống build xác thực chất lượng documentation và tạo ebook EPUB.
 
@@ -23,11 +23,11 @@ pre-commit run --all-files
 ```
 
 Bốn kiểm tra là:
-1. **markdown-lint** — Cấu trúc và định dạng Markdown qua `markdownlint`
-2. **cross-references** — Liên kết nội bộ, anchors, cú pháp code fence (Python script)
-3. **mermaid-syntax** — Xác thực tất cả sơ đồ Mermaid parse đúng (Python script)
-4. **link-check** — Các URL bên ngoài có thể truy cập được (Python script)
-5. **build-epub** — EPUB tạo ra không có lỗi (khi có thay đổi `.md`)
+1. **markdown-lint** - Cấu trúc và định dạng Markdown qua `markdownlint`
+2. **cross-references** - Liên kết nội bộ, anchors, cú pháp code fence (Python script)
+3. **mermaid-syntax** - Xác thực tất cả sơ đồ Mermaid parse đúng (Python script)
+4. **link-check** - Các URL bên ngoài có thể truy cập được (Python script)
+5. **build-epub** - EPUB tạo ra không có lỗi (khi có thay đổi `.md`)
 
 ### Thiết Lập Môi Trường Phát Triển
 
@@ -116,8 +116,8 @@ uv run scripts/build_epub.py --verbose --output custom-name.epub --max-concurren
 ### Cấu Trúc Module
 
 Mỗi thư mục đánh số tuân theo pattern:
-- **README.md** — Tổng quan về tính năng với các ví dụ
-- **Các file ví dụ** — Template copy-paste (`.md` cho commands, `.json` cho configs, `.sh` cho hooks)
+- **README.md** - Tổng quan về tính năng với các ví dụ
+- **Các file ví dụ** - Template copy-paste (`.md` cho commands, `.json` cho configs, `.sh` cho hooks)
 - Các file được tổ chức theo độ phức tạp của tính năng và dependencies
 
 ### Sơ Đồ Mermaid
@@ -137,15 +137,15 @@ Mỗi thư mục đánh số tuân theo pattern:
 
 ## Các Điểm Kiến Trúc Quan Trọng
 
-1. **Các thư mục đánh số thể hiện thứ tự học tập** — Prefix 01-10 thể hiện thứ tự được khuyến nghị để học các tính năng của Claude Code. Đánh số này có chủ đích; không tổ chức lại theo bảng chữ cái.
+1. **Các thư mục đánh số thể hiện thứ tự học tập** - Prefix 01-10 thể hiện thứ tự được khuyến nghị để học các tính năng của Claude Code. Đánh số này có chủ đích; không tổ chức lại theo bảng chữ cái.
 
-2. **Scripts là các tiện ích, không phải sản phẩm** — Các script Python trong `scripts/` hỗ trợ chất lượng documentation và tạo EPUB. Nội dung thực tế nằm trong các thư mục module đánh số.
+2. **Scripts là các tiện ích, không phải sản phẩm** - Các script Python trong `scripts/` hỗ trợ chất lượng documentation và tạo EPUB. Nội dung thực tế nằm trong các thư mục module đánh số.
 
-3. **Pre-commit là người gác cổng** — Tất cả bốn kiểm tra chất lượng phải pass trước khi PR được chấp nhận. CI pipeline chạy các kiểm tra tương tự như lần thứ hai.
+3. **Pre-commit là người gác cổng** - Tất cả bốn kiểm tra chất lượng phải pass trước khi PR được chấp nhận. CI pipeline chạy các kiểm tra tương tự như lần thứ hai.
 
-4. **Mermaid rendering cần network** — EPUB build gọi Kroki.io API để render diagrams. Các lỗi build ở đây thường là vấn đề network hoặc cú pháp Mermaid không hợp lệ.
+4. **Mermaid rendering cần network** - EPUB build gọi Kroki.io API để render diagrams. Các lỗi build ở đây thường là vấn đề network hoặc cú pháp Mermaid không hợp lệ.
 
-5. **Đây là tutorial, không phải thư viện** — Khi thêm nội dung, tập trung vào giải thích rõ ràng, ví dụ copy-paste, và sơ đồ trực quan. Giá trị nằm ở việc dạy các khái niệm, không cung cấp code có thể tái sử dụng.
+5. **Đây là tutorial, không phải thư viện** - Khi thêm nội dung, tập trung vào giải thích rõ ràng, ví dụ copy-paste, và sơ đồ trực quan. Giá trị nằm ở việc dạy các khái niệm, không cung cấp code có thể tái sử dụng.
 
 ## Commit Conventions
 

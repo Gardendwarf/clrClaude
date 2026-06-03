@@ -196,13 +196,13 @@ Since checkpoints are created automatically, you can focus on your work without 
 
 ### Using Checkpoints Effectively
 
-✅ **Do:**
+ **Do:**
 - Review available checkpoints before rewinding
 - Use rewind when you want to explore different directions
 - Keep checkpoints to compare different approaches
 - Understand what each rewind option does (restore code and conversation, restore conversation, restore code, or summarize)
 
-❌ **Don't:**
+ **Don't:**
 - Rely on checkpoints alone for code preservation
 - Expect checkpoints to track external file system changes
 - Use checkpoints as a substitute for git commits
@@ -285,9 +285,9 @@ Use both together:
 
 ## Knowing When to Rewind: Context Monitoring
 
-Checkpoints let you go back — but how do you know *when* you should? As your conversation grows, Claude's context window fills up and model quality silently degrades. You might be shipping code from a half-blind model without realizing it.
+Checkpoints let you go back - but how do you know *when* you should? As your conversation grows, Claude's context window fills up and model quality silently degrades. You might be shipping code from a half-blind model without realizing it.
 
-**[cc-context-stats](https://github.com/luongnv89/cc-context-stats)** solves this by adding real-time **context zones** to your Claude Code status bar. It tracks where you are in the context window — from **Plan** (green, safe to plan and code) through **Code** (yellow, avoid starting new plans) to **Dump** (orange, finish up and rewind). When you see the zone shift, you know it's time to checkpoint and start fresh instead of pushing through with degraded output.
+**[cc-context-stats](https://github.com/luongnv89/cc-context-stats)** solves this by adding real-time **context zones** to your Claude Code status bar. It tracks where you are in the context window - from **Plan** (green, safe to plan and code) through **Code** (yellow, avoid starting new plans) to **Dump** (orange, finish up and rewind). When you see the zone shift, you know it's time to checkpoint and start fresh instead of pushing through with degraded output.
 
 ## Related Concepts
 

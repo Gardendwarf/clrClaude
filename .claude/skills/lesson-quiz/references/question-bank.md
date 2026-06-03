@@ -1,4 +1,4 @@
-# Lesson Quiz — Question Bank
+# Lesson Quiz - Question Bank
 
 10 questions per lesson. Each question has: category, question text, options (3-4), correct answer, explanation, and review section.
 
@@ -287,7 +287,7 @@
 - **Question**: How do you restrict which subagents a coordinator agent can spawn?
 - **Options**: A) Use `allowed-agents:` field | B) Use `Task(agent_name)` syntax in the `tools` field | C) Set `spawn-limit: 2` | D) Use `restrict-agents: [name1, name2]`
 - **Correct**: B
-- **Explanation**: Adding `Task(worker, researcher)` in the tools field creates an allowlist — the agent can only spawn subagents named "worker" or "researcher".
+- **Explanation**: Adding `Task(worker, researcher)` in the tools field creates an allowlist - the agent can only spawn subagents named "worker" or "researcher".
 - **Review**: Restrict spawnable subagents section
 
 ### Q5
@@ -387,7 +387,7 @@
 - **Question**: What happens when a team member first encounters a project-scoped `.mcp.json`?
 - **Options**: A) It loads automatically | B) They get an approval prompt to trust the project's MCP servers | C) It's ignored unless they opt in via settings | D) Claude asks the admin to approve
 - **Correct**: B
-- **Explanation**: Project-scoped `.mcp.json` triggers a security approval prompt on each team member's first use. This is intentional — it prevents untrusted MCP servers.
+- **Explanation**: Project-scoped `.mcp.json` triggers a security approval prompt on each team member's first use. This is intentional - it prevents untrusted MCP servers.
 - **Review**: MCP Scopes section
 
 ### Q7
@@ -437,7 +437,7 @@
 ### Q2
 - **Category**: practical
 - **Question**: A hook script exits with code 2. What happens?
-- **Options**: A) Non-blocking warning shown | B) Blocking error — stderr is shown as an error to Claude, tool use is prevented | C) Hook is retried | D) Session ends
+- **Options**: A) Non-blocking warning shown | B) Blocking error - stderr is shown as an error to Claude, tool use is prevented | C) Hook is retried | D) Session ends
 - **Correct**: B
 - **Explanation**: Exit code 0 = success/continue, exit code 2 = blocking error (stderr shown as error), any other non-zero = non-blocking (stderr in verbose only).
 - **Review**: Exit codes section
@@ -579,7 +579,7 @@
 - **Question**: What is the main advantage of a plugin over standalone skills/hooks/MCP?
 - **Options**: A) Plugins are faster | B) Single-command install, versioned, marketplace distribution, bundles everything together | C) Plugins have more permissions | D) Plugins work offline
 - **Correct**: B
-- **Explanation**: Plugins package multiple components into one installable unit with versioning, marketplace distribution, and automatic updates — vs. manual setup of standalone components.
+- **Explanation**: Plugins package multiple components into one installable unit with versioning, marketplace distribution, and automatic updates - vs. manual setup of standalone components.
 - **Review**: Standalone vs Plugin comparison section
 
 ### Q10
@@ -661,7 +661,7 @@
 ### Q9
 - **Category**: conceptual
 - **Question**: Are checkpoints a replacement for git commits?
-- **Options**: A) Yes, they're more powerful | B) No, they are complementary — checkpoints are session-scoped and expire, git is permanent and shareable | C) Yes, for small projects | D) Only in solo development
+- **Options**: A) Yes, they're more powerful | B) No, they are complementary - checkpoints are session-scoped and expire, git is permanent and shareable | C) Yes, for small projects | D) Only in solo development
 - **Correct**: B
 - **Explanation**: Checkpoints are temporary (30-day retention), session-scoped, and cannot be shared. Git commits are permanent, auditable, and shareable. Use both together.
 - **Review**: Integration with git section
@@ -747,7 +747,7 @@
 - **Question**: What is the difference between `dontAsk` and `bypassPermissions` modes?
 - **Options**: A) They are the same | B) `dontAsk` auto-denies unless pre-approved; `bypassPermissions` skips all checks entirely | C) `dontAsk` is for files; `bypassPermissions` is for commands | D) `bypassPermissions` is safer
 - **Correct**: B
-- **Explanation**: dontAsk auto-denies permission requests unless they match pre-approved patterns. bypassPermissions skips all safety checks entirely — it's dangerous for routine use.
+- **Explanation**: dontAsk auto-denies permission requests unless they match pre-approved patterns. bypassPermissions skips all safety checks entirely - it's dangerous for routine use.
 - **Review**: Permission Modes section
 
 ### Q10
@@ -767,7 +767,7 @@
 - **Question**: What are the two primary modes of the Claude CLI?
 - **Options**: A) Online and offline mode | B) Interactive REPL (`claude`) and Print mode (`claude -p`) | C) GUI and terminal mode | D) Single and batch mode
 - **Correct**: B
-- **Explanation**: Interactive REPL is the default conversational mode. Print mode (-p) is non-interactive, scriptable, pipeable — it exits after one response.
+- **Explanation**: Interactive REPL is the default conversational mode. Print mode (-p) is non-interactive, scriptable, pipeable - it exits after one response.
 - **Review**: CLI architecture section
 
 ### Q2

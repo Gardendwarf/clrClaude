@@ -31,27 +31,27 @@ If no argument was provided, present a selection prompt using AskUserQuestion:
 **Question 1** (header: "Lesson"):
 "Which lesson do you want to quiz on?"
 Options:
-1. "Slash Commands (01)" — Custom commands, skills, frontmatter, arguments
-2. "Memory (02)" — CLAUDE.md, memory hierarchy, rules, auto memory
-3. "Skills (03)" — Progressive disclosure, auto-invocation, SKILL.md
-4. "Subagents (04)" — Task delegation, agent config, isolation
+1. "Slash Commands (01)" - Custom commands, skills, frontmatter, arguments
+2. "Memory (02)" - CLAUDE.md, memory hierarchy, rules, auto memory
+3. "Skills (03)" - Progressive disclosure, auto-invocation, SKILL.md
+4. "Subagents (04)" - Task delegation, agent config, isolation
 
 **Question 2** (header: "Lesson"):
 "Which lesson do you want to quiz on? (continued)"
 Options:
-1. "MCP (05)" — External integration, transport, servers, tool search
-2. "Hooks (06)" — Event automation, PreToolUse, exit codes, JSON I/O
-3. "Plugins (07)" — Bundled solutions, marketplace, plugin.json
-4. "More lessons..." — Checkpoints, Advanced Features, CLI
+1. "MCP (05)" - External integration, transport, servers, tool search
+2. "Hooks (06)" - Event automation, PreToolUse, exit codes, JSON I/O
+3. "Plugins (07)" - Bundled solutions, marketplace, plugin.json
+4. "More lessons..." - Checkpoints, Advanced Features, CLI
 
 If "More lessons..." is selected, present:
 
 **Question 3** (header: "Lesson"):
 "Select your lesson:"
 Options:
-1. "Checkpoints (08)" — Rewind, restore, safe experimentation
-2. "Advanced Features (09)" — Planning, permissions, print mode, thinking
-3. "CLI Reference (10)" — Flags, output formats, scripting, piping
+1. "Checkpoints (08)" - Rewind, restore, safe experimentation
+2. "Advanced Features (09)" - Planning, permissions, print mode, thinking
+3. "CLI Reference (10)" - Flags, output formats, scripting, piping
 
 ### Step 2: Read the Lesson Content
 
@@ -67,9 +67,9 @@ Ask the user about quiz timing context:
 Use AskUserQuestion (header: "Timing"):
 "When are you taking this quiz relative to the lesson?"
 Options:
-1. "Before (pre-test)" — I haven't read the lesson yet, testing my prior knowledge
-2. "During (progress check)" — I'm partway through the lesson
-3. "After (mastery check)" — I've completed the lesson and want to verify understanding
+1. "Before (pre-test)" - I haven't read the lesson yet, testing my prior knowledge
+2. "During (progress check)" - I'm partway through the lesson
+3. "After (mastery check)" - I've completed the lesson and want to verify understanding
 
 This context affects how the results are framed (see Step 5).
 
@@ -101,18 +101,18 @@ After all rounds, calculate the score and present results.
 - Total possible = 10 points
 
 **Grade scale:**
-- 9-10: Mastered — Excellent understanding
-- 7-8: Proficient — Good grasp, minor gaps
-- 5-6: Developing — Fundamentals understood, needs review
-- 3-4: Beginning — Significant gaps, review recommended
-- 0-2: Not yet — Start from the beginning of this lesson
+- 9-10: Mastered - Excellent understanding
+- 7-8: Proficient - Good grasp, minor gaps
+- 5-6: Developing - Fundamentals understood, needs review
+- 3-4: Beginning - Significant gaps, review recommended
+- 0-2: Not yet - Start from the beginning of this lesson
 
 **Output format:**
 
 ```markdown
 ## Lesson Quiz Results: [Lesson Name]
 
-**Score: N/10** — [Grade label]
+**Score: N/10** - [Grade label]
 **Quiz timing**: [Before / During / After] the lesson
 **Question breakdown**: N conceptual correct, N practical correct
 
@@ -124,7 +124,7 @@ After all rounds, calculate the score and present results.
 | 2 | Practical | ... | ... | ... |
 | ... | ... | ... | ... | ... |
 
-### Incorrect Answers — Review These
+### Incorrect Answers - Review These
 
 [For each incorrect answer, show:]
 
@@ -140,10 +140,10 @@ After all rounds, calculate the score and present results.
 **Pre-test score: N/10.** This gives you a baseline! Focus your study on the topics you missed. After completing the lesson, retake the quiz to measure your improvement.
 
 [If during]:
-**Progress check: N/10.** [If 7+: Great progress — keep going! If 4-6: Review the incorrect topics before continuing. If <4: Consider re-reading from the beginning.]
+**Progress check: N/10.** [If 7+: Great progress - keep going! If 4-6: Review the incorrect topics before continuing. If <4: Consider re-reading from the beginning.]
 
 [If after]:
-**Mastery check: N/10.** [If 9-10: You've mastered this lesson! Move on to the next. If 7-8: Almost there — review the missed topics and retake. If <7: Spend more time with the lesson, especially the sections marked above.]
+**Mastery check: N/10.** [If 9-10: You've mastered this lesson! Move on to the next. If 7-8: Almost there - review the missed topics and retake. If <7: Spend more time with the lesson, especially the sections marked above.]
 
 ### Recommended Next Steps
 
@@ -160,10 +160,10 @@ After presenting results, use AskUserQuestion:
 
 "What would you like to do next?"
 Options:
-1. "Retake this quiz" — Try the same lesson quiz again
-2. "Quiz another lesson" — Switch to a different lesson
-3. "Explain a topic I missed" — Get a detailed explanation of an incorrect answer
-4. "Done" — End the quiz session
+1. "Retake this quiz" - Try the same lesson quiz again
+2. "Quiz another lesson" - Switch to a different lesson
+3. "Explain a topic I missed" - Get a detailed explanation of an incorrect answer
+4. "Done" - End the quiz session
 
 If **Retake**: Go back to Step 4 (skip timing question, use same timing).
 If **Quiz another lesson**: Go back to Step 1.

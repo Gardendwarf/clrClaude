@@ -16,7 +16,7 @@ IGNORE_DIRS = {".venv", "node_modules", ".git", "blog-posts", ".agents"}
 def main() -> int:
     if not shutil.which("mmdc"):
         print(
-            "⚠ mmdc not found — skipping Mermaid validation (install @mermaid-js/mermaid-cli)"
+            "⚠ mmdc not found - skipping Mermaid validation (install @mermaid-js/mermaid-cli)"
         )
         return 0
 

@@ -15,8 +15,8 @@ Comprehensive interactive assessment that evaluates Claude Code proficiency acro
 Present the user with a choice of assessment depth:
 
 Use AskUserQuestion with these options:
-- **Quick Assessment** — "8 questions, ~2 minutes. Determines your overall level (Beginner/Intermediate/Advanced) and gives a learning path."
-- **Deep Assessment** — "5 categories with detailed questions, ~5 minutes. Gives per-topic skill scores, identifies specific gaps, and builds a prioritized learning path."
+- **Quick Assessment** - "8 questions, ~2 minutes. Determines your overall level (Beginner/Intermediate/Advanced) and gives a learning path."
+- **Deep Assessment** - "5 categories with detailed questions, ~5 minutes. Gives per-topic skill scores, identifies specific gaps, and builds a prioritized learning path."
 
 If user chooses **Quick Assessment**, go to Step 2A.
 If user chooses **Deep Assessment**, go to Step 2B.
@@ -30,18 +30,18 @@ Present TWO multi-select questions (AskUserQuestion supports max 4 options each)
 **Question 1** (header: "Basics"):
 "Part 1/2: Which of these Claude Code skills do you already have?"
 Options:
-1. "Start Claude Code and chat" — I can run `claude` and interact with it
-2. "Created/edited CLAUDE.md" — I have set up project or user memory
-3. "Used 3+ slash commands" — e.g., /help, /compact, /model, /clear
-4. "Created custom command/skill" — Written a SKILL.md or custom command file
+1. "Start Claude Code and chat" - I can run `claude` and interact with it
+2. "Created/edited CLAUDE.md" - I have set up project or user memory
+3. "Used 3+ slash commands" - e.g., /help, /compact, /model, /clear
+4. "Created custom command/skill" - Written a SKILL.md or custom command file
 
 **Question 2** (header: "Advanced"):
 "Part 2/2: Which of these advanced skills do you have?"
 Options:
-1. "Configured an MCP server" — e.g., GitHub, database, or other external data source
-2. "Set up hooks" — Configured hooks in ~/.claude/settings.json
-3. "Created/used subagents" — Used .claude/agents/ for task delegation
-4. "Used print mode (claude -p)" — Used `claude -p` for non-interactive or CI/CD use
+1. "Configured an MCP server" - e.g., GitHub, database, or other external data source
+2. "Set up hooks" - Configured hooks in ~/.claude/settings.json
+3. "Created/used subagents" - Used .claude/agents/ for task delegation
+4. "Used print mode (claude -p)" - Used `claude -p` for non-interactive or CI/CD use
 
 **Scoring:**
 - 0-2 total = Level 1: Beginner
@@ -60,14 +60,14 @@ Present 5 rounds of questions, one AskUserQuestion call per round. Each round co
 
 ---
 
-**Round 1 — Slash Commands & Memory** (header: "Commands")
+**Round 1 - Slash Commands & Memory** (header: "Commands")
 
 "Which of these have you done? Select all that apply."
 Options:
-1. "Created a custom slash command or skill" — Written a SKILL.md file with frontmatter, or created .claude/commands/ files
-2. "Used dynamic context in commands" — Used `$ARGUMENTS`, `$0`/`$1`, backtick `!command` syntax, or `@file` references in skill/command files
-3. "Set up project + personal memory" — Created both a project CLAUDE.md and personal ~/.claude/CLAUDE.md (or CLAUDE.local.md)
-4. "Used memory hierarchy features" — Understand the 7-level priority order, used .claude/rules/ directory, path-specific rules, or @import syntax
+1. "Created a custom slash command or skill" - Written a SKILL.md file with frontmatter, or created .claude/commands/ files
+2. "Used dynamic context in commands" - Used `$ARGUMENTS`, `$0`/`$1`, backtick `!command` syntax, or `@file` references in skill/command files
+3. "Set up project + personal memory" - Created both a project CLAUDE.md and personal ~/.claude/CLAUDE.md (or CLAUDE.local.md)
+4. "Used memory hierarchy features" - Understand the 7-level priority order, used .claude/rules/ directory, path-specific rules, or @import syntax
 
 **Scoring for Round 1:**
 - Options 1-2 map to **Slash Commands** (0-2 points)
@@ -75,14 +75,14 @@ Options:
 
 ---
 
-**Round 2 — Skills & Hooks** (header: "Automation")
+**Round 2 - Skills & Hooks** (header: "Automation")
 
 "Which of these have you done? Select all that apply."
 Options:
-1. "Installed and used an auto-invoked skill" — A skill that triggers automatically based on its description, without manual /command invocation
-2. "Controlled skill invocation behavior" — Used `disable-model-invocation`, `user-invocable`, or `context: fork` with agent field in SKILL.md frontmatter
-3. "Set up a PreToolUse or PostToolUse hook" — Configured a hook that runs before/after tool execution (e.g., command validator, auto-formatter)
-4. "Used advanced hook features" — Configured prompt-type hooks, component-scoped hooks in SKILL.md, HTTP hooks, or hooks with custom JSON output (updatedInput, systemMessage)
+1. "Installed and used an auto-invoked skill" - A skill that triggers automatically based on its description, without manual /command invocation
+2. "Controlled skill invocation behavior" - Used `disable-model-invocation`, `user-invocable`, or `context: fork` with agent field in SKILL.md frontmatter
+3. "Set up a PreToolUse or PostToolUse hook" - Configured a hook that runs before/after tool execution (e.g., command validator, auto-formatter)
+4. "Used advanced hook features" - Configured prompt-type hooks, component-scoped hooks in SKILL.md, HTTP hooks, or hooks with custom JSON output (updatedInput, systemMessage)
 
 **Scoring for Round 2:**
 - Options 1-2 map to **Skills** (0-2 points)
@@ -90,14 +90,14 @@ Options:
 
 ---
 
-**Round 3 — MCP & Subagents** (header: "Integration")
+**Round 3 - MCP & Subagents** (header: "Integration")
 
 "Which of these have you done? Select all that apply."
 Options:
-1. "Connected an MCP server and used its tools" — e.g., GitHub MCP for PRs/issues, database MCP for queries, or any external data source
-2. "Used advanced MCP features" — Project-scope .mcp.json, OAuth authentication, MCP resources with @mentions, Tool Search, or `claude mcp serve`
-3. "Created or configured custom subagents" — Defined agents in .claude/agents/ with custom tools, model, or permissions
-4. "Used advanced subagent features" — Worktree isolation, persistent agent memory, background tasks with Ctrl+B, agent allowlists with `Task(agent_name)`, or agent teams
+1. "Connected an MCP server and used its tools" - e.g., GitHub MCP for PRs/issues, database MCP for queries, or any external data source
+2. "Used advanced MCP features" - Project-scope .mcp.json, OAuth authentication, MCP resources with @mentions, Tool Search, or `claude mcp serve`
+3. "Created or configured custom subagents" - Defined agents in .claude/agents/ with custom tools, model, or permissions
+4. "Used advanced subagent features" - Worktree isolation, persistent agent memory, background tasks with Ctrl+B, agent allowlists with `Task(agent_name)`, or agent teams
 
 **Scoring for Round 3:**
 - Options 1-2 map to **MCP** (0-2 points)
@@ -105,14 +105,14 @@ Options:
 
 ---
 
-**Round 4 — Checkpoints & Advanced Features** (header: "Power User")
+**Round 4 - Checkpoints & Advanced Features** (header: "Power User")
 
 "Which of these have you done? Select all that apply."
 Options:
-1. "Used checkpoints for safe experimentation" — Created checkpoints, used Esc+Esc or /rewind, restored code and/or conversation, or used Summarize option
-2. "Used planning mode or extended thinking" — Activated planning via /plan, Shift+Tab, or --permission-mode plan; toggled extended thinking with Alt+T/Option+T
-3. "Configured permission modes" — Used acceptEdits, plan, dontAsk, or bypassPermissions mode via CLI flags, keyboard shortcuts, or settings
-4. "Used remote/desktop/web features" — Used `claude remote-control`, `claude --remote`, `/teleport`, `/desktop`, or worktrees with `claude -w`
+1. "Used checkpoints for safe experimentation" - Created checkpoints, used Esc+Esc or /rewind, restored code and/or conversation, or used Summarize option
+2. "Used planning mode or extended thinking" - Activated planning via /plan, Shift+Tab, or --permission-mode plan; toggled extended thinking with Alt+T/Option+T
+3. "Configured permission modes" - Used acceptEdits, plan, dontAsk, or bypassPermissions mode via CLI flags, keyboard shortcuts, or settings
+4. "Used remote/desktop/web features" - Used `claude remote-control`, `claude --remote`, `/teleport`, `/desktop`, or worktrees with `claude -w`
 
 **Scoring for Round 4:**
 - Option 1 maps to **Checkpoints** (0-1 point)
@@ -120,14 +120,14 @@ Options:
 
 ---
 
-**Round 5 — Plugins & CLI** (header: "Mastery")
+**Round 5 - Plugins & CLI** (header: "Mastery")
 
 "Which of these have you done? Select all that apply."
 Options:
-1. "Installed or created a plugin" — Used a bundled plugin from marketplace, or created a .claude-plugin/ directory with plugin.json manifest
-2. "Used plugin advanced features" — Plugin hooks, plugin MCP servers, LSP configuration, plugin namespaced commands, or --plugin-dir flag for testing
-3. "Used print mode in scripts or CI/CD" — Used `claude -p` with --output-format json, --max-turns, piped input, or integrated into GitHub Actions / CI pipelines
-4. "Used advanced CLI features" — Session resumption (-c/-r), --agents flag, --json-schema for structured output, --fallback-model, --from-pr, or batch processing loops
+1. "Installed or created a plugin" - Used a bundled plugin from marketplace, or created a .claude-plugin/ directory with plugin.json manifest
+2. "Used plugin advanced features" - Plugin hooks, plugin MCP servers, LSP configuration, plugin namespaced commands, or --plugin-dir flag for testing
+3. "Used print mode in scripts or CI/CD" - Used `claude -p` with --output-format json, --max-turns, piped input, or integrated into GitHub Actions / CI pipelines
+4. "Used advanced CLI features" - Session resumption (-c/-r), --agents flag, --json-schema for structured output, --fallback-model, --from-pr, or batch processing loops
 
 **Scoring for Round 5:**
 - Options 1-2 map to **Plugins** (0-2 points)
@@ -169,7 +169,7 @@ You checked **N/8** items.
 
 ### Your Personalized Learning Path
 
-[Output the level-specific learning path — see Step 4]
+[Output the level-specific learning path - see Step 4]
 ```
 
 #### 3B: For Deep Assessment
@@ -203,17 +203,17 @@ Calculate per-topic scores from the 5 rounds. Each topic gets 0-2 points. Then p
 **Mastery key:** 0 = None, 1 = Basic, 2 = Proficient
 
 ### Strength Areas
-[List topics with score 2/2 — these are mastered]
+[List topics with score 2/2 - these are mastered]
 
 ### Priority Gaps (Learn Next)
-[List topics with score 0 — these need attention first, ordered by dependency]
+[List topics with score 0 - these need attention first, ordered by dependency]
 
 ### Review Areas
-[List topics with score 1/2 — basics known but advanced features not yet used]
+[List topics with score 1/2 - basics known but advanced features not yet used]
 
 ### Your Personalized Learning Path
 
-[Output gap-specific learning path — see Step 4]
+[Output gap-specific learning path - see Step 4]
 ```
 
 **Overall level calculation for Deep Assessment:**
@@ -225,7 +225,7 @@ Calculate per-topic scores from the 5 rounds. Each topic gets 0-2 points. Then p
 
 ### Step 4: Generate Personalized Learning Path
 
-Based on the assessment results, generate a learning path that is specific to the user's gaps. Do NOT just repeat the generic level path — adapt it.
+Based on the assessment results, generate a learning path that is specific to the user's gaps. Do NOT just repeat the generic level path - adapt it.
 
 #### Rules for Path Generation
 
@@ -238,7 +238,7 @@ Based on the assessment results, generate a learning path that is specific to th
    - Hooks (depends on Slash Commands)
    - MCP (no deps) -> Plugins (depends on MCP, Skills, Hooks)
    - Advanced Features (depends on all previous)
-3. **For score 1/2 topics**: Recommend the "deep dive" — link to the specific advanced section they're missing.
+3. **For score 1/2 topics**: Recommend the "deep dive" - link to the specific advanced section they're missing.
 4. **Estimate time**: Sum only the topics they need to learn/review.
 5. **Group into phases**: Organize remaining topics into logical phases of 2-3 topics each.
 
@@ -252,13 +252,13 @@ Based on the assessment results, generate a learning path that is specific to th
 #### Phase 1: [Phase Name] (~N hours)
 [Only if they have gaps in these areas]
 
-**[Topic Name]** — [Learn from scratch / Deep dive into advanced features]
+**[Topic Name]** - [Learn from scratch / Deep dive into advanced features]
 - Tutorial: [link to tutorial directory]
 - Focus on: [specific sections/concepts they need]
 - Key exercise: [one concrete exercise to do]
 - You'll know it's done when: [specific success criterion]
 
-**[Topic Name]** — ...
+**[Topic Name]** - ...
 
 ---
 
@@ -286,7 +286,7 @@ Use these specific recommendations when a topic is a gap:
 - Key exercise: Create a `/optimize` command and test it
 - Done when: You can create a custom skill with arguments and dynamic context
 
-**Slash Commands (score 1 — review)**:
+**Slash Commands (score 1 - review)**:
 - Focus on: Dynamic context with `!`backtick`` syntax, `@file` references, `disable-model-invocation` vs `user-invocable` control
 - Done when: You can create a skill that injects live command output and controls its own invocation behavior
 
@@ -296,7 +296,7 @@ Use these specific recommendations when a topic is a gap:
 - Key exercise: Create a project CLAUDE.md with your coding standards
 - Done when: Claude remembers your preferences across sessions
 
-**Memory (score 1 — review)**:
+**Memory (score 1 - review)**:
 - Focus on: 7-level hierarchy and priority order, .claude/rules/ directory with path-specific rules, `@import` syntax (max depth 5), Auto Memory MEMORY.md (200-line limit)
 - Done when: You have modular rules for different directories and understand the full hierarchy
 
@@ -306,7 +306,7 @@ Use these specific recommendations when a topic is a gap:
 - Key exercise: Install the code-review skill and verify it auto-triggers
 - Done when: A skill automatically activates based on conversation context
 
-**Skills (score 1 — review)**:
+**Skills (score 1 - review)**:
 - Focus on: `context: fork` with `agent` field for subagent execution, `disable-model-invocation` vs `user-invocable`, 2% context budget, bundled resources (scripts/, references/, assets/)
 - Done when: You can create a skill that runs in a subagent with forked context
 
@@ -316,7 +316,7 @@ Use these specific recommendations when a topic is a gap:
 - Key exercise: Create a PreToolUse hook that validates Bash commands
 - Done when: A hook blocks dangerous commands before execution
 
-**Hooks (score 1 — review)**:
+**Hooks (score 1 - review)**:
 - Focus on: All 25 hook events (including PostToolUseFailure, StopFailure, TaskCreated, CwdChanged, FileChanged, PostCompact, Elicitation, ElicitationResult), 4 hook types (command, http, prompt, agent), component-scoped hooks in SKILL.md frontmatter, HTTP hooks with allowedEnvVars, `CLAUDE_ENV_FILE` for SessionStart/CwdChanged/FileChanged
 - Done when: You can create a prompt-based Stop hook and a component-scoped hook in a skill
 
@@ -326,7 +326,7 @@ Use these specific recommendations when a topic is a gap:
 - Key exercise: Add GitHub MCP server and query PRs
 - Done when: You can query live data from an external service via MCP
 
-**MCP (score 1 — review)**:
+**MCP (score 1 - review)**:
 - Focus on: Project-scope .mcp.json (requires team approval), OAuth 2.0 auth, MCP resources with `@server:resource` mentions, Tool Search (ENABLE_TOOL_SEARCH), `claude mcp serve`, output limits (10k/25k/50k)
 - Done when: You have a project .mcp.json and understand Tool Search auto mode
 
@@ -336,7 +336,7 @@ Use these specific recommendations when a topic is a gap:
 - Key exercise: Create a code-reviewer subagent and test delegation
 - Done when: Claude delegates code review to your custom agent
 
-**Subagents (score 1 — review)**:
+**Subagents (score 1 - review)**:
 - Focus on: Worktree isolation (`isolation: worktree`), persistent agent memory (`memory` field with scopes), background agents (Ctrl+B/Ctrl+F), agent allowlists with `Task(agent_name)`, agent teams (`--teammate-mode`)
 - Done when: You have a subagent with persistent memory running in worktree isolation
 
@@ -352,7 +352,7 @@ Use these specific recommendations when a topic is a gap:
 - Key exercise: Use planning mode to design a feature, then implement it
 - Done when: You can switch between planning and implementation modes fluently
 
-**Advanced Features (score 1 — review)**:
+**Advanced Features (score 1 - review)**:
 - Focus on: Remote control (`claude remote-control`), web sessions (`claude --remote`), desktop handoff (`/desktop`), worktrees (`claude -w`), task lists (Ctrl+T), managed settings for enterprise
 - Done when: You can hand off sessions between CLI, web, and desktop
 
@@ -362,7 +362,7 @@ Use these specific recommendations when a topic is a gap:
 - Key exercise: Install a plugin and explore its components
 - Done when: You understand when to use a plugin vs standalone components
 
-**Plugins (score 1 — review)**:
+**Plugins (score 1 - review)**:
 - Focus on: Creating plugin.json manifest, plugin hooks (hooks/hooks.json), LSP configuration (.lsp.json), `${CLAUDE_PLUGIN_ROOT}` variable, --plugin-dir for testing, marketplace publishing
 - Done when: You can create and test a plugin for your team
 
@@ -372,7 +372,7 @@ Use these specific recommendations when a topic is a gap:
 - Key exercise: Pipe a file to `claude -p` and get JSON output
 - Done when: You can use Claude non-interactively in a script
 
-**CLI (score 1 — review)**:
+**CLI (score 1 - review)**:
 - Focus on: --agents flag with JSON config, --json-schema for structured output, --fallback-model, --from-pr, --strict-mcp-config, batch processing with for loops, `claude mcp serve`
 - Done when: You have a CI/CD script that uses Claude with structured JSON output
 
@@ -383,10 +383,10 @@ Use these specific recommendations when a topic is a gap:
 After presenting results, ask the user what they'd like to do next:
 
 Use AskUserQuestion with these options:
-- **Start learning** — "Help me begin the first topic in my learning path right now"
-- **Deep dive on a gap** — "Explain one of my gap areas in detail so I can learn it here"
-- **Practice project** — "Set up a practice project that covers my gap areas"
-- **Retake assessment** — "I want to retake the quiz (maybe the other mode)"
+- **Start learning** - "Help me begin the first topic in my learning path right now"
+- **Deep dive on a gap** - "Explain one of my gap areas in detail so I can learn it here"
+- **Practice project** - "Set up a practice project that covers my gap areas"
+- **Retake assessment** - "I want to retake the quiz (maybe the other mode)"
 
 If **Start learning**: Read the README.md of the first gap tutorial and walk the user through the first exercise.
 If **Deep dive on a gap**: Ask which gap topic, then read the relevant tutorial README.md and explain the key concepts with examples.

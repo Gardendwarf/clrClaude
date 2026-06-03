@@ -69,7 +69,7 @@ Built-in commands are shortcuts for common actions. There are **60+ built-in com
 | `/remote-env` | Configure default remote environment |
 | `/rename [name]` | Rename session |
 | `/resume [session]` | Resume conversation (alias: `/continue`) |
-| `/review` | **Deprecated** — install the `code-review` plugin instead |
+| `/review` | **Deprecated** - install the `code-review` plugin instead |
 | `/rewind` | Rewind conversation and/or code (alias: `/checkpoint`) |
 | `/sandbox` | Toggle sandbox mode |
 | `/schedule [description]` | Create/manage Cloud scheduled tasks |
@@ -104,11 +104,11 @@ These skills ship with Claude Code and are invoked like slash commands:
 
 | Command | Status |
 |---------|--------|
-| `/review` | Deprecated — replaced by `code-review` plugin |
+| `/review` | Deprecated - replaced by `code-review` plugin |
 | `/output-style` | Deprecated since v2.1.73 |
 | `/fork` | Renamed to `/branch` (alias still works, v2.1.77) |
-| `/pr-comments` | Removed in v2.1.91 — ask Claude directly to view PR comments |
-| `/vim` | Removed in v2.1.92 — use /config → Editor mode |
+| `/pr-comments` | Removed in v2.1.91 - ask Claude directly to view PR comments |
+| `/vim` | Removed in v2.1.92 - use /config → Editor mode |
 
 ### Recent Changes
 
@@ -119,8 +119,8 @@ These skills ship with Claude Code and are invoked like slash commands:
 - `/voice` command added for push-to-talk voice dictation
 - `/schedule` command added for creating/managing scheduled tasks
 - `/color` command added for prompt bar customization
-- /pr-comments removed in v2.1.91 — ask Claude directly to view PR comments
-- /vim removed in v2.1.92 — use /config → Editor mode instead
+- /pr-comments removed in v2.1.91 - ask Claude directly to view PR comments
+- /vim removed in v2.1.92 - use /config → Editor mode instead
 - /ultraplan added for browser-based plan review and execution
 - /powerup added for interactive feature lessons
 - /sandbox added for toggling sandbox mode
@@ -129,13 +129,13 @@ These skills ship with Claude Code and are invoked like slash commands:
 - MCP prompts are available as `/mcp__<server>__<prompt>` commands (see [MCP Prompts as Commands](#mcp-prompts-as-commands))
 - `/team-onboarding` added for auto-generating teammate ramp-up guides (v2.1.101)
 
-### `/team-onboarding` — Teammate Ramp-Up Guide
+### `/team-onboarding` - Teammate Ramp-Up Guide
 
 > **New in v2.1.101**
 
 Use `/team-onboarding` to generate a teammate ramp-up guide from your project's local Claude Code usage. The command inspects your `CLAUDE.md`, installed skills, subagents, hooks, and recent workflows, then produces an onboarding document that helps new developers become productive quickly.
 
-It's a built-in command — nothing to install.
+It's a built-in command - nothing to install.
 
 **Usage:**
 

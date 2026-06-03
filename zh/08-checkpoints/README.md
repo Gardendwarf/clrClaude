@@ -198,13 +198,13 @@ Claude Code 会自动管理你的 checkpoints：
 
 ### 如何高效使用 Checkpoints
 
-✅ **应该做：**
+ **应该做：**
 - 回退前先看清楚可用的 checkpoints
 - 当你想尝试不同方向时使用 rewind
 - 保留 checkpoints 方便比较不同方案
 - 理解每个 rewind 选项的作用（恢复代码和对话、恢复对话、恢复代码、或总结）
 
-❌ **不要做：**
+ **不要做：**
 - 只依赖 checkpoints 来保存代码
 - 指望 checkpoints 跟踪外部文件系统变化
 - 把 checkpoints 当成 git commit 的替代品

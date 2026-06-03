@@ -1,6 +1,6 @@
 # Changelog
 
-## v2.3.0 — 2026-04-07
+## v2.3.0 - 2026-04-07
 
 ### Features
 
@@ -38,14 +38,14 @@
 
 ### Other
 
-- shift-left quality gates — add mypy to pre-commit, fix CI failures (699fb39) @Luong NGUYEN
+- shift-left quality gates - add mypy to pre-commit, fix CI failures (699fb39) @Luong NGUYEN
 - Add Vietnamese (Tiếng Việt) Localization (a70777e) @Thiên Toán
 
 **Full Changelog**: https://github.com/luongnv89/claude-howto/compare/v2.2.0...v2.3.0
 
 ---
 
-## v2.2.0 — 2026-03-26
+## v2.2.0 - 2026-03-26
 
 ### Documentation
 
@@ -68,7 +68,7 @@
 
 ---
 
-## v2.1.1 — 2026-03-13
+## v2.1.1 - 2026-03-13
 
 ### Bug Fixes
 
@@ -79,13 +79,13 @@
 
 ---
 
-## v2.1.0 — 2026-03-13
+## v2.1.0 - 2026-03-13
 
 ### Features
 
 - Add adaptive learning path with self-assessment and lesson quiz skills (1ef46cd) @luongnv89
-  - `/self-assessment` — interactive proficiency quiz across 10 feature areas with personalized learning path
-  - `/lesson-quiz [lesson]` — per-lesson knowledge check with 8-10 targeted questions
+  - `/self-assessment` - interactive proficiency quiz across 10 feature areas with personalized learning path
+  - `/lesson-quiz [lesson]` - per-lesson knowledge check with 8-10 targeted questions
 
 ### Bug Fixes
 
@@ -96,8 +96,8 @@
 
 ### Documentation
 
-- Phase 5 QA — fix consistency, URLs, and terminology across docs (00bbe4c) @luongnv89
-- Complete Phases 3-4 — new feature coverage and reference doc updates (132de29) @luongnv89
+- Phase 5 QA - fix consistency, URLs, and terminology across docs (00bbe4c) @luongnv89
+- Complete Phases 3-4 - new feature coverage and reference doc updates (132de29) @luongnv89
 - Add MCPorter runtime to MCP context bloat section (ef52705) @luongnv89
 - Add missing commands, features, and settings across 6 guides (4bc8f15) @luongnv89
 - Add style guide based on existing repo conventions (84141d0) @luongnv89
@@ -113,13 +113,13 @@
 
 ---
 
-## v2.0.0 — 2026-02-01
+## v2.0.0 - 2026-02-01
 
 ### Features
 
 - Sync all documentation with Claude Code February 2026 features (487c96d)
   - Update 26 files across all 10 tutorial directories and 7 reference documents
-  - Add documentation for **Auto Memory** — persistent learnings per project
+  - Add documentation for **Auto Memory** - persistent learnings per project
   - Add documentation for **Remote Control**, **Web Sessions**, and **Desktop App**
   - Add documentation for **Agent Teams** (experimental multi-agent collaboration)
   - Add documentation for **MCP OAuth 2.0**, **Tool Search**, and **Claude.ai Connectors**

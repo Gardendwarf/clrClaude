@@ -42,7 +42,7 @@ Dưới đây là bảng thuật ngữ kỹ thuật quan trọng cần nhất qu
 
 **QUY TẮC VÀNG:** Giữ nguyên 100% code có thể execute được. Chỉ dịch comments và explanations.
 
-**Ví dụ đúng (✅ CORRECT):**
+**Ví dụ đúng ( CORRECT):**
 
 ````markdown
 Để sử dụng lệnh này, chạy:
@@ -54,13 +54,13 @@ Dưới đây là bảng thuật ngữ kỹ thuật quan trọng cần nhất qu
 Lệnh này sẽ phân tích code của bạn.
 ````
 
-**Ví dụ sai (❌ INCORRECT):**
+**Ví dụ sai ( INCORRECT):**
 
 ````markdown
 Để sử dụng lệnh này, chạy:
 
 ```bash
-/tối-ưu-hóa  # KHÔNG BAO GIỜ dịch command
+/tối-ưu-hóa # KHÔNG BAO GIỜ dịch command
 ```
 ````
 
@@ -69,13 +69,13 @@ Lệnh này sẽ phân tích code của bạn.
 Dịch comments sang tiếng Việt để người đọc dễ hiểu:
 
 ```python
-# ✅ CORRECT - Dịch comment
+# CORRECT - Dịch comment
 # Lệnh slash này giúp tối ưu hóa code của bạn
 def optimize_code():
     pass
 
-# ❌ INCORRECT - Đừng dịch tên hàm
-def toi_uu_ma():  # KHÔNG dịch function names
+# INCORRECT - Đừng dịch tên hàm
+def toi_uu_ma(): # KHÔNG dịch function names
     pass
 ```
 
@@ -84,11 +84,11 @@ def toi_uu_ma():  # KHÔNG dịch function names
 Giữ nguyên tên hàm, biến, và class bằng tiếng Anh:
 
 ```python
-# ✅ CORRECT
+# CORRECT
 def create_subagent(name: str, system_prompt: str):
     pass
 
-# ❌ INCORRECT
+# INCORRECT
 def tao_tac_nhan_con(ten: str, he_thong_prompt: str):
     pass
 ```
@@ -98,14 +98,14 @@ def tao_tac_nhan_con(ten: str, he_thong_prompt: str):
 **Giữ nguyên 100% Mermaid diagrams.** Không dịch bất kỳ text nào trong diagram blocks.
 
 ````markdown
-<!-- ✅ CORRECT -->
+<!-- CORRECT -->
 ```mermaid
 graph LR
     A[User] --> B[Claude]
     B --> C[Subagent]
 ```
 
-<!-- ❌ INCORRECT -->
+<!-- INCORRECT -->
 ```mermaid
 graph LR
     A[Người dùng] --> B[Claude]
@@ -117,10 +117,10 @@ graph LR
 Giữ nguyên tên file và paths:
 
 ```markdown
-<!-- ✅ CORRECT -->
+<!-- CORRECT -->
 Sao chép file `.claude/commands/optimize.md` vào dự án của bạn.
 
-<!-- ❌ INCORRECT -->
+<!-- INCORRECT -->
 Sao chép file `.claude/commands/tối-ưu-hóa.md` vào dự án của bạn.
 ```
 
@@ -129,7 +129,7 @@ Sao chép file `.claude/commands/tối-ưu-hóa.md` vào dự án của bạn.
 **Internal Links (trong vi/):** Giữ nguyên relative paths:
 
 ```markdown
-<!-- ✅ CORRECT -->
+<!-- CORRECT -->
 Xem [Lệnh Slash](01-slash-commands/README.md) để biết thêm chi tiết.
 ```
 
@@ -147,12 +147,12 @@ Xem [bản tiếng Anh](../../README.md) để biết thêm chi tiết.
 Giữ nguyên tên modules và features vì đây là terms đặc trưng:
 
 ```markdown
-<!-- ✅ CORRECT -->
+<!-- CORRECT -->
 - 01-slash-commands/ - Lệnh Slash
 - 03-skills/ - Skills
 - 04-subagents/ - Tác nhân con
 
-<!-- ❌ INCORRECT -->
+<!-- INCORRECT -->
 - 01-lenh-slash/ - Lệnh Slash
 - 03-ky-nang/ - Skills
 ```
@@ -167,10 +167,10 @@ Giữ nguyên tên modules và features vì đây là terms đặc trưng:
 **Ví dụ:**
 
 ```markdown
-<!-- ✅ CORRECT -->
+<!-- CORRECT -->
 Bạn có thể sử dụng lệnh này để tối ưu hóa code.
 
-<!-- ❌ INFORMAL (tránh dùng) -->
+<!-- INFORMAL (tránh dùng) -->
 Đây là cách mày dùng lệnh này.
 ```
 
@@ -183,13 +183,13 @@ Bạn có thể sử dụng lệnh này để tối ưu hóa code.
 **Ví dụ:**
 
 ```markdown
-<!-- ✅ CORRECT -->
+<!-- CORRECT -->
 Chức năng này giúp bạn tăng năng suất làm việc.
 
-<!-- ❌ TOO FORMAL -->
+<!-- TOO FORMAL -->
 Nghiệp vụ này hỗ trợ Quý vị gia tăng hiệu suất lao động.
 
-<!-- ❌ TOO INFORMAL -->
+<!-- TOO INFORMAL -->
 Cái này giúp làm việc nhanh hơn nha.
 ```
 
@@ -202,17 +202,17 @@ Cái này giúp làm việc nhanh hơn nha.
 **Ví dụ:**
 
 ```markdown
-<!-- ✅ CORRECT -->
+<!-- CORRECT -->
 Slash commands giúp bạn tiết kiệm thời gian bằng cách tự động hóa các tác vụ thường ngày. Tuy nhiên, bạn không nên lạm dụng chúng.
 
-<!-- ❌ CONFUSING -->
+<!-- CONFUSING -->
 Slash commands giúp bạn tiết kiệm thời gian bằng cách tự động hóa các tác vụ thường ngày tuy nhiên bạn không nên lạm dụng chúng.
 ```
 
 ### 4. Định dạng (Formatting)
 
 - **Giữ nguyên format Markdown:** headings, lists, tables, code blocks
-- **Sử dụng bold cho emphasis:** **quan trọng**, ⚠️ **cảnh báo**
+- **Sử dụng bold cho emphasis:** **quan trọng**, **cảnh báo**
 - **Sử dụng code blocks cho examples:** File paths, commands, code snippets
 
 ## Quy trình Dịch / Translation Workflow
@@ -308,57 +308,57 @@ Trước khi dịch file trong module, đọc README của module đó trước:
 
 ## Common Pitfalls to Avoid
 
-### ❌ DON'T: Translate Technical Terms
+### DON'T: Translate Technical Terms
 
 ```markdown
-<!-- ❌ WRONG -->
+<!-- WRONG -->
 Lệnh "hook" giúp bạn tự động hóa quy trình.
 
-<!-- ✅ RIGHT -->
+<!-- RIGHT -->
 Hook giúp bạn tự động hóa workflow.
 ```
 
-### ❌ DON'T: Translate Commands
+### DON'T: Translate Commands
 
 ```markdown
-<!-- ❌ WRONG -->
+<!-- WRONG -->
 Chạy lệnh `/tối-ưu-hóa` để bắt đầu.
 
-<!-- ✅ RIGHT -->
+<!-- RIGHT -->
 Chạy lệnh `/optimize` để bắt đầu.
 ```
 
-### ❌ DON'T: Translate Function Names
+### DON'T: Translate Function Names
 
 ```python
-# ❌ WRONG
+# WRONG
 # Hàm này tạo một subagent mới
 def tao_subagent_moi():
     pass
 
-# ✅ RIGHT
+# RIGHT
 # Tạo một subagent mới
 def create_subagent():
     pass
 ```
 
-### ❌ DON'T: Translate Mermaid Diagrams
+### DON'T: Translate Mermaid Diagrams
 
 ````markdown
-<!-- ❌ WRONG -->
+<!-- WRONG -->
 ```mermaid
 graph TD
     A[Người dùng] --> B[Tác nhân]
 ```
 
-<!-- ✅ RIGHT -->
+<!-- RIGHT -->
 ```mermaid
 graph TD
     A[User] --> B[Agent]
 ```
 ````
 
-### ❌ DON'T: Use Machine Translation Blindly
+### DON'T: Use Machine Translation Blindly
 
 Machine translation (Google Translate, DeepL) thường:
 - Dịch sai terms kỹ thuật

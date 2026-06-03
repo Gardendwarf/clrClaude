@@ -129,7 +129,7 @@
 
   <!-- Tagline -->
   <text x="168" y="135" font-family="'Inter', 'SF Pro', -apple-system, sans-serif" font-size="16" fill="#6ee7b7" opacity="0.85" letter-spacing="0.5">
-    Visual guide to Claude Code — examples you can use today
+    Visual guide to Claude Code - examples you can use today
   </text>
 
   <!-- Decorative code snippets floating -->

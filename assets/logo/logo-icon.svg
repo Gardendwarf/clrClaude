@@ -22,10 +22,10 @@
     <line x1="-36.8" y1="36.8" x2="-29.7" y2="29.7" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"/>
     <line x1="29.7" y1="29.7" x2="36.8" y2="36.8" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"/>
 
-    <!-- Compass needle — north (green) -->
+    <!-- Compass needle - north (green) -->
     <polygon points="0,-40 -6,-2 0,-8 6,-2" fill="#22C55E"/>
 
-    <!-- Compass needle — south (dark) -->
+    <!-- Compass needle - south (dark) -->
     <polygon points="0,40 -6,2 0,8 6,2" fill="#000000"/>
 
     <!-- Center > bracket -->

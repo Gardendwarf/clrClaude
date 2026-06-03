@@ -107,6 +107,6 @@ When reviewing multiple findings, track:
 - **Medium:** X
 - **Low:** X
 
-**Recommendation:** ✅ Approve / ⚠️ Request Changes / 🔄 Needs Discussion
+**Recommendation:** Approve / Request Changes / Needs Discussion
 
 **Overall Code Quality:** 1-5 stars

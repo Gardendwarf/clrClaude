@@ -5,7 +5,7 @@ allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*), Bash(git
 
 # Commit và Push Tất Cả
 
-⚠️ **CẢNH BÁO**: Stage TẤT CẢ thay đổi, commit, và push đến remote. Chỉ sử dụng khi tin rằng tất cả thay đổi thuộc về nhau.
+ **CẢNH BÁO**: Stage TẤT CẢ thay đổi, commit, và push đến remote. Chỉ sử dụng khi tin rằng tất cả thay đổi thuộc về nhau.
 
 ## Quy Trình
 
@@ -17,7 +17,7 @@ Chạy song song:
 
 ### 2. Kiểm Tra An Toàn
 
-**❌ DỪNG LẠI và CẢNH BÁO nếu phát hiện:**
+** DỪNG LẠI và CẢNH BÁO nếu phát hiện:**
 - Bí mật: `.env*`, `*.key`, `*.pem`, `credentials.json`, `secrets.yaml`, `id_rsa`, `*.p12`, `*.pfx`, `*.cer`
 - API Keys: Bất kỳ biến `*_API_KEY`, `*_SECRET`, `*_TOKEN` nào có giá trị thực (không phải placeholder như `your-api-key`, `xxx`, `placeholder`)
 - Files lớn: `>10MB` mà không có Git LFS
@@ -27,11 +27,11 @@ Chạy song song:
 **Xác Thực API Key:**
 Kiểm tra các file đã sửa đổi cho các mẫu như:
 ```bash
-OPENAI_API_KEY=sk-proj-xxxxx  # ❌ Phát hiện khóa thật!
-AWS_SECRET_KEY=AKIA...         # ❌ Phát hiện khóa thật!
-STRIPE_API_KEY=sk_live_...    # ❌ Phát hiện khóa thật!
+OPENAI_API_KEY=sk-proj-xxxxx # Phát hiện khóa thật!
+AWS_SECRET_KEY=AKIA... # Phát hiện khóa thật!
+STRIPE_API_KEY=sk_live_... # Phát hiện khóa thật!
 
-# ✅ Placeholder chấp nhận được:
+# Placeholder chấp nhận được:
 API_KEY=your-api-key-here
 SECRET_KEY=placeholder
 TOKEN=xxx
@@ -39,7 +39,7 @@ API_KEY=<your-key>
 SECRET=${YOUR_SECRET}
 ```
 
-**✅ Xác minh:**
+** Xác minh:**
 - `.gitignore` được cấu hình đúng
 - Không có xung đột merge
 - Nhánh đúng (cảnh báo nếu main/master)
@@ -49,12 +49,12 @@ SECRET=${YOUR_SECRET}
 
 Trình bày tóm tắt:
 ```
-📊 Tóm Tắt Thay Đổi:
+ Tóm Tắt Thay Đổi:
 - X file đã sửa, Y thêm, Z xóa
 - Tổng: +AAA chèn, -BBB xóa
 
-🔒 An toàn: ✅ Không có bí mật | ✅ Không có file lớn | ⚠️ [cảnh báo]
-🌿 Nhánh: [name] → origin/[name]
+ An toàn: Không có bí mật | Không có file lớn | [cảnh báo]
+ Nhánh: [name] → origin/[name]
 
 Tôi sẽ: git add . → commit → push
 
@@ -68,7 +68,7 @@ Gõ 'yes' để tiếp tục hoặc 'no' để hủy.
 Chạy tuần tự:
 ```bash
 git add .
-git status  # Xác minh staging
+git status # Xác minh staging
 ```
 
 ### 5. Tạo Thông Điệp Commit
@@ -102,14 +102,14 @@ git commit -m "$(cat <<'EOF'
 [Thông điệp commit được tạo]
 EOF
 )"
-git push  # Nếu thất bại: git pull --rebase && git push
-git log -1 --oneline --decorate  # Xác minh
+git push # Nếu thất bại: git pull --rebase && git push
+git log -1 --oneline --decorate # Xác minh
 ```
 
 ### 7. Xác Nhận Thành Công
 
 ```
-✅ Đã push thành công đến remote!
+ Đã push thành công đến remote!
 
 Commit: [hash] [message]
 Nhánh: [branch] → origin/[branch]
@@ -127,14 +127,14 @@ Files đã thay đổi: X (+chèn, -xóa)
 
 ## Khi Nào Sử Dụng
 
-✅ **Tốt:**
+ **Tốt:**
 - Các cập nhật tài liệu đa file
 - Tính năng với tests và docs
 - Sửa lỗi trên nhiều file
 - Định dạng/refactoring toàn dự án
 - Thay đổi cấu hình
 
-❌ **Tránh:**
+ **Tránh:**
 - Không chắc những gì đang được commit
 - Chứa bí mật/dữ liệu nhạy cảm
 - Các nhánh được bảo vệ mà không có review
@@ -149,4 +149,4 @@ Nếu người dùng muốn kiểm soát, đề xuất:
 2. **Staging tương tác**: `git add -p` để chọn patch
 3. **Workflow PR**: Tạo nhánh → push → PR (sử dụng lệnh `/pr`)
 
-**⚠️ Nhớ**: Luôn review các thay đổi trước khi push. Khi nghi ngờ, sử dụng các lệnh git riêng lẻ để kiểm soát nhiều hơn.
+** Nhớ**: Luôn review các thay đổi trước khi push. Khi nghi ngờ, sử dụng các lệnh git riêng lẻ để kiểm soát nhiều hơn.

@@ -28,7 +28,7 @@ ISSUES=""
 
 # Check for hardcoded passwords
 # Handles both JSON format ("password": "value") and code format (password = 'value')
-# Use \\n as separator — it is a valid JSON newline escape and passes through printf safely
+# Use \\n as separator - it is a valid JSON newline escape and passes through printf safely
 if grep -qiE '"password"[[:space:]]*:[[:space:]]*"[^"]+"' "$FILE_PATH" 2>/dev/null; then
   ISSUES="${ISSUES}- WARNING: Potential hardcoded password detected\\n"
 elif grep -qiE '(password|passwd|pwd)[[:space:]]*=[[:space:]]*'"'"'[^'"'"']+'"'"'' "$FILE_PATH" 2>/dev/null; then
@@ -69,7 +69,7 @@ fi
 # Use hookSpecificOutput format required by Claude Code PostToolUse protocol
 if [ -n "$ISSUES" ]; then
   # Escape file path for JSON (backslash and double-quote)
-  # ISSUES already uses \\n as separator (valid JSON escape) — only escape double-quotes
+  # ISSUES already uses \\n as separator (valid JSON escape) - only escape double-quotes
   SAFE_PATH=$(printf '%s' "$FILE_PATH" | sed 's/\\/\\\\/g; s/"/\\"/g')
   SAFE_ISSUES=$(printf '%s' "$ISSUES" | sed 's/"/\\"/g')
   printf '{"hookSpecificOutput": {"hookEventName": "PostToolUse", "additionalContext": "Security scan found issues in %s:\\n%sPlease review and use environment variables instead."}}' "$SAFE_PATH" "$SAFE_ISSUES"

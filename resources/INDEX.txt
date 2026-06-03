@@ -1,70 +1,70 @@
 ╔═══════════════════════════════════════════════════════════════════════════╗
-║           CLAUDE HOW TO - BRAND ASSETS RESOURCE LIBRARY                   ║
-║                         Complete Asset Package                            ║
+║ CLAUDE HOW TO - BRAND ASSETS RESOURCE LIBRARY ║
+║ Complete Asset Package ║
 ╚═══════════════════════════════════════════════════════════════════════════╝
 
-📁 DIRECTORY STRUCTURE
+ DIRECTORY STRUCTURE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 resources/
 │
-├── 📄 README.md (Complete Documentation)
-│   └─ Full guide for all assets, usage patterns, HTML integration
+├── README.md (Complete Documentation)
+│ └─ Full guide for all assets, usage patterns, HTML integration
 │
-├── 📄 QUICK-START.md (Copy & Paste Solutions)
-│   └─ Fast setup, recommended sizes, color values
+├── QUICK-START.md (Copy & Paste Solutions)
+│ └─ Fast setup, recommended sizes, color values
 │
-├── 📄 DESIGN-SYSTEM.md (Brand Guidelines)
-│   └─ Visual identity, color system, typography, effects
+├── DESIGN-SYSTEM.md (Brand Guidelines)
+│ └─ Visual identity, color system, typography, effects
 │
-├── 📁 logos/
-│   └─ 📊 claude-howto-logo.svg (800×200px)
-│       → Main horizontal logo with terminal icon
-│       → Perfect for: Headers, marketing, print
+├── logos/
+│ └─ claude-howto-logo.svg (800×200px)
+│ → Main horizontal logo with terminal icon
+│ → Perfect for: Headers, marketing, print
 │
-├── 📁 icons/
-│   └─ 🔷 claude-howto-icon.svg (256×256px)
-│       → App icon with ascending hexagons
-│       → Perfect for: Apps, avatars, thumbnails
+├── icons/
+│ └─ claude-howto-icon.svg (256×256px)
+│ → App icon with ascending hexagons
+│ → Perfect for: Apps, avatars, thumbnails
 │
-└── 📁 favicons/
-    ├─ 🔹 favicon-16.svg   (16×16px)   → Browser tabs
-    ├─ 🔹 favicon-32.svg   (32×32px)   → Standard favicon
-    ├─ 🔹 favicon-64.svg   (64×64px)   → High-DPI
-    ├─ 🔹 favicon-128.svg  (128×128px) → Apple touch icon
-    └─ 🔹 favicon-256.svg  (256×256px) → Modern browsers/PWA
+└── favicons/
+    ├─ favicon-16.svg (16×16px) → Browser tabs
+    ├─ favicon-32.svg (32×32px) → Standard favicon
+    ├─ favicon-64.svg (64×64px) → High-DPI
+    ├─ favicon-128.svg (128×128px) → Apple touch icon
+    └─ favicon-256.svg (256×256px) → Modern browsers/PWA
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-📋 QUICK FILE REFERENCE
+ QUICK FILE REFERENCE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-FILE                          SIZE        USE CASE
+FILE SIZE USE CASE
 ────────────────────────────────────────────────────────────────────────────
-logos/claude-howto-logo.svg   800×200px   Website headers, marketing
-icons/claude-howto-icon.svg   256×256px   App icons, avatars, social
-favicons/favicon-32.svg       32×32px     Browser favicon (primary)
-favicons/favicon-16.svg       16×16px     Browser tab (old browsers)
-favicons/favicon-64.svg       64×64px     Bookmarks, high-DPI
-favicons/favicon-128.svg      128×128px   Apple touch icon
-favicons/favicon-256.svg      256×256px   Android, PWA, modern
+logos/claude-howto-logo.svg 800×200px Website headers, marketing
+icons/claude-howto-icon.svg 256×256px App icons, avatars, social
+favicons/favicon-32.svg 32×32px Browser favicon (primary)
+favicons/favicon-16.svg 16×16px Browser tab (old browsers)
+favicons/favicon-64.svg 64×64px Bookmarks, high-DPI
+favicons/favicon-128.svg 128×128px Apple touch icon
+favicons/favicon-256.svg 256×256px Android, PWA, modern
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-🎨 DESIGN CONCEPT
+ DESIGN CONCEPT
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 The icon uses ASCENDING HEXAGONS to represent learning progression:
 
-              🟢 MINT (Top)
+               MINT (Top)
         Advanced Features
         Levels 7-10
 
-          🟢 EMERALD (Middle)
+           EMERALD (Middle)
     Intermediate Skills
     Levels 4-6
 
-      🟢 DARK EMERALD (Bottom)
+       DARK EMERALD (Bottom)
   Beginner Fundamentals
   Levels 1-3
 
@@ -72,23 +72,23 @@ Visual meaning: Upward progression = Learning journey from beginner to mastery
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-🎨 COLOR PALETTE
+ COLOR PALETTE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-COLOR               HEX         RGB             USAGE
+COLOR HEX RGB USAGE
 ─────────────────────────────────────────────────────────────────────────────
-Deep Forest         #0d1f0d     13, 31, 13      Backgrounds
-Emerald (Primary)   #10b981     16, 185, 129    Main accents
-Dark Emerald        #059669     5, 150, 105     Secondary accents
-Forest              #047857     4, 120, 87      Tertiary accents
-Mint (Highlight)    #6ee7b7     110, 231, 183   Highlights
-Light Mint          #34d399     52, 211, 153    Secondary highlights
+Deep Forest #0d1f0d 13, 31, 13 Backgrounds
+Emerald (Primary) #10b981 16, 185, 129 Main accents
+Dark Emerald #059669 5, 150, 105 Secondary accents
+Forest #047857 4, 120, 87 Tertiary accents
+Mint (Highlight) #6ee7b7 110, 231, 183 Highlights
+Light Mint #34d399 52, 211, 153 Secondary highlights
 
 All colors maintain WCAG AAA contrast on dark backgrounds (8.2:1+)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-📖 DOCUMENTATION FILES
+ DOCUMENTATION FILES
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 1. README.md
@@ -121,7 +121,7 @@ All colors maintain WCAG AAA contrast on dark backgrounds (8.2:1+)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-🚀 GETTING STARTED
+ GETTING STARTED
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 STEP 1: Choose Your Use Case
@@ -141,31 +141,31 @@ STEP 3: Copy & Use
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-✅ FILE CHECKLIST
+ FILE CHECKLIST
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Logos:
-  ✓ claude-howto-logo.svg (main logo)
+   claude-howto-logo.svg (main logo)
 
 Icons:
-  ✓ claude-howto-icon.svg (app icon)
+   claude-howto-icon.svg (app icon)
 
 Favicons (all sizes):
-  ✓ favicon-16.svg
-  ✓ favicon-32.svg
-  ✓ favicon-64.svg
-  ✓ favicon-128.svg
-  ✓ favicon-256.svg
+   favicon-16.svg
+   favicon-32.svg
+   favicon-64.svg
+   favicon-128.svg
+   favicon-256.svg
 
 Documentation:
-  ✓ README.md (complete guide)
-  ✓ QUICK-START.md (fast reference)
-  ✓ DESIGN-SYSTEM.md (brand guidelines)
-  ✓ INDEX.txt (this file)
+   README.md (complete guide)
+   QUICK-START.md (fast reference)
+   DESIGN-SYSTEM.md (brand guidelines)
+   INDEX.txt (this file)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-📝 FILE FORMATS
+ FILE FORMATS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 All assets are in SVG format:
@@ -179,7 +179,7 @@ No raster images needed - SVG covers all use cases!
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-🤝 INTEGRATION EXAMPLES
+ INTEGRATION EXAMPLES
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 HTML (Web):
@@ -200,7 +200,7 @@ Next.js/Web Framework:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-📊 ASSET STATISTICS
+ ASSET STATISTICS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Total Assets: 7 SVG files
@@ -223,7 +223,7 @@ Last Updated: January 2026
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-📞 SUPPORT & MORE
+ SUPPORT & MORE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 For detailed information:
@@ -238,4 +238,4 @@ Questions or customization needed?
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Happy building! 🚀
+Happy building!

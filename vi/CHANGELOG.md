@@ -1,6 +1,6 @@
 # Changelog
 
-## v2.3.0 — 2026-04-07
+## v2.3.0 - 2026-04-07
 
 ### Tính Năng / Features
 
@@ -38,14 +38,14 @@
 
 ### Khác / Other
 
-- Chuyển các cổng chất lượng sang trái — thêm mypy vào pre-commit, sửa các lỗi CI (699fb39) @Luong NGUYEN
+- Chuyển các cổng chất lượng sang trái - thêm mypy vào pre-commit, sửa các lỗi CI (699fb39) @Luong NGUYEN
 - Thêm bản địa hóa tiếng Việt (Tiếng Việt) (a70777e) @Thiên Toán
 
 **Full Changelog**: https://github.com/luongnv89/claude-howto/compare/v2.2.0...v2.3.0
 
 ---
 
-## v2.2.0 — 2026-03-26
+## v2.2.0 - 2026-03-26
 
 ### Tài Liệu / Documentation
 
@@ -68,7 +68,7 @@
 
 ---
 
-## v2.1.1 — 2026-03-13
+## v2.1.1 - 2026-03-13
 
 ### Sửa Lỗi / Bug Fixes
 
@@ -79,13 +79,13 @@
 
 ---
 
-## v2.1.0 — 2026-03-13
+## v2.1.0 - 2026-03-13
 
 ### Tính Năng / Features
 
 - Thêm đường dẫn học tập thích ứng với self-assessment và kỹ năng quiz bài học (1ef46cd) @luongnv89
-  - `/self-assessment` — quiz trình độ tương tác trên 10 lĩnh vực tính năng với đường dẫn học tập được cá nhân hóa
-  - `/lesson-quiz [lesson]` — kiểm tra kiến thức mỗi bài học với 8-10 câu hỏi được nhắm mục tiêu
+  - `/self-assessment` - quiz trình độ tương tác trên 10 lĩnh vực tính năng với đường dẫn học tập được cá nhân hóa
+  - `/lesson-quiz [lesson]` - kiểm tra kiến thức mỗi bài học với 8-10 câu hỏi được nhắm mục tiêu
 
 ### Sửa Lỗi / Bug Fixes
 
@@ -96,8 +96,8 @@
 
 ### Tài Liệu / Documentation
 
-- Giai đoạn 5 QA — sửa nhất quán, URLs, và thuật ngữ trên các tài liệu (00bbe4c) @luongnv89
-- Hoàn thành Giai đoạn 3-4 — phạm vi tính năng mới và cập nhật tài liệu tham khảo (132de29) @luongnv89
+- Giai đoạn 5 QA - sửa nhất quán, URLs, và thuật ngữ trên các tài liệu (00bbe4c) @luongnv89
+- Hoàn thành Giai đoạn 3-4 - phạm vi tính năng mới và cập nhật tài liệu tham khảo (132de29) @luongnv89
 - Thêm runtime MCPorter vào phần context bloat MCP (ef52705) @luongnv89
 - Thêm các lệnh, tính năng, và settings bị thiếu qua 6 hướng dẫn (4bc8f15) @luongnv89
 - Thêm hướng dẫn style dựa trên các quy ước repo hiện có (84141d0) @luongnv89
@@ -113,13 +113,13 @@
 
 ---
 
-## v2.0.0 — 2026-02-01
+## v2.0.0 - 2026-02-01
 
 ### Tính Năng / Features
 
 - Đồng bộ tất cả tài liệu với các tính năng Claude Code tháng 2 năm 2026 (487c96d)
   - Cập nhật 26 files trên tất cả 10 thư mục hướng dẫn và 7 tài liệu tham khảo
-  - Thêm tài liệu cho **Auto Memory** — các bài học liên tục cho mỗi dự án
+  - Thêm tài liệu cho **Auto Memory** - các bài học liên tục cho mỗi dự án
   - Thêm tài liệu cho **Remote Control**, **Web Sessions**, và **Desktop App**
   - Thêm tài liệu cho **Agent Teams** (hợp tác đa tác nhân thực nghiệm)
   - Thêm tài liệu cho **MCP OAuth 2.0**, **Tool Search**, và **Claude.ai Connectors**

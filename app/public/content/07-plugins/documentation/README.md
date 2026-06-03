@@ -9,11 +9,11 @@ Comprehensive documentation generation and maintenance for your project.
 
 ## Features
 
-✅ API documentation generation
-✅ README creation and updates
-✅ Documentation synchronization
-✅ Code comment improvements
-✅ Example generation
+ API documentation generation
+ README creation and updates
+ Documentation synchronization
+ Code comment improvements
+ Example generation
 
 ## Installation
 
@@ -84,12 +84,12 @@ Claude:
 7. Includes curl, JavaScript, and Python examples
 
 Result:
-✅ API documentation generated
-📄 Files created:
+ API documentation generated
+ Files created:
    - docs/api/users.md
    - docs/api/auth.md
    - docs/api/products.md
-📊 Coverage: 23/23 endpoints documented
+ Coverage: 23/23 endpoints documented
 ```
 
 ## Templates Usage

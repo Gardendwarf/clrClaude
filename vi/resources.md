@@ -30,7 +30,7 @@
 
 | Bài Viết | Mô Tả | Liên Kết |
 |---------|-------------|------|
-| Code Execution with MCP | Cách giải quyết MCP context bloat sử dụng code execution — 98.7% token reduction | [anthropic.com/engineering/code-execution-with-mcp](https://www.anthropic.com/engineering/code-execution-with-mcp) |
+| Code Execution with MCP | Cách giải quyết MCP context bloat sử dụng code execution - 98.7% token reduction | [anthropic.com/engineering/code-execution-with-mcp](https://www.anthropic.com/engineering/code-execution-with-mcp) |
 
 ---
 
@@ -91,7 +91,7 @@ _**Tất Cả Tips**_
   - Sử dụng Claude để draft PR descriptions, release notes, hoặc documentation dựa trên code diffs.
   - **Example prompt**: _"Based on the git diff, create a detailed PR description with a summary of changes, list of modified files, testing steps, and potential impacts. Also generate release notes for version 2.3.0."_
 
-**Tip**: Để có kết quả tốt nhất, kết hợp một số practices này — bắt đầu bằng cách pinning các critical files và summarizing goals của bạn, sau đó sử dụng focused prompts và các công cụ refactoring của Claude để incrementally improve codebase và automation của bạn.
+**Tip**: Để có kết quả tốt nhất, kết hợp một số practices này - bắt đầu bằng cách pinning các critical files và summarizing goals của bạn, sau đó sử dụng focused prompts và các công cụ refactoring của Claude để incrementally improve codebase và automation của bạn.
 
 
 **Recommended workflow with Claude Code / Workflow được khuyến nghị với Claude Code**
@@ -106,7 +106,7 @@ _**Tất Cả Tips**_
 2. **Sử Dụng Plan Mode và Specs**
    - Sử dụng plan mode (`shift-tab` hoặc `/plan`) để draft một specification chi tiết trước khi implement features.
    - Hỏi Claude để được architecture suggestions và initial project layout.
-   - Giữ một clear, goal-oriented prompt sequence — hỏi về component outlines, major modules, và responsibilities.
+   - Giữ một clear, goal-oriented prompt sequence - hỏi về component outlines, major modules, và responsibilities.
 
 3. **Phát Triển & Review Iterative**
    - Implement core features trong small chunks, prompting Claude cho code generation, refactoring, và documentation.

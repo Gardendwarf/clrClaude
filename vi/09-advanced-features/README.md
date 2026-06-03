@@ -75,14 +75,14 @@ Planning mode is a two-phase approach:
 
 ### When to Use Planning Mode
 
-✅ Use planning mode for:
+ Use planning mode for:
 - Complex multi-file refactoring
 - New feature implementations
 - Architectural changes
 - Database migrations
 - Major API redesigns
 
-❌ Don't use planning mode for:
+ Don't use planning mode for:
 - Simple bug fixes
 - Formatting changes
 - Single-file edits
@@ -232,7 +232,7 @@ export MAX_THINKING_TOKENS=1024
 
 **Effort level** (Opus 4.6 only):
 ```bash
-export CLAUDE_CODE_EFFORT_LEVEL=high   # low (○), medium (◐), high (●), or max (Opus 4.6 only)
+export CLAUDE_CODE_EFFORT_LEVEL=high # low (○), medium (◐), high (●), or max (Opus 4.6 only)
 ```
 
 **CLI flag**:
@@ -312,10 +312,10 @@ Start with a **modular monolith**:
 - Prepare for future extraction to microservices if needed
 
 This gives you:
-✓ Fast initial development
-✓ Low operational complexity
-✓ Option to extract services later
-✓ Clear architecture
+ Fast initial development
+ Low operational complexity
+ Option to extract services later
+ Clear architecture
 
 Migration path: When you reach 50k+ users or specific modules need independent scaling, extract those modules into microservices.
 </extended_thinking>
@@ -456,7 +456,7 @@ The script adds rules across these categories:
 | Common shell | `Bash(ls:*)`, `Bash(cat:*)`, `Bash(find:*)`, `Bash(cp:*)`, `Bash(mv:*)` |
 | GitHub CLI | `Bash(gh pr view:*)`, `Bash(gh pr create:*)`, `Bash(gh issue list:*)` |
 
-Dangerous operations (`rm -rf`, `sudo`, force push, `DROP TABLE`, `terraform destroy`, etc.) are intentionally excluded. The script is idempotent — running it twice won't duplicate rules.
+Dangerous operations (`rm -rf`, `sudo`, force push, `DROP TABLE`, `terraform destroy`, etc.) are intentionally excluded. The script is idempotent - running it twice won't duplicate rules.
 
 ---
 
@@ -479,9 +479,9 @@ User: Run tests in background
 
 Claude: Started task bg-1234
 
-/task list           # Show all tasks
+/task list # Show all tasks
 /task status bg-1234 # Check progress
-/task show bg-1234   # View output
+/task show bg-1234 # View output
 /task cancel bg-1234 # Cancel task
 ```
 
@@ -501,9 +501,9 @@ Claude: [Works on auth module while tests run in background]
 
 [Later, when tests complete]
 
-Claude: 📢 Background task bg-1234 completed:
-✅ 245 tests passed
-❌ 3 tests failed
+Claude: Background task bg-1234 completed:
+ 245 tests passed
+ 3 tests failed
 View results: /task show bg-1234
 ```
 
@@ -561,8 +561,8 @@ Claude: [Implements API endpoint while build and linter run]
 
 [10 minutes later]
 
-Claude: 📢 Build completed successfully (bg-5001)
-📢 Linter found 12 issues (bg-5002)
+Claude: Build completed successfully (bg-5001)
+ Linter found 12 issues (bg-5002)
 
 User: Show me the linter issues
 
@@ -587,7 +587,7 @@ Claude: [Shows linter output from bg-5002]
 
 ## Scheduled Tasks
 
-Scheduled Tasks let you run prompts automatically on a recurring schedule or as one-time reminders. Tasks are session-scoped — they run while Claude Code is active and are cleared when the session ends. Available since v2.1.72+.
+Scheduled Tasks let you run prompts automatically on a recurring schedule or as one-time reminders. Tasks are session-scoped - they run while Claude Code is active and are cleared when the session ends. Available since v2.1.72+.
 
 ### The `/loop` command
 
@@ -620,9 +620,9 @@ in 45 minutes, run the integration tests
 
 **Limits and behavior**:
 - Up to **50 scheduled tasks** per session
-- Session-scoped — cleared when the session ends
+- Session-scoped - cleared when the session ends
 - Recurring tasks auto-expire after **3 days**
-- Tasks only fire while Claude Code is running — no catch-up for missed fires
+- Tasks only fire while Claude Code is running - no catch-up for missed fires
 
 ### Behavior details
 
@@ -630,7 +630,7 @@ in 45 minutes, run the integration tests
 |--------|--------|
 | **Recurring jitter** | Up to 10% of the interval (max 15 minutes) |
 | **One-shot jitter** | Up to 90 seconds on :00/:30 boundaries |
-| **Missed fires** | No catch-up — skipped if Claude Code was not running |
+| **Missed fires** | No catch-up - skipped if Claude Code was not running |
 | **Persistence** | Not persisted across restarts |
 
 ### Cloud Scheduled Tasks
@@ -682,12 +682,12 @@ Cycle through modes with `Shift+Tab` in the CLI. Set a default with the `--permi
 
 **Keyboard shortcut**:
 ```bash
-Shift + Tab  # Cycle through all 6 modes
+Shift + Tab # Cycle through all 6 modes
 ```
 
 **Slash command**:
 ```bash
-/plan                  # Enter plan mode
+/plan # Enter plan mode
 ```
 
 **CLI flag**:
@@ -1023,8 +1023,8 @@ There are 18 contexts total including `Transcript`, `Task`, `ThemePicker`, `Atta
 Keybindings support chord sequences (multi-key combinations):
 
 ```
-"ctrl+k ctrl+s"   → Two-key sequence: press ctrl+k, then ctrl+s
-"ctrl+shift+p"    → Simultaneous modifier keys
+"ctrl+k ctrl+s" → Two-key sequence: press ctrl+k, then ctrl+s
+"ctrl+shift+p" → Simultaneous modifier keys
 ```
 
 **Keystroke syntax**:
@@ -1066,9 +1066,9 @@ User: /plugin <TAB>
 Access previous commands:
 
 ```
-User: <↑>  # Previous command
-User: <↓>  # Next command
-User: Ctrl+R  # Search history
+User: <↑> # Previous command
+User: <↓> # Next command
+User: Ctrl+R # Search history
 
 (reverse-i-search)`test': run all tests
 ```
@@ -1216,8 +1216,8 @@ Chrome Integration connects Claude Code to your Chrome or Microsoft Edge browser
 **At startup**:
 
 ```bash
-claude --chrome      # Enable Chrome connection
-claude --no-chrome   # Disable Chrome connection
+claude --chrome # Enable Chrome connection
+claude --no-chrome # Disable Chrome connection
 ```
 
 **Within a session**:
@@ -1245,11 +1245,11 @@ The Chrome extension manages per-site access. Grant or revoke access for specifi
 
 ### How it works
 
-Claude Code controls the browser in a visible window — you can watch actions happen in real time. When the browser encounters a login page or CAPTCHA, Claude pauses and waits for you to handle it manually before continuing.
+Claude Code controls the browser in a visible window - you can watch actions happen in real time. When the browser encounters a login page or CAPTCHA, Claude pauses and waits for you to handle it manually before continuing.
 
 ### Known limitations
 
-- **Browser support**: Chrome and Edge only — Brave, Arc, and other Chromium browsers are not supported
+- **Browser support**: Chrome and Edge only - Brave, Arc, and other Chromium browsers are not supported
 - **WSL**: Not available in Windows Subsystem for Linux
 - **Third-party providers**: Not supported with Bedrock, Vertex, or Foundry API providers
 - **Service worker idle**: The Chrome extension service worker may go idle during extended sessions
@@ -1260,7 +1260,7 @@ Claude Code controls the browser in a visible window — you can watch actions h
 
 ## Remote Control
 
-Remote Control lets you continue a locally running Claude Code session from your phone, tablet, or any browser. Your local session keeps running on your machine — nothing moves to the cloud. Available on Pro, Max, Team, and Enterprise plans (v2.1.51+).
+Remote Control lets you continue a locally running Claude Code session from your phone, tablet, or any browser. Your local session keeps running on your machine - nothing moves to the cloud. Available on Pro, Max, Team, and Enterprise plans (v2.1.51+).
 
 ### Starting Remote Control
 
@@ -1294,16 +1294,16 @@ claude remote-control --name "Auth Refactor"
 
 Three ways to connect from another device:
 
-1. **Session URL** — Printed to the terminal when the session starts; open in any browser
-2. **QR code** — Press `spacebar` after starting to display a scannable QR code
-3. **Find by name** — Browse your sessions at claude.ai/code or in the Claude mobile app (iOS/Android)
+1. **Session URL** - Printed to the terminal when the session starts; open in any browser
+2. **QR code** - Press `spacebar` after starting to display a scannable QR code
+3. **Find by name** - Browse your sessions at claude.ai/code or in the Claude mobile app (iOS/Android)
 
 ### Security
 
 - **No inbound ports** opened on your machine
 - **Outbound HTTPS only** over TLS
-- **Scoped credentials** — multiple short-lived, narrowly scoped tokens
-- **Session isolation** — each remote session is independent
+- **Scoped credentials** - multiple short-lived, narrowly scoped tokens
+- **Session isolation** - each remote session is independent
 
 ### Remote Control vs Claude Code on the web
 
@@ -1555,8 +1555,8 @@ Sandboxing provides OS-level filesystem and network isolation for Bash commands 
 
 **CLI flags**:
 ```bash
-claude --sandbox       # Enable sandboxing
-claude --no-sandbox    # Disable sandboxing
+claude --sandbox # Enable sandboxing
+claude --no-sandbox # Disable sandboxing
 ```
 
 ### Configuration Settings
@@ -1749,7 +1749,7 @@ export CLAUDE_CODE_DISABLE_1M_CONTEXT=true
 export CLAUDE_CODE_DISABLE_NONSTREAMING_FALLBACK=true
 export CLAUDE_CODE_ENABLE_PROMPT_SUGGESTION=false
 export CLAUDE_CODE_ENABLE_TASKS=true
-export CLAUDE_CODE_SIMPLE=true              # Set by --bare flag
+export CLAUDE_CODE_SIMPLE=true # Set by --bare flag
 
 # MCP configuration
 export MAX_MCP_OUTPUT_TOKENS=50000
@@ -1817,35 +1817,35 @@ Create `.claude/config.json` in your project:
 ## Best Practices
 
 ### Planning Mode
-- ✅ Use for complex multi-step tasks
-- ✅ Review plans before approving
-- ✅ Modify plans when needed
-- ❌ Don't use for simple tasks
+- Use for complex multi-step tasks
+- Review plans before approving
+- Modify plans when needed
+- Don't use for simple tasks
 
 ### Extended Thinking
-- ✅ Use for architectural decisions
-- ✅ Use for complex problem-solving
-- ✅ Review the thinking process
-- ❌ Don't use for simple queries
+- Use for architectural decisions
+- Use for complex problem-solving
+- Review the thinking process
+- Don't use for simple queries
 
 ### Background Tasks
-- ✅ Use for long-running operations
-- ✅ Monitor task progress
-- ✅ Handle task failures gracefully
-- ❌ Don't start too many concurrent tasks
+- Use for long-running operations
+- Monitor task progress
+- Handle task failures gracefully
+- Don't start too many concurrent tasks
 
 ### Permissions
-- ✅ Use `plan` for code review (read-only)
-- ✅ Use `default` for interactive development
-- ✅ Use `acceptEdits` for automation workflows
-- ✅ Use `auto` for autonomous work with safety guardrails
-- ❌ Don't use `bypassPermissions` unless absolutely necessary
+- Use `plan` for code review (read-only)
+- Use `default` for interactive development
+- Use `acceptEdits` for automation workflows
+- Use `auto` for autonomous work with safety guardrails
+- Don't use `bypassPermissions` unless absolutely necessary
 
 ### Sessions
-- ✅ Use separate sessions for different tasks
-- ✅ Save important session states
-- ✅ Clean up old sessions
-- ❌ Don't mix unrelated work in one session
+- Use separate sessions for different tasks
+- Save important session states
+- Clean up old sessions
+- Don't mix unrelated work in one session
 
 ---
 

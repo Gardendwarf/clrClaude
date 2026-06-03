@@ -5,7 +5,7 @@
 
 # Claude Code 示例 - 速查卡
 
-## 🚀 安装速命令
+## 安装速命令
 
 ### Slash Commands
 ```bash
@@ -92,24 +92,24 @@ chmod +x ~/.claude/hooks/*.sh
 /plan 任务描述
 
 # 权限模式（使用 --permission-mode 参数）
-# default          - 风险操作需要审批
-# acceptEdits      - 自动接受文件编辑，其他操作仍需审批
-# plan             - 只读分析，不做修改
-# dontAsk          - 除危险操作外全部接受
-# auto             - 后台分类器自动决定权限
+# default - 风险操作需要审批
+# acceptEdits - 自动接受文件编辑，其他操作仍需审批
+# plan - 只读分析，不做修改
+# dontAsk - 除危险操作外全部接受
+# auto - 后台分类器自动决定权限
 # bypassPermissions - 全部接受（需要 --dangerously-skip-permissions）
 
 # 会话管理
-/resume                # 恢复之前的对话
-/rename "name"         # 命名当前会话
-/fork                  # 分叉当前会话
-claude -c              # 继续最近的对话
-claude -r "session"    # 按名称/ID 恢复会话
+/resume # 恢复之前的对话
+/rename "name" # 命名当前会话
+/fork # 分叉当前会话
+claude -c # 继续最近的对话
+claude -r "session" # 按名称/ID 恢复会话
 ```
 
 ---
 
-## 📋 功能速览
+## 功能速览
 
 | 功能 | 安装路径 | 用法 |
 |------|----------|------|
@@ -134,7 +134,7 @@ claude -r "session"    # 按名称/ID 恢复会话
 
 ---
 
-## 🎯 常见使用场景
+## 常见使用场景
 
 ### 代码审查
 ```bash
@@ -268,36 +268,36 @@ export CLAUDE_AGENT_TEAMS=1
 
 ---
 
-## 📁 文件位置参考
+## 文件位置参考
 
 ```text
 Your Project/
 ├── .claude/
-│   ├── commands/              # Slash commands 放这里
-│   ├── agents/                # Subagents 放这里
-│   ├── skills/                # 项目 skills 放这里
-│   └── settings.json          # 项目设置（hooks 等）
-├── .mcp.json                  # MCP 配置（项目级）
-├── CLAUDE.md                  # 项目 memory
+│ ├── commands/ # Slash commands 放这里
+│ ├── agents/ # Subagents 放这里
+│ ├── skills/ # 项目 skills 放这里
+│ └── settings.json # 项目设置（hooks 等）
+├── .mcp.json # MCP 配置（项目级）
+├── CLAUDE.md # 项目 memory
 └── src/
     └── api/
-        └── CLAUDE.md          # 目录级 memory
+        └── CLAUDE.md # 目录级 memory
 
 User Home/
 ├── .claude/
-│   ├── commands/              # 个人命令
-│   ├── agents/                # 个人 agents
-│   ├── skills/                # 个人 skills
-│   ├── hooks/                 # hook 脚本
-│   ├── settings.json          # 用户设置
-│   ├── managed-settings.d/    # 托管设置（企业/组织）
-│   └── CLAUDE.md              # 个人 memory
-└── .claude.json               # 个人 MCP 配置（用户级）
+│ ├── commands/ # 个人命令
+│ ├── agents/ # 个人 agents
+│ ├── skills/ # 个人 skills
+│ ├── hooks/ # hook 脚本
+│ ├── settings.json # 用户设置
+│ ├── managed-settings.d/ # 托管设置（企业/组织）
+│ └── CLAUDE.md # 个人 memory
+└── .claude.json # 个人 MCP 配置（用户级）
 ```
 
 ---
 
-## 🔍 查找示例
+## 查找示例
 
 ### 按分类
 - **Slash Commands**：`01-slash-commands/`
@@ -326,7 +326,7 @@ User Home/
 
 ---
 
-## 🎓 学习路径
+## 学习路径
 
 ### 第 1 天
 ```bash
@@ -382,7 +382,7 @@ cp -r 03-skills/code-review ~/.claude/skills/
 
 ---
 
-## 🆕 新功能（2026 年 3 月）
+## 新功能（2026 年 3 月）
 
 | 功能 | 说明 | 用法 |
 |------|------|------|
@@ -407,7 +407,7 @@ cp -r 03-skills/code-review ~/.claude/skills/
 
 ---
 
-## 💡 小技巧
+## 小技巧
 
 ### 自定义
 - 先原样使用示例
@@ -436,7 +436,7 @@ echo $GITHUB_TOKEN
 
 ---
 
-## 📊 功能矩阵
+## 功能矩阵
 
 | 需求 | 用这个 | 示例 |
 |------|--------|------|
@@ -454,7 +454,7 @@ echo $GITHUB_TOKEN
 
 ---
 
-## 🔗 快速链接
+## 快速链接
 
 - **主指南**：`README.md`
 - **完整索引**：`INDEX.md`
@@ -463,7 +463,7 @@ echo $GITHUB_TOKEN
 
 ---
 
-## 📞 常见问题
+## 常见问题
 
 **问：我应该先用哪个？**
 答：先从 slash commands 开始，按需逐步添加功能。
@@ -482,7 +482,7 @@ echo $GITHUB_TOKEN
 
 ---
 
-## ✅ 检查清单
+## 检查清单
 
 入门清单：
 

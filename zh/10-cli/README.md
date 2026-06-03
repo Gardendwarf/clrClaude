@@ -156,9 +156,9 @@ claude -p --system-prompt-file ./prompts/code-reviewer.txt "review main.py"
 
 | 参数 | 行为 | 交互模式 | 打印模式 |
 |------|----------|-------------|-------|
-| `--system-prompt` | 替换整个默认系统提示词 | ✅ | ✅ |
-| `--system-prompt-file` | 用文件中的提示词替换 | ❌ | ✅ |
-| `--append-system-prompt` | 追加到默认系统提示词后 | ✅ | ✅ |
+| `--system-prompt` | 替换整个默认系统提示词 | | |
+| `--system-prompt-file` | 用文件中的提示词替换 | | |
+| `--append-system-prompt` | 追加到默认系统提示词后 | | |
 
 **仅在打印模式中使用 `--system-prompt-file`。交互模式请使用 `--system-prompt` 或 `--append-system-prompt`。**
 
@@ -196,10 +196,10 @@ claude --disallowedTools "Bash(rm -rf:*)" "Bash(git push --force:*)"
 |------|-------------|---------|---------|
 | `--output-format` | 指定输出格式（打印模式） | `text`、`json`、`stream-json` | `claude -p --output-format json "query"` |
 | `--input-format` | 指定输入格式（打印模式） | `text`、`stream-json` | `claude -p --input-format stream-json` |
-| `--verbose` | 启用详细日志 |  | `claude --verbose` |
+| `--verbose` | 启用详细日志 | | `claude --verbose` |
 | `--include-partial-messages` | 包含流式事件 | 需要 `stream-json` | `claude -p --output-format stream-json --include-partial-messages "query"` |
-| `--json-schema` | 获取符合 schema 的 JSON 输出 |  | `claude -p --json-schema '{"type":"object"}' "query"` |
-| `--max-budget-usd` | 打印模式最大花费 |  | `claude -p --max-budget-usd 5.00 "query"` |
+| `--json-schema` | 获取符合 schema 的 JSON 输出 | | `claude -p --json-schema '{"type":"object"}' "query"` |
+| `--max-budget-usd` | 打印模式最大花费 | | `claude -p --max-budget-usd 5.00 "query"` |
 
 ### 输出格式示例
 

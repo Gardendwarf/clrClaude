@@ -902,7 +902,7 @@ if __name__ == "__main__":
 
 ### Example 7: Seed Auto-Mode Permissions (One-Time Setup Script)
 
-A one-time setup script that seeds `~/.claude/settings.json` with ~67 safe permission rules equivalent to Claude Code's auto-mode baseline — without any hook, without remembering future choices. Run it once; safe to re-run (skips rules already present).
+A one-time setup script that seeds `~/.claude/settings.json` with ~67 safe permission rules equivalent to Claude Code's auto-mode baseline - without any hook, without remembering future choices. Run it once; safe to re-run (skips rules already present).
 
 **File:** `09-advanced-features/setup-auto-mode-permissions.py`
 

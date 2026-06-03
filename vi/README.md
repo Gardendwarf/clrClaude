@@ -1,19 +1,19 @@
 # Hướng Dẫn Claude Code
 
-🌐 **Language / Ngôn ngữ:** [English](../README.md) | [Tiếng Việt](README.md)
+ **Language / Ngôn ngữ:** [English](../README.md) | [Tiếng Việt](README.md)
 
 > **Làm chủ Claude Code trong một cuối tuần**
 
 Đây là bản tiếng Việt của tài liệu [Claude Code How-To Guide](../README.md).
 
-## 📖 Giới Thiệu
+## Giới Thiệu
 
 Tài liệu này giúp bạn:
 - Hiểu và sử dụng Claude Code hiệu quả
 - Tự động hóa các tác vụ phát triển phần mềm
 - Tích hợp Claude Code vào workflow hàng ngày
 
-## 🚀 Bắt Đầu Nhanh
+## Bắt Đầu Nhanh
 
 ### Yêu Cầu
 
@@ -33,7 +33,7 @@ mkdir -p .claude/commands
 cp 01-slash-commands/*.md .claude/commands/
 ```
 
-## 📚 Cấu Trúc Tài Liệu
+## Cấu Trúc Tài Liệu
 
 Tài liệu được chia thành 10 modules theo trình tự học:
 
@@ -48,17 +48,17 @@ Tài liệu được chia thành 10 modules theo trình tự học:
 9. **[09 - Tính Nâng Cao](09-advanced-features/)** - Planning, thinking, backgrounds
 10. **[10 - CLI](10-cli/)** - Tham chiếu dòng lệnh
 
-## 🔗 Liên Kết
+## Liên Kết
 
 - [Bản tiếng Anh](../README.md)
 - [Tài liệu Chính thức Claude Code](https://code.claude.com/docs)
 - [GitHub Repository](https://github.com/luongnv89/claude-howto)
 
-## 🤝 Đóng Góp
+## Đóng Góp
 
 Xem [CONTRIBUTING.md](../CONTRIBUTING.md) để biết thêm chi tiết.
 
-## 📝 Ghi Chú Dịch Thuật
+## Ghi Chú Dịch Thuật
 
 Xem [TRANSLATION_NOTES.md](TRANSLATION_NOTES.md) để hiểu:
 - Glossary thuật ngữ kỹ thuật

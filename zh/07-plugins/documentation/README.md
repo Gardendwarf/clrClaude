@@ -10,11 +10,11 @@ tags: plugins, documentation, automation
 
 ## 特性
 
-✅ 生成 API 文档
-✅ 创建和更新 README
-✅ 同步文档
-✅ 改进代码注释
-✅ 生成示例
+ 生成 API 文档
+ 创建和更新 README
+ 同步文档
+ 改进代码注释
+ 生成示例
 
 ## 包含内容
 
@@ -92,12 +92,12 @@ Claude：
 7. 包含 curl、JavaScript 和 Python 示例
 
 结果：
-✅ API 文档已生成
-📄 已创建文件：
+ API 文档已生成
+ 已创建文件：
    - docs/api/users.md
    - docs/api/auth.md
    - docs/api/products.md
-📊 覆盖率：23/23 个端点已文档化
+ 覆盖率：23/23 个端点已文档化
 ```
 
 ## 模板用途

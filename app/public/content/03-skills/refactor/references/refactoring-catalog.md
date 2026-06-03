@@ -2,7 +2,7 @@
 
 A curated catalog of refactoring techniques from Martin Fowler's *Refactoring* (2nd Edition). Each refactoring includes motivation, step-by-step mechanics, and examples.
 
-> "A refactoring is defined by its mechanics—the precise sequence of steps that you follow to carry out the change." — Martin Fowler
+> "A refactoring is defined by its mechanics-the precise sequence of steps that you follow to carry out the change." - Martin Fowler
 
 ---
 

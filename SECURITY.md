@@ -10,8 +10,8 @@ We provide security updates for the following versions:
 
 | Version | Status | Support Until |
 |---------|--------|---------------|
-| Latest (main) | ✅ Active | Current + 6 months |
-| 1.x releases | ✅ Active | Until next major version |
+| Latest (main) | Active | Current + 6 months |
+| 1.x releases | Active | Until next major version |
 
 **Note**: As an educational guide project, we focus on maintaining current best practices and documentation security rather than traditional version support. Updates are applied directly to the main branch.
 
@@ -239,16 +239,16 @@ pip-audit
 
 1. **Never hardcode secrets**
    ```python
-   # ❌ Bad
+   # Bad
    api_key = "sk-1234567890"
 
-   # ✅ Good
+   # Good
    api_key = os.getenv("API_KEY")
    ```
 
 2. **Warn about security implications**
    ```markdown
-   ⚠️ **Security Note**: Never commit `.env` files to git.
+    **Security Note**: Never commit `.env` files to git.
    Add to `.gitignore` immediately.
    ```
 
@@ -331,4 +331,4 @@ This security policy is reviewed and updated:
 
 ---
 
-Thank you for helping keep Claude How To secure! 🔒
+Thank you for helping keep Claude How To secure!

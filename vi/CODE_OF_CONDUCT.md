@@ -138,26 +138,26 @@ Nếu bạn tin rằng một quyết định được đưa ra do lỗi, bạn c
 Bất đồng là điều tự nhiên trong các cộng đồng kỹ thuật. Dưới đây là cách không đồng ý một cách tôn trọng:
 
 ### Nên Làm / Do's
-- ✅ Tập trung vào ý tưởng, không phải con người
-- ✅ Đặt câu hỏi làm rõ
-- ✅ Thừa nhận các điểm hợp lệ trong quan điểm đối lập
-- ✅ Sử dụng câu "Tôi" ("Tôi không đồng ý vì...")
-- ✅ Trích dẫn nguồn và bằng chứng
-- ✅ Cảm ơn người khác vì quan điểm của họ
+- Tập trung vào ý tưởng, không phải con người
+- Đặt câu hỏi làm rõ
+- Thừa nhận các điểm hợp lệ trong quan điểm đối lập
+- Sử dụng câu "Tôi" ("Tôi không đồng ý vì...")
+- Trích dẫn nguồn và bằng chứng
+- Cảm ơn người khác vì quan điểm của họ
 
 ### Không Nên / Don'ts
-- ❌ Tấn công cá nhân
-- ❌ Sử dụng ngôn ngữ coi thường ("Đó là ý tưởng ngu ngốc")
-- ❌ Giả định ý định xấu
-- ❌ Đưa ra các xung đột trong quá khứ không liên quan
-- ❌ Leo thang giọng điệu hoặc trở nên thù địch
-- ❌ Cố tình bóp méo quan điểm của người khác
+- Tấn công cá nhân
+- Sử dụng ngôn ngữ coi thường ("Đó là ý tưởng ngu ngốc")
+- Giả định ý định xấu
+- Đưa ra các xung đột trong quá khứ không liên quan
+- Leo thang giọng điệu hoặc trở nên thù địch
+- Cố tình bóp méo quan điểm của người khác
 
 ### Ví Dụ Không Đồng Ý Tôn Trọng / Example of Respectful Disagreement
 ```
-❌ Bad: "That's a dumb idea and you clearly don't understand the project."
+ Bad: "That's a dumb idea and you clearly don't understand the project."
 
-✅ Good: "I see your point, but I'm concerned this approach might
+ Good: "I see your point, but I'm concerned this approach might
 not scale well with larger projects. Have you considered the
 performance implications shown in this benchmark? I'd love to
 hear your thoughts on this."
@@ -223,7 +223,7 @@ Nếu bạn có câu hỏi về Bộ Quy Tắc Ứng Xử này, vui lòng liên 
 
 ---
 
-**Cảm ơn bạn đã giúp chúng tôi tạo ra một cộng đồng chào đón, bao trùm và tôn trọng!** 🌟
+**Cảm ơn bạn đã giúp chúng tôi tạo ra một cộng đồng chào đón, bao trùm và tôn trọng!**
 
 ---
 **Cập Nhật Lần Cuối**: Tháng 4 năm 2026

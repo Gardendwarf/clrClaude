@@ -7,7 +7,7 @@ description: Systematic code refactoring based on Martin Fowler's methodology. U
 
 A systematic approach to refactoring code based on Martin Fowler's *Refactoring: Improving the Design of Existing Code* (2nd Edition). This skill emphasizes safe, incremental changes backed by tests.
 
-> "Refactoring is the process of changing a software system in such a way that it does not alter the external behavior of the code yet improves its internal structure." — Martin Fowler
+> "Refactoring is the process of changing a software system in such a way that it does not alter the external behavior of the code yet improves its internal structure." - Martin Fowler
 
 ## Core Principles
 
@@ -69,7 +69,7 @@ Present findings to user:
 ## Phase 2: Test Coverage Assessment
 
 ### Why Tests Matter
-> "Refactoring without tests is like driving without a seatbelt." — Martin Fowler
+> "Refactoring without tests is like driving without a seatbelt." - Martin Fowler
 
 Tests are the **key enabler** of safe refactoring. Without them, you risk introducing bugs.
 

@@ -67,13 +67,13 @@ Các khả năng tự động gọi với scripts và templates.
 ### Code Review Skill (5 files)
 ```
 code-review/
-├── SKILL.md                          # Định nghĩa skill
+├── SKILL.md # Định nghĩa skill
 ├── scripts/
-│   ├── analyze-metrics.py            # Trình phân tích metrics code
-│   └── compare-complexity.py         # So sánh độ phức tạp
+│ ├── analyze-metrics.py # Trình phân tích metrics code
+│ └── compare-complexity.py # So sánh độ phức tạp
 └── templates/
-    ├── review-checklist.md           # Checklist review
-    └── finding-template.md           # Tài liệu phát hiện
+    ├── review-checklist.md # Checklist review
+    └── finding-template.md # Tài liệu phát hiện
 ```
 
 **Mục Đích**: Review code toàn diện với phân tích bảo mật, hiệu năng, và chất lượng
@@ -85,11 +85,11 @@ code-review/
 ### Brand Voice Skill (4 files)
 ```
 brand-voice/
-├── SKILL.md                          # Định nghĩa skill
+├── SKILL.md # Định nghĩa skill
 ├── templates/
-│   ├── email-template.txt            # Định dạng email
-│   └── social-post-template.txt      # Định dạng social media
-└── tone-examples.md                  # Ví dụ tin nhắn
+│ ├── email-template.txt # Định dạng email
+│ └── social-post-template.txt # Định dạng social media
+└── tone-examples.md # Ví dụ tin nhắn
 ```
 
 **Mục Đích**: Đảm bảo brand voice nhất quán trong communications
@@ -101,8 +101,8 @@ brand-voice/
 ### Documentation Generator Skill (2 files)
 ```
 doc-generator/
-├── SKILL.md                          # Định nghĩa skill
-└── generate-docs.py                  # Trình trích xuất doc Python
+├── SKILL.md # Định nghĩa skill
+└── generate-docs.py # Trình trích xuất doc Python
 ```
 
 **Mục Đích**: Tạo tài liệu API toàn diện từ source code
@@ -114,15 +114,15 @@ doc-generator/
 ### Refactor Skill (5 files)
 ```
 refactor/
-├── SKILL.md                          # Định nghĩa skill
+├── SKILL.md # Định nghĩa skill
 ├── scripts/
-│   ├── analyze-complexity.py         # Trình phân tích độ phức tạp
-│   └── detect-smells.py              # Trình phát hiện code smells
+│ ├── analyze-complexity.py # Trình phân tích độ phức tạp
+│ └── detect-smells.py # Trình phát hiện code smells
 ├── references/
-│   ├── code-smells.md                # Danh mục code smells
-│   └── refactoring-catalog.md        # Patterns refactoring
+│ ├── code-smells.md # Danh mục code smells
+│ └── refactoring-catalog.md # Patterns refactoring
 └── templates/
-    └── refactoring-plan.md           # Template kế hoạch refactoring
+    └── refactoring-plan.md # Template kế hoạch refactoring
 ```
 
 **Mục Đích**: Refactor code có hệ thống với phân tích độ phức tạp
@@ -134,7 +134,7 @@ refactor/
 ### Claude MD Skill (1 file)
 ```
 claude-md/
-└── SKILL.md                          # Định nghĩa skill
+└── SKILL.md # Định nghĩa skill
 ```
 
 **Mục Đích**: Quản lý và tối ưu hóa files CLAUDE.md
@@ -144,10 +144,10 @@ claude-md/
 ### Blog Draft Skill (3 files)
 ```
 blog-draft/
-├── SKILL.md                          # Định nghĩa skill
+├── SKILL.md # Định nghĩa skill
 └── templates/
-    ├── draft-template.md             # Template blog draft
-    └── outline-template.md           # Template blog outline
+    ├── draft-template.md # Template blog draft
+    └── outline-template.md # Template blog outline
 ```
 
 **Mục Đích**: Soạn blog posts với cấu trúc nhất quán
@@ -234,20 +234,20 @@ Các bộ sưu tập tính năng được đóng gói.
 ```
 pr-review/
 ├── .claude-plugin/
-│   └── plugin.json                   # Plugin manifest
+│ └── plugin.json # Plugin manifest
 ├── commands/
-│   ├── review-pr.md                  # Review toàn diện
-│   ├── check-security.md             # Kiểm tra bảo mật
-│   └── check-tests.md                # Kiểm tra độ phủ test
+│ ├── review-pr.md # Review toàn diện
+│ ├── check-security.md # Kiểm tra bảo mật
+│ └── check-tests.md # Kiểm tra độ phủ test
 ├── agents/
-│   ├── security-reviewer.md          # Chuyên gia bảo mật
-│   ├── test-checker.md               # Chuyên gia test
-│   └── performance-analyzer.md       # Chuyên gia hiệu năng
+│ ├── security-reviewer.md # Chuyên gia bảo mật
+│ ├── test-checker.md # Chuyên gia test
+│ └── performance-analyzer.md # Chuyên gia hiệu năng
 ├── mcp/
-│   └── github-config.json            # Tích hợp GitHub
+│ └── github-config.json # Tích hợp GitHub
 ├── hooks/
-│   └── pre-review.js                 # Xác thực pre-review
-└── README.md                         # Tài liệu plugin
+│ └── pre-review.js # Xác thực pre-review
+└── README.md # Tài liệu plugin
 ```
 
 **Tính Năng**: Phân tích bảo mật, độ phủ test, tác động hiệu năng
@@ -262,26 +262,26 @@ pr-review/
 ```
 devops-automation/
 ├── .claude-plugin/
-│   └── plugin.json                   # Plugin manifest
+│ └── plugin.json # Plugin manifest
 ├── commands/
-│   ├── deploy.md                     # Triển khai
-│   ├── rollback.md                   # Rollback
-│   ├── status.md                     # Trạng thái hệ thống
-│   └── incident.md                   # Phản hồi sự cố
+│ ├── deploy.md # Triển khai
+│ ├── rollback.md # Rollback
+│ ├── status.md # Trạng thái hệ thống
+│ └── incident.md # Phản hồi sự cố
 ├── agents/
-│   ├── deployment-specialist.md      # Chuyên gia triển khai
-│   ├── incident-commander.md         # Điều phối viên sự cố
-│   └── alert-analyzer.md             # Trình phân tích alert
+│ ├── deployment-specialist.md # Chuyên gia triển khai
+│ ├── incident-commander.md # Điều phối viên sự cố
+│ └── alert-analyzer.md # Trình phân tích alert
 ├── mcp/
-│   └── kubernetes-config.json        # Tích hợp Kubernetes
+│ └── kubernetes-config.json # Tích hợp Kubernetes
 ├── hooks/
-│   ├── pre-deploy.js                 # Kiểm tra pre-deployment
-│   └── post-deploy.js                # Tasks post-deployment
+│ ├── pre-deploy.js # Kiểm tra pre-deployment
+│ └── post-deploy.js # Tasks post-deployment
 ├── scripts/
-│   ├── deploy.sh                     # Tự động hóa triển khai
-│   ├── rollback.sh                   # Tự động hóa rollback
-│   └── health-check.sh               # Kiểm tra sức khỏe
-└── README.md                         # Tài liệu plugin
+│ ├── deploy.sh # Tự động hóa triển khai
+│ ├── rollback.sh # Tự động hóa rollback
+│ └── health-check.sh # Kiểm tra sức khỏe
+└── README.md # Tài liệu plugin
 ```
 
 **Tính Năng**: Triển khai Kubernetes, rollback, giám sát, phản hồi sự cố
@@ -296,23 +296,23 @@ devops-automation/
 ```
 documentation/
 ├── .claude-plugin/
-│   └── plugin.json                   # Plugin manifest
+│ └── plugin.json # Plugin manifest
 ├── commands/
-│   ├── generate-api-docs.md          # Tạo tài liệu API
-│   ├── generate-readme.md            # Tạo README
-│   ├── sync-docs.md                  # Đồng bộ tài liệu
-│   └── validate-docs.md              # Xác thực tài liệu
+│ ├── generate-api-docs.md # Tạo tài liệu API
+│ ├── generate-readme.md # Tạo README
+│ ├── sync-docs.md # Đồng bộ tài liệu
+│ └── validate-docs.md # Xác thực tài liệu
 ├── agents/
-│   ├── api-documenter.md             # Chuyên gia tài liệu API
-│   ├── code-commentator.md           # Chuyên gia comment code
-│   └── example-generator.md          # Trình tạo ví dụ
+│ ├── api-documenter.md # Chuyên gia tài liệu API
+│ ├── code-commentator.md # Chuyên gia comment code
+│ └── example-generator.md # Trình tạo ví dụ
 ├── mcp/
-│   └── github-docs-config.json       # Tích hợp GitHub
+│ └── github-docs-config.json # Tích hợp GitHub
 ├── templates/
-│   ├── api-endpoint.md               # Template API endpoint
-│   ├── function-docs.md              # Template tài liệu function
-│   └── adr-template.md               # Template ADR
-└── README.md                         # Tài liệu plugin
+│ ├── api-endpoint.md # Template API endpoint
+│ ├── function-docs.md # Template tài liệu function
+│ └── adr-template.md # Template ADR
+└── README.md # Tài liệu plugin
 ```
 
 **Tính Năng**: Tài liệu API, tạo README, đồng bộ docs, xác thực
@@ -487,167 +487,167 @@ Các pattern và tham chiếu sử dụng giao diện dòng lệnh.
 
 ```
 claude-howto/
-├── README.md                                    # Tổng quan chính
-├── INDEX.md                                     # File này
-├── QUICK_REFERENCE.md                           # Tham khảo nhanh
-├── claude_concepts_guide.md                     # Hướng dẫn gốc
+├── README.md # Tổng quan chính
+├── INDEX.md # File này
+├── QUICK_REFERENCE.md # Tham khảo nhanh
+├── claude_concepts_guide.md # Hướng dẫn gốc
 │
-├── 01-slash-commands/                           # Lệnh Slash
-│   ├── optimize.md
-│   ├── pr.md
-│   ├── generate-api-docs.md
-│   ├── commit.md
-│   ├── setup-ci-cd.md
-│   ├── push-all.md
-│   ├── unit-test-expand.md
-│   ├── doc-refactor.md
-│   ├── pr-slash-command.png
-│   └── README.md
+├── 01-slash-commands/ # Lệnh Slash
+│ ├── optimize.md
+│ ├── pr.md
+│ ├── generate-api-docs.md
+│ ├── commit.md
+│ ├── setup-ci-cd.md
+│ ├── push-all.md
+│ ├── unit-test-expand.md
+│ ├── doc-refactor.md
+│ ├── pr-slash-command.png
+│ └── README.md
 │
-├── 02-memory/                                   # Bộ Nhớ
-│   ├── project-CLAUDE.md
-│   ├── directory-api-CLAUDE.md
-│   ├── personal-CLAUDE.md
-│   ├── memory-saved.png
-│   ├── memory-ask-claude.png
-│   └── README.md
+├── 02-memory/ # Bộ Nhớ
+│ ├── project-CLAUDE.md
+│ ├── directory-api-CLAUDE.md
+│ ├── personal-CLAUDE.md
+│ ├── memory-saved.png
+│ ├── memory-ask-claude.png
+│ └── README.md
 │
-├── 03-skills/                                   # Skills
-│   ├── code-review/
-│   │   ├── SKILL.md
-│   │   ├── scripts/
-│   │   │   ├── analyze-metrics.py
-│   │   │   └── compare-complexity.py
-│   │   └── templates/
-│   │       ├── review-checklist.md
-│   │       └── finding-template.md
-│   ├── brand-voice/
-│   │   ├── SKILL.md
-│   │   ├── templates/
-│   │   │   ├── email-template.txt
-│   │   │   └── social-post-template.txt
-│   │   └── tone-examples.md
-│   ├── doc-generator/
-│   │   ├── SKILL.md
-│   │   └── generate-docs.py
-│   ├── refactor/
-│   │   ├── SKILL.md
-│   │   ├── scripts/
-│   │   │   ├── analyze-complexity.py
-│   │   │   └── detect-smells.py
-│   │   ├── references/
-│   │   │   ├── code-smells.md
-│   │   │   └── refactoring-catalog.md
-│   │   └── templates/
-│   │       └── refactoring-plan.md
-│   ├── claude-md/
-│   │   └── SKILL.md
-│   ├── blog-draft/
-│   │   ├── SKILL.md
-│   │   └── templates/
-│   │       ├── draft-template.md
-│   │       └── outline-template.md
-│   └── README.md
+├── 03-skills/ # Skills
+│ ├── code-review/
+│ │ ├── SKILL.md
+│ │ ├── scripts/
+│ │ │ ├── analyze-metrics.py
+│ │ │ └── compare-complexity.py
+│ │ └── templates/
+│ │ ├── review-checklist.md
+│ │ └── finding-template.md
+│ ├── brand-voice/
+│ │ ├── SKILL.md
+│ │ ├── templates/
+│ │ │ ├── email-template.txt
+│ │ │ └── social-post-template.txt
+│ │ └── tone-examples.md
+│ ├── doc-generator/
+│ │ ├── SKILL.md
+│ │ └── generate-docs.py
+│ ├── refactor/
+│ │ ├── SKILL.md
+│ │ ├── scripts/
+│ │ │ ├── analyze-complexity.py
+│ │ │ └── detect-smells.py
+│ │ ├── references/
+│ │ │ ├── code-smells.md
+│ │ │ └── refactoring-catalog.md
+│ │ └── templates/
+│ │ └── refactoring-plan.md
+│ ├── claude-md/
+│ │ └── SKILL.md
+│ ├── blog-draft/
+│ │ ├── SKILL.md
+│ │ └── templates/
+│ │ ├── draft-template.md
+│ │ └── outline-template.md
+│ └── README.md
 │
-├── 04-subagents/                                # Tác Nhân Con
-│   ├── code-reviewer.md
-│   ├── test-engineer.md
-│   ├── documentation-writer.md
-│   ├── secure-reviewer.md
-│   ├── implementation-agent.md
-│   ├── debugger.md
-│   ├── data-scientist.md
-│   ├── clean-code-reviewer.md
-│   └── README.md
+├── 04-subagents/ # Tác Nhân Con
+│ ├── code-reviewer.md
+│ ├── test-engineer.md
+│ ├── documentation-writer.md
+│ ├── secure-reviewer.md
+│ ├── implementation-agent.md
+│ ├── debugger.md
+│ ├── data-scientist.md
+│ ├── clean-code-reviewer.md
+│ └── README.md
 │
-├── 05-mcp/                                      # Giao Thức MCP
-│   ├── github-mcp.json
-│   ├── database-mcp.json
-│   ├── filesystem-mcp.json
-│   ├── multi-mcp.json
-│   └── README.md
+├── 05-mcp/ # Giao Thức MCP
+│ ├── github-mcp.json
+│ ├── database-mcp.json
+│ ├── filesystem-mcp.json
+│ ├── multi-mcp.json
+│ └── README.md
 │
-├── 06-hooks/                                    # Hooks
-│   ├── format-code.sh
-│   ├── pre-commit.sh
-│   ├── security-scan.sh
-│   ├── log-bash.sh
-│   ├── validate-prompt.sh
-│   ├── notify-team.sh
-│   ├── context-tracker.py
-│   ├── context-tracker-tiktoken.py
-│   └── README.md
+├── 06-hooks/ # Hooks
+│ ├── format-code.sh
+│ ├── pre-commit.sh
+│ ├── security-scan.sh
+│ ├── log-bash.sh
+│ ├── validate-prompt.sh
+│ ├── notify-team.sh
+│ ├── context-tracker.py
+│ ├── context-tracker-tiktoken.py
+│ └── README.md
 │
-├── 07-plugins/                                  # Plugins
-│   ├── pr-review/
-│   │   ├── .claude-plugin/
-│   │   │   └── plugin.json
-│   │   ├── commands/
-│   │   │   ├── review-pr.md
-│   │   │   ├── check-security.md
-│   │   │   └── check-tests.md
-│   │   ├── agents/
-│   │   │   ├── security-reviewer.md
-│   │   │   ├── test-checker.md
-│   │   │   └── performance-analyzer.md
-│   │   ├── mcp/
-│   │   │   └── github-config.json
-│   │   ├── hooks/
-│   │   │   └── pre-review.js
-│   │   └── README.md
-│   ├── devops-automation/
-│   │   ├── .claude-plugin/
-│   │   │   └── plugin.json
-│   │   ├── commands/
-│   │   │   ├── deploy.md
-│   │   │   ├── rollback.md
-│   │   │   ├── status.md
-│   │   │   └── incident.md
-│   │   ├── agents/
-│   │   │   ├── deployment-specialist.md
-│   │   │   ├── incident-commander.md
-│   │   │   └── alert-analyzer.md
-│   │   ├── mcp/
-│   │   │   └── kubernetes-config.json
-│   │   ├── hooks/
-│   │   │   ├── pre-deploy.js
-│   │   │   └── post-deploy.js
-│   │   ├── scripts/
-│   │   │   ├── deploy.sh
-│   │   │   ├── rollback.sh
-│   │   │   └── health-check.sh
-│   │   └── README.md
-│   ├── documentation/
-│   │   ├── .claude-plugin/
-│   │   │   └── plugin.json
-│   │   ├── commands/
-│   │   │   ├── generate-api-docs.md
-│   │   │   ├── generate-readme.md
-│   │   │   ├── sync-docs.md
-│   │   │   └── validate-docs.md
-│   │   ├── agents/
-│   │   │   ├── api-documenter.md
-│   │   │   ├── code-commentator.md
-│   │   │   └── example-generator.md
-│   │   ├── mcp/
-│   │   │   └── github-docs-config.json
-│   │   ├── templates/
-│   │   │   ├── api-endpoint.md
-│   │   │   ├── function-docs.md
-│   │   │   └── adr-template.md
-│   │   └── README.md
-│   └── README.md
+├── 07-plugins/ # Plugins
+│ ├── pr-review/
+│ │ ├── .claude-plugin/
+│ │ │ └── plugin.json
+│ │ ├── commands/
+│ │ │ ├── review-pr.md
+│ │ │ ├── check-security.md
+│ │ │ └── check-tests.md
+│ │ ├── agents/
+│ │ │ ├── security-reviewer.md
+│ │ │ ├── test-checker.md
+│ │ │ └── performance-analyzer.md
+│ │ ├── mcp/
+│ │ │ └── github-config.json
+│ │ ├── hooks/
+│ │ │ └── pre-review.js
+│ │ └── README.md
+│ ├── devops-automation/
+│ │ ├── .claude-plugin/
+│ │ │ └── plugin.json
+│ │ ├── commands/
+│ │ │ ├── deploy.md
+│ │ │ ├── rollback.md
+│ │ │ ├── status.md
+│ │ │ └── incident.md
+│ │ ├── agents/
+│ │ │ ├── deployment-specialist.md
+│ │ │ ├── incident-commander.md
+│ │ │ └── alert-analyzer.md
+│ │ ├── mcp/
+│ │ │ └── kubernetes-config.json
+│ │ ├── hooks/
+│ │ │ ├── pre-deploy.js
+│ │ │ └── post-deploy.js
+│ │ ├── scripts/
+│ │ │ ├── deploy.sh
+│ │ │ ├── rollback.sh
+│ │ │ └── health-check.sh
+│ │ └── README.md
+│ ├── documentation/
+│ │ ├── .claude-plugin/
+│ │ │ └── plugin.json
+│ │ ├── commands/
+│ │ │ ├── generate-api-docs.md
+│ │ │ ├── generate-readme.md
+│ │ │ ├── sync-docs.md
+│ │ │ └── validate-docs.md
+│ │ ├── agents/
+│ │ │ ├── api-documenter.md
+│ │ │ ├── code-commentator.md
+│ │ │ └── example-generator.md
+│ │ ├── mcp/
+│ │ │ └── github-docs-config.json
+│ │ ├── templates/
+│ │ │ ├── api-endpoint.md
+│ │ │ ├── function-docs.md
+│ │ │ └── adr-template.md
+│ │ └── README.md
+│ └── README.md
 │
-├── 08-checkpoints/                              # Checkpoints
-│   ├── checkpoint-examples.md
-│   └── README.md
+├── 08-checkpoints/ # Checkpoints
+│ ├── checkpoint-examples.md
+│ └── README.md
 │
-├── 09-advanced-features/                        # Tính Nâng Cao
-│   ├── config-examples.json
-│   ├── planning-mode-examples.md
-│   └── README.md
+├── 09-advanced-features/ # Tính Nâng Cao
+│ ├── config-examples.json
+│ ├── planning-mode-examples.md
+│ └── README.md
 │
-└── 10-cli/                                      # Sử Dụng CLI
+└── 10-cli/ # Sử Dụng CLI
     └── README.md
 ```
 
@@ -740,9 +740,9 @@ chmod +x ~/.claude/hooks/*.sh
 /plan Triển khai tính năng X
 
 # Sử dụng permission modes
-claude --permission-mode plan          # Cho review code (read-only)
-claude --permission-mode acceptEdits   # Tự động chấp nhận edits
-claude --permission-mode auto          # Tự động phê duyệt hành động an toàn
+claude --permission-mode plan # Cho review code (read-only)
+claude --permission-mode acceptEdits # Tự động chấp nhận edits
+claude --permission-mode auto # Tự động phê duyệt hành động an toàn
 
 # Chạy trong mode headless cho CI/CD
 claude -p "Chạy test và báo cáo kết quả"
@@ -775,31 +775,31 @@ Chạy test trong background
 ## Lộ Trình Học Tập
 
 ### Người Mới Bắt Đầu (Tuần 1)
-1. ✅ Đọc `README.md`
-2. ✅ Cài đặt 1-2 lệnh slash
-3. ✅ Tạo file bộ nhớ dự án
-4. ✅ Thử các commands cơ bản
+1. Đọc `README.md`
+2. Cài đặt 1-2 lệnh slash
+3. Tạo file bộ nhớ dự án
+4. Thử các commands cơ bản
 
 ### Trung Cấp (Tuần 2-3)
-1. ✅ Thiết lập GitHub MCP
-2. ✅ Cài đặt một tác nhân con
-3. ✅ Thử ủy quyền tasks
-4. ✅ Cài đặt một skill
+1. Thiết lập GitHub MCP
+2. Cài đặt một tác nhân con
+3. Thử ủy quyền tasks
+4. Cài đặt một skill
 
 ### Nâng Cao (Tuần 4+)
-1. ✅ Cài đặt plugin hoàn chỉnh
-2. ✅ Tạo lệnh slash tùy chỉnh
-3. ✅ Tạo tác nhân con tùy chỉnh
-4. ✅ Tạo skill tùy chỉnh
-5. ✅ Xây dựng plugin của riêng bạn
+1. Cài đặt plugin hoàn chỉnh
+2. Tạo lệnh slash tùy chỉnh
+3. Tạo tác nhân con tùy chỉnh
+4. Tạo skill tùy chỉnh
+5. Xây dựng plugin của riêng bạn
 
 ### Chuyên Gia (Tuần 5+)
-1. ✅ Thiết lập hooks cho tự động hóa
-2. ✅ Sử dụng checkpoints để thử nghiệm
-3. ✅ Cấu hình planning mode
-4. ✅ Sử dụng permission modes hiệu quả
-5. ✅ Thiết lập headless mode cho CI/CD
-6. ✅ Làm chủ session management
+1. Thiết lập hooks cho tự động hóa
+2. Sử dụng checkpoints để thử nghiệm
+3. Cấu hình planning mode
+4. Sử dụng permission modes hiệu quả
+5. Thiết lập headless mode cho CI/CD
+6. Làm chủ session management
 
 ---
 

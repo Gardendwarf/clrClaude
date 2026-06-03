@@ -3,13 +3,13 @@
   <img alt="Claude How To" src="resources/logos/claude-howto-logo.svg">
 </picture>
 
-# 📚 Claude Code Learning Roadmap
+# Claude Code Learning Roadmap
 
 **New to Claude Code?** This guide helps you master Claude Code features at your own pace. Whether you're a complete beginner or an experienced developer, start with the self-assessment quiz below to find the right path for you.
 
 ---
 
-## 🧭 Find Your Level
+## Find Your Level
 
 Not everyone starts from the same place. Take this quick self-assessment to find the right entry point.
 
@@ -28,9 +28,9 @@ Not everyone starts from the same place. Take this quick self-assessment to find
 
 | Checks | Level | Start At | Time to Complete |
 |--------|-------|----------|------------------|
-| 0-2 | **Level 1: Beginner** — Getting Started | [Milestone 1A](#milestone-1a-first-commands--memory) | ~3 hours |
-| 3-5 | **Level 2: Intermediate** — Building Workflows | [Milestone 2A](#milestone-2a-automation-skills--hooks) | ~5 hours |
-| 6-8 | **Level 3: Advanced** — Power User & Team Lead | [Milestone 3A](#milestone-3a-advanced-features) | ~5 hours |
+| 0-2 | **Level 1: Beginner** - Getting Started | [Milestone 1A](#milestone-1a-first-commands--memory) | ~3 hours |
+| 3-5 | **Level 2: Intermediate** - Building Workflows | [Milestone 2A](#milestone-2a-automation-skills--hooks) | ~5 hours |
+| 6-8 | **Level 3: Advanced** - Power User & Team Lead | [Milestone 3A](#milestone-3a-advanced-features) | ~5 hours |
 
 > **Tip**: If you're unsure, start one level lower. It's better to review familiar material quickly than to miss foundational concepts.
 
@@ -38,7 +38,7 @@ Not everyone starts from the same place. Take this quick self-assessment to find
 
 ---
 
-## 🎯 Learning Philosophy
+## Learning Philosophy
 
 The folders in this repository are numbered in **recommended learning order** based on three key principles:
 
@@ -50,25 +50,25 @@ This approach ensures you build a solid foundation while gaining immediate produ
 
 ---
 
-## 🗺️ Your Learning Path
+## Your Learning Path
 
 ```mermaid
 graph TD
-    Q["🧭 Self-Assessment Quiz<br/>Find Your Level"] --> L1
+    Q[" Self-Assessment Quiz<br/>Find Your Level"] --> L1
     Q --> L2
     Q --> L3
 
-    subgraph L1["🟢 Level 1: Beginner — Getting Started"]
+    subgraph L1[" Level 1: Beginner - Getting Started"]
         direction LR
         A["1A: First Commands & Memory<br/>Slash Commands + Memory"] --> B["1B: Safe Exploration<br/>Checkpoints + CLI Basics"]
     end
 
-    subgraph L2["🔵 Level 2: Intermediate — Building Workflows"]
+    subgraph L2[" Level 2: Intermediate - Building Workflows"]
         direction LR
         C["2A: Automation<br/>Skills + Hooks"] --> D["2B: Integration<br/>MCP + Subagents"]
     end
 
-    subgraph L3["🔴 Level 3: Advanced — Power User"]
+    subgraph L3[" Level 3: Advanced - Power User"]
         direction LR
         E["3A: Advanced Features<br/>Planning + Permissions"] --> F["3B: Team & Distribution<br/>Plugins + CLI Mastery"]
     end
@@ -86,34 +86,34 @@ graph TD
 ```
 
 **Color Legend:**
-- 💜 Purple: Self-Assessment Quiz
-- 🟢 Green: Level 1 — Beginner path
-- 🔵 Blue / 🟡 Gold: Level 2 — Intermediate path
-- 🔴 Red: Level 3 — Advanced path
+- Purple: Self-Assessment Quiz
+- Green: Level 1 - Beginner path
+- Blue / Gold: Level 2 - Intermediate path
+- Red: Level 3 - Advanced path
 
 ---
 
-## 📊 Complete Roadmap Table
+## Complete Roadmap Table
 
 | Step | Feature | Complexity | Time | Level | Dependencies | Why Learn This | Key Benefits |
 |------|---------|-----------|------|-------|--------------|----------------|--------------|
-| **1** | [Slash Commands](01-slash-commands/) | ⭐ Beginner | 30 min | Level 1 | None | Quick productivity wins (55+ built-in + 5 bundled skills) | Instant automation, team standards |
-| **2** | [Memory](02-memory/) | ⭐⭐ Beginner+ | 45 min | Level 1 | None | Essential for all features | Persistent context, preferences |
-| **3** | [Checkpoints](08-checkpoints/) | ⭐⭐ Intermediate | 45 min | Level 1 | Session management | Safe exploration | Experimentation, recovery |
-| **4** | [CLI Basics](10-cli/) | ⭐⭐ Beginner+ | 30 min | Level 1 | None | Core CLI usage | Interactive & print mode |
-| **5** | [Skills](03-skills/) | ⭐⭐ Intermediate | 1 hour | Level 2 | Slash Commands | Automatic expertise | Reusable capabilities, consistency |
-| **6** | [Hooks](06-hooks/) | ⭐⭐ Intermediate | 1 hour | Level 2 | Tools, Commands | Workflow automation (25 events, 4 types) | Validation, quality gates |
-| **7** | [MCP](05-mcp/) | ⭐⭐⭐ Intermediate+ | 1 hour | Level 2 | Configuration | Live data access | Real-time integration, APIs |
-| **8** | [Subagents](04-subagents/) | ⭐⭐⭐ Intermediate+ | 1.5 hours | Level 2 | Memory, Commands | Complex task handling (6 built-in including Bash) | Delegation, specialized expertise |
-| **9** | [Advanced Features](09-advanced-features/) | ⭐⭐⭐⭐⭐ Advanced | 2-3 hours | Level 3 | All previous | Power user tools | Planning, Auto Mode, Channels, Voice Dictation, permissions |
-| **10** | [Plugins](07-plugins/) | ⭐⭐⭐⭐ Advanced | 2 hours | Level 3 | All previous | Complete solutions | Team onboarding, distribution |
-| **11** | [CLI Mastery](10-cli/) | ⭐⭐⭐ Advanced | 1 hour | Level 3 | Recommended: All | Master command-line usage | Scripting, CI/CD, automation |
+| **1** | [Slash Commands](01-slash-commands/) | Beginner | 30 min | Level 1 | None | Quick productivity wins (55+ built-in + 5 bundled skills) | Instant automation, team standards |
+| **2** | [Memory](02-memory/) | Beginner+ | 45 min | Level 1 | None | Essential for all features | Persistent context, preferences |
+| **3** | [Checkpoints](08-checkpoints/) | Intermediate | 45 min | Level 1 | Session management | Safe exploration | Experimentation, recovery |
+| **4** | [CLI Basics](10-cli/) | Beginner+ | 30 min | Level 1 | None | Core CLI usage | Interactive & print mode |
+| **5** | [Skills](03-skills/) | Intermediate | 1 hour | Level 2 | Slash Commands | Automatic expertise | Reusable capabilities, consistency |
+| **6** | [Hooks](06-hooks/) | Intermediate | 1 hour | Level 2 | Tools, Commands | Workflow automation (25 events, 4 types) | Validation, quality gates |
+| **7** | [MCP](05-mcp/) | Intermediate+ | 1 hour | Level 2 | Configuration | Live data access | Real-time integration, APIs |
+| **8** | [Subagents](04-subagents/) | Intermediate+ | 1.5 hours | Level 2 | Memory, Commands | Complex task handling (6 built-in including Bash) | Delegation, specialized expertise |
+| **9** | [Advanced Features](09-advanced-features/) | Advanced | 2-3 hours | Level 3 | All previous | Power user tools | Planning, Auto Mode, Channels, Voice Dictation, permissions |
+| **10** | [Plugins](07-plugins/) | Advanced | 2 hours | Level 3 | All previous | Complete solutions | Team onboarding, distribution |
+| **11** | [CLI Mastery](10-cli/) | Advanced | 1 hour | Level 3 | Recommended: All | Master command-line usage | Scripting, CI/CD, automation |
 
 **Total Learning Time**: ~11-13 hours (or jump to your level and save time)
 
 ---
 
-## 🟢 Level 1: Beginner — Getting Started
+## Level 1: Beginner - Getting Started
 
 **For**: Users with 0-2 quiz checks
 **Time**: ~3 hours
@@ -124,14 +124,14 @@ graph TD
 
 **Topics**: Slash Commands + Memory
 **Time**: 1-2 hours
-**Complexity**: ⭐ Beginner
+**Complexity**: Beginner
 **Goal**: Immediate productivity boost with custom commands and persistent context
 
 #### What You'll Achieve
-✅ Create custom slash commands for repetitive tasks
-✅ Set up project memory for team standards
-✅ Configure personal preferences
-✅ Understand how Claude loads context automatically
+ Create custom slash commands for repetitive tasks
+ Set up project memory for team standards
+ Configure personal preferences
+ Understand how Claude loads context automatically
 
 #### Hands-on Exercises
 
@@ -165,14 +165,14 @@ Once comfortable, read:
 
 **Topics**: Checkpoints + CLI Basics
 **Time**: 1 hour
-**Complexity**: ⭐⭐ Beginner+
+**Complexity**: Beginner+
 **Goal**: Learn to experiment safely and use core CLI commands
 
 #### What You'll Achieve
-✅ Create and restore checkpoints for safe experimentation
-✅ Understand interactive vs. print mode
-✅ Use basic CLI flags and options
-✅ Process files via piping
+ Create and restore checkpoints for safe experimentation
+ Understand interactive vs. print mode
+ Use basic CLI flags and options
+ Process files via piping
 
 #### Hands-on Exercises
 
@@ -184,8 +184,8 @@ Once comfortable, read:
 # Choose "Restore code and conversation" to go back
 
 # Exercise 2: Interactive vs Print mode
-claude "explain this project"           # Interactive mode
-claude -p "explain this function"       # Print mode (non-interactive)
+claude "explain this project" # Interactive mode
+claude -p "explain this function" # Print mode (non-interactive)
 
 # Exercise 3: Process file content via piping
 cat error.log | claude -p "explain this error"
@@ -206,7 +206,7 @@ cat error.log | claude -p "explain this error"
 
 ---
 
-## 🔵 Level 2: Intermediate — Building Workflows
+## Level 2: Intermediate - Building Workflows
 
 **For**: Users with 3-5 quiz checks
 **Time**: ~5 hours
@@ -230,15 +230,15 @@ Before starting Level 2, make sure you're comfortable with these Level 1 concept
 
 **Topics**: Skills + Hooks
 **Time**: 2-3 hours
-**Complexity**: ⭐⭐ Intermediate
+**Complexity**: Intermediate
 **Goal**: Automate common workflows and quality checks
 
 #### What You'll Achieve
-✅ Auto-invoke specialized capabilities with YAML frontmatter (including `effort` and `shell` fields)
-✅ Set up event-driven automation across 25 hook events
-✅ Use all 4 hook types (command, http, prompt, agent)
-✅ Enforce code quality standards
-✅ Create custom hooks for your workflow
+ Auto-invoke specialized capabilities with YAML frontmatter (including `effort` and `shell` fields)
+ Set up event-driven automation across 25 hook events
+ Use all 4 hook types (command, http, prompt, agent)
+ Enforce code quality standards
+ Create custom hooks for your workflow
 
 #### Hands-on Exercises
 
@@ -289,14 +289,14 @@ chmod +x ~/.claude/hooks/pre-tool-check.sh
 
 **Topics**: MCP + Subagents
 **Time**: 2-3 hours
-**Complexity**: ⭐⭐⭐ Intermediate+
+**Complexity**: Intermediate+
 **Goal**: Integrate external services and delegate complex tasks
 
 #### What You'll Achieve
-✅ Access live data from GitHub, databases, etc.
-✅ Delegate work to specialized AI agents
-✅ Understand when to use MCP vs. subagents
-✅ Build integrated workflows
+ Access live data from GitHub, databases, etc.
+ Delegate work to specialized AI agents
+ Understand when to use MCP vs. subagents
+ Build integrated workflows
 
 #### Hands-on Exercises
 
@@ -336,7 +336,7 @@ Try this complete workflow:
 
 ---
 
-## 🔴 Level 3: Advanced — Power User & Team Lead
+## Level 3: Advanced - Power User & Team Lead
 
 **For**: Users with 6-8 quiz checks
 **Time**: ~5 hours
@@ -360,20 +360,20 @@ Before starting Level 3, make sure you're comfortable with these Level 2 concept
 
 **Topics**: Advanced Features (Planning, Permissions, Extended Thinking, Auto Mode, Channels, Voice Dictation, Remote/Desktop/Web)
 **Time**: 2-3 hours
-**Complexity**: ⭐⭐⭐⭐⭐ Advanced
+**Complexity**: Advanced
 **Goal**: Master advanced workflows and power user tools
 
 #### What You'll Achieve
-✅ Planning mode for complex features
-✅ Fine-grained permission control with 6 modes (default, acceptEdits, plan, auto, dontAsk, bypassPermissions)
-✅ Extended thinking via Alt+T / Option+T toggle
-✅ Background task management
-✅ Auto Memory for learned preferences
-✅ Auto Mode with background safety classifier
-✅ Channels for structured multi-session workflows
-✅ Voice Dictation for hands-free interaction
-✅ Remote control, desktop app, and web sessions
-✅ Agent Teams for multi-agent collaboration
+ Planning mode for complex features
+ Fine-grained permission control with 6 modes (default, acceptEdits, plan, auto, dontAsk, bypassPermissions)
+ Extended thinking via Alt+T / Option+T toggle
+ Background task management
+ Auto Memory for learned preferences
+ Auto Mode with background safety classifier
+ Channels for structured multi-session workflows
+ Voice Dictation for hands-free interaction
+ Remote control, desktop app, and web sessions
+ Agent Teams for multi-agent collaboration
 
 #### Hands-on Exercises
 
@@ -438,15 +438,15 @@ export CLAUDE_AGENT_TEAMS=1
 
 **Topics**: Plugins + CLI Mastery + CI/CD
 **Time**: 2-3 hours
-**Complexity**: ⭐⭐⭐⭐ Advanced
+**Complexity**: Advanced
 **Goal**: Build team tooling, create plugins, master CI/CD integration
 
 #### What You'll Achieve
-✅ Install and create complete bundled plugins
-✅ Master CLI for scripting and automation
-✅ Set up CI/CD integration with `claude -p`
-✅ JSON output for automated pipelines
-✅ Session management and batch processing
+ Install and create complete bundled plugins
+ Master CLI for scripting and automation
+ Set up CI/CD integration with `claude -p`
+ JSON output for automated pipelines
+ Session management and batch processing
 
 #### Hands-on Exercises
 
@@ -506,7 +506,7 @@ Create a simple CI/CD script:
 
 ---
 
-## 🧪 Test Your Knowledge
+## Test Your Knowledge
 
 This repository includes two interactive skills you can use anytime in Claude Code to evaluate your understanding:
 
@@ -517,15 +517,15 @@ This repository includes two interactive skills you can use anytime in Claude Co
 
 **Examples:**
 ```
-/self-assessment                  # Find your overall level
-/lesson-quiz hooks                # Quiz on Lesson 06: Hooks
-/lesson-quiz 03                   # Quiz on Lesson 03: Skills
-/lesson-quiz advanced-features    # Quiz on Lesson 09
+/self-assessment # Find your overall level
+/lesson-quiz hooks # Quiz on Lesson 06: Hooks
+/lesson-quiz 03 # Quiz on Lesson 03: Skills
+/lesson-quiz advanced-features # Quiz on Lesson 09
 ```
 
 ---
 
-## ⚡ Quick Start Paths
+## Quick Start Paths
 
 ### If You Only Have 15 Minutes
 **Goal**: Get your first win
@@ -570,9 +570,9 @@ This repository includes two interactive skills you can use anytime in Claude Co
 
 ---
 
-## 💡 Learning Tips
+## Learning Tips
 
-### ✅ Do
+### Do
 
 - **Take the quiz first** to find your starting point
 - **Complete hands-on exercises** for each milestone
@@ -583,7 +583,7 @@ This repository includes two interactive skills you can use anytime in Claude Co
 - **Experiment safely** using checkpoints
 - **Share knowledge** with your team
 
-### ❌ Don't
+### Don't
 
 - **Skip the prerequisites check** when jumping to a higher level
 - **Try to learn everything at once** - it's overwhelming
@@ -595,7 +595,7 @@ This repository includes two interactive skills you can use anytime in Claude Co
 
 ---
 
-## 🎓 Learning Styles
+## Learning Styles
 
 ### Visual Learners
 - Study the mermaid diagrams in each README
@@ -623,11 +623,11 @@ This repository includes two interactive skills you can use anytime in Claude Co
 
 ---
 
-## 📈 Progress Tracking
+## Progress Tracking
 
 Use these checklists to track your progress by level. Run `/self-assessment` anytime to get an updated skill profile, or `/lesson-quiz [lesson]` after each tutorial to verify your understanding.
 
-### 🟢 Level 1: Beginner
+### Level 1: Beginner
 - [ ] Completed [01-slash-commands](01-slash-commands/)
 - [ ] Completed [02-memory](02-memory/)
 - [ ] Created first custom slash command
@@ -639,7 +639,7 @@ Use these checklists to track your progress by level. Run `/self-assessment` any
 - [ ] Used interactive and print mode
 - [ ] **Milestone 1B achieved**
 
-### 🔵 Level 2: Intermediate
+### Level 2: Intermediate
 - [ ] Completed [03-skills](03-skills/)
 - [ ] Completed [06-hooks](06-hooks/)
 - [ ] Installed first skill
@@ -652,7 +652,7 @@ Use these checklists to track your progress by level. Run `/self-assessment` any
 - [ ] Combined integrations in a workflow
 - [ ] **Milestone 2B achieved**
 
-### 🔴 Level 3: Advanced
+### Level 3: Advanced
 - [ ] Completed [09-advanced-features](09-advanced-features/)
 - [ ] Used planning mode successfully
 - [ ] Configured permission modes (6 modes including auto)
@@ -670,7 +670,7 @@ Use these checklists to track your progress by level. Run `/self-assessment` any
 
 ---
 
-## 🆘 Common Learning Challenges
+## Common Learning Challenges
 
 ### Challenge 1: "Too many concepts at once"
 **Solution**: Focus on one milestone at a time. Complete all exercises before moving forward.
@@ -692,7 +692,7 @@ Use these checklists to track your progress by level. Run `/self-assessment` any
 
 ---
 
-## 🎯 What's Next After Completion?
+## What's Next After Completion?
 
 Once you've completed all milestones:
 
@@ -714,7 +714,7 @@ Once you've completed all milestones:
 
 ---
 
-## 📚 Additional Resources
+## Additional Resources
 
 ### Official Documentation
 - [Claude Code Documentation](https://code.claude.com/docs/en/overview)
@@ -730,7 +730,7 @@ Once you've completed all milestones:
 
 ---
 
-## 💬 Feedback & Support
+## Feedback & Support
 
 - **Found an issue?** Create an issue in the repository
 - **Have a suggestion?** Submit a pull request

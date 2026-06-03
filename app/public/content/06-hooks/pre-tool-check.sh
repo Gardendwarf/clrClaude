@@ -84,7 +84,7 @@ BLOCKED_PATTERNS=(
 for pattern in "${BLOCKED_PATTERNS[@]}"; do
   if echo "$COMMAND" | grep -qE "$pattern"; then
     log_decision "BLOCK:$pattern"
-    # These echoes MUST go to stderr — Claude Code surfaces stderr as the
+    # These echoes MUST go to stderr - Claude Code surfaces stderr as the
     # block reason on exit 2. Writing to stdout would show "No stderr output".
     echo "❌ Blocked: Potentially destructive command detected: $pattern" >&2
     echo "   Command: $COMMAND" >&2
@@ -112,7 +112,7 @@ for pattern in "${WARNING_PATTERNS[@]}"; do
   if echo "$COMMAND" | grep -qi "$pattern"; then
     MATCHED_WARNINGS="${MATCHED_WARNINGS:+$MATCHED_WARNINGS,}$pattern"
     # Mirror the warning on stderr for humans running the hook manually.
-    # Claude Code drops this on exit 0 — the audit log is the reliable
+    # Claude Code drops this on exit 0 - the audit log is the reliable
     # record (see WARN entries).
     echo "⚠️  Warning: High-risk operation detected: $pattern" >&2
   fi
@@ -121,7 +121,7 @@ done
 if [ -n "$MATCHED_WARNINGS" ]; then
   log_decision "WARN:$MATCHED_WARNINGS"
   echo "   Command: $COMMAND" >&2
-  echo "   Proceeding — review the above warnings before continuing." >&2
+  echo "   Proceeding - review the above warnings before continuing." >&2
 else
   log_decision "ALLOW"
 fi

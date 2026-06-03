@@ -329,18 +329,18 @@ Tạo các quy tắc có tổ chức, cụ thể theo đường dẫn sử dụn
 ```
 your-project/
 ├── .claude/
-│   ├── CLAUDE.md
-│   └── rules/
-│       ├── code-style.md
-│       ├── testing.md
-│       ├── security.md
-│       └── api/                  # Subdirectories được hỗ trợ
-│           ├── conventions.md
-│           └── validation.md
+│ ├── CLAUDE.md
+│ └── rules/
+│ ├── code-style.md
+│ ├── testing.md
+│ ├── security.md
+│ └── api/ # Subdirectories được hỗ trợ
+│ ├── conventions.md
+│ └── validation.md
 
 ~/.claude/
 ├── CLAUDE.md
-└── rules/                        # User-level rules (tất cả dự án)
+└── rules/ # User-level rules (tất cả dự án)
     ├── personal-style.md
     └── preferred-patterns.md
 ```
@@ -455,10 +455,10 @@ graph TD
 
 ```
 ~/.claude/projects/<project>/memory/
-├── MEMORY.md              # Entrypoint (200 dòng đầu tiên được tải khi khởi động)
-├── debugging.md           # Topic file (được tải theo yêu cầu)
-├── api-conventions.md     # Topic file (được tải theo yêu cầu)
-└── testing-patterns.md    # Topic file (được tải theo yêu cầu)
+├── MEMORY.md # Entrypoint (200 dòng đầu tiên được tải khi khởi động)
+├── debugging.md # Topic file (được tải theo yêu cầu)
+├── api-conventions.md # Topic file (được tải theo yêu cầu)
+└── testing-patterns.md # Topic file (được tải theo yêu cầu)
 ```
 
 ### Yêu Cầu Phiên Bản
@@ -497,9 +497,9 @@ Tất cả các worktrees và thư mục con trong cùng một git repository ch
 Các subagent (được tạo ra qua các công cụ như Task hoặc thực thi song song) có thể có bối cảnh bộ nhớ riêng của chúng. Sử dụng trường frontmatter `memory` trong định nghĩa subagent để chỉ định các phạm vi bộ nhớ nào để tải:
 
 ```yaml
-memory: user      # Chỉ tải bộ nhớ cấp người dùng
-memory: project   # Chỉ tải bộ nhớ cấp dự án
-memory: local     # Chỉ tải bộ nhớ cục bộ
+memory: user # Chỉ tải bộ nhớ cấp người dùng
+memory: project # Chỉ tải bộ nhớ cấp dự án
+memory: local # Chỉ tải bộ nhớ cục bộ
 ```
 
 Điều này cho phép các subagent hoạt động với bối cảnh tập trung thay vì kế thừa toàn bộ hệ phân cấp bộ nhớ.
@@ -755,10 +755,10 @@ I organize my projects as:
 
    project/
    ├── src/
-   │   ├── api/
-   │   ├── services/
-   │   ├── models/
-   │   └── utils/
+   │ ├── api/
+   │ ├── services/
+   │ ├── models/
+   │ └── utils/
    ├── tests/
    ├── docs/
    └── docker/
@@ -787,7 +787,7 @@ Claude: I'm adding that to your memory. Which memory file should this go in?
 
 User: Project memory
 
-Claude: ✅ Memory saved!
+Claude: Memory saved!
 
 Added to ./CLAUDE.md:
 ---
@@ -814,7 +814,7 @@ Claude: I'm saving this rule to memory. Which memory file should I use?
 
 User: Project memory
 
-Claude: ✅ Memory saved!
+Claude: Memory saved!
 
 Added to ./CLAUDE.md:
 ---
@@ -836,13 +836,13 @@ Added to ./CLAUDE.md:
 
 | Tính Năng | Claude Web/Desktop | Claude Code (CLAUDE.md) |
 |---------|-------------------|------------------------|
-| Auto-synthesis | ✅ Every 24h | ❌ Manual |
-| Cross-project | ✅ Shared | ❌ Project-specific |
-| Team access | ✅ Shared projects | ✅ Git-tracked |
-| Searchable | ✅ Built-in | ✅ Through `/memory` |
-| Editable | ✅ In-chat | ✅ Direct file edit |
-| Import/Export | ✅ Yes | ✅ Copy/paste |
-| Persistent | ✅ 24h+ | ✅ Indefinite |
+| Auto-synthesis | Every 24h | Manual |
+| Cross-project | Shared | Project-specific |
+| Team access | Shared projects | Git-tracked |
+| Searchable | Built-in | Through `/memory` |
+| Editable | In-chat | Direct file edit |
+| Import/Export | Yes | Copy/paste |
+| Persistent | 24h+ | Indefinite |
 
 ### Bộ Nhớ Trong Claude Web/Desktop
 
@@ -892,8 +892,8 @@ graph LR
 ### Nên Làm - Những Gì Để Bao Gồm
 
 - **Hãy cụ thể và chi tiết**: Sử dụng các hướng dẫn rõ ràng, chi tiết thay vì hướng dẫn mơ hồ
-  - ✅ Tốt: "Use 2-space indentation for all JavaScript files"
-  - ❌ Tránh: "Follow best practices"
+  - Tốt: "Use 2-space indentation for all JavaScript files"
+  - Tránh: "Follow best practices"
 
 - **Giữ tổ chức**: Cấu trúc các file bộ nhớ với các phần và tiêu đề markdown rõ ràng
 

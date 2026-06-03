@@ -29,7 +29,7 @@
 
 | Article | Description | Link |
 |---------|-------------|------|
-| Code Execution with MCP | How to solve MCP context bloat using code execution — 98.7% token reduction | [anthropic.com/engineering/code-execution-with-mcp](https://www.anthropic.com/engineering/code-execution-with-mcp) |
+| Code Execution with MCP | How to solve MCP context bloat using code execution - 98.7% token reduction | [anthropic.com/engineering/code-execution-with-mcp](https://www.anthropic.com/engineering/code-execution-with-mcp) |
 
 ---
 
@@ -90,7 +90,7 @@ _**All Tips**_
   - Use Claude to draft PR descriptions, release notes, or documentation based on code diffs.
   - **Example prompt**: _"Based on the git diff, create a detailed PR description with a summary of changes, list of modified files, testing steps, and potential impacts. Also generate release notes for version 2.3.0."_
 
-**Tip**: For best results, combine several of these practices—start by pinning critical files and summarizing your goals, then use focused prompts and Claude’s refactoring tools to incrementally improve your codebase and automation.
+**Tip**: For best results, combine several of these practices-start by pinning critical files and summarizing your goals, then use focused prompts and Claude’s refactoring tools to incrementally improve your codebase and automation.
 
 
 **Recommended workflow with Claude Code**
@@ -107,7 +107,7 @@ _**All Tips**_
 2. **Use Plan Mode and Specs**
    - Use plan mode (`shift-tab` or `/plan`) to draft a detailed specification before implementing features.
    - Ask Claude for architecture suggestions and initial project layout.
-   - Keep a clear, goal-oriented prompt sequence—ask for component outlines, major modules, and responsibilities.
+   - Keep a clear, goal-oriented prompt sequence-ask for component outlines, major modules, and responsibilities.
 
 3. **Iterative Develop & Review**
    - Implement core features in small chunks, prompting Claude for code generation, refactoring, and documentation.

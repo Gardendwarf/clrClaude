@@ -7,7 +7,7 @@
   <img alt="Claude How To" src="../resources/logos/claude-howto-logo.svg">
 </picture>
 
-# Приклади Claude Code — Повний покажчик
+# Приклади Claude Code - Повний покажчик
 
 Цей документ містить повний покажчик усіх файлів-прикладів, упорядкований за типом функціональності.
 
@@ -72,13 +72,13 @@
 
 ```
 code-review/
-├── SKILL.md                          # Визначення навички
+├── SKILL.md # Визначення навички
 ├── scripts/
-│   ├── analyze-metrics.py            # Аналізатор метрик коду
-│   └── compare-complexity.py         # Порівняння складності
+│ ├── analyze-metrics.py # Аналізатор метрик коду
+│ └── compare-complexity.py # Порівняння складності
 └── templates/
-    ├── review-checklist.md           # Чекліст ревʼю
-    └── finding-template.md           # Шаблон знахідок
+    ├── review-checklist.md # Чекліст ревʼю
+    └── finding-template.md # Шаблон знахідок
 ```
 
 **Призначення**: Комплексне ревʼю коду з аналізом безпеки, продуктивності та якості
@@ -91,11 +91,11 @@ code-review/
 
 ```
 brand-voice/
-├── SKILL.md                          # Визначення навички
+├── SKILL.md # Визначення навички
 ├── templates/
-│   ├── email-template.txt            # Формат електронного листа
-│   └── social-post-template.txt      # Формат соцмедіа
-└── tone-examples.md                  # Приклади повідомлень
+│ ├── email-template.txt # Формат електронного листа
+│ └── social-post-template.txt # Формат соцмедіа
+└── tone-examples.md # Приклади повідомлень
 ```
 
 **Призначення**: Забезпечення єдиного стилю бренду в комунікаціях
@@ -108,8 +108,8 @@ brand-voice/
 
 ```
 doc-generator/
-├── SKILL.md                          # Визначення навички
-└── generate-docs.py                  # Python-генератор документації
+├── SKILL.md # Визначення навички
+└── generate-docs.py # Python-генератор документації
 ```
 
 **Призначення**: Генерація комплексної API-документації з вихідного коду
@@ -122,15 +122,15 @@ doc-generator/
 
 ```
 refactor/
-├── SKILL.md                          # Визначення навички
+├── SKILL.md # Визначення навички
 ├── scripts/
-│   ├── analyze-complexity.py         # Аналізатор складності
-│   └── detect-smells.py              # Детектор code smells
+│ ├── analyze-complexity.py # Аналізатор складності
+│ └── detect-smells.py # Детектор code smells
 ├── references/
-│   ├── code-smells.md                # Каталог code smells
-│   └── refactoring-catalog.md        # Патерни рефакторингу
+│ ├── code-smells.md # Каталог code smells
+│ └── refactoring-catalog.md # Патерни рефакторингу
 └── templates/
-    └── refactoring-plan.md           # Шаблон плану рефакторингу
+    └── refactoring-plan.md # Шаблон плану рефакторингу
 ```
 
 **Призначення**: Систематичний рефакторинг коду з аналізом складності
@@ -143,7 +143,7 @@ refactor/
 
 ```
 claude-md/
-└── SKILL.md                          # Визначення навички
+└── SKILL.md # Визначення навички
 ```
 
 **Призначення**: Управління та оптимізація файлів CLAUDE.md
@@ -154,15 +154,15 @@ claude-md/
 
 ```
 blog-draft/
-├── SKILL.md                          # Визначення навички
+├── SKILL.md # Визначення навички
 └── templates/
-    ├── draft-template.md             # Шаблон чернетки блогу
-    └── outline-template.md           # Шаблон плану блогу
+    ├── draft-template.md # Шаблон чернетки блогу
+    └── outline-template.md # Шаблон плану блогу
 ```
 
 **Призначення**: Створення чернеток блог-постів зі стандартною структурою
 
-**Додатково**: `README.md` — огляд навичок та керівництво з використання
+**Додатково**: `README.md` - огляд навичок та керівництво з використання
 
 **Шлях встановлення**: `~/.claude/skills/` або `.claude/skills/`
 
@@ -246,20 +246,20 @@ blog-draft/
 ```
 pr-review/
 ├── .claude-plugin/
-│   └── plugin.json                   # Маніфест плагіна
+│ └── plugin.json # Маніфест плагіна
 ├── commands/
-│   ├── review-pr.md                  # Комплексне ревʼю
-│   ├── check-security.md             # Перевірка безпеки
-│   └── check-tests.md               # Перевірка покриття тестами
+│ ├── review-pr.md # Комплексне ревʼю
+│ ├── check-security.md # Перевірка безпеки
+│ └── check-tests.md # Перевірка покриття тестами
 ├── agents/
-│   ├── security-reviewer.md          # Спеціаліст з безпеки
-│   ├── test-checker.md               # Спеціаліст з тестування
-│   └── performance-analyzer.md       # Спеціаліст з продуктивності
+│ ├── security-reviewer.md # Спеціаліст з безпеки
+│ ├── test-checker.md # Спеціаліст з тестування
+│ └── performance-analyzer.md # Спеціаліст з продуктивності
 ├── mcp/
-│   └── github-config.json            # Інтеграція з GitHub
+│ └── github-config.json # Інтеграція з GitHub
 ├── hooks/
-│   └── pre-review.js                 # Валідація перед ревʼю
-└── README.md                         # Документація плагіна
+│ └── pre-review.js # Валідація перед ревʼю
+└── README.md # Документація плагіна
 ```
 
 **Можливості**: Аналіз безпеки, покриття тестами, вплив на продуктивність
@@ -275,26 +275,26 @@ pr-review/
 ```
 devops-automation/
 ├── .claude-plugin/
-│   └── plugin.json                   # Маніфест плагіна
+│ └── plugin.json # Маніфест плагіна
 ├── commands/
-│   ├── deploy.md                     # Розгортання
-│   ├── rollback.md                   # Відкат
-│   ├── status.md                     # Статус системи
-│   └── incident.md                   # Реагування на інциденти
+│ ├── deploy.md # Розгортання
+│ ├── rollback.md # Відкат
+│ ├── status.md # Статус системи
+│ └── incident.md # Реагування на інциденти
 ├── agents/
-│   ├── deployment-specialist.md      # Експерт з розгортання
-│   ├── incident-commander.md         # Координатор інцидентів
-│   └── alert-analyzer.md             # Аналізатор сповіщень
+│ ├── deployment-specialist.md # Експерт з розгортання
+│ ├── incident-commander.md # Координатор інцидентів
+│ └── alert-analyzer.md # Аналізатор сповіщень
 ├── mcp/
-│   └── kubernetes-config.json        # Інтеграція з Kubernetes
+│ └── kubernetes-config.json # Інтеграція з Kubernetes
 ├── hooks/
-│   ├── pre-deploy.js                 # Перевірки перед розгортанням
-│   └── post-deploy.js               # Дії після розгортання
+│ ├── pre-deploy.js # Перевірки перед розгортанням
+│ └── post-deploy.js # Дії після розгортання
 ├── scripts/
-│   ├── deploy.sh                     # Автоматизація розгортання
-│   ├── rollback.sh                   # Автоматизація відкату
-│   └── health-check.sh              # Перевірка стану
-└── README.md                         # Документація плагіна
+│ ├── deploy.sh # Автоматизація розгортання
+│ ├── rollback.sh # Автоматизація відкату
+│ └── health-check.sh # Перевірка стану
+└── README.md # Документація плагіна
 ```
 
 **Можливості**: Розгортання Kubernetes, відкат, моніторинг, реагування на інциденти
@@ -310,23 +310,23 @@ devops-automation/
 ```
 documentation/
 ├── .claude-plugin/
-│   └── plugin.json                   # Маніфест плагіна
+│ └── plugin.json # Маніфест плагіна
 ├── commands/
-│   ├── generate-api-docs.md          # Генерація API-документації
-│   ├── generate-readme.md            # Створення README
-│   ├── sync-docs.md                  # Синхронізація документації
-│   └── validate-docs.md              # Валідація документації
+│ ├── generate-api-docs.md # Генерація API-документації
+│ ├── generate-readme.md # Створення README
+│ ├── sync-docs.md # Синхронізація документації
+│ └── validate-docs.md # Валідація документації
 ├── agents/
-│   ├── api-documenter.md             # Спеціаліст з API-документації
-│   ├── code-commentator.md           # Спеціаліст з коментарів
-│   └── example-generator.md          # Генератор прикладів
+│ ├── api-documenter.md # Спеціаліст з API-документації
+│ ├── code-commentator.md # Спеціаліст з коментарів
+│ └── example-generator.md # Генератор прикладів
 ├── mcp/
-│   └── github-docs-config.json       # Інтеграція з GitHub
+│ └── github-docs-config.json # Інтеграція з GitHub
 ├── templates/
-│   ├── api-endpoint.md               # Шаблон API-ендпоінту
-│   ├── function-docs.md              # Шаблон документації функцій
-│   └── adr-template.md               # Шаблон ADR
-└── README.md                         # Документація плагіна
+│ ├── api-endpoint.md # Шаблон API-ендпоінту
+│ ├── function-docs.md # Шаблон документації функцій
+│ └── adr-template.md # Шаблон ADR
+└── README.md # Документація плагіна
 ```
 
 **Можливості**: API-документація, генерація README, синхронізація, валідація
@@ -335,7 +335,7 @@ documentation/
 
 **Встановлення**: `/plugin install documentation`
 
-**Додатково**: `README.md` — огляд плагінів та керівництво
+**Додатково**: `README.md` - огляд плагінів та керівництво
 
 ---
 
@@ -485,12 +485,12 @@ documentation/
 
 **Ключові можливості CLI**:
 
-- `claude` — Запуск інтерактивної сесії
-- `claude -p "prompt"` — Headless/неінтерактивний режим
-- `claude web` — Запуск веб-сесії
-- `claude --model` — Вибір моделі (Sonnet 4.6, Opus 4.6)
-- `claude --permission-mode` — Встановлення режиму дозволів
-- `claude --remote` — Увімкнення віддаленого керування через WebSocket
+- `claude` - Запуск інтерактивної сесії
+- `claude -p "prompt"` - Headless/неінтерактивний режим
+- `claude web` - Запуск веб-сесії
+- `claude --model` - Вибір моделі (Sonnet 4.6, Opus 4.6)
+- `claude --permission-mode` - Встановлення режиму дозволів
+- `claude --remote` - Увімкнення віддаленого керування через WebSocket
 
 ---
 
@@ -518,167 +518,167 @@ documentation/
 
 ```
 claude-howto/
-├── README.md                                    # Головний огляд
-├── INDEX.md                                     # Цей файл
-├── QUICK_REFERENCE.md                           # Картка довідника
-├── claude_concepts_guide.md                     # Оригінальний посібник
+├── README.md # Головний огляд
+├── INDEX.md # Цей файл
+├── QUICK_REFERENCE.md # Картка довідника
+├── claude_concepts_guide.md # Оригінальний посібник
 │
-├── 01-slash-commands/                           # Слеш-команди
-│   ├── optimize.md
-│   ├── pr.md
-│   ├── generate-api-docs.md
-│   ├── commit.md
-│   ├── setup-ci-cd.md
-│   ├── push-all.md
-│   ├── unit-test-expand.md
-│   ├── doc-refactor.md
-│   ├── pr-slash-command.png
-│   └── README.md
+├── 01-slash-commands/ # Слеш-команди
+│ ├── optimize.md
+│ ├── pr.md
+│ ├── generate-api-docs.md
+│ ├── commit.md
+│ ├── setup-ci-cd.md
+│ ├── push-all.md
+│ ├── unit-test-expand.md
+│ ├── doc-refactor.md
+│ ├── pr-slash-command.png
+│ └── README.md
 │
-├── 02-memory/                                   # Пам'ять
-│   ├── project-CLAUDE.md
-│   ├── directory-api-CLAUDE.md
-│   ├── personal-CLAUDE.md
-│   ├── memory-saved.png
-│   ├── memory-ask-claude.png
-│   └── README.md
+├── 02-memory/ # Пам'ять
+│ ├── project-CLAUDE.md
+│ ├── directory-api-CLAUDE.md
+│ ├── personal-CLAUDE.md
+│ ├── memory-saved.png
+│ ├── memory-ask-claude.png
+│ └── README.md
 │
-├── 03-skills/                                   # Навички
-│   ├── code-review/
-│   │   ├── SKILL.md
-│   │   ├── scripts/
-│   │   │   ├── analyze-metrics.py
-│   │   │   └── compare-complexity.py
-│   │   └── templates/
-│   │       ├── review-checklist.md
-│   │       └── finding-template.md
-│   ├── brand-voice/
-│   │   ├── SKILL.md
-│   │   ├── templates/
-│   │   │   ├── email-template.txt
-│   │   │   └── social-post-template.txt
-│   │   └── tone-examples.md
-│   ├── doc-generator/
-│   │   ├── SKILL.md
-│   │   └── generate-docs.py
-│   ├── refactor/
-│   │   ├── SKILL.md
-│   │   ├── scripts/
-│   │   │   ├── analyze-complexity.py
-│   │   │   └── detect-smells.py
-│   │   ├── references/
-│   │   │   ├── code-smells.md
-│   │   │   └── refactoring-catalog.md
-│   │   └── templates/
-│   │       └── refactoring-plan.md
-│   ├── claude-md/
-│   │   └── SKILL.md
-│   ├── blog-draft/
-│   │   ├── SKILL.md
-│   │   └── templates/
-│   │       ├── draft-template.md
-│   │       └── outline-template.md
-│   └── README.md
+├── 03-skills/ # Навички
+│ ├── code-review/
+│ │ ├── SKILL.md
+│ │ ├── scripts/
+│ │ │ ├── analyze-metrics.py
+│ │ │ └── compare-complexity.py
+│ │ └── templates/
+│ │ ├── review-checklist.md
+│ │ └── finding-template.md
+│ ├── brand-voice/
+│ │ ├── SKILL.md
+│ │ ├── templates/
+│ │ │ ├── email-template.txt
+│ │ │ └── social-post-template.txt
+│ │ └── tone-examples.md
+│ ├── doc-generator/
+│ │ ├── SKILL.md
+│ │ └── generate-docs.py
+│ ├── refactor/
+│ │ ├── SKILL.md
+│ │ ├── scripts/
+│ │ │ ├── analyze-complexity.py
+│ │ │ └── detect-smells.py
+│ │ ├── references/
+│ │ │ ├── code-smells.md
+│ │ │ └── refactoring-catalog.md
+│ │ └── templates/
+│ │ └── refactoring-plan.md
+│ ├── claude-md/
+│ │ └── SKILL.md
+│ ├── blog-draft/
+│ │ ├── SKILL.md
+│ │ └── templates/
+│ │ ├── draft-template.md
+│ │ └── outline-template.md
+│ └── README.md
 │
-├── 04-subagents/                                # Субагенти
-│   ├── code-reviewer.md
-│   ├── test-engineer.md
-│   ├── documentation-writer.md
-│   ├── secure-reviewer.md
-│   ├── implementation-agent.md
-│   ├── debugger.md
-│   ├── data-scientist.md
-│   ├── clean-code-reviewer.md
-│   └── README.md
+├── 04-subagents/ # Субагенти
+│ ├── code-reviewer.md
+│ ├── test-engineer.md
+│ ├── documentation-writer.md
+│ ├── secure-reviewer.md
+│ ├── implementation-agent.md
+│ ├── debugger.md
+│ ├── data-scientist.md
+│ ├── clean-code-reviewer.md
+│ └── README.md
 │
-├── 05-mcp/                                      # Протокол MCP
-│   ├── github-mcp.json
-│   ├── database-mcp.json
-│   ├── filesystem-mcp.json
-│   ├── multi-mcp.json
-│   └── README.md
+├── 05-mcp/ # Протокол MCP
+│ ├── github-mcp.json
+│ ├── database-mcp.json
+│ ├── filesystem-mcp.json
+│ ├── multi-mcp.json
+│ └── README.md
 │
-├── 06-hooks/                                    # Хуки
-│   ├── format-code.sh
-│   ├── pre-commit.sh
-│   ├── security-scan.sh
-│   ├── log-bash.sh
-│   ├── validate-prompt.sh
-│   ├── notify-team.sh
-│   ├── context-tracker.py
-│   ├── context-tracker-tiktoken.py
-│   └── README.md
+├── 06-hooks/ # Хуки
+│ ├── format-code.sh
+│ ├── pre-commit.sh
+│ ├── security-scan.sh
+│ ├── log-bash.sh
+│ ├── validate-prompt.sh
+│ ├── notify-team.sh
+│ ├── context-tracker.py
+│ ├── context-tracker-tiktoken.py
+│ └── README.md
 │
-├── 07-plugins/                                  # Плагіни
-│   ├── pr-review/
-│   │   ├── .claude-plugin/
-│   │   │   └── plugin.json
-│   │   ├── commands/
-│   │   │   ├── review-pr.md
-│   │   │   ├── check-security.md
-│   │   │   └── check-tests.md
-│   │   ├── agents/
-│   │   │   ├── security-reviewer.md
-│   │   │   ├── test-checker.md
-│   │   │   └── performance-analyzer.md
-│   │   ├── mcp/
-│   │   │   └── github-config.json
-│   │   ├── hooks/
-│   │   │   └── pre-review.js
-│   │   └── README.md
-│   ├── devops-automation/
-│   │   ├── .claude-plugin/
-│   │   │   └── plugin.json
-│   │   ├── commands/
-│   │   │   ├── deploy.md
-│   │   │   ├── rollback.md
-│   │   │   ├── status.md
-│   │   │   └── incident.md
-│   │   ├── agents/
-│   │   │   ├── deployment-specialist.md
-│   │   │   ├── incident-commander.md
-│   │   │   └── alert-analyzer.md
-│   │   ├── mcp/
-│   │   │   └── kubernetes-config.json
-│   │   ├── hooks/
-│   │   │   ├── pre-deploy.js
-│   │   │   └── post-deploy.js
-│   │   ├── scripts/
-│   │   │   ├── deploy.sh
-│   │   │   ├── rollback.sh
-│   │   │   └── health-check.sh
-│   │   └── README.md
-│   ├── documentation/
-│   │   ├── .claude-plugin/
-│   │   │   └── plugin.json
-│   │   ├── commands/
-│   │   │   ├── generate-api-docs.md
-│   │   │   ├── generate-readme.md
-│   │   │   ├── sync-docs.md
-│   │   │   └── validate-docs.md
-│   │   ├── agents/
-│   │   │   ├── api-documenter.md
-│   │   │   ├── code-commentator.md
-│   │   │   └── example-generator.md
-│   │   ├── mcp/
-│   │   │   └── github-docs-config.json
-│   │   ├── templates/
-│   │   │   ├── api-endpoint.md
-│   │   │   ├── function-docs.md
-│   │   │   └── adr-template.md
-│   │   └── README.md
-│   └── README.md
+├── 07-plugins/ # Плагіни
+│ ├── pr-review/
+│ │ ├── .claude-plugin/
+│ │ │ └── plugin.json
+│ │ ├── commands/
+│ │ │ ├── review-pr.md
+│ │ │ ├── check-security.md
+│ │ │ └── check-tests.md
+│ │ ├── agents/
+│ │ │ ├── security-reviewer.md
+│ │ │ ├── test-checker.md
+│ │ │ └── performance-analyzer.md
+│ │ ├── mcp/
+│ │ │ └── github-config.json
+│ │ ├── hooks/
+│ │ │ └── pre-review.js
+│ │ └── README.md
+│ ├── devops-automation/
+│ │ ├── .claude-plugin/
+│ │ │ └── plugin.json
+│ │ ├── commands/
+│ │ │ ├── deploy.md
+│ │ │ ├── rollback.md
+│ │ │ ├── status.md
+│ │ │ └── incident.md
+│ │ ├── agents/
+│ │ │ ├── deployment-specialist.md
+│ │ │ ├── incident-commander.md
+│ │ │ └── alert-analyzer.md
+│ │ ├── mcp/
+│ │ │ └── kubernetes-config.json
+│ │ ├── hooks/
+│ │ │ ├── pre-deploy.js
+│ │ │ └── post-deploy.js
+│ │ ├── scripts/
+│ │ │ ├── deploy.sh
+│ │ │ ├── rollback.sh
+│ │ │ └── health-check.sh
+│ │ └── README.md
+│ ├── documentation/
+│ │ ├── .claude-plugin/
+│ │ │ └── plugin.json
+│ │ ├── commands/
+│ │ │ ├── generate-api-docs.md
+│ │ │ ├── generate-readme.md
+│ │ │ ├── sync-docs.md
+│ │ │ └── validate-docs.md
+│ │ ├── agents/
+│ │ │ ├── api-documenter.md
+│ │ │ ├── code-commentator.md
+│ │ │ └── example-generator.md
+│ │ ├── mcp/
+│ │ │ └── github-docs-config.json
+│ │ ├── templates/
+│ │ │ ├── api-endpoint.md
+│ │ │ ├── function-docs.md
+│ │ │ └── adr-template.md
+│ │ └── README.md
+│ └── README.md
 │
-├── 08-checkpoints/                              # Контрольні точки
-│   ├── checkpoint-examples.md
-│   └── README.md
+├── 08-checkpoints/ # Контрольні точки
+│ ├── checkpoint-examples.md
+│ └── README.md
 │
-├── 09-advanced-features/                        # Розширені функції
-│   ├── config-examples.json
-│   ├── planning-mode-examples.md
-│   └── README.md
+├── 09-advanced-features/ # Розширені функції
+│ ├── config-examples.json
+│ ├── planning-mode-examples.md
+│ └── README.md
 │
-└── 10-cli/                                      # Використання CLI
+└── 10-cli/ # Використання CLI
     └── README.md
 ```
 
@@ -777,9 +777,9 @@ chmod +x ~/.claude/hooks/*.sh
 /plan Implement feature X
 
 # Використати режими дозволів
-claude --permission-mode plan          # Для ревʼю коду (тільки читання)
-claude --permission-mode acceptEdits   # Автоматично приймати редагування
-claude --permission-mode auto          # Автоматично схвалювати безпечні дії
+claude --permission-mode plan # Для ревʼю коду (тільки читання)
+claude --permission-mode acceptEdits # Автоматично приймати редагування
+claude --permission-mode auto # Автоматично схвалювати безпечні дії
 
 # Запустити в headless-режимі для CI/CD
 claude -p "Run tests and report results"
@@ -813,34 +813,34 @@ Run tests in background
 
 ### Початківець (Тиждень 1)
 
-1. ✅ Прочитати `README.md`
-2. ✅ Встановити 1-2 слеш-команди
-3. ✅ Створити файл пам'яті проекту
-4. ✅ Спробувати базові команди
+1. Прочитати `README.md`
+2. Встановити 1-2 слеш-команди
+3. Створити файл пам'яті проекту
+4. Спробувати базові команди
 
 ### Середній рівень (Тижні 2-3)
 
-1. ✅ Налаштувати GitHub MCP
-2. ✅ Встановити субагента
-3. ✅ Спробувати делегувати завдання
-4. ✅ Встановити навичку
+1. Налаштувати GitHub MCP
+2. Встановити субагента
+3. Спробувати делегувати завдання
+4. Встановити навичку
 
 ### Просунутий (Тиждень 4+)
 
-1. ✅ Встановити повний плагін
-2. ✅ Створити власні слеш-команди
-3. ✅ Створити власного субагента
-4. ✅ Створити власну навичку
-5. ✅ Створити власний плагін
+1. Встановити повний плагін
+2. Створити власні слеш-команди
+3. Створити власного субагента
+4. Створити власну навичку
+5. Створити власний плагін
 
 ### Експерт (Тиждень 5+)
 
-1. ✅ Налаштувати хуки для автоматизації
-2. ✅ Використовувати контрольні точки для експериментів
-3. ✅ Налаштувати режим планування
-4. ✅ Ефективно використовувати режими дозволів
-5. ✅ Налаштувати headless-режим для CI/CD
-6. ✅ Опанувати управління сесіями
+1. Налаштувати хуки для автоматизації
+2. Використовувати контрольні точки для експериментів
+3. Налаштувати режим планування
+4. Ефективно використовувати режими дозволів
+5. Налаштувати headless-режим для CI/CD
+6. Опанувати управління сесіями
 
 ---
 
@@ -848,58 +848,58 @@ Run tests in background
 
 ### Продуктивність
 
-- `01-slash-commands/optimize.md` — Аналіз продуктивності
-- `04-subagents/code-reviewer.md` — Ревʼю продуктивності
-- `03-skills/code-review/` — Метрики продуктивності
-- `07-plugins/pr-review/agents/performance-analyzer.md` — Спеціаліст з продуктивності
+- `01-slash-commands/optimize.md` - Аналіз продуктивності
+- `04-subagents/code-reviewer.md` - Ревʼю продуктивності
+- `03-skills/code-review/` - Метрики продуктивності
+- `07-plugins/pr-review/agents/performance-analyzer.md` - Спеціаліст з продуктивності
 
 ### Безпека
 
-- `04-subagents/secure-reviewer.md` — Ревʼю безпеки
-- `03-skills/code-review/` — Аналіз безпеки
-- `07-plugins/pr-review/` — Перевірки безпеки
+- `04-subagents/secure-reviewer.md` - Ревʼю безпеки
+- `03-skills/code-review/` - Аналіз безпеки
+- `07-plugins/pr-review/` - Перевірки безпеки
 
 ### Тестування
 
-- `04-subagents/test-engineer.md` — Інженер з тестування
-- `07-plugins/pr-review/commands/check-tests.md` — Покриття тестами
+- `04-subagents/test-engineer.md` - Інженер з тестування
+- `07-plugins/pr-review/commands/check-tests.md` - Покриття тестами
 
 ### Документація
 
-- `01-slash-commands/generate-api-docs.md` — Команда генерації API-документації
-- `04-subagents/documentation-writer.md` — Агент-документатор
-- `03-skills/doc-generator/` — Навичка генерації документації
-- `07-plugins/documentation/` — Повний плагін документації
+- `01-slash-commands/generate-api-docs.md` - Команда генерації API-документації
+- `04-subagents/documentation-writer.md` - Агент-документатор
+- `03-skills/doc-generator/` - Навичка генерації документації
+- `07-plugins/documentation/` - Повний плагін документації
 
 ### Розгортання
 
-- `07-plugins/devops-automation/` — Повне DevOps-рішення
+- `07-plugins/devops-automation/` - Повне DevOps-рішення
 
 ### Автоматизація
 
-- `06-hooks/` — Автоматизація на основі подій
-- `06-hooks/pre-commit.sh` — Автоматизація pre-commit
-- `06-hooks/format-code.sh` — Автоформатування
-- `09-advanced-features/` — Headless-режим для CI/CD
+- `06-hooks/` - Автоматизація на основі подій
+- `06-hooks/pre-commit.sh` - Автоматизація pre-commit
+- `06-hooks/format-code.sh` - Автоформатування
+- `09-advanced-features/` - Headless-режим для CI/CD
 
 ### Валідація
 
-- `06-hooks/security-scan.sh` — Валідація безпеки
-- `06-hooks/validate-prompt.sh` — Валідація промптів
+- `06-hooks/security-scan.sh` - Валідація безпеки
+- `06-hooks/validate-prompt.sh` - Валідація промптів
 
 ### Експериментування
 
-- `08-checkpoints/` — Безпечне експериментування з відкатом
-- `08-checkpoints/checkpoint-examples.md` — Практичні приклади
+- `08-checkpoints/` - Безпечне експериментування з відкатом
+- `08-checkpoints/checkpoint-examples.md` - Практичні приклади
 
 ### Планування
 
-- `09-advanced-features/planning-mode-examples.md` — Приклади режиму планування
-- `09-advanced-features/README.md` — Розширене мислення
+- `09-advanced-features/planning-mode-examples.md` - Приклади режиму планування
+- `09-advanced-features/README.md` - Розширене мислення
 
 ### Конфігурація
 
-- `09-advanced-features/config-examples.json` — Приклади конфігурації
+- `09-advanced-features/config-examples.json` - Приклади конфігурації
 
 ---
 

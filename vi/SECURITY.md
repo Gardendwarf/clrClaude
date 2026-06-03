@@ -10,8 +10,8 @@ Chúng tôi cung cấp các bản cập nhật bảo mật cho các phiên bản
 
 | Phiên Bản | Trạng Thái | Hỗ Trợ Đến |
 |---------|--------|---------------|
-| Mới nhất (main) | ✅ Hoạt Động | Hiện tại + 6 tháng |
-| Bản phát hành 1.x | ✅ Hoạt Động | Đến phiên bản lớn tiếp theo |
+| Mới nhất (main) | Hoạt Động | Hiện tại + 6 tháng |
+| Bản phát hành 1.x | Hoạt Động | Đến phiên bản lớn tiếp theo |
 
 **Lưu ý**: Là một dự án hướng dẫn giáo dục, chúng tôi tập trung vào việc duy trì các thực hành tốt nhất hiện tại và bảo mật tài liệu hơn là hỗ trợ phiên bản truyền thống. Các bản cập nhật được áp dụng trực tiếp vào nhánh chính.
 

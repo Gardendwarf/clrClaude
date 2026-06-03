@@ -5,7 +5,7 @@
 
 # Claude How To - Brand Assets
 
-Complete collection of logos, icons, and favicons for the Claude How To project. All assets use the V3.0 design: a compass with code bracket (`>`) symbol, representing guided navigation through code — using a Black/White/Gray palette with Bright Green (#22C55E) accent.
+Complete collection of logos, icons, and favicons for the Claude How To project. All assets use the V3.0 design: a compass with code bracket (`>`) symbol, representing guided navigation through code - using a Black/White/Gray palette with Bright Green (#22C55E) accent.
 
 ## Directory Structure
 
@@ -41,7 +41,7 @@ assets/logo/
 
 ### Design Concept (V3.0)
 
-**Compass with Code Bracket** — guidance meets code:
+**Compass with Code Bracket** - guidance meets code:
 - **Compass Ring** = Navigation, finding your way
 - **North Needle (Green)** = Direction, progress on the learning path
 - **South Needle (Black)** = Grounding, solid foundation
@@ -102,7 +102,7 @@ Optimized versions at multiple sizes for web use:
 | `favicon-256.svg` | 256×256 px | 4x | Modern browsers, PWA icons |
 
 **Optimization Notes**:
-- 16px: Minimal geometry — ring, needles, chevron only
+- 16px: Minimal geometry - ring, needles, chevron only
 - 32px: Adds cardinal tick marks
 - 64px+: Full detail with intercardinal ticks
 - All maintain visual consistency with main icon
@@ -154,7 +154,7 @@ Optimized versions at multiple sizes for web use:
 - **Gray**: `#6B7280` (Secondary text, minor tick marks)
 
 ### Accent Color
-- **Bright Green**: `#22C55E` (North needle, center dot, accent lines — highlights only, never as background)
+- **Bright Green**: `#22C55E` (North needle, center dot, accent lines - highlights only, never as background)
 
 ### Dark Mode
 - **Background**: `#0A0A0A` (Near-black)
@@ -182,7 +182,7 @@ colors: {
 ### Usage Guidelines
 - Use black for primary text and structural elements
 - Use gray for secondary/supporting elements
-- Use green **only** for highlights — needle, dots, accent lines
+- Use green **only** for highlights - needle, dots, accent lines
 - Never use green as a background color
 - Maintain WCAG AA contrast (4.5:1 minimum)
 
@@ -241,7 +241,7 @@ inkscape -D -z --file=favicon-256.svg --export-png=favicon-256.png
 
 ## Accessibility
 
-- High contrast color ratios (WCAG AA compliant — 4.5:1 minimum)
+- High contrast color ratios (WCAG AA compliant - 4.5:1 minimum)
 - Clean geometric shapes recognizable at all sizes
 - Scalable vector format
 - No text in icons (text added separately in wordmark)

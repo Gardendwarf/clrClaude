@@ -129,26 +129,26 @@ If you believe a decision was made in error, you may appeal by:
 Disagreements are natural in technical communities. Here's how to disagree respectfully:
 
 ### Do's
-- ✅ Focus on the idea, not the person
-- ✅ Ask clarifying questions
-- ✅ Acknowledge valid points in opposing views
-- ✅ Use "I" statements ("I disagree because...")
-- ✅ Cite sources and evidence
-- ✅ Thank others for their perspective
+- Focus on the idea, not the person
+- Ask clarifying questions
+- Acknowledge valid points in opposing views
+- Use "I" statements ("I disagree because...")
+- Cite sources and evidence
+- Thank others for their perspective
 
 ### Don'ts
-- ❌ Make personal attacks
-- ❌ Use dismissive language ("That's stupid")
-- ❌ Assume bad intent
-- ❌ Bring up unrelated past conflicts
-- ❌ Escalate tone or become hostile
-- ❌ Deliberately misrepresent others' views
+- Make personal attacks
+- Use dismissive language ("That's stupid")
+- Assume bad intent
+- Bring up unrelated past conflicts
+- Escalate tone or become hostile
+- Deliberately misrepresent others' views
 
 ### Example of Respectful Disagreement
 ```
-❌ Bad: "That's a dumb idea and you clearly don't understand the project."
+ Bad: "That's a dumb idea and you clearly don't understand the project."
 
-✅ Good: "I see your point, but I'm concerned this approach might
+ Good: "I see your point, but I'm concerned this approach might
 not scale well with larger projects. Have you considered the
 performance implications shown in this benchmark? I'd love to
 hear your thoughts on this."
@@ -214,7 +214,7 @@ If you have questions about this Code of Conduct, please reach out to the projec
 
 ---
 
-**Thank you for helping us create a welcoming, inclusive, and respectful community!** 🌟
+**Thank you for helping us create a welcoming, inclusive, and respectful community!**
 
 ---
 **Last Updated**: April 9, 2026

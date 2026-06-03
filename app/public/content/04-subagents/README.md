@@ -609,7 +609,7 @@ Or in `settings.json`:
 Once enabled, ask Claude to work with teammates in your prompt:
 
 ```
-User: Build the authentication module. Use a team — one teammate for the API endpoints,
+User: Build the authentication module. Use a team - one teammate for the API endpoints,
       one for the database schema, and one for the test suite.
 ```
 
@@ -689,9 +689,9 @@ graph TB
 
 The team lead breaks work into tasks and assigns them to teammates. The shared task list handles:
 
-- **Automatic dependency management** — tasks wait for their dependencies to complete
-- **Status tracking** — teammates update task status as they work
-- **Inter-agent messaging** — teammates send messages via the mailbox for coordination (e.g., "Database schema is ready, you can start writing queries")
+- **Automatic dependency management** - tasks wait for their dependencies to complete
+- **Status tracking** - teammates update task status as they work
+- **Inter-agent messaging** - teammates send messages via the mailbox for coordination (e.g., "Database schema is ready, you can start writing queries")
 
 ### Plan approval workflow
 
@@ -709,7 +709,7 @@ Agent Teams introduce two additional [hook events](../06-hooks/):
 ### Best practices
 
 - **Team size**: Keep teams at 3-5 teammates for optimal coordination
-- **Task sizing**: Break work into tasks that take 5-15 minutes each — small enough to parallelize, large enough to be meaningful
+- **Task sizing**: Break work into tasks that take 5-15 minutes each - small enough to parallelize, large enough to be meaningful
 - **Avoid file conflicts**: Assign different files or directories to different teammates to prevent merge conflicts
 - **Start simple**: Use in-process mode for your first team; switch to split-panes once comfortable
 - **Clear task descriptions**: Provide specific, actionable task descriptions so teammates can work independently

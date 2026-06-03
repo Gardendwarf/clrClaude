@@ -5,7 +5,7 @@
 
 # Ví Dụ Claude Code - Tham Khảo Nhanh
 
-## 🚀 Lệnh Cài Đặt Nhanh
+## Lệnh Cài Đặt Nhanh
 
 ### Lệnh Slash
 ```bash
@@ -92,24 +92,24 @@ chmod +x ~/.claude/hooks/*.sh
 /plan Mô tả tác vụ
 
 # Chế độ quyền (sử dụng cờ --permission-mode)
-# default        - Hỏi phê duyệt cho các hành động rủi ro
-# acceptEdits    - Tự động chấp nhận chỉnh sửa file, hỏi cho các hành động khác
-# plan           - Chỉ đọc phân tích, không sửa đổi
-# dontAsk        - Chấp nhận tất cả hành động trừ các hành động rủi ro
-# auto           - Bộ phân loại nền quyết định quyền tự động
+# default - Hỏi phê duyệt cho các hành động rủi ro
+# acceptEdits - Tự động chấp nhận chỉnh sửa file, hỏi cho các hành động khác
+# plan - Chỉ đọc phân tích, không sửa đổi
+# dontAsk - Chấp nhận tất cả hành động trừ các hành động rủi ro
+# auto - Bộ phân loại nền quyết định quyền tự động
 # bypassPermissions - Chấp nhận tất cả hành động (yêu cầu --dangerously-skip-permissions)
 
 # Quản lý phiên
-/resume                # Tiếp tục cuộc hội thoại trước
-/rename "name"         # Đặt tên cho phiên hiện tại
-/fork                  # Fork phiên hiện tại
-claude -c              # Tiếp tục cuộc hội thoại gần nhất
-claude -r "session"    # Tiếp tục phiên theo tên/ID
+/resume # Tiếp tục cuộc hội thoại trước
+/rename "name" # Đặt tên cho phiên hiện tại
+/fork # Fork phiên hiện tại
+claude -c # Tiếp tục cuộc hội thoại gần nhất
+claude -r "session" # Tiếp tục phiên theo tên/ID
 ```
 
 ---
 
-## 📋 Bảng Cheat Sheet Tính Năng
+## Bảng Cheat Sheet Tính Năng
 
 | Tính Năng | Đường Dẫn Cài Đặt | Cách Sử Dụng |
 |---------|-------------|-------|
@@ -134,7 +134,7 @@ claude -r "session"    # Tiếp tục phiên theo tên/ID
 
 ---
 
-## 🎯 Trường Hợp Sử Dụng Phổ Biến
+## Trường Hợp Sử Dụng Phổ Biến
 
 ### Review Code
 ```bash
@@ -268,36 +268,36 @@ export CLAUDE_AGENT_TEAMS=1
 
 ---
 
-## 📁 Tham Khảo Vị Trí File
+## Tham Khảo Vị Trí File
 
 ```
 Dự Án Của Bạn/
 ├── .claude/
-│   ├── commands/              # Lệnh slash đặt ở đây
-│   ├── agents/                # Tác nhân con đặt ở đây
-│   ├── skills/                # Skills dự án đặt ở đây
-│   └── settings.json          # Cài đặt dự án (hooks, v.v.)
-├── .mcp.json                  # Cấu hình MCP (phạm vi dự án)
-├── CLAUDE.md                  # Bộ nhớ dự án
+│ ├── commands/ # Lệnh slash đặt ở đây
+│ ├── agents/ # Tác nhân con đặt ở đây
+│ ├── skills/ # Skills dự án đặt ở đây
+│ └── settings.json # Cài đặt dự án (hooks, v.v.)
+├── .mcp.json # Cấu hình MCP (phạm vi dự án)
+├── CLAUDE.md # Bộ nhớ dự án
 └── src/
     └── api/
-        └── CLAUDE.md          # Bộ nhớ cụ thể thư mục
+        └── CLAUDE.md # Bộ nhớ cụ thể thư mục
 
 Home Người Dùng/
 ├── .claude/
-│   ├── commands/              # Lệnh cá nhân
-│   ├── agents/                # Tác nhân cá nhân
-│   ├── skills/                # Skills cá nhân
-│   ├── hooks/                 # Script hooks
-│   ├── settings.json          # Cài đặt người dùng
-│   ├── managed-settings.d/    # Cài đặt được quản lý (doanh nghiệp/tổ chức)
-│   └── CLAUDE.md              # Bộ nhớ cá nhân
-└── .claude.json               # Cấu hình MCP cá nhân (phạm vi người dùng)
+│ ├── commands/ # Lệnh cá nhân
+│ ├── agents/ # Tác nhân cá nhân
+│ ├── skills/ # Skills cá nhân
+│ ├── hooks/ # Script hooks
+│ ├── settings.json # Cài đặt người dùng
+│ ├── managed-settings.d/ # Cài đặt được quản lý (doanh nghiệp/tổ chức)
+│ └── CLAUDE.md # Bộ nhớ cá nhân
+└── .claude.json # Cấu hình MCP cá nhân (phạm vi người dùng)
 ```
 
 ---
 
-## 🔍 Tìm Ví Dụ
+## Tìm Ví Dụ
 
 ### Theo Danh Mục
 - **Lệnh Slash**: `01-slash-commands/`
@@ -326,7 +326,7 @@ Home Người Dùng/
 
 ---
 
-## 🎓 Lộ Trình Học
+## Lộ Trình Học
 
 ### Ngày 1
 ```bash
@@ -436,7 +436,7 @@ echo $GITHUB_TOKEN
 
 ---
 
-## 📊 Ma Trận Tính Năng
+## Ma Trận Tính Năng
 
 | Nhu Cầu | Sử Dụng Cái Này | Ví Dụ |
 |------|----------|---------|
@@ -454,7 +454,7 @@ echo $GITHUB_TOKEN
 
 ---
 
-## 🔗 Liên Kết Nhanh
+## Liên Kết Nhanh
 
 - **Hướng Dẫn Chính**: `README.md`
 - **Index Hoàn Chỉnh**: `INDEX.md`
@@ -463,7 +463,7 @@ echo $GITHUB_TOKEN
 
 ---
 
-## 📞 Câu Hỏi Phổ Biến
+## Câu Hỏi Phổ Biến
 
 **Câu: Tôi nên dùng cái nào?**
 Đáp: Bắt đầu với lệnh slash, thêm tính năng khi cần.
@@ -482,7 +482,7 @@ echo $GITHUB_TOKEN
 
 ---
 
-## ✅ Checklist
+## Checklist
 
 Checklist bắt đầu:
 

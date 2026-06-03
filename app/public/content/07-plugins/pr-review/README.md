@@ -9,11 +9,11 @@ Complete PR review workflow with security, testing, and documentation checks.
 
 ## Features
 
-✅ Security analysis
-✅ Test coverage checking
-✅ Documentation verification
-✅ Code quality assessment
-✅ Performance impact analysis
+ Security analysis
+ Test coverage checking
+ Documentation verification
+ Code quality assessment
+ Performance impact analysis
 
 ## Installation
 
@@ -84,8 +84,8 @@ Claude:
 7. Provides comprehensive review report
 
 Result:
-✅ Security: No critical issues found
-⚠️  Testing: Coverage is 65%, recommend 80%+
-✅ Performance: No significant impact
-📝 Recommendations: Add tests for edge cases
+ Security: No critical issues found
+  Testing: Coverage is 65%, recommend 80%+
+ Performance: No significant impact
+ Recommendations: Add tests for edge cases
 ```

@@ -3,14 +3,14 @@
   <img alt="Claude How To" src="resources/logos/claude-howto-logo.svg">
 </picture>
 
-# 📚 Claude Code 学习路线图
+# Claude Code 学习路线图
 
 **刚接触 Claude Code？** 这份指南会帮你按照自己的节奏掌握 Claude Code 的各项功能。无论你是完全新手，还是经验丰富的开发者，都可以先做下面的自我评估测验，找到最适合自己的起点。
 
 ---
 
 <a id="find-your-level"></a>
-## 🧭 找到你的水平
+## 找到你的水平
 
 每个人的起点都不同。先做一份快速自我评估，确认最适合你的入口。
 
@@ -39,7 +39,7 @@
 
 ---
 
-## 🎯 学习理念
+## 学习理念
 
 本仓库里的文件夹是按照**推荐学习顺序**编号的，背后有 3 个原则：
 
@@ -51,25 +51,25 @@
 
 ---
 
-## 🗺️ 你的学习路径
+## 你的学习路径
 
 ```mermaid
 graph TD
-    Q["🧭 自我评估测验<br/>找到你的水平"] --> L1
+    Q[" 自我评估测验<br/>找到你的水平"] --> L1
     Q --> L2
     Q --> L3
 
-    subgraph L1["🟢 Level 1：Beginner - 从这里开始"]
+    subgraph L1[" Level 1：Beginner - 从这里开始"]
         direction LR
         A["1A：第一个命令与 Memory<br/>Slash Commands + Memory"] --> B["1B：安全探索<br/>Checkpoints + CLI Basics"]
     end
 
-    subgraph L2["🔵 Level 2：Intermediate - 构建工作流"]
+    subgraph L2[" Level 2：Intermediate - 构建工作流"]
         direction LR
         C["2A：自动化<br/>Skills + Hooks"] --> D["2B：集成<br/>MCP + Subagents"]
     end
 
-    subgraph L3["🔴 Level 3：Advanced - 高阶用户"]
+    subgraph L3[" Level 3：Advanced - 高阶用户"]
         direction LR
         E["3A：高级功能<br/>Planning + Permissions"] --> F["3B：团队与分发<br/>Plugins + CLI 精通"]
     end
@@ -87,34 +87,34 @@ graph TD
 ```
 
 **颜色说明：**
-- 💜 紫色：自我评估测验
-- 🟢 绿色：Level 1 - Beginner 路线
-- 🔵 蓝色 / 🟡 金色：Level 2 - Intermediate 路线
-- 🔴 红色：Level 3 - Advanced 路线
+- 紫色：自我评估测验
+- 绿色：Level 1 - Beginner 路线
+- 蓝色 / 金色：Level 2 - Intermediate 路线
+- 红色：Level 3 - Advanced 路线
 
 ---
 
-## 📊 完整路线图表
+## 完整路线图表
 
 | 步骤 | 功能 | 复杂度 | 时间 | 水平 | 依赖 | 为什么学它 | 关键收益 |
 |------|---------|-----------|------|-------|--------------|----------------|--------------|
-| **1** | [Slash Commands](01-slash-commands/README.md) | ⭐ Beginner | 30 分钟 | Level 1 | 无 | 快速获得生产力提升（55+ 内置命令 + 5 个 bundled skills） | 立即自动化、统一团队规范 |
-| **2** | [Memory](02-memory/README.md) | ⭐⭐ Beginner+ | 45 分钟 | Level 1 | 无 | 所有功能的基础 | 持久上下文、偏好设置 |
-| **3** | [Checkpoints](08-checkpoints/README.md) | ⭐⭐ Intermediate | 45 分钟 | Level 1 | 会话管理 | 安全探索 | 试验、恢复 |
-| **4** | [CLI Basics](10-cli/README.md) | ⭐⭐ Beginner+ | 30 分钟 | Level 1 | 无 | 核心 CLI 用法 | 交互式与 print mode |
-| **5** | [Skills](03-skills/README.md) | ⭐⭐ Intermediate | 1 小时 | Level 2 | Slash Commands | 自动化专业能力 | 可复用能力、一致性 |
-| **6** | [Hooks](06-hooks/README.md) | ⭐⭐ Intermediate | 1 小时 | Level 2 | 工具、命令 | 工作流自动化（25 个事件、4 种类型） | 校验、质量门禁 |
-| **7** | [MCP](05-mcp/README.md) | ⭐⭐⭐ Intermediate+ | 1 小时 | Level 2 | 配置 | 实时数据访问 | 实时集成、API |
-| **8** | [Subagents](04-subagents/README.md) | ⭐⭐⭐ Intermediate+ | 1.5 小时 | Level 2 | Memory、命令 | 处理复杂任务（包含 Bash 在内的 6 个内置 agent） | 委派、专业分工 |
-| **9** | [Advanced Features](09-advanced-features/README.md) | ⭐⭐⭐⭐⭐ Advanced | 2-3 小时 | Level 3 | 前面所有内容 | 高阶工具 | Planning、自动模式（Auto Mode）、通道（Channels）、语音输入、权限控制 |
-| **10** | [Plugins](07-plugins/README.md) | ⭐⭐⭐⭐ Advanced | 2 小时 | Level 3 | 前面所有内容 | 完整解决方案 | 团队入职、分发 |
-| **11** | [CLI Mastery](10-cli/README.md) | ⭐⭐⭐ Advanced | 1 小时 | Level 3 | 建议：全部 | 掌握命令行用法 | 脚本、CI/CD、自动化 |
+| **1** | [Slash Commands](01-slash-commands/README.md) | Beginner | 30 分钟 | Level 1 | 无 | 快速获得生产力提升（55+ 内置命令 + 5 个 bundled skills） | 立即自动化、统一团队规范 |
+| **2** | [Memory](02-memory/README.md) | Beginner+ | 45 分钟 | Level 1 | 无 | 所有功能的基础 | 持久上下文、偏好设置 |
+| **3** | [Checkpoints](08-checkpoints/README.md) | Intermediate | 45 分钟 | Level 1 | 会话管理 | 安全探索 | 试验、恢复 |
+| **4** | [CLI Basics](10-cli/README.md) | Beginner+ | 30 分钟 | Level 1 | 无 | 核心 CLI 用法 | 交互式与 print mode |
+| **5** | [Skills](03-skills/README.md) | Intermediate | 1 小时 | Level 2 | Slash Commands | 自动化专业能力 | 可复用能力、一致性 |
+| **6** | [Hooks](06-hooks/README.md) | Intermediate | 1 小时 | Level 2 | 工具、命令 | 工作流自动化（25 个事件、4 种类型） | 校验、质量门禁 |
+| **7** | [MCP](05-mcp/README.md) | Intermediate+ | 1 小时 | Level 2 | 配置 | 实时数据访问 | 实时集成、API |
+| **8** | [Subagents](04-subagents/README.md) | Intermediate+ | 1.5 小时 | Level 2 | Memory、命令 | 处理复杂任务（包含 Bash 在内的 6 个内置 agent） | 委派、专业分工 |
+| **9** | [Advanced Features](09-advanced-features/README.md) | Advanced | 2-3 小时 | Level 3 | 前面所有内容 | 高阶工具 | Planning、自动模式（Auto Mode）、通道（Channels）、语音输入、权限控制 |
+| **10** | [Plugins](07-plugins/README.md) | Advanced | 2 小时 | Level 3 | 前面所有内容 | 完整解决方案 | 团队入职、分发 |
+| **11** | [CLI Mastery](10-cli/README.md) | Advanced | 1 小时 | Level 3 | 建议：全部 | 掌握命令行用法 | 脚本、CI/CD、自动化 |
 
 **总学习时间**：约 11-13 小时（或者直接跳到你的水平，节省时间）
 
 ---
 
-## 🟢 Level 1：Beginner - 从这里开始
+## Level 1：Beginner - 从这里开始
 
 **适合**：测验勾选数 0-2
 **时间**：约 3 小时
@@ -126,14 +126,14 @@ graph TD
 
 **主题**：Slash Commands + Memory
 **时间**：1-2 小时
-**复杂度**：⭐ Beginner
+**复杂度**： Beginner
 **目标**：通过自定义命令和持久上下文，快速提升效率
 
 #### 你将完成什么
-✅ 为重复性任务创建自定义 slash commands
-✅ 为团队规范设置项目 memory
-✅ 配置个人偏好
-✅ 理解 Claude 如何自动加载上下文
+ 为重复性任务创建自定义 slash commands
+ 为团队规范设置项目 memory
+ 配置个人偏好
+ 理解 Claude 如何自动加载上下文
 
 #### 实战练习
 
@@ -167,14 +167,14 @@ cp 02-memory/project-CLAUDE.md ./CLAUDE.md
 
 **主题**：Checkpoints + CLI Basics
 **时间**：1 小时
-**复杂度**：⭐⭐ Beginner+
+**复杂度**： Beginner+
 **目标**：学会安全试验，并使用核心 CLI 命令
 
 #### 你将完成什么
-✅ 创建和恢复 checkpoints，安全试验
-✅ 理解交互模式与 print mode
-✅ 使用基本 CLI 参数和选项
-✅ 通过管道处理文件
+ 创建和恢复 checkpoints，安全试验
+ 理解交互模式与 print mode
+ 使用基本 CLI 参数和选项
+ 通过管道处理文件
 
 #### 实战练习
 
@@ -186,8 +186,8 @@ cp 02-memory/project-CLAUDE.md ./CLAUDE.md
 # 选择“恢复代码和对话”返回
 
 # 练习 2：交互模式 vs 输出模式（Print mode）
-claude "explain this project"           # 交互模式
-claude -p "explain this function"       # 输出模式（非交互）
+claude "explain this project" # 交互模式
+claude -p "explain this function" # 输出模式（非交互）
 
 # 练习 3：通过管道处理文件内容
 cat error.log | claude -p "explain this error"
@@ -208,7 +208,7 @@ cat error.log | claude -p "explain this error"
 
 ---
 
-## 🔵 Level 2：Intermediate - 构建工作流
+## Level 2：Intermediate - 构建工作流
 
 **适合**：测验勾选数 3-5
 **时间**：约 5 小时
@@ -233,15 +233,15 @@ cat error.log | claude -p "explain this error"
 
 **主题**：Skills + Hooks
 **时间**：2-3 小时
-**复杂度**：⭐⭐ Intermediate
+**复杂度**： Intermediate
 **目标**：自动化常见工作流和质量检查
 
 #### 你将完成什么
-✅ 通过 YAML frontmatter 自动触发专门能力（包含 `effort` 和 `shell` 字段）
-✅ 在 25 个 hook 事件上设置事件驱动自动化
-✅ 使用 4 种 hook 类型（command、http、prompt、agent）
-✅ 强制执行代码质量标准
-✅ 为自己的工作流创建自定义 hooks
+ 通过 YAML frontmatter 自动触发专门能力（包含 `effort` 和 `shell` 字段）
+ 在 25 个 hook 事件上设置事件驱动自动化
+ 使用 4 种 hook 类型（command、http、prompt、agent）
+ 强制执行代码质量标准
+ 为自己的工作流创建自定义 hooks
 
 #### 实战练习
 
@@ -292,14 +292,14 @@ chmod +x ~/.claude/hooks/pre-tool-check.sh
 
 **主题**：MCP + Subagents
 **时间**：2-3 小时
-**复杂度**：⭐⭐⭐ Intermediate+
+**复杂度**： Intermediate+
 **目标**：集成外部服务，并把复杂任务委派出去
 
 #### 你将完成什么
-✅ 从 GitHub、数据库等位置访问实时数据
-✅ 把工作委派给专门化 AI agents
-✅ 明白什么时候该用 MCP，什么时候该用 subagents
-✅ 构建集成式工作流
+ 从 GitHub、数据库等位置访问实时数据
+ 把工作委派给专门化 AI agents
+ 明白什么时候该用 MCP，什么时候该用 subagents
+ 构建集成式工作流
 
 #### 实战练习
 
@@ -339,7 +339,7 @@ cp 04-subagents/*.md .claude/agents/
 
 ---
 
-## 🔴 Level 3：Advanced - 高阶用户与团队负责人
+## Level 3：Advanced - 高阶用户与团队负责人
 
 **适合**：测验勾选数 6-8
 **时间**：约 5 小时
@@ -364,20 +364,20 @@ cp 04-subagents/*.md .claude/agents/
 
 **主题**：高级功能（Planning、Permissions、Extended Thinking、自动模式（Auto Mode）、通道（Channels）、语音输入（Voice Dictation）、Remote/Desktop/Web）
 **时间**：2-3 小时
-**复杂度**：⭐⭐⭐⭐⭐ Advanced
+**复杂度**： Advanced
 **目标**：掌握高级工作流和高阶工具
 
 #### 你将完成什么
-✅ 为复杂功能使用 planning mode
-✅ 用 6 种模式进行细粒度权限控制（default、acceptEdits、plan、auto、dontAsk、bypassPermissions）
-✅ 用 Alt+T / Option+T 切换 extended thinking
-✅ 管理后台任务
-✅ 使用 Auto Memory 记住偏好
-✅ 使用自动模式（Auto Mode）和后台安全分类器
-✅ 使用通道（Channels）组织多会话工作流
-✅ 使用语音输入（Voice Dictation）解放双手
-✅ 远程控制、桌面应用和 Web 会话
-✅ 使用 Agent Teams 协作
+ 为复杂功能使用 planning mode
+ 用 6 种模式进行细粒度权限控制（default、acceptEdits、plan、auto、dontAsk、bypassPermissions）
+ 用 Alt+T / Option+T 切换 extended thinking
+ 管理后台任务
+ 使用 Auto Memory 记住偏好
+ 使用自动模式（Auto Mode）和后台安全分类器
+ 使用通道（Channels）组织多会话工作流
+ 使用语音输入（Voice Dictation）解放双手
+ 远程控制、桌面应用和 Web 会话
+ 使用 Agent Teams 协作
 
 #### 实战练习
 
@@ -442,15 +442,15 @@ export CLAUDE_AGENT_TEAMS=1
 
 **主题**：Plugins + CLI 精通 + CI/CD
 **时间**：2-3 小时
-**复杂度**：⭐⭐⭐⭐ Advanced
+**复杂度**： Advanced
 **目标**：搭建团队工具、创建插件、熟练集成 CI/CD
 
 #### 你将完成什么
-✅ 安装和创建完整的 bundled plugins
-✅ 掌握 CLI，用于脚本和自动化
-✅ 使用 `claude -p` 做 CI/CD 集成
-✅ 为自动化流水线输出 JSON
-✅ 管理会话与批处理
+ 安装和创建完整的 bundled plugins
+ 掌握 CLI，用于脚本和自动化
+ 使用 `claude -p` 做 CI/CD 集成
+ 为自动化流水线输出 JSON
+ 管理会话与批处理
 
 #### 实战练习
 
@@ -485,7 +485,7 @@ done
 
 ---
 
-## 🧪 测试你的知识
+## 测试你的知识
 
 根据你刚学完的内容，直接运行下面的测验：
 
@@ -503,7 +503,7 @@ done
 
 ---
 
-## ⚡ 快速开始路径
+## 快速开始路径
 
 ### 如果你只有 15 分钟
 **目标**：先拿到一个立竿见影的成果
@@ -548,9 +548,9 @@ done
 
 ---
 
-## 💡 学习建议
+## 学习建议
 
-### ✅ 建议做
+### 建议做
 
 - **先做测验**，找到自己的起点
 - **完成每个里程碑的实战练习**
@@ -561,7 +561,7 @@ done
 - **借助 checkpoints 安全试验**
 - **把经验分享给团队**
 
-### ❌ 不建议做
+### 不建议做
 
 - **不要跳过前置条件检查**
 - **不要试图一次学完所有内容**
@@ -573,7 +573,7 @@ done
 
 ---
 
-## 🎓 学习风格
+## 学习风格
 
 ### 视觉型学习者
 - 阅读每个 README 里的 Mermaid 图
@@ -601,11 +601,11 @@ done
 
 ---
 
-## 📈 进度追踪
+## 进度追踪
 
 用这些清单按水平追踪进度。你可以随时运行 `/self-assessment` 更新自己的技能画像，也可以在每个教程后运行 `/lesson-quiz [lesson]` 验证理解。
 
-### 🟢 Level 1：Beginner
+### Level 1：Beginner
 - [ ] 完成 [01-slash-commands](01-slash-commands/README.md)
 - [ ] 完成 [02-memory](02-memory/README.md)
 - [ ] 创建第一个自定义 slash command
@@ -617,7 +617,7 @@ done
 - [ ] 使用交互模式和 print mode
 - [ ] **达到里程碑 1B**
 
-### 🔵 Level 2：Intermediate
+### Level 2：Intermediate
 - [ ] 完成 [03-skills](03-skills/README.md)
 - [ ] 完成 [06-hooks](06-hooks/README.md)
 - [ ] 安装第一个 skill
@@ -630,7 +630,7 @@ done
 - [ ] 把多个集成组合进一个工作流
 - [ ] **达到里程碑 2B**
 
-### 🔴 Level 3：Advanced
+### Level 3：Advanced
 - [ ] 完成 [09-advanced-features](09-advanced-features/README.md)
 - [ ] 成功使用 planning mode
 - [ ] 配置权限模式（包含 auto 在内的 6 种）
@@ -648,7 +648,7 @@ done
 
 ---
 
-## 🆘 常见学习难题
+## 常见学习难题
 
 ### 难题 1：“概念一下子太多了”
 **解决**：一次只关注一个里程碑。完成所有练习后再往下走。
@@ -670,7 +670,7 @@ done
 
 ---
 
-## 🎯 学完之后做什么？
+## 学完之后做什么？
 
 完成所有里程碑后，可以继续做这些事：
 
@@ -692,7 +692,7 @@ done
 
 ---
 
-## 📚 其他资源
+## 其他资源
 
 ### 官方文档
 - [Claude Code Documentation](https://code.claude.com/docs/en/overview)
@@ -708,7 +708,7 @@ done
 
 ---
 
-## 💬 反馈与支持
+## 反馈与支持
 
 - **发现问题？** 在仓库里创建 issue
 - **有建议？** 提交 pull request

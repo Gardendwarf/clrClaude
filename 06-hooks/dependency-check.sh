@@ -9,7 +9,7 @@ if [ -z "$FILE" ]; then
   exit 0
 fi
 
-# Use basename for matching — $1 may be an absolute path
+# Use basename for matching - $1 may be an absolute path
 BASENAME=$(basename "$FILE")
 
 # Only run when a dependency manifest is written
@@ -21,7 +21,7 @@ case "$BASENAME" in
   Gemfile|Gemfile.lock| \
   composer.json|composer.lock| \
   pom.xml|build.gradle|build.gradle.kts)
-    echo "📦 Dependency manifest updated: $FILE — scanning for vulnerabilities..."
+    echo "📦 Dependency manifest updated: $FILE - scanning for vulnerabilities..."
     ;;
   *)
     exit 0
@@ -74,7 +74,7 @@ vulns = [d for d in data.get('dependencies', []) if d.get('vulns')]
 if vulns:
     for dep in vulns:
         for v in dep['vulns']:
-            print(f'  ⚠️  {dep[\"name\"]} {dep[\"version\"]}: {v[\"id\"]} — {v[\"fix_versions\"]}')
+            print(f'  ⚠️  {dep[\"name\"]} {dep[\"version\"]}: {v[\"id\"]} - {v[\"fix_versions\"]}')
     sys.exit(1)
 " 2>/dev/null; then
       echo "  ✅ No Python vulnerabilities found"
@@ -145,12 +145,12 @@ if command -v trivy &>/dev/null; then
 fi
 
 if [ "$ISSUES_FOUND" -eq 0 ]; then
-  echo "✅ Dependency check passed — no vulnerabilities detected"
+  echo "✅ Dependency check passed - no vulnerabilities detected"
 else
   echo ""
   echo "⚠️  Vulnerabilities detected. Review and update dependencies before committing."
   echo "   This hook is advisory only and will not block your workflow."
 fi
 
-# Always exit 0 — this hook warns but does not block
+# Always exit 0 - this hook warns but does not block
 exit 0

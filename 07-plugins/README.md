@@ -9,7 +9,7 @@ This folder contains complete plugin examples that bundle multiple Claude Code f
 
 ## Overview
 
-Claude Code Plugins are bundled collections of customizations (slash commands, subagents, MCP servers, and hooks) that install with a single command. They represent the highest-level extension mechanism—combining multiple features into cohesive, shareable packages.
+Claude Code Plugins are bundled collections of customizations (slash commands, subagents, MCP servers, and hooks) that install with a single command. They represent the highest-level extension mechanism-combining multiple features into cohesive, shareable packages.
 
 ## Plugin Architecture
 
@@ -55,7 +55,7 @@ sequenceDiagram
     Subagents-->>Tools: Ready to use
     MCPServers-->>Tools: Ready to use
     Hooks-->>Tools: Ready to use
-    Tools-->>Claude: Plugin installed ✅
+    Tools-->>Claude: Plugin installed
 ```
 
 ## Plugin Types & Distribution
@@ -90,32 +90,32 @@ Plugin manifest uses JSON format in `.claude-plugin/plugin.json`:
 ```
 my-plugin/
 ├── .claude-plugin/
-│   └── plugin.json       # Manifest (name, description, version, author)
-├── commands/             # Skills as Markdown files
-│   ├── task-1.md
-│   ├── task-2.md
-│   └── workflows/
-├── agents/               # Custom agent definitions
-│   ├── specialist-1.md
-│   ├── specialist-2.md
-│   └── configs/
-├── skills/               # Agent Skills with SKILL.md files
-│   ├── skill-1.md
-│   └── skill-2.md
-├── hooks/                # Event handlers in hooks.json
-│   └── hooks.json
-├── .mcp.json             # MCP server configurations
-├── .lsp.json             # LSP server configurations for code intelligence
-├── bin/                  # Executables added to Bash tool's PATH while plugin is enabled
-├── settings.json         # Default settings applied when plugin is enabled (currently only `agent` key supported)
+│ └── plugin.json # Manifest (name, description, version, author)
+├── commands/ # Skills as Markdown files
+│ ├── task-1.md
+│ ├── task-2.md
+│ └── workflows/
+├── agents/ # Custom agent definitions
+│ ├── specialist-1.md
+│ ├── specialist-2.md
+│ └── configs/
+├── skills/ # Agent Skills with SKILL.md files
+│ ├── skill-1.md
+│ └── skill-2.md
+├── hooks/ # Event handlers in hooks.json
+│ └── hooks.json
+├── .mcp.json # MCP server configurations
+├── .lsp.json # LSP server configurations for code intelligence
+├── bin/ # Executables added to Bash tool's PATH while plugin is enabled
+├── settings.json # Default settings applied when plugin is enabled (currently only `agent` key supported)
 ├── templates/
-│   └── issue-template.md
+│ └── issue-template.md
 ├── scripts/
-│   ├── helper-1.sh
-│   └── helper-2.py
+│ ├── helper-1.sh
+│ └── helper-2.py
 ├── docs/
-│   ├── README.md
-│   └── USAGE.md
+│ ├── README.md
+│ └── USAGE.md
 └── tests/
     └── plugin.test.js
 ```
@@ -207,10 +207,10 @@ The official marketplace includes pre-configured LSP plugins:
 
 Once configured, LSP servers provide:
 
-- **Instant diagnostics** — errors and warnings appear immediately after edits
-- **Code navigation** — go to definition, find references, implementations
-- **Hover information** — type signatures and documentation on hover
-- **Symbol listing** — browse symbols in the current file or workspace
+- **Instant diagnostics** - errors and warnings appear immediately after edits
+- **Code navigation** - go to definition, find references, implementations
+- **Hover information** - type signatures and documentation on hover
+- **Symbol listing** - browse symbols in the current file or workspace
 
 ## Plugin Options (v2.1.83+)
 
@@ -355,11 +355,11 @@ Specializes in finding security vulnerabilities:
 /plugin install pr-review
 
 # Result:
-# ✅ 3 slash commands installed
-# ✅ 3 subagents configured
-# ✅ 2 MCP servers connected
-# ✅ 4 hooks registered
-# ✅ Ready to use!
+# 3 slash commands installed
+# 3 subagents configured
+# 2 MCP servers connected
+# 4 hooks registered
+# Ready to use!
 ```
 
 ### Example 2: DevOps Plugin
@@ -369,22 +369,22 @@ Specializes in finding security vulnerabilities:
 ```
 devops-automation/
 ├── commands/
-│   ├── deploy.md
-│   ├── rollback.md
-│   ├── status.md
-│   └── incident.md
+│ ├── deploy.md
+│ ├── rollback.md
+│ ├── status.md
+│ └── incident.md
 ├── agents/
-│   ├── deployment-specialist.md
-│   ├── incident-commander.md
-│   └── alert-analyzer.md
+│ ├── deployment-specialist.md
+│ ├── incident-commander.md
+│ └── alert-analyzer.md
 ├── mcp/
-│   ├── github-config.json
-│   ├── kubernetes-config.json
-│   └── prometheus-config.json
+│ ├── github-config.json
+│ ├── kubernetes-config.json
+│ └── prometheus-config.json
 ├── hooks/
-│   ├── pre-deploy.js
-│   ├── post-deploy.js
-│   └── on-error.js
+│ ├── pre-deploy.js
+│ ├── post-deploy.js
+│ └── on-error.js
 └── scripts/
     ├── deploy.sh
     ├── rollback.sh
@@ -398,17 +398,17 @@ devops-automation/
 ```
 documentation/
 ├── commands/
-│   ├── generate-api-docs.md
-│   ├── generate-readme.md
-│   ├── sync-docs.md
-│   └── validate-docs.md
+│ ├── generate-api-docs.md
+│ ├── generate-readme.md
+│ ├── sync-docs.md
+│ └── validate-docs.md
 ├── agents/
-│   ├── api-documenter.md
-│   ├── code-commentator.md
-│   └── example-generator.md
+│ ├── api-documenter.md
+│ ├── code-commentator.md
+│ └── example-generator.md
 ├── mcp/
-│   ├── github-docs-config.json
-│   └── slack-announce-config.json
+│ ├── github-docs-config.json
+│ └── slack-announce-config.json
 └── templates/
     ├── api-endpoint.md
     ├── function-docs.md
@@ -549,9 +549,9 @@ Control how marketplace definitions interact with local `plugin.json` files:
 
 | Value | Effect |
 |-------|--------|
-| Not set | No restrictions — users can add any marketplace |
-| Empty array `[]` | Lockdown — no marketplaces allowed |
-| Array of patterns | Allowlist — only matching marketplaces can be added |
+| Not set | No restrictions - users can add any marketplace |
+| Empty array `[]` | Lockdown - no marketplaces allowed |
+| Array of patterns | Allowlist - only matching marketplaces can be added |
 
 ```json
 {
@@ -600,12 +600,12 @@ graph LR
 All plugin operations are available as CLI commands:
 
 ```bash
-claude plugin install <name>@<marketplace>   # Install from a marketplace
-claude plugin uninstall <name>               # Remove a plugin
-claude plugin list                           # List installed plugins
-claude plugin enable <name>                  # Enable a disabled plugin
-claude plugin disable <name>                 # Disable a plugin
-claude plugin validate                       # Validate plugin structure
+claude plugin install <name>@<marketplace> # Install from a marketplace
+claude plugin uninstall <name> # Remove a plugin
+claude plugin list # List installed plugins
+claude plugin enable <name> # Enable a disabled plugin
+claude plugin disable <name> # Disable a plugin
+claude plugin validate # Validate plugin structure
 ```
 
 ## Installation Methods
@@ -641,7 +641,7 @@ claude --plugin-dir ./plugin-a --plugin-dir ./plugin-b
 graph TD
     A["Should I create a plugin?"]
     A -->|Need multiple components| B{"Multiple commands<br/>or subagents<br/>or MCPs?"}
-    B -->|Yes| C["✅ Create Plugin"]
+    B -->|Yes| C[" Create Plugin"]
     B -->|No| D["Use Individual Feature"]
     A -->|Team workflow| E{"Share with<br/>team?"}
     E -->|Yes| C
@@ -655,13 +655,13 @@ graph TD
 
 | Use Case | Recommendation | Why |
 |----------|-----------------|-----|
-| **Team Onboarding** | ✅ Use Plugin | Instant setup, all configurations |
-| **Framework Setup** | ✅ Use Plugin | Bundles framework-specific commands |
-| **Enterprise Standards** | ✅ Use Plugin | Central distribution, version control |
-| **Quick Task Automation** | ❌ Use Command | Overkill complexity |
-| **Single Domain Expertise** | ❌ Use Skill | Too heavy, use skill instead |
-| **Specialized Analysis** | ❌ Use Subagent | Create manually or use skill |
-| **Live Data Access** | ❌ Use MCP | Standalone, don't bundle |
+| **Team Onboarding** | Use Plugin | Instant setup, all configurations |
+| **Framework Setup** | Use Plugin | Bundles framework-specific commands |
+| **Enterprise Standards** | Use Plugin | Central distribution, version control |
+| **Quick Task Automation** | Use Command | Overkill complexity |
+| **Single Domain Expertise** | Use Skill | Too heavy, use skill instead |
+| **Specialized Analysis** | Use Subagent | Create manually or use skill |
+| **Live Data Access** | Use MCP | Standalone, don't bundle |
 
 ## Testing a Plugin
 
@@ -747,11 +747,11 @@ Complete PR review workflow with security, testing, and documentation checks.
 ```
 
 ## Features
-✅ Security analysis
-✅ Test coverage checking
-✅ Documentation verification
-✅ Code quality assessment
-✅ Performance impact analysis
+ Security analysis
+ Test coverage checking
+ Documentation verification
+ Code quality assessment
+ Performance impact analysis
 
 ## Usage
 ```bash
@@ -779,14 +779,14 @@ Complete PR review workflow with security, testing, and documentation checks.
 **With Plugin (2 minutes):**
 ```bash
 /plugin install pr-review
-# ✅ Everything installed and configured
-# ✅ Ready to use immediately
-# ✅ Team can reproduce exact setup
+# Everything installed and configured
+# Ready to use immediately
+# Team can reproduce exact setup
 ```
 
 ## Best Practices
 
-### Do's ✅
+### Do's
 - Use clear, descriptive plugin names
 - Include comprehensive README
 - Version your plugin properly (semver)
@@ -800,7 +800,7 @@ Complete PR review workflow with security, testing, and documentation checks.
 - Include comprehensive tests
 - Document all dependencies
 
-### Don'ts ❌
+### Don'ts
 - Don't bundle unrelated features
 - Don't hardcode credentials
 - Don't skip testing
@@ -895,10 +895,10 @@ The following Claude Code features work together with plugins:
    └── performance-analyzer subagent checks performance
 
 3. Results synthesized and presented:
-   ✅ Security: No critical issues
-   ⚠️  Testing: Coverage 65% (recommend 80%+)
-   ✅ Performance: No significant impact
-   📝 12 recommendations provided
+    Security: No critical issues
+     Testing: Coverage 65% (recommend 80%+)
+    Performance: No significant impact
+    12 recommendations provided
 ```
 
 ## Troubleshooting

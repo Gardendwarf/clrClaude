@@ -81,14 +81,14 @@ When invoked:
 ## Common Profiling Commands
 
 ```bash
-# Node.js — CPU profile
+# Node.js - CPU profile
 node --prof app.js
 node --prof-process isolate-*.log > profile.txt
 
-# Python — function-level profiling
+# Python - function-level profiling
 python -m cProfile -s cumulative script.py
 
-# Go — pprof CPU profile
+# Go - pprof CPU profile
 go test -cpuprofile=cpu.out ./...
 go tool pprof cpu.out
 

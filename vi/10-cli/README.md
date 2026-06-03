@@ -156,9 +156,9 @@ claude -p --system-prompt-file ./prompts/code-reviewer.txt "review main.py"
 
 | Cờ | Hành Vi | Interactive | Print |
 |------|----------|-------------|-------|
-| `--system-prompt` | Thay thế toàn bộ system prompt | ✅ | ✅ |
-| `--system-prompt-file` | Thay thế bằng prompt từ file | ❌ | ✅ |
-| `--append-system-prompt` | Thêm vào system prompt mặc định | ✅ | ✅ |
+| `--system-prompt` | Thay thế toàn bộ system prompt | | |
+| `--system-prompt-file` | Thay thế bằng prompt từ file | | |
+| `--append-system-prompt` | Thêm vào system prompt mặc định | | |
 
 **Chỉ sử dụng `--system-prompt-file` trong chế độ in. Trong chế độ tương tác, sử dụng `--system-prompt` hoặc `--append-system-prompt`.**
 
@@ -688,7 +688,7 @@ claude --effort high "complex review"
 /effort high
 
 # Set effort level via environment variable
-export CLAUDE_CODE_EFFORT_LEVEL=high   # low, medium, high, or max (Opus 4.6 only)
+export CLAUDE_CODE_EFFORT_LEVEL=high # low, medium, high, or max (Opus 4.6 only)
 ```
 
 Từ khóa "ultrathink" trong prompts kích hoạt deep reasoning. Mức `max` effort chỉ dành cho Opus 4.6.

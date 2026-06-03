@@ -5,7 +5,7 @@
 
 <p align="center">
   <a href="https://github.com/trending">
-    <img src="https://img.shields.io/badge/GitHub-🔥%20%231%20Trending-purple?style=for-the-badge&logo=github"/>
+    <img src="https://img.shields.io/badge/GitHub-%20%231%20Trending-purple?style=for-the-badge&logo=github"/>
   </a>
 </p>
 
@@ -15,11 +15,11 @@
 [![Version](https://img.shields.io/badge/version-2.3.0-brightgreen)](CHANGELOG.md)
 [![Claude Code](https://img.shields.io/badge/Claude_Code-2.1+-purple)](https://code.claude.com)
 
-🌐 **Language / Ngôn ngữ / 语言 / Мова:** [English](README.md) | [Tiếng Việt](vi/README.md) | [中文](zh/README.md) | [Українська](uk/README.md)
+ **Language / Ngôn ngữ / 语言 / Мова:** [English](README.md) | [Tiếng Việt](vi/README.md) | [中文](zh/README.md) | [Українська](uk/README.md)
 
 # Master Claude Code in a Weekend
 
-Go from typing `claude` to orchestrating agents, hooks, skills, and MCP servers — with visual tutorials, copy-paste templates, and a guided learning path.
+Go from typing `claude` to orchestrating agents, hooks, skills, and MCP servers - with visual tutorials, copy-paste templates, and a guided learning path.
 
 **[Get Started in 15 Minutes](#get-started-in-15-minutes)** | **[Find Your Level](#not-sure-where-to-start)** | **[Browse the Feature Catalog](CATALOG.md)**
 
@@ -43,11 +43,11 @@ Go from typing `claude` to orchestrating agents, hooks, skills, and MCP servers 
 
 You installed Claude Code. You ran a few prompts. Now what?
 
-- **The official docs describe features — but don't show you how to combine them.** You know slash commands exist, but not how to chain them with hooks, memory, and subagents into a workflow that actually saves hours.
+- **The official docs describe features - but don't show you how to combine them.** You know slash commands exist, but not how to chain them with hooks, memory, and subagents into a workflow that actually saves hours.
 - **There's no clear learning path.** Should you learn MCP before hooks? Skills before subagents? You end up skimming everything and mastering nothing.
 - **Examples are too basic.** A "hello world" slash command doesn't help you build a production code review pipeline that uses memory, delegates to specialized agents, and runs security scans automatically.
 
-You're leaving 90% of Claude Code's power on the table — and you don't know what you don't know.
+You're leaving 90% of Claude Code's power on the table - and you don't know what you don't know.
 
 ---
 
@@ -66,13 +66,13 @@ This isn't another feature reference. It's a **structured, visual, example-drive
 
 ### What you get:
 
-- **10 tutorial modules** covering every Claude Code feature — from slash commands to custom agent teams
-- **Copy-paste configs** — slash commands, CLAUDE.md templates, hook scripts, MCP configs, subagent definitions, and full plugin bundles
+- **10 tutorial modules** covering every Claude Code feature - from slash commands to custom agent teams
+- **Copy-paste configs** - slash commands, CLAUDE.md templates, hook scripts, MCP configs, subagent definitions, and full plugin bundles
 - **Mermaid diagrams** showing how each feature works internally, so you understand *why*, not just *how*
 - **A guided learning path** that takes you from beginner to power user in 11-13 hours
-- **Built-in self-assessment** — run `/self-assessment` or `/lesson-quiz hooks` directly in Claude Code to identify gaps
+- **Built-in self-assessment** - run `/self-assessment` or `/lesson-quiz hooks` directly in Claude Code to identify gaps
 
-**[Start the Learning Path  ->](LEARNING-ROADMAP.md)**
+**[Start the Learning Path ->](LEARNING-ROADMAP.md)**
 
 ---
 
@@ -84,7 +84,7 @@ Take the [self-assessment quiz](LEARNING-ROADMAP.md#-find-your-level) or run `/s
 
 ### 2. Follow the guided path
 
-Work through 10 modules in order — each builds on the last. Copy templates directly into your project as you learn.
+Work through 10 modules in order - each builds on the last. Copy templates directly into your project as you learn.
 
 ### 3. Combine features into workflows
 
@@ -101,9 +101,9 @@ Run `/lesson-quiz [topic]` after each module. The quiz pinpoints what you missed
 ## Trusted by 21,800+ Developers
 
 - **21,800+ GitHub stars** from developers who use Claude Code daily
-- **2,585+ forks** — teams adapting this guide for their own workflows
-- **Actively maintained** — synced with every Claude Code release (latest: v2.3.0, April 2026)
-- **Community-driven** — contributions from developers who share their real-world configurations
+- **2,585+ forks** - teams adapting this guide for their own workflows
+- **Actively maintained** - synced with every Claude Code release (latest: v2.3.0, April 2026)
+- **Community-driven** - contributions from developers who share their real-world configurations
 
 [![Star History Chart](https://api.star-history.com/svg?repos=luongnv89/claude-howto&type=Date)](https://star-history.com/#luongnv89/claude-howto&Date)
 
@@ -149,7 +149,7 @@ cd claude-howto
 mkdir -p /path/to/your-project/.claude/commands
 cp 01-slash-commands/optimize.md /path/to/your-project/.claude/commands/
 
-# 3. Try it — in Claude Code, type:
+# 3. Try it - in Claude Code, type:
 # /optimize
 
 # 4. Ready for more? Set up project memory:
@@ -196,16 +196,16 @@ cp -r 03-skills/code-review ~/.claude/skills/
 ## FAQ
 
 **Is this free?**
-Yes. MIT licensed, free forever. Use it in personal projects, at work, in your team — no restrictions beyond including the license notice.
+Yes. MIT licensed, free forever. Use it in personal projects, at work, in your team - no restrictions beyond including the license notice.
 
 **Is this maintained?**
 Actively. The guide is synced with every Claude Code release. Current version: v2.3.0 (April 2026), compatible with Claude Code 2.1+.
 
 **How is this different from the official docs?**
-The official docs are a feature reference. This guide is a tutorial with diagrams, production-ready templates, and a progressive learning path. They complement each other — start here to learn, reference the docs when you need specifics.
+The official docs are a feature reference. This guide is a tutorial with diagrams, production-ready templates, and a progressive learning path. They complement each other - start here to learn, reference the docs when you need specifics.
 
 **How long does it take to go through everything?**
-11-13 hours for the full path. But you'll get immediate value in 15 minutes — just copy a slash command template and try it.
+11-13 hours for the full path. But you'll get immediate value in 15 minutes - just copy a slash command template and try it.
 
 **Can I use this with Claude Sonnet / Haiku / Opus?**
 Yes. All templates work with Claude Sonnet 4.6, Claude Opus 4.6, and Claude Haiku 4.5.
@@ -229,7 +229,7 @@ MIT licensed. Free forever. Clone it, fork it, make it yours.
 ---
 
 <details>
-<summary>Quick Navigation — All Features</summary>
+<summary>Quick Navigation - All Features</summary>
 
 | Feature | Description | Folder |
 |---------|-------------|--------|
@@ -554,13 +554,13 @@ Configure hooks in `~/.claude/settings.json`:
 **What**: Advanced capabilities for complex workflows and automation
 
 **Includes**:
-- **Planning Mode** — Create detailed implementation plans before coding
-- **Extended Thinking** — Deep reasoning for complex problems (toggle with `Alt+T` / `Option+T`)
-- **Background Tasks** — Run long operations without blocking
-- **Permission Modes** — `default`, `acceptEdits`, `plan`, `dontAsk`, `bypassPermissions`
-- **Headless Mode** — Run Claude Code in CI/CD: `claude -p "Run tests and generate report"`
-- **Session Management** — `/resume`, `/rename`, `/fork`, `claude -c`, `claude -r`
-- **Configuration** — Customize behavior in `~/.claude/settings.json`
+- **Planning Mode** - Create detailed implementation plans before coding
+- **Extended Thinking** - Deep reasoning for complex problems (toggle with `Alt+T` / `Option+T`)
+- **Background Tasks** - Run long operations without blocking
+- **Permission Modes** - `default`, `acceptEdits`, `plan`, `dontAsk`, `bypassPermissions`
+- **Headless Mode** - Run Claude Code in CI/CD: `claude -p "Run tests and generate report"`
+- **Session Management** - `/resume`, `/rename`, `/fork`, `claude -c`, `claude -r`
+- **Configuration** - Customize behavior in `~/.claude/settings.json`
 
 See [config-examples.json](09-advanced-features/config-examples.json) for complete configurations.
 
@@ -652,62 +652,62 @@ Claude:
 
 ```
 ├── 01-slash-commands/
-│   ├── optimize.md
-│   ├── pr.md
-│   ├── generate-api-docs.md
-│   └── README.md
+│ ├── optimize.md
+│ ├── pr.md
+│ ├── generate-api-docs.md
+│ └── README.md
 ├── 02-memory/
-│   ├── project-CLAUDE.md
-│   ├── directory-api-CLAUDE.md
-│   ├── personal-CLAUDE.md
-│   └── README.md
+│ ├── project-CLAUDE.md
+│ ├── directory-api-CLAUDE.md
+│ ├── personal-CLAUDE.md
+│ └── README.md
 ├── 03-skills/
-│   ├── code-review/
-│   │   ├── SKILL.md
-│   │   ├── scripts/
-│   │   └── templates/
-│   ├── brand-voice/
-│   │   ├── SKILL.md
-│   │   └── templates/
-│   ├── doc-generator/
-│   │   ├── SKILL.md
-│   │   └── generate-docs.py
-│   └── README.md
+│ ├── code-review/
+│ │ ├── SKILL.md
+│ │ ├── scripts/
+│ │ └── templates/
+│ ├── brand-voice/
+│ │ ├── SKILL.md
+│ │ └── templates/
+│ ├── doc-generator/
+│ │ ├── SKILL.md
+│ │ └── generate-docs.py
+│ └── README.md
 ├── 04-subagents/
-│   ├── code-reviewer.md
-│   ├── test-engineer.md
-│   ├── documentation-writer.md
-│   ├── secure-reviewer.md
-│   ├── implementation-agent.md
-│   └── README.md
+│ ├── code-reviewer.md
+│ ├── test-engineer.md
+│ ├── documentation-writer.md
+│ ├── secure-reviewer.md
+│ ├── implementation-agent.md
+│ └── README.md
 ├── 05-mcp/
-│   ├── github-mcp.json
-│   ├── database-mcp.json
-│   ├── filesystem-mcp.json
-│   ├── multi-mcp.json
-│   └── README.md
+│ ├── github-mcp.json
+│ ├── database-mcp.json
+│ ├── filesystem-mcp.json
+│ ├── multi-mcp.json
+│ └── README.md
 ├── 06-hooks/
-│   ├── format-code.sh
-│   ├── pre-commit.sh
-│   ├── security-scan.sh
-│   ├── log-bash.sh
-│   ├── validate-prompt.sh
-│   ├── notify-team.sh
-│   └── README.md
+│ ├── format-code.sh
+│ ├── pre-commit.sh
+│ ├── security-scan.sh
+│ ├── log-bash.sh
+│ ├── validate-prompt.sh
+│ ├── notify-team.sh
+│ └── README.md
 ├── 07-plugins/
-│   ├── pr-review/
-│   ├── devops-automation/
-│   ├── documentation/
-│   └── README.md
+│ ├── pr-review/
+│ ├── devops-automation/
+│ ├── documentation/
+│ └── README.md
 ├── 08-checkpoints/
-│   ├── checkpoint-examples.md
-│   └── README.md
+│ ├── checkpoint-examples.md
+│ └── README.md
 ├── 09-advanced-features/
-│   ├── config-examples.json
-│   ├── planning-mode-examples.md
-│   └── README.md
+│ ├── config-examples.json
+│ ├── planning-mode-examples.md
+│ └── README.md
 ├── 10-cli/
-│   └── README.md
+│ └── README.md
 └── README.md (this file)
 ```
 

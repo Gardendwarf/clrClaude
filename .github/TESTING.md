@@ -35,9 +35,9 @@ cd claude-howto
 uv venv
 
 # Activate it
-source .venv/bin/activate  # macOS/Linux
+source .venv/bin/activate # macOS/Linux
 # or
-.venv\Scripts\activate     # Windows
+.venv\Scripts\activate # Windows
 
 # Install development dependencies
 uv pip install -r requirements-dev.txt
@@ -291,7 +291,7 @@ Some security warnings may be false positives. Configure in `pyproject.toml`:
 ```toml
 [tool.bandit]
 exclude_dirs = ["scripts/tests"]
-skips = ["B101"]  # Skip assert_used warning
+skips = ["B101"] # Skip assert_used warning
 ```
 
 ### Type Checking Too Strict
@@ -303,7 +303,7 @@ Relax type checking for specific files:
 # type: ignore
 
 # Or for specific lines
-some_dynamic_code()  # type: ignore
+some_dynamic_code() # type: ignore
 ```
 
 ## Continuous Integration Best Practices
@@ -334,7 +334,7 @@ When submitting a PR:
 5. **Security scan**: `bandit -r scripts/ --exclude scripts/tests/`
 6. **Update documentation** if tests change
 
-Tests are required for all PRs! 🧪
+Tests are required for all PRs!
 
 ---
 

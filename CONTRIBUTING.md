@@ -109,18 +109,18 @@ The hooks that run on every commit are:
 ## Directory Structure
 
 ```
-├── 01-slash-commands/      # User-invoked shortcuts
-├── 02-memory/              # Persistent context examples
-├── 03-skills/              # Reusable capabilities
-├── 04-subagents/           # Specialized AI assistants
-├── 05-mcp/                 # Model Context Protocol examples
-├── 06-hooks/               # Event-driven automation
-├── 07-plugins/             # Bundled features
-├── 08-checkpoints/         # Session snapshots
-├── 09-advanced-features/   # Planning, thinking, backgrounds
-├── 10-cli/                 # CLI reference
-├── scripts/                # Build and utility scripts
-└── README.md               # Main guide
+├── 01-slash-commands/ # User-invoked shortcuts
+├── 02-memory/ # Persistent context examples
+├── 03-skills/ # Reusable capabilities
+├── 04-subagents/ # Specialized AI assistants
+├── 05-mcp/ # Model Context Protocol examples
+├── 06-hooks/ # Event-driven automation
+├── 07-plugins/ # Bundled features
+├── 08-checkpoints/ # Session snapshots
+├── 09-advanced-features/ # Planning, thinking, backgrounds
+├── 10-cli/ # CLI reference
+├── scripts/ # Build and utility scripts
+└── README.md # Main guide
 ```
 
 ## How to Contribute Examples
@@ -375,7 +375,7 @@ By contributing to this project, you agree that your contributions will be licen
 - Look at existing examples
 - Open an issue for discussion
 
-Thank you for contributing! 🙏
+Thank you for contributing!
 
 ---
 **Last Updated**: April 9, 2026

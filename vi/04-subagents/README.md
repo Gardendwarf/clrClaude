@@ -609,7 +609,7 @@ Hoặc trong `settings.json`:
 Sau khi bật, yêu cầu Claude làm việc với đồng nghiệp trong prompt của bạn:
 
 ```
-User: Build the authentication module. Use a team — one teammate for the API endpoints,
+User: Build the authentication module. Use a team - one teammate for the API endpoints,
       one for the database schema, and one for the test suite.
 ```
 
@@ -689,9 +689,9 @@ graph TB
 
 Đội trưởng chia nhỏ công việc thành các tác vụ và chỉ định chúng cho đồng nghiệp. Danh sách việc chia sẻ xử lý:
 
-- **Quản lý dependency tự động** — các tác vụ chờ các dependency của chúng hoàn thành
-- **Theo dõi trạng thái** — đồng nghiệp cập nhật trạng thái tác vụ khi họ làm việc
-- **Nhắn tin liên-tác nhân** — đồng nghiệp gửi tin qua mailbox để điều phối (ví dụ: "Database schema is ready, you can start writing queries")
+- **Quản lý dependency tự động** - các tác vụ chờ các dependency của chúng hoàn thành
+- **Theo dõi trạng thái** - đồng nghiệp cập nhật trạng thái tác vụ khi họ làm việc
+- **Nhắn tin liên-tác nhân** - đồng nghiệp gửi tin qua mailbox để điều phối (ví dụ: "Database schema is ready, you can start writing queries")
 
 ### Quy trình phê duyệt kế hoạch
 
@@ -709,7 +709,7 @@ Agent Teams giới thiệu hai sự kiện [hook](../06-hooks/) bổ sung:
 ### Thực hành tốt nhất
 
 - **Kích thước đội**: Giữ đội ở mức 3-5 đồng nghiệp để điều phối tối ưu
-- **Kích thước tác vụ**: Chia việc thành các tác vụ mất 5-15 phút mỗi tác — đủ nhỏ để song song hóa, đủ lớn để có ý nghĩa
+- **Kích thước tác vụ**: Chia việc thành các tác vụ mất 5-15 phút mỗi tác - đủ nhỏ để song song hóa, đủ lớn để có ý nghĩa
 - **Tránh xung đột file**: Gán các file hoặc thư mục khác nhau cho các đồng nghiệp khác nhau để ngăn xung đột merge
 - **Bắt đầu đơn giản**: Sử dụng chế độ in-process cho đội đầu tiên của bạn; chuyển sang split-panes khi thoải mái
 - **Mô tả tác vụ rõ ràng**: Cung cấp mô tả tác vụ cụ thể, có thể hành động để đồng nghiệp có thể làm việc độc lập

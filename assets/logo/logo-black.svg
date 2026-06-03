@@ -19,10 +19,10 @@
     <line x1="23.2" y1="96.8" x2="30.3" y2="89.7" stroke="rgba(0,0,0,0.3)" stroke-width="1.5" stroke-linecap="round"/>
     <line x1="89.7" y1="89.7" x2="96.8" y2="96.8" stroke="rgba(0,0,0,0.3)" stroke-width="1.5" stroke-linecap="round"/>
 
-    <!-- Compass needle — north -->
+    <!-- Compass needle - north -->
     <polygon points="60,20 54,58 60,52 66,58" fill="#000000"/>
 
-    <!-- Compass needle — south -->
+    <!-- Compass needle - south -->
     <polygon points="60,100 54,62 60,68 66,62" fill="rgba(0,0,0,0.4)"/>
 
     <!-- Center > bracket -->

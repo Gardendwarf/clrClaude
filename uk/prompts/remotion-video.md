@@ -6,7 +6,7 @@ Follow a 7-phase workflow, making smart decisions at each step based on the info
 
 ---
 
-# 🔄 AUTOMATED WORKFLOW
+# AUTOMATED WORKFLOW
 
 **KEY PRINCIPLES:**
 
@@ -17,7 +17,7 @@ Follow a 7-phase workflow, making smart decisions at each step based on the info
 - **Customer-Centric:** Emphasize how the product solves problems, improves lives, or delivers benefits to users.
 - **Autonomous Execution:** After user confirms preferences, proceed autonomously through planning and implementation without further approval requests.
 
-## 📋 Phase 1: Autonomous Resource Discovery
+## Phase 1: Autonomous Resource Discovery
 
 **OBJECTIVE:** Automatically explore the codebase and gather all available product information without asking the user.
 
@@ -62,7 +62,7 @@ Follow a 7-phase workflow, making smart decisions at each step based on the info
 
 ---
 
-## 🔍 Phase 2: Information Analysis & Deep Dive
+## Phase 2: Information Analysis & Deep Dive
 
 **OBJECTIVE:** Analyze gathered information and extract key insights for video creation.
 
@@ -98,7 +98,7 @@ Follow a 7-phase workflow, making smart decisions at each step based on the info
 
 ---
 
-## ✅ Phase 3: Present Findings & Gather User Preferences
+## Phase 3: Present Findings & Gather User Preferences
 
 **OBJECTIVE:** Share what you discovered and get user input on video preferences before planning.
 
@@ -107,7 +107,7 @@ Follow a 7-phase workflow, making smart decisions at each step based on the info
 1. **Present a summary of discovered information:**
 
    ```text
-   📊 DISCOVERED INFORMATION
+    DISCOVERED INFORMATION
 
    Product: [Name]
    Value Proposition: [Main benefit to customers]
@@ -155,7 +155,7 @@ Follow a 7-phase workflow, making smart decisions at each step based on the info
 
 ---
 
-## 📐 Phase 4: Structure Design (Post-Confirmation)
+## Phase 4: Structure Design (Post-Confirmation)
 
 **OBJECTIVE:** Create a compelling video structure using the 3-act format based on user preferences.
 
@@ -164,7 +164,7 @@ Follow a 7-phase workflow, making smart decisions at each step based on the info
 1. **Design video structure with user's confirmed preferences:**
 
    ```text
-   🎬 VIDEO STRUCTURE
+    VIDEO STRUCTURE
 
    Act 1: The Hook (0-5 seconds)
    - [Attention-grabbing visual concept]
@@ -200,7 +200,7 @@ Follow a 7-phase workflow, making smart decisions at each step based on the info
 
 ---
 
-## 🛠️ Phase 5: Technical Architecture
+## Phase 5: Technical Architecture
 
 **OBJECTIVE:** Design implementation architecture and proceed directly to building.
 
@@ -225,7 +225,7 @@ Follow a 7-phase workflow, making smart decisions at each step based on the info
 
 ---
 
-## 💻 Phase 6: Implementation
+## Phase 6: Implementation
 
 **OBJECTIVE:** Build the complete Remotion video project autonomously.
 
@@ -262,7 +262,7 @@ Follow a 7-phase workflow, making smart decisions at each step based on the info
 
 ---
 
-## 🎥 Phase 7: Delivery & Next Steps
+## Phase 7: Delivery & Next Steps
 
 **OBJECTIVE:** Provide rendering instructions and mark project complete.
 
@@ -298,7 +298,7 @@ Follow a 7-phase workflow, making smart decisions at each step based on the info
 
 ---
 
-# 🎯 QUALITY STANDARDS
+# QUALITY STANDARDS
 
 Throughout all phases, maintain these standards:
 
@@ -322,7 +322,7 @@ Throughout all phases, maintain these standards:
 
 ---
 
-# 🚀 Getting Started
+# Getting Started
 
 I'll create a professional Remotion video project for your product. Here's my workflow:
 

@@ -189,7 +189,7 @@ sequenceDiagram
     Config->>Claude: Activate connection
     Claude->>Service: Test connection
     Service-->>Claude: Authentication successful
-    Claude->>User: ✅ MCP connected!
+    Claude->>User: MCP connected!
 ```
 
 ## MCP Tool Search
@@ -309,14 +309,14 @@ claude mcp add-from-claude-desktop
 
 | MCP Server | Purpose | Common Tools | Auth | Real-time |
 |------------|---------|--------------|------|-----------|
-| **Filesystem** | File operations | read, write, delete | OS permissions | ✅ Yes |
-| **GitHub** | Repository management | list_prs, create_issue, push | OAuth | ✅ Yes |
-| **Slack** | Team communication | send_message, list_channels | Token | ✅ Yes |
-| **Database** | SQL queries | query, insert, update | Credentials | ✅ Yes |
-| **Google Docs** | Document access | read, write, share | OAuth | ✅ Yes |
-| **Asana** | Project management | create_task, update_status | API Key | ✅ Yes |
-| **Stripe** | Payment data | list_charges, create_invoice | API Key | ✅ Yes |
-| **Memory** | Persistent memory | store, retrieve, delete | Local | ❌ No |
+| **Filesystem** | File operations | read, write, delete | OS permissions | Yes |
+| **GitHub** | Repository management | list_prs, create_issue, push | OAuth | Yes |
+| **Slack** | Team communication | send_message, list_channels | Token | Yes |
+| **Database** | SQL queries | query, insert, update | Credentials | Yes |
+| **Google Docs** | Document access | read, write, share | OAuth | Yes |
+| **Asana** | Project management | create_task, update_status | API Key | Yes |
+| **Stripe** | Payment data | list_charges, create_invoice | API Key | Yes |
+| **Memory** | Persistent memory | store, retrieve, delete | Local | No |
 
 ## Practical Examples
 
@@ -503,9 +503,9 @@ Write report.html to /reports/
 Send summary to #daily-reports channel
 
 Final Output:
-✅ Report generated and posted
-📊 47 PRs merged this week
-💰 $12,450 in daily sales
+ Report generated and posted
+ 47 PRs merged this week
+ $12,450 in daily sales
 ```
 
 **Setup**:
@@ -727,9 +727,9 @@ export MAX_MCP_OUTPUT_TOKENS=50000
 
 ## Solving Context Bloat with Code Execution
 
-As MCP adoption scales, connecting to dozens of servers with hundreds or thousands of tools creates a significant challenge: **context bloat**. This is arguably the biggest problem with MCP at scale, and Anthropic's engineering team has proposed an elegant solution — using code execution instead of direct tool calls.
+As MCP adoption scales, connecting to dozens of servers with hundreds or thousands of tools creates a significant challenge: **context bloat**. This is arguably the biggest problem with MCP at scale, and Anthropic's engineering team has proposed an elegant solution - using code execution instead of direct tool calls.
 
-> **Source**: [Code Execution with MCP: Building More Efficient Agents](https://www.anthropic.com/engineering/code-execution-with-mcp) — Anthropic Engineering Blog
+> **Source**: [Code Execution with MCP: Building More Efficient Agents](https://www.anthropic.com/engineering/code-execution-with-mcp) - Anthropic Engineering Blog
 
 ### The Problem: Two Sources of Token Waste
 
@@ -739,7 +739,7 @@ Most MCP clients load all tool definitions upfront. When connected to thousands 
 
 **2. Intermediate results consume additional tokens**
 
-Every intermediate tool result passes through the model's context. Consider transferring a meeting transcript from Google Drive to Salesforce — the full transcript flows through context **twice**: once when reading it, and again when writing it to the destination. A 2-hour meeting transcript could mean 50,000+ extra tokens.
+Every intermediate tool result passes through the model's context. Consider transferring a meeting transcript from Google Drive to Salesforce - the full transcript flows through context **twice**: once when reading it, and again when writing it to the destination. A 2-hour meeting transcript could mean 50,000+ extra tokens.
 
 ```mermaid
 graph LR
@@ -775,11 +775,11 @@ MCP tools are presented as a file tree of typed functions:
 ```
 servers/
 ├── google-drive/
-│   ├── getDocument.ts
-│   └── index.ts
+│ ├── getDocument.ts
+│ └── index.ts
 ├── salesforce/
-│   ├── updateRecord.ts
-│   └── index.ts
+│ ├── updateRecord.ts
+│ └── index.ts
 └── ...
 ```
 
@@ -812,7 +812,7 @@ The agent then writes code to orchestrate the tools:
 import * as gdrive from './servers/google-drive';
 import * as salesforce from './servers/salesforce';
 
-// Data flows directly between tools — never through the model
+// Data flows directly between tools - never through the model
 const transcript = (
   await gdrive.getDocument({ documentId: 'abc123' })
 ).content;
@@ -824,7 +824,7 @@ await salesforce.updateRecord({
 });
 ```
 
-**Result: Token usage drops from ~150,000 to ~2,000 — a 98.7% reduction.**
+**Result: Token usage drops from ~150,000 to ~2,000 - a 98.7% reduction.**
 
 ### Key Benefits
 
@@ -839,11 +839,11 @@ await salesforce.updateRecord({
 #### Example: Filtering Large Datasets
 
 ```typescript
-// Without code execution — all 10,000 rows flow through context
+// Without code execution - all 10,000 rows flow through context
 // TOOL CALL: gdrive.getSheet(sheetId: 'abc123')
-//   -> returns 10,000 rows in context
+// -> returns 10,000 rows in context
 
-// With code execution — filter in the execution environment
+// With code execution - filter in the execution environment
 const allRows = await gdrive.getSheet({ sheetId: 'abc123' });
 const pendingOrders = allRows.filter(
   row => row["Status"] === 'pending'
@@ -855,7 +855,7 @@ console.log(pendingOrders.slice(0, 5)); // Only 5 rows reach the model
 #### Example: Loop Without Round-Tripping
 
 ```typescript
-// Poll for a deployment notification — runs entirely in code
+// Poll for a deployment notification - runs entirely in code
 let found = false;
 while (!found) {
   const messages = await slack.getChannelHistory({
@@ -877,13 +877,13 @@ Code execution introduces its own complexity. Running agent-generated code requi
 - **Monitoring and logging** of executed code
 - Additional **infrastructure overhead** compared to direct tool calls
 
-The benefits — reduced token costs, lower latency, improved tool composition — should be weighed against these implementation costs. For agents with only a few MCP servers, direct tool calls may be simpler. For agents at scale (dozens of servers, hundreds of tools), code execution is a significant improvement.
+The benefits - reduced token costs, lower latency, improved tool composition - should be weighed against these implementation costs. For agents with only a few MCP servers, direct tool calls may be simpler. For agents at scale (dozens of servers, hundreds of tools), code execution is a significant improvement.
 
 ### MCPorter: A Runtime for MCP Tool Composition
 
-[MCPorter](https://github.com/steipete/mcporter) is a TypeScript runtime and CLI toolkit that makes calling MCP servers practical without boilerplate — and helps reduce context bloat through selective tool exposure and typed wrappers.
+[MCPorter](https://github.com/steipete/mcporter) is a TypeScript runtime and CLI toolkit that makes calling MCP servers practical without boilerplate - and helps reduce context bloat through selective tool exposure and typed wrappers.
 
-**What it solves:** Instead of loading all tool definitions from all MCP servers upfront, MCPorter lets you discover, inspect, and call specific tools on demand — keeping your context lean.
+**What it solves:** Instead of loading all tool definitions from all MCP servers upfront, MCPorter lets you discover, inspect, and call specific tools on demand - keeping your context lean.
 
 **Key features:**
 
@@ -898,12 +898,12 @@ The benefits — reduced token costs, lower latency, improved tool composition �
 **Installation:**
 
 ```bash
-npx mcporter list          # No install required — discover servers instantly
-pnpm add mcporter          # Add to a project
-brew install steipete/tap/mcporter  # macOS via Homebrew
+npx mcporter list # No install required - discover servers instantly
+pnpm add mcporter # Add to a project
+brew install steipete/tap/mcporter # macOS via Homebrew
 ```
 
-**Example — composing tools in TypeScript:**
+**Example - composing tools in TypeScript:**
 
 ```typescript
 import { createRuntime, createServerProxy } from "mcporter";
@@ -921,7 +921,7 @@ await salesforce.updateRecord({
 });
 ```
 
-**Example — CLI tool call:**
+**Example - CLI tool call:**
 
 ```bash
 # Call a specific tool directly
@@ -931,13 +931,13 @@ npx mcporter call linear.create_comment issueId:ENG-123 body:'Looks good!'
 npx mcporter list
 ```
 
-MCPorter complements the code-execution approach described above by providing the runtime infrastructure for calling MCP tools as typed APIs — making it straightforward to keep intermediate data out of the model context.
+MCPorter complements the code-execution approach described above by providing the runtime infrastructure for calling MCP tools as typed APIs - making it straightforward to keep intermediate data out of the model context.
 
 ## Best Practices
 
 ### Security Considerations
 
-#### Do's ✅
+#### Do's
 - Use environment variables for all credentials
 - Rotate tokens and API keys regularly (monthly recommended)
 - Use read-only tokens when possible
@@ -949,7 +949,7 @@ MCPorter complements the code-execution approach described above by providing th
 - Document all active MCP connections
 - Keep MCP server packages updated
 
-#### Don'ts ❌
+#### Don'ts
 - Don't hardcode credentials in config files
 - Don't commit tokens or secrets to git
 - Don't share tokens in team chats or emails
@@ -1102,8 +1102,8 @@ export GITHUB_TOKEN="your_token"
 - [MCP Protocol Specification](https://modelcontextprotocol.io/specification)
 - [MCP GitHub Repository](https://github.com/modelcontextprotocol/servers)
 - [Available MCP Servers](https://github.com/modelcontextprotocol/servers)
-- [MCPorter](https://github.com/steipete/mcporter) — TypeScript runtime & CLI for calling MCP servers without boilerplate
-- [Code Execution with MCP](https://www.anthropic.com/engineering/code-execution-with-mcp) — Anthropic's engineering blog on solving context bloat
+- [MCPorter](https://github.com/steipete/mcporter) - TypeScript runtime & CLI for calling MCP servers without boilerplate
+- [Code Execution with MCP](https://www.anthropic.com/engineering/code-execution-with-mcp) - Anthropic's engineering blog on solving context bloat
 - [Claude Code CLI Reference](https://code.claude.com/docs/en/cli-reference)
 - [Claude API Documentation](https://docs.anthropic.com)
 

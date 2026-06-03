@@ -77,31 +77,31 @@ graph TB
 ```
 my-plugin/
 ├── .claude-plugin/
-│   └── plugin.json       # 清单（名称、描述、版本、作者）
-├── commands/             # 以 Markdown 文件形式存放的命令
-│   ├── task-1.md
-│   ├── task-2.md
-│   └── workflows/
-├── agents/               # 自定义 agent 定义
-│   ├── specialist-1.md
-│   ├── specialist-2.md
-│   └── configs/
-├── skills/               # 带有 SKILL.md 文件的技能
-│   ├── skill-1.md
-│   └── skill-2.md
-├── hooks/                # hooks.json 中的事件处理器
-│   └── hooks.json
-├── .mcp.json             # MCP server 配置
-├── .lsp.json             # LSP server 配置
-├── settings.json         # 默认设置
+│ └── plugin.json # 清单（名称、描述、版本、作者）
+├── commands/ # 以 Markdown 文件形式存放的命令
+│ ├── task-1.md
+│ ├── task-2.md
+│ └── workflows/
+├── agents/ # 自定义 agent 定义
+│ ├── specialist-1.md
+│ ├── specialist-2.md
+│ └── configs/
+├── skills/ # 带有 SKILL.md 文件的技能
+│ ├── skill-1.md
+│ └── skill-2.md
+├── hooks/ # hooks.json 中的事件处理器
+│ └── hooks.json
+├── .mcp.json # MCP server 配置
+├── .lsp.json # LSP server 配置
+├── settings.json # 默认设置
 ├── templates/
-│   └── issue-template.md
+│ └── issue-template.md
 ├── scripts/
-│   ├── helper-1.sh
-│   └── helper-2.py
+│ ├── helper-1.sh
+│ └── helper-2.py
 ├── docs/
-│   ├── README.md
-│   └── USAGE.md
+│ ├── README.md
+│ └── USAGE.md
 └── tests/
     └── plugin.test.js
 ```
@@ -341,11 +341,11 @@ tools: read, grep, diff
 /plugin install pr-review
 
 # 结果：
-# ✅ 已安装 3 个 slash commands
-# ✅ 已配置 3 个 subagents
-# ✅ 已连接 2 个 MCP servers
-# ✅ 已注册 4 个 hooks
-# ✅ 可以直接使用！
+# 已安装 3 个 slash commands
+# 已配置 3 个 subagents
+# 已连接 2 个 MCP servers
+# 已注册 4 个 hooks
+# 可以直接使用！
 ```
 
 ### 示例 2：DevOps 插件
@@ -355,22 +355,22 @@ tools: read, grep, diff
 ```
 devops-automation/
 ├── commands/
-│   ├── deploy.md
-│   ├── rollback.md
-│   ├── status.md
-│   └── incident.md
+│ ├── deploy.md
+│ ├── rollback.md
+│ ├── status.md
+│ └── incident.md
 ├── agents/
-│   ├── deployment-specialist.md
-│   ├── incident-commander.md
-│   └── alert-analyzer.md
+│ ├── deployment-specialist.md
+│ ├── incident-commander.md
+│ └── alert-analyzer.md
 ├── mcp/
-│   ├── github-config.json
-│   ├── kubernetes-config.json
-│   └── prometheus-config.json
+│ ├── github-config.json
+│ ├── kubernetes-config.json
+│ └── prometheus-config.json
 ├── hooks/
-│   ├── pre-deploy.js
-│   ├── post-deploy.js
-│   └── on-error.js
+│ ├── pre-deploy.js
+│ ├── post-deploy.js
+│ └── on-error.js
 └── scripts/
     ├── deploy.sh
     ├── rollback.sh
@@ -384,17 +384,17 @@ devops-automation/
 ```
 documentation/
 ├── commands/
-│   ├── generate-api-docs.md
-│   ├── generate-readme.md
-│   ├── sync-docs.md
-│   └── validate-docs.md
+│ ├── generate-api-docs.md
+│ ├── generate-readme.md
+│ ├── sync-docs.md
+│ └── validate-docs.md
 ├── agents/
-│   ├── api-documenter.md
-│   ├── code-commentator.md
-│   └── example-generator.md
+│ ├── api-documenter.md
+│ ├── code-commentator.md
+│ └── example-generator.md
 ├── mcp/
-│   ├── github-docs-config.json
-│   └── slack-announce-config.json
+│ ├── github-docs-config.json
+│ └── slack-announce-config.json
 └── templates/
     ├── api-endpoint.md
     ├── function-docs.md
@@ -586,12 +586,12 @@ graph LR
 所有插件操作都可以通过 CLI 命令完成：
 
 ```bash
-claude plugin install <name>@<marketplace>   # 从市场安装
-claude plugin uninstall <name>               # 删除插件
-claude plugin list                           # 列出已安装插件
-claude plugin enable <name>                  # 启用已禁用的插件
-claude plugin disable <name>                 # 禁用插件
-claude plugin validate                       # 验证插件结构
+claude plugin install <name>@<marketplace> # 从市场安装
+claude plugin uninstall <name> # 删除插件
+claude plugin list # 列出已安装插件
+claude plugin enable <name> # 启用已禁用的插件
+claude plugin disable <name> # 禁用插件
+claude plugin validate # 验证插件结构
 ```
 
 ## 安装方式
@@ -627,7 +627,7 @@ claude --plugin-dir ./plugin-a --plugin-dir ./plugin-b
 graph TD
     A["我该创建插件吗？"]
     A -->|需要多个组件| B{"多个命令<br/>或 subagents<br/>或 MCPs?"}
-    B -->|是| C["✅ 创建插件"]
+    B -->|是| C[" 创建插件"]
     B -->|否| D["使用单独功能"]
     A -->|团队工作流| E{"要和<br/>团队共享吗？"}
     E -->|是| C
@@ -641,13 +641,13 @@ graph TD
 
 | 场景 | 建议 | 原因 |
 |------|------|------|
-| **团队入职** | ✅ 使用插件 | 即时安装，包含所有配置 |
-| **框架初始化** | ✅ 使用插件 | 打包框架专属命令 |
-| **企业规范** | ✅ 使用插件 | 集中分发，版本控制 |
-| **快速任务自动化** | ❌ 使用命令 | 太重 |
-| **单一领域能力** | ❌ 使用 Skill | 太重，直接用 skill 更合适 |
-| **专门化分析** | ❌ 使用 Subagent | 可手动创建，或用 skill |
-| **实时数据访问** | ❌ 使用 MCP | 独立使用，不要打包 |
+| **团队入职** | 使用插件 | 即时安装，包含所有配置 |
+| **框架初始化** | 使用插件 | 打包框架专属命令 |
+| **企业规范** | 使用插件 | 集中分发，版本控制 |
+| **快速任务自动化** | 使用命令 | 太重 |
+| **单一领域能力** | 使用 Skill | 太重，直接用 skill 更合适 |
+| **专门化分析** | 使用 Subagent | 可手动创建，或用 skill |
+| **实时数据访问** | 使用 MCP | 独立使用，不要打包 |
 
 ## 测试插件
 
@@ -733,11 +733,11 @@ claude --plugin-dir ./my-plugin --plugin-dir ./another-plugin
 ```
 
 ## 功能
-✅ 安全分析
-✅ 测试覆盖率检查
-✅ 文档校验
-✅ 代码质量评估
-✅ 性能影响分析
+ 安全分析
+ 测试覆盖率检查
+ 文档校验
+ 代码质量评估
+ 性能影响分析
 
 ## 使用
 ```bash
@@ -765,14 +765,14 @@ claude --plugin-dir ./my-plugin --plugin-dir ./another-plugin
 **使用插件（2 分钟）：**
 ```bash
 /plugin install pr-review
-# ✅ 一切都已安装并配置
-# ✅ 可以立即使用
-# ✅ 团队可以复现完全相同的设置
+# 一切都已安装并配置
+# 可以立即使用
+# 团队可以复现完全相同的设置
 ```
 
 ## 最佳实践
 
-### 应该做的 ✅
+### 应该做的
 - 使用清晰、描述性的插件名
 - 提供完整 README
 - 正确使用语义化版本（semver）
@@ -786,7 +786,7 @@ claude --plugin-dir ./my-plugin --plugin-dir ./another-plugin
 - 包含完整测试
 - 记录所有依赖
 
-### 不要做的 ❌
+### 不要做的
 - 不要打包无关功能
 - 不要硬编码凭据
 - 不要跳过测试
@@ -881,10 +881,10 @@ claude --plugin-dir ./my-plugin --plugin-dir ./another-plugin
    └── performance-analyzer subagent 检查性能
 
 3. 汇总并展示结果：
-   ✅ 安全：没有发现关键问题
-   ⚠️  测试：覆盖率 65%（建议 80%+）
-   ✅ 性能：没有明显影响
-   📝 提供了 12 条建议
+    安全：没有发现关键问题
+     测试：覆盖率 65%（建议 80%+）
+    性能：没有明显影响
+    提供了 12 条建议
 ```
 
 ## 故障排查

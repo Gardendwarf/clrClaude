@@ -30,10 +30,10 @@ SKIP_DOMAINS = {
     "127.0.0.1",
     "my-webhook.example.com",
     "git.internal",
-    # Wikipedia blocks HEAD requests — GET also unreliable in CI without network
+    # Wikipedia blocks HEAD requests - GET also unreliable in CI without network
     "en.wikipedia.org",
     "wikipedia.org",
-    # GitHub API requires auth — unauthenticated requests return 404 for protected endpoints
+    # GitHub API requires auth - unauthenticated requests return 404 for protected endpoints
     "api.github.com",
 }
 SKIP_DOMAIN_SUFFIXES = (".example.com", ".example.org", ".internal")
@@ -70,7 +70,7 @@ def check_url(url: str) -> tuple[str, bool, str]:
         with urllib.request.urlopen(req, timeout=TIMEOUT):  # nosec B310
             return url, True, "ok"
     except urllib.error.HTTPError as e:
-        # 403/429 often means the server is up but blocks bots — treat as ok
+        # 403/429 often means the server is up but blocks bots - treat as ok
         if e.code in (401, 403, 405, 429):
             return url, True, f"http {e.code} (ignored)"
         return url, False, f"HTTP {e.code}"

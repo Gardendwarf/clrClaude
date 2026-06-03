@@ -246,7 +246,7 @@ def main() -> None:
     added = append_unique(allow, permissions_to_add)
 
     if not added:
-        print("Nothing to add — all selected rules already present.")
+        print("Nothing to add - all selected rules already present.")
         return
 
     print(f"{'Would add' if args.dry_run else 'Adding'} {len(added)} rule(s):")
@@ -254,7 +254,7 @@ def main() -> None:
         print(f"  + {rule}")
 
     if args.dry_run:
-        print("\nDry run — no changes written.")
+        print("\nDry run - no changes written.")
         return
 
     atomic_write_json(SETTINGS_PATH, settings)

@@ -5,7 +5,7 @@
 
 <p align="center">
   <a href="https://github.com/trending">
-    <img src="https://img.shields.io/badge/GitHub-🔥%20%231%20Trending-purple?style=for-the-badge&logo=github"/>
+    <img src="https://img.shields.io/badge/GitHub-%20%231%20Trending-purple?style=for-the-badge&logo=github"/>
   </a>
 </p>
 
@@ -70,7 +70,7 @@
 - **一条引导式学习路径**，帮助你在 11 到 13 小时内从初学者成长为高级用户
 - **内置自测能力**，可以直接在 Claude Code 中运行 `/self-assessment` 或 `/lesson-quiz hooks` 找出知识盲点
 
-**[开始学习路线  ->](LEARNING-ROADMAP.md)**
+**[开始学习路线 ->](LEARNING-ROADMAP.md)**
 
 ---
 
@@ -650,62 +650,62 @@ Claude：
 
 ```
 ├── 01-slash-commands/
-│   ├── optimize.md
-│   ├── pr.md
-│   ├── generate-api-docs.md
-│   └── README.md
+│ ├── optimize.md
+│ ├── pr.md
+│ ├── generate-api-docs.md
+│ └── README.md
 ├── 02-memory/
-│   ├── project-CLAUDE.md
-│   ├── directory-api-CLAUDE.md
-│   ├── personal-CLAUDE.md
-│   └── README.md
+│ ├── project-CLAUDE.md
+│ ├── directory-api-CLAUDE.md
+│ ├── personal-CLAUDE.md
+│ └── README.md
 ├── 03-skills/
-│   ├── code-review/
-│   │   ├── SKILL.md
-│   │   ├── scripts/
-│   │   └── templates/
-│   ├── brand-voice/
-│   │   ├── SKILL.md
-│   │   └── templates/
-│   ├── doc-generator/
-│   │   ├── SKILL.md
-│   │   └── generate-docs.py
-│   └── README.md
+│ ├── code-review/
+│ │ ├── SKILL.md
+│ │ ├── scripts/
+│ │ └── templates/
+│ ├── brand-voice/
+│ │ ├── SKILL.md
+│ │ └── templates/
+│ ├── doc-generator/
+│ │ ├── SKILL.md
+│ │ └── generate-docs.py
+│ └── README.md
 ├── 04-subagents/
-│   ├── code-reviewer.md
-│   ├── test-engineer.md
-│   ├── documentation-writer.md
-│   ├── secure-reviewer.md
-│   ├── implementation-agent.md
-│   └── README.md
+│ ├── code-reviewer.md
+│ ├── test-engineer.md
+│ ├── documentation-writer.md
+│ ├── secure-reviewer.md
+│ ├── implementation-agent.md
+│ └── README.md
 ├── 05-mcp/
-│   ├── github-mcp.json
-│   ├── database-mcp.json
-│   ├── filesystem-mcp.json
-│   ├── multi-mcp.json
-│   └── README.md
+│ ├── github-mcp.json
+│ ├── database-mcp.json
+│ ├── filesystem-mcp.json
+│ ├── multi-mcp.json
+│ └── README.md
 ├── 06-hooks/
-│   ├── format-code.sh
-│   ├── pre-commit.sh
-│   ├── security-scan.sh
-│   ├── log-bash.sh
-│   ├── validate-prompt.sh
-│   ├── notify-team.sh
-│   └── README.md
+│ ├── format-code.sh
+│ ├── pre-commit.sh
+│ ├── security-scan.sh
+│ ├── log-bash.sh
+│ ├── validate-prompt.sh
+│ ├── notify-team.sh
+│ └── README.md
 ├── 07-plugins/
-│   ├── pr-review/
-│   ├── devops-automation/
-│   ├── documentation/
-│   └── README.md
+│ ├── pr-review/
+│ ├── devops-automation/
+│ ├── documentation/
+│ └── README.md
 ├── 08-checkpoints/
-│   ├── checkpoint-examples.md
-│   └── README.md
+│ ├── checkpoint-examples.md
+│ └── README.md
 ├── 09-advanced-features/
-│   ├── config-examples.json
-│   ├── planning-mode-examples.md
-│   └── README.md
+│ ├── config-examples.json
+│ ├── planning-mode-examples.md
+│ └── README.md
 ├── 10-cli/
-│   └── README.md
+│ └── README.md
 └── README.md（本文件）
 ```
 

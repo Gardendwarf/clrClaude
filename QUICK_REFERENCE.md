@@ -5,7 +5,7 @@
 
 # Claude Code Examples - Quick Reference Card
 
-## 🚀 Installation Quick Commands
+## Installation Quick Commands
 
 ### Slash Commands
 ```bash
@@ -92,24 +92,24 @@ chmod +x ~/.claude/hooks/*.sh
 /plan Task description
 
 # Permission modes (use --permission-mode flag)
-# default        - Ask for approval on risky actions
-# acceptEdits    - Auto-accept file edits, ask for others
-# plan           - Read-only analysis, no modifications
-# dontAsk        - Accept all actions except risky ones
-# auto           - Background classifier decides permissions automatically
+# default - Ask for approval on risky actions
+# acceptEdits - Auto-accept file edits, ask for others
+# plan - Read-only analysis, no modifications
+# dontAsk - Accept all actions except risky ones
+# auto - Background classifier decides permissions automatically
 # bypassPermissions - Accept all actions (requires --dangerously-skip-permissions)
 
 # Session management
-/resume                # Resume a previous conversation
-/rename "name"         # Name the current session
-/fork                  # Fork the current session
-claude -c              # Continue most recent conversation
-claude -r "session"    # Resume session by name/ID
+/resume # Resume a previous conversation
+/rename "name" # Name the current session
+/fork # Fork the current session
+claude -c # Continue most recent conversation
+claude -r "session" # Resume session by name/ID
 ```
 
 ---
 
-## 📋 Feature Cheat Sheet
+## Feature Cheat Sheet
 
 | Feature | Install Path | Usage |
 |---------|-------------|-------|
@@ -134,7 +134,7 @@ claude -r "session"    # Resume session by name/ID
 
 ---
 
-## 🎯 Common Use Cases
+## Common Use Cases
 
 ### Code Review
 ```bash
@@ -268,36 +268,36 @@ export CLAUDE_AGENT_TEAMS=1
 
 ---
 
-## 📁 File Locations Reference
+## File Locations Reference
 
 ```
 Your Project/
 ├── .claude/
-│   ├── commands/              # Slash commands go here
-│   ├── agents/                # Subagents go here
-│   ├── skills/                # Project skills go here
-│   └── settings.json          # Project settings (hooks, etc.)
-├── .mcp.json                  # MCP configuration (project scope)
-├── CLAUDE.md                  # Project memory
+│ ├── commands/ # Slash commands go here
+│ ├── agents/ # Subagents go here
+│ ├── skills/ # Project skills go here
+│ └── settings.json # Project settings (hooks, etc.)
+├── .mcp.json # MCP configuration (project scope)
+├── CLAUDE.md # Project memory
 └── src/
     └── api/
-        └── CLAUDE.md          # Directory-specific memory
+        └── CLAUDE.md # Directory-specific memory
 
 User Home/
 ├── .claude/
-│   ├── commands/              # Personal commands
-│   ├── agents/                # Personal agents
-│   ├── skills/                # Personal skills
-│   ├── hooks/                 # Hook scripts
-│   ├── settings.json          # User settings
-│   ├── managed-settings.d/    # Managed settings (enterprise/org)
-│   └── CLAUDE.md              # Personal memory
-└── .claude.json               # Personal MCP config (user scope)
+│ ├── commands/ # Personal commands
+│ ├── agents/ # Personal agents
+│ ├── skills/ # Personal skills
+│ ├── hooks/ # Hook scripts
+│ ├── settings.json # User settings
+│ ├── managed-settings.d/ # Managed settings (enterprise/org)
+│ └── CLAUDE.md # Personal memory
+└── .claude.json # Personal MCP config (user scope)
 ```
 
 ---
 
-## 🔍 Finding Examples
+## Finding Examples
 
 ### By Category
 - **Slash Commands**: `01-slash-commands/`
@@ -326,7 +326,7 @@ User Home/
 
 ---
 
-## 🎓 Learning Path
+## Learning Path
 
 ### Day 1
 ```bash
@@ -435,7 +435,7 @@ echo $GITHUB_TOKEN
 
 ---
 
-## 📊 Feature Matrix
+## Feature Matrix
 
 | Need | Use This | Example |
 |------|----------|---------|
@@ -453,7 +453,7 @@ echo $GITHUB_TOKEN
 
 ---
 
-## 🔗 Quick Links
+## Quick Links
 
 - **Main Guide**: `README.md`
 - **Complete Index**: `INDEX.md`
@@ -462,7 +462,7 @@ echo $GITHUB_TOKEN
 
 ---
 
-## 📞 Common Questions
+## Common Questions
 
 **Q: Which should I use?**
 A: Start with slash commands, add features as needed.
@@ -481,7 +481,7 @@ A: Absolutely! They're templates to customize.
 
 ---
 
-## ✅ Checklist
+## Checklist
 
 Getting started checklist:
 

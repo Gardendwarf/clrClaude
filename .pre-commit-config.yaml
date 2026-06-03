@@ -61,7 +61,7 @@ repos:
         files: ^scripts/
         exclude: ^scripts/tests/
 
-  # Local doc quality hooks (mirrors CI checks — CI is a 2nd pass of these)
+  # Local doc quality hooks (mirrors CI checks - CI is a 2nd pass of these)
   - repo: local
     hooks:
       - id: markdown-lint

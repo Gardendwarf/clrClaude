@@ -1,8 +1,8 @@
 # Code Smells Catalog
 
-A comprehensive reference of code smells based on Martin Fowler's *Refactoring* (2nd Edition). Code smells are symptoms of deeper problems—they indicate that something might be wrong with your code's design.
+A comprehensive reference of code smells based on Martin Fowler's *Refactoring* (2nd Edition). Code smells are symptoms of deeper problems-they indicate that something might be wrong with your code's design.
 
-> "A code smell is a surface indication that usually corresponds to a deeper problem in the system." — Martin Fowler
+> "A code smell is a surface indication that usually corresponds to a deeper problem in the system." - Martin Fowler
 
 ---
 
@@ -271,7 +271,7 @@ class SalariedEmployee {
 - Complex initialization for certain cases
 
 **Why it's bad:**
-- Confusing—field exists but might be null
+- Confusing-field exists but might be null
 - Hard to understand object state
 - Indicates conditional logic hiding
 
@@ -323,7 +323,7 @@ class SalariedEmployee {
 
 ## Change Preventers
 
-Smells that make changes difficult—changing one thing requires changing many others.
+Smells that make changes difficult-changing one thing requires changing many others.
 
 ### Divergent Change
 
@@ -596,7 +596,7 @@ class Customer {
 - "Train wreck" code
 
 **Why it's bad:**
-- Fragile—any change breaks chain
+- Fragile-any change breaks chain
 - Violates Law of Demeter
 - Coupling to structure
 

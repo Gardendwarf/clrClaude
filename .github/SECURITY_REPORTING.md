@@ -187,7 +187,7 @@ We do NOT accept reports on:
 
 ## Responsible Disclosure Guidelines
 
-### Do's ✅
+### Do's
 
 - **Report privately** before public disclosure
 - **Be specific** with file paths and line numbers
@@ -197,7 +197,7 @@ We do NOT accept reports on:
 - **Be professional** in all communications
 - **Respect confidentiality** until we publish
 
-### Don'ts ❌
+### Don'ts
 
 - **Don't publicly disclose** before we fix
 - **Don't exploit** the vulnerability beyond testing
@@ -306,4 +306,4 @@ A: Check GitHub security advisories page. If you still don't see a response, you
 
 ---
 
-Thank you for helping keep this project secure! 🔒
+Thank you for helping keep this project secure!

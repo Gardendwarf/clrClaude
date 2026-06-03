@@ -89,7 +89,7 @@ done
 
 if [ "$WARNINGS" -gt 0 ]; then
   echo "   Command: $COMMAND"
-  echo "   Proceeding — review the above warnings before continuing."
+  echo "   Proceeding - review the above warnings before continuing."
 fi
 
 # ── Allow ─────────────────────────────────────────────────────────────────────

@@ -107,6 +107,6 @@ usersWithPosts.forEach(({ user, posts }) => {
 - **Medium：** X
 - **Low：** X
 
-**建议：** ✅ Approve / ⚠️ Request Changes / 🔄 Needs Discussion
+**建议：** Approve / Request Changes / Needs Discussion
 
 **整体代码质量：** 1-5 星

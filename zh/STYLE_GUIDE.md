@@ -232,7 +232,7 @@
 ```markdown
 | Column 1 | Column 2 | Column 3 |
 |----------|----------|----------|
-| Data     | Data     | Data     |
+| Data | Data | Data |
 ```
 
 ### 常见表格模式
@@ -433,27 +433,27 @@ Emoji 使用要 **克制且有目的**，只在特定场景中出现：
 
 | 场景 | Emoji | 示例 |
 |---------|--------|---------|
-| Root README 章节标题 | 分类图标 | `## 📚 Learning Path` |
-| Skill 等级指示 | 彩色圆点 | 🟢 Beginner, 🔵 Intermediate, 🔴 Advanced |
-| Do's 和 Don'ts | 对勾/叉号 | ✅ Do this, ❌ Don't do this |
-| 复杂度评级 | 星星 | ⭐⭐⭐ |
+| Root README 章节标题 | 分类图标 | `## Learning Path` |
+| Skill 等级指示 | 彩色圆点 | Beginner, Intermediate, Advanced |
+| Do's 和 Don'ts | 对勾/叉号 | Do this, Don't do this |
+| 复杂度评级 | 星星 | |
 
 ### 标准 Emoji 集合
 
 | Emoji | 含义 |
 |-------|---------|
-| 📚 | 学习、指南、文档 |
-| ⚡ | 快速上手、速查 |
-| 🎯 | 功能、速查 |
-| 🎓 | 学习路径 |
-| 📊 | 统计、对比 |
-| 🚀 | 安装、快速命令 |
-| 🟢 | 初学者级别 |
-| 🔵 | 中级别 |
-| 🔴 | 高级别 |
-| ✅ | 推荐做法 |
-| ❌ | 避免 / 反模式 |
-| ⭐ | 复杂度评级单位 |
+| | 学习、指南、文档 |
+| | 快速上手、速查 |
+| | 功能、速查 |
+| | 学习路径 |
+| | 统计、对比 |
+| | 安装、快速命令 |
+| | 初学者级别 |
+| | 中级别 |
+| | 高级别 |
+| | 推荐做法 |
+| | 避免 / 反模式 |
+| | 复杂度评级单位 |
 
 ### 规则
 
@@ -484,11 +484,11 @@ name: my-feature
 description: Brief description
 argument-hint: "[file-path] [options]"
 allowed-tools: Bash, Read, Grep, Write, Edit
-model: opus                        # opus, sonnet, or haiku
-disable-model-invocation: true     # User-only invocation
-user-invocable: false              # Hidden from user menu
-context: fork                      # Run in isolated subagent
-agent: Explore                     # Agent type for context: fork
+model: opus # opus, sonnet, or haiku
+disable-model-invocation: true # User-only invocation
+user-invocable: false # Hidden from user menu
+context: fork # Run in isolated subagent
+agent: Explore # Agent type for context: fork
 ---
 ```
 

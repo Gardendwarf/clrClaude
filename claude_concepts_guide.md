@@ -57,19 +57,19 @@ graph LR
 
 | Location | Scope | Availability | Use Case | Git Tracked |
 |----------|-------|--------------|----------|-------------|
-| `.claude/commands/` | Project-specific | Team members | Team workflows, shared standards | ✅ Yes |
-| `~/.claude/commands/` | Personal | Individual user | Personal shortcuts across projects | ❌ No |
-| Subdirectories | Namespaced | Based on parent | Organize by category | ✅ Yes |
+| `.claude/commands/` | Project-specific | Team members | Team workflows, shared standards | Yes |
+| `~/.claude/commands/` | Personal | Individual user | Personal shortcuts across projects | No |
+| Subdirectories | Namespaced | Based on parent | Organize by category | Yes |
 
 ### Features & Capabilities
 
 | Feature | Example | Supported |
 |---------|---------|-----------|
-| Shell script execution | `bash scripts/deploy.sh` | ✅ Yes |
-| File references | `@path/to/file.js` | ✅ Yes |
-| Bash integration | `$(git log --oneline)` | ✅ Yes |
-| Arguments | `/pr --verbose` | ✅ Yes |
-| MCP commands | `/mcp__github__list_prs` | ✅ Yes |
+| Shell script execution | `bash scripts/deploy.sh` | Yes |
+| File references | `@path/to/file.js` | Yes |
+| Bash integration | `$(git log --oneline)` | Yes |
+| Arguments | `/pr --verbose` | Yes |
+| MCP commands | `/mcp__github__list_prs` | Yes |
 
 ### Practical Examples
 
@@ -200,7 +200,7 @@ sequenceDiagram
 
 ### Best Practices
 
-| ✅ Do | ❌ Don't |
+| Do | Don't |
 |------|---------|
 | Use clear, action-oriented names | Create commands for one-time tasks |
 | Document trigger words in description | Build complex logic in commands |
@@ -221,11 +221,11 @@ Subagents are specialized AI assistants with isolated context windows and custom
 
 ```mermaid
 graph TB
-    User["👤 User"]
-    Main["🎯 Main Agent<br/>(Coordinator)"]
-    Reviewer["🔍 Code Reviewer<br/>Subagent"]
-    Tester["✅ Test Engineer<br/>Subagent"]
-    Docs["📝 Documentation<br/>Subagent"]
+    User[" User"]
+    Main[" Main Agent<br/>(Coordinator)"]
+    Reviewer[" Code Reviewer<br/>Subagent"]
+    Tester[" Test Engineer<br/>Subagent"]
+    Docs[" Documentation<br/>Subagent"]
 
     User -->|asks| Main
     Main -->|delegates| Reviewer
@@ -467,11 +467,11 @@ tools: read, grep
 Reviews code for security vulnerabilities only.
 
 This agent:
-- ✅ Reads files to analyze
-- ✅ Searches for patterns
-- ❌ Cannot execute code
-- ❌ Cannot modify files
-- ❌ Cannot run tests
+- Reads files to analyze
+- Searches for patterns
+- Cannot execute code
+- Cannot modify files
+- Cannot run tests
 
 This ensures the reviewer doesn't accidentally break anything.
 ```
@@ -490,12 +490,12 @@ tools: read, write, bash, grep, edit, glob
 Builds features from specifications.
 
 This agent:
-- ✅ Reads specifications
-- ✅ Writes new code files
-- ✅ Runs build commands
-- ✅ Searches codebase
-- ✅ Edits existing files
-- ✅ Finds files matching patterns
+- Reads specifications
+- Writes new code files
+- Runs build commands
+- Searches codebase
+- Edits existing files
+- Finds files matching patterns
 
 Full capabilities for independent feature development.
 ```
@@ -527,12 +527,12 @@ graph TB
 
 | Scenario | Use Subagent | Why |
 |----------|--------------|-----|
-| Complex feature with many steps | ✅ Yes | Separate concerns, prevent context pollution |
-| Quick code review | ❌ No | Not necessary overhead |
-| Parallel task execution | ✅ Yes | Each subagent has own context |
-| Specialized expertise needed | ✅ Yes | Custom system prompts |
-| Long-running analysis | ✅ Yes | Prevents main context exhaustion |
-| Single task | ❌ No | Adds latency unnecessarily |
+| Complex feature with many steps | Yes | Separate concerns, prevent context pollution |
+| Quick code review | No | Not necessary overhead |
+| Parallel task execution | Yes | Each subagent has own context |
+| Specialized expertise needed | Yes | Custom system prompts |
+| Long-running analysis | Yes | Prevents main context exhaustion |
+| Single task | No | Adds latency unnecessarily |
 
 ### Agent Teams
 
@@ -840,10 +840,10 @@ I organize my projects as:
 ```
 project/
   ├── src/
-  │   ├── api/
-  │   ├── services/
-  │   ├── models/
-  │   └── utils/
+  │ ├── api/
+  │ ├── services/
+  │ ├── models/
+  │ └── utils/
   ├── tests/
   ├── docs/
   └── docker/
@@ -871,7 +871,7 @@ Claude: I'm adding that to your memory. Which memory file should this go in?
 
 User: Project memory
 
-Claude: ✅ Memory saved!
+Claude: Memory saved!
 
 Added to ./CLAUDE.md:
 ---
@@ -931,13 +931,13 @@ graph LR
 
 | Feature | Claude Web/Desktop | Claude Code (CLAUDE.md) |
 |---------|-------------------|------------------------|
-| Auto-synthesis | ✅ Every 24h | ❌ Manual |
-| Cross-project | ✅ Shared | ❌ Project-specific |
-| Team access | ✅ Shared projects | ✅ Git-tracked |
-| Searchable | ✅ Built-in | ✅ Through `/memory` |
-| Editable | ✅ In-chat | ✅ Direct file edit |
-| Import/Export | ✅ Yes | ✅ Copy/paste |
-| Persistent | ✅ 24h+ | ✅ Indefinite |
+| Auto-synthesis | Every 24h | Manual |
+| Cross-project | Shared | Project-specific |
+| Team access | Shared projects | Git-tracked |
+| Searchable | Built-in | Through `/memory` |
+| Editable | In-chat | Direct file edit |
+| Import/Export | Yes | Copy/paste |
+| Persistent | 24h+ | Indefinite |
 
 ---
 
@@ -1000,21 +1000,21 @@ sequenceDiagram
     Config->>Claude: Activate connection
     Claude->>Service: Test connection
     Service-->>Claude: Authentication successful
-    Claude->>User: ✅ MCP connected!
+    Claude->>User: MCP connected!
 ```
 
 ### Available MCP Servers Table
 
 | MCP Server | Purpose | Common Tools | Auth | Real-time |
 |------------|---------|--------------|------|-----------|
-| **Filesystem** | File operations | read, write, delete | OS permissions | ✅ Yes |
-| **GitHub** | Repository management | list_prs, create_issue, push | OAuth | ✅ Yes |
-| **Slack** | Team communication | send_message, list_channels | Token | ✅ Yes |
-| **Database** | SQL queries | query, insert, update | Credentials | ✅ Yes |
-| **Google Docs** | Document access | read, write, share | OAuth | ✅ Yes |
-| **Asana** | Project management | create_task, update_status | API Key | ✅ Yes |
-| **Stripe** | Payment data | list_charges, create_invoice | API Key | ✅ Yes |
-| **Memory** | Persistent memory | store, retrieve, delete | Local | ❌ No |
+| **Filesystem** | File operations | read, write, delete | OS permissions | Yes |
+| **GitHub** | Repository management | list_prs, create_issue, push | OAuth | Yes |
+| **Slack** | Team communication | send_message, list_channels | Token | Yes |
+| **Database** | SQL queries | query, insert, update | Credentials | Yes |
+| **Google Docs** | Document access | read, write, share | OAuth | Yes |
+| **Asana** | Project management | create_task, update_status | API Key | Yes |
+| **Stripe** | Payment data | list_charges, create_invoice | API Key | Yes |
+| **Memory** | Persistent memory | store, retrieve, delete | Local | No |
 
 ### Practical Examples
 
@@ -1161,9 +1161,9 @@ Write report.html to /reports/
 Send summary to #daily-reports channel
 
 Final Output:
-✅ Report generated and posted
-📊 47 PRs merged this week
-💰 $12,450 in daily sales
+ Report generated and posted
+ 47 PRs merged this week
+ $12,450 in daily sales
 ```
 
 #### Example 4: Filesystem MCP Operations
@@ -1330,8 +1330,8 @@ These bundled skills are always available and do not require installation or con
 ~/.claude/skills/code-review/
 ├── SKILL.md
 ├── templates/
-│   ├── review-checklist.md
-│   └── finding-template.md
+│ ├── review-checklist.md
+│ └── finding-template.md
 └── scripts/
     ├── analyze-metrics.py
     └── compare-complexity.py
@@ -1478,7 +1478,7 @@ class ComplexityAnalyzer:
         Calculate cyclomatic complexity using McCabe's method.
         Count decision points: if, elif, else, for, while, except, and, or
         """
-        complexity = 1  # Base complexity
+        complexity = 1 # Base complexity
 
         # Count decision points
         decision_patterns = [
@@ -1567,18 +1567,18 @@ def compare_files(before_file: str, after_file: str) -> None:
     print("=" * 60)
 
     print("\nBEFORE:")
-    print(f"  Cyclomatic Complexity:    {before_metrics['cyclomatic_complexity']}")
-    print(f"  Cognitive Complexity:     {before_metrics['cognitive_complexity']}")
-    print(f"  Maintainability Index:    {before_metrics['maintainability_index']}")
-    print(f"  Lines of Code:            {before_metrics['lines_of_code']}")
-    print(f"  Avg Line Length:          {before_metrics['avg_line_length']}")
+    print(f" Cyclomatic Complexity: {before_metrics['cyclomatic_complexity']}")
+    print(f" Cognitive Complexity: {before_metrics['cognitive_complexity']}")
+    print(f" Maintainability Index: {before_metrics['maintainability_index']}")
+    print(f" Lines of Code: {before_metrics['lines_of_code']}")
+    print(f" Avg Line Length: {before_metrics['avg_line_length']}")
 
     print("\nAFTER:")
-    print(f"  Cyclomatic Complexity:    {after_metrics['cyclomatic_complexity']}")
-    print(f"  Cognitive Complexity:     {after_metrics['cognitive_complexity']}")
-    print(f"  Maintainability Index:    {after_metrics['maintainability_index']}")
-    print(f"  Lines of Code:            {after_metrics['lines_of_code']}")
-    print(f"  Avg Line Length:          {after_metrics['avg_line_length']}")
+    print(f" Cyclomatic Complexity: {after_metrics['cyclomatic_complexity']}")
+    print(f" Cognitive Complexity: {after_metrics['cognitive_complexity']}")
+    print(f" Maintainability Index: {after_metrics['maintainability_index']}")
+    print(f" Lines of Code: {after_metrics['lines_of_code']}")
+    print(f" Avg Line Length: {after_metrics['avg_line_length']}")
 
     print("\nCHANGES:")
     cyclomatic_change = after_metrics['cyclomatic_complexity'] - before_metrics['cyclomatic_complexity']
@@ -1586,25 +1586,25 @@ def compare_files(before_file: str, after_file: str) -> None:
     mi_change = after_metrics['maintainability_index'] - before_metrics['maintainability_index']
     loc_change = after_metrics['lines_of_code'] - before_metrics['lines_of_code']
 
-    print(f"  Cyclomatic Complexity:    {cyclomatic_change:+d}")
-    print(f"  Cognitive Complexity:     {cognitive_change:+d}")
-    print(f"  Maintainability Index:    {mi_change:+.2f}")
-    print(f"  Lines of Code:            {loc_change:+d}")
+    print(f" Cyclomatic Complexity: {cyclomatic_change:+d}")
+    print(f" Cognitive Complexity: {cognitive_change:+d}")
+    print(f" Maintainability Index: {mi_change:+.2f}")
+    print(f" Lines of Code: {loc_change:+d}")
 
     print("\nASSESSMENT:")
     if mi_change > 0:
-        print("  ✅ Code is MORE maintainable")
+        print(" Code is MORE maintainable")
     elif mi_change < 0:
-        print("  ⚠️  Code is LESS maintainable")
+        print(" Code is LESS maintainable")
     else:
-        print("  ➡️  Maintainability unchanged")
+        print(" Maintainability unchanged")
 
     if cyclomatic_change < 0:
-        print("  ✅ Complexity DECREASED")
+        print(" Complexity DECREASED")
     elif cyclomatic_change > 0:
-        print("  ⚠️  Complexity INCREASED")
+        print(" Complexity INCREASED")
     else:
-        print("  ➡️  Complexity unchanged")
+        print(" Complexity unchanged")
 
     print("=" * 60)
 
@@ -1781,7 +1781,7 @@ When reviewing multiple findings, track:
 - **Medium:** X
 - **Low:** X
 
-**Recommendation:** ✅ Approve / ⚠️ Request Changes / 🔄 Needs Discussion
+**Recommendation:** Approve / Request Changes / Needs Discussion
 
 **Overall Code Quality:** 1-5 stars
 ~~~~
@@ -1883,7 +1883,7 @@ Help teams automate their development workflows with AI
 
 ## Writing Guidelines
 
-### Do's ✅
+### Do's
 - Use "you" when addressing readers
 - Use active voice: "Claude generates reports" not "Reports are generated by Claude"
 - Start with value proposition
@@ -1892,7 +1892,7 @@ Help teams automate their development workflows with AI
 - Use lists for clarity
 - Include calls-to-action
 
-### Don'ts ❌
+### Don'ts
 - Don't use corporate jargon
 - Don't patronize or oversimplify
 - Don't use "we believe" or "we think"
@@ -1902,14 +1902,14 @@ Help teams automate their development workflows with AI
 
 ## Vocabulary
 
-### ✅ Preferred Terms
+### Preferred Terms
 - Claude (not "the Claude AI")
 - Code generation (not "auto-coding")
 - Agent (not "bot")
 - Streamline (not "revolutionize")
 - Integrate (not "synergize")
 
-### ❌ Avoid Terms
+### Avoid Terms
 - "Cutting-edge" (overused)
 - "Game-changer" (vague)
 - "Leverage" (corporate-speak)
@@ -1918,12 +1918,12 @@ Help teams automate their development workflows with AI
 ```
 ## Examples
 
-### ✅ Good Example
-"Claude automates your code review process. Instead of manually checking each PR, Claude reviews security, performance, and quality—saving your team hours every week."
+### Good Example
+"Claude automates your code review process. Instead of manually checking each PR, Claude reviews security, performance, and quality-saving your team hours every week."
 
 Why it works: Clear value, specific benefits, action-oriented
 
-### ❌ Bad Example
+### Bad Example
 "Claude leverages cutting-edge AI to provide comprehensive software development solutions."
 
 Why it doesn't work: Vague, corporate jargon, no specific value
@@ -2161,7 +2161,7 @@ graph TB
 
 ### Overview
 
-Claude Code Plugins are bundled collections of customizations (slash commands, subagents, MCP servers, and hooks) that install with a single command. They represent the highest-level extension mechanism—combining multiple features into cohesive, shareable packages.
+Claude Code Plugins are bundled collections of customizations (slash commands, subagents, MCP servers, and hooks) that install with a single command. They represent the highest-level extension mechanism-combining multiple features into cohesive, shareable packages.
 
 ### Architecture
 
@@ -2207,7 +2207,7 @@ sequenceDiagram
     Subagents-->>Tools: Ready to use
     MCPServers-->>Tools: Ready to use
     Hooks-->>Tools: Ready to use
-    Tools-->>Claude: Plugin installed ✅
+    Tools-->>Claude: Plugin installed
 ```
 
 ### Plugin Types & Distribution
@@ -2261,31 +2261,31 @@ config:
 ```
 my-plugin/
 ├── .claude-plugin/
-│   └── plugin.json
+│ └── plugin.json
 ├── commands/
-│   ├── task-1.md
-│   ├── task-2.md
-│   └── workflows/
+│ ├── task-1.md
+│ ├── task-2.md
+│ └── workflows/
 ├── agents/
-│   ├── specialist-1.md
-│   ├── specialist-2.md
-│   └── configs/
+│ ├── specialist-1.md
+│ ├── specialist-2.md
+│ └── configs/
 ├── skills/
-│   ├── skill-1.md
-│   └── skill-2.md
+│ ├── skill-1.md
+│ └── skill-2.md
 ├── hooks/
-│   └── hooks.json
+│ └── hooks.json
 ├── .mcp.json
 ├── .lsp.json
 ├── settings.json
 ├── templates/
-│   └── issue-template.md
+│ └── issue-template.md
 ├── scripts/
-│   ├── helper-1.sh
-│   └── helper-2.py
+│ ├── helper-1.sh
+│ └── helper-2.py
 ├── docs/
-│   ├── README.md
-│   └── USAGE.md
+│ ├── README.md
+│ └── USAGE.md
 └── tests/
     └── plugin.test.js
 ```
@@ -2351,11 +2351,11 @@ Specializes in finding security vulnerabilities:
 /plugin install pr-review
 
 # Result:
-# ✅ 3 slash commands installed
-# ✅ 3 subagents configured
-# ✅ 2 MCP servers connected
-# ✅ 4 hooks registered
-# ✅ Ready to use!
+# 3 slash commands installed
+# 3 subagents configured
+# 2 MCP servers connected
+# 4 hooks registered
+# Ready to use!
 ```
 
 #### Example 2: DevOps Plugin
@@ -2365,22 +2365,22 @@ Specializes in finding security vulnerabilities:
 ```
 devops-automation/
 ├── commands/
-│   ├── deploy.md
-│   ├── rollback.md
-│   ├── status.md
-│   └── incident.md
+│ ├── deploy.md
+│ ├── rollback.md
+│ ├── status.md
+│ └── incident.md
 ├── agents/
-│   ├── deployment-specialist.md
-│   ├── incident-commander.md
-│   └── alert-analyzer.md
+│ ├── deployment-specialist.md
+│ ├── incident-commander.md
+│ └── alert-analyzer.md
 ├── mcp/
-│   ├── github-config.json
-│   ├── kubernetes-config.json
-│   └── prometheus-config.json
+│ ├── github-config.json
+│ ├── kubernetes-config.json
+│ └── prometheus-config.json
 ├── hooks/
-│   ├── pre-deploy.js
-│   ├── post-deploy.js
-│   └── on-error.js
+│ ├── pre-deploy.js
+│ ├── post-deploy.js
+│ └── on-error.js
 └── scripts/
     ├── deploy.sh
     ├── rollback.sh
@@ -2394,17 +2394,17 @@ devops-automation/
 ```
 documentation/
 ├── commands/
-│   ├── generate-api-docs.md
-│   ├── generate-readme.md
-│   ├── sync-docs.md
-│   └── validate-docs.md
+│ ├── generate-api-docs.md
+│ ├── generate-readme.md
+│ ├── sync-docs.md
+│ └── validate-docs.md
 ├── agents/
-│   ├── api-documenter.md
-│   ├── code-commentator.md
-│   └── example-generator.md
+│ ├── api-documenter.md
+│ ├── code-commentator.md
+│ └── example-generator.md
 ├── mcp/
-│   ├── github-docs-config.json
-│   └── slack-announce-config.json
+│ ├── github-docs-config.json
+│ └── slack-announce-config.json
 └── templates/
     ├── api-endpoint.md
     ├── function-docs.md
@@ -2472,13 +2472,13 @@ graph LR
 
 | Use Case | Recommendation | Why |
 |----------|-----------------|-----|
-| **Team Onboarding** | ✅ Use Plugin | Instant setup, all configurations |
-| **Framework Setup** | ✅ Use Plugin | Bundles framework-specific commands |
-| **Enterprise Standards** | ✅ Use Plugin | Central distribution, version control |
-| **Quick Task Automation** | ❌ Use Command | Overkill complexity |
-| **Single Domain Expertise** | ❌ Use Skill | Too heavy, use skill instead |
-| **Specialized Analysis** | ❌ Use Subagent | Create manually or use skill |
-| **Live Data Access** | ❌ Use MCP | Standalone, don't bundle |
+| **Team Onboarding** | Use Plugin | Instant setup, all configurations |
+| **Framework Setup** | Use Plugin | Bundles framework-specific commands |
+| **Enterprise Standards** | Use Plugin | Central distribution, version control |
+| **Quick Task Automation** | Use Command | Overkill complexity |
+| **Single Domain Expertise** | Use Skill | Too heavy, use skill instead |
+| **Specialized Analysis** | Use Subagent | Create manually or use skill |
+| **Live Data Access** | Use MCP | Standalone, don't bundle |
 
 ### When to Create a Plugin
 
@@ -2486,7 +2486,7 @@ graph LR
 graph TD
     A["Should I create a plugin?"]
     A -->|Need multiple components| B{"Multiple commands<br/>or subagents<br/>or MCPs?"}
-    B -->|Yes| C["✅ Create Plugin"]
+    B -->|Yes| C[" Create Plugin"]
     B -->|No| D["Use Individual Feature"]
     A -->|Team workflow| E{"Share with<br/>team?"}
     E -->|Yes| C
@@ -2529,11 +2529,11 @@ Complete PR review workflow with security, testing, and documentation checks.
 ```
 
 ## Features
-✅ Security analysis
-✅ Test coverage checking
-✅ Documentation verification
-✅ Code quality assessment
-✅ Performance impact analysis
+ Security analysis
+ Test coverage checking
+ Documentation verification
+ Code quality assessment
+ Performance impact analysis
 
 ## Usage
 ```bash
@@ -2561,9 +2561,9 @@ Complete PR review workflow with security, testing, and documentation checks.
 **With Plugin (2 minutes):**
 ```bash
 /plugin install pr-review
-# ✅ Everything installed and configured
-# ✅ Ready to use immediately
-# ✅ Team can reproduce exact setup
+# Everything installed and configured
+# Ready to use immediately
+# Team can reproduce exact setup
 ```
 
 ---
@@ -2721,11 +2721,11 @@ graph TD
     B -->|Specialized subtask| F["Subagent"]
     B -->|Domain-specific work| G["Skill"]
 
-    C --> C1["✅ Team shortcut"]
-    D --> D1["✅ Live API access"]
-    E --> E1["✅ Persistent context"]
-    F --> F1["✅ Parallel execution"]
-    G --> G1["✅ Auto-invoked expertise"]
+    C --> C1[" Team shortcut"]
+    D --> D1[" Live API access"]
+    E --> E1[" Persistent context"]
+    F --> F1[" Parallel execution"]
+    G --> G1[" Auto-invoked expertise"]
 ```
 
 ### Selection Decision Tree
@@ -2880,13 +2880,13 @@ Hooks are configured in `~/.claude/settings.json` (user-level) or `.claude/setti
 
 ### Best Practices
 
-✅ **Do:**
+ **Do:**
 - Keep hooks fast (< 1 second)
 - Use hooks for validation and automation
 - Handle errors gracefully
 - Use absolute paths
 
-❌ **Don't:**
+ **Don't:**
 - Make hooks interactive
 - Use hooks for long-running tasks
 - Hardcode credentials
@@ -2996,9 +2996,9 @@ User: Run tests in background
 
 Claude: Started task bg-1234
 
-/task list           # Show all tasks
+/task list # Show all tasks
 /task status bg-1234 # Check progress
-/task show bg-1234   # View output
+/task show bg-1234 # View output
 /task cancel bg-1234 # Cancel task
 ```
 
@@ -3017,10 +3017,10 @@ Control what Claude can do.
 
 **Usage:**
 ```bash
-claude --permission-mode plan          # Read-only analysis
-claude --permission-mode acceptEdits   # Auto-accept edits
-claude --permission-mode auto          # Auto-approve safe actions
-claude --permission-mode dontAsk       # No confirmation prompts
+claude --permission-mode plan # Read-only analysis
+claude --permission-mode acceptEdits # Auto-accept edits
+claude --permission-mode auto # Auto-approve safe actions
+claude --permission-mode dontAsk # No confirmation prompts
 ```
 
 ### Headless Mode (Print Mode)
@@ -3066,11 +3066,11 @@ Manage multiple work sessions.
 
 **Commands:**
 ```bash
-/resume                # Resume a previous conversation
-/rename "Feature"      # Name the current session
-/fork                  # Fork into a new session
-claude -c              # Continue most recent conversation
-claude -r "Feature"    # Resume session by name/ID
+/resume # Resume a previous conversation
+/rename "Feature" # Name the current session
+/fork # Fork into a new session
+claude -c # Continue most recent conversation
+claude -r "Feature" # Resume session by name/ID
 ```
 
 ### Interactive Features

@@ -35,9 +35,9 @@ cd claude-howto
 uv venv
 
 # 激活虚拟环境
-source .venv/bin/activate  # macOS/Linux
+source .venv/bin/activate # macOS/Linux
 # 或者
-.venv\Scripts\activate     # Windows
+.venv\Scripts\activate # Windows
 
 # 安装开发依赖
 uv pip install -r requirements-dev.txt
@@ -291,7 +291,7 @@ pytest scripts/tests/
 ```toml
 [tool.bandit]
 exclude_dirs = ["scripts/tests"]
-skips = ["B101"]  # 跳过 assert_used 警告
+skips = ["B101"] # 跳过 assert_used 警告
 ```
 
 ### 类型检查太严格
@@ -303,7 +303,7 @@ skips = ["B101"]  # 跳过 assert_used 警告
 # type: ignore
 
 # 或者针对特定行
-some_dynamic_code()  # type: ignore
+some_dynamic_code() # type: ignore
 ```
 
 ## 持续集成最佳实践
@@ -334,7 +334,7 @@ some_dynamic_code()  # type: ignore
 5. **安全扫描**：`bandit -r scripts/ --exclude scripts/tests/`
 6. **如果测试变化，更新文档**
 
-所有 PR 都必须包含测试！🧪
+所有 PR 都必须包含测试！
 
 ---
 

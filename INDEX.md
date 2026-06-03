@@ -67,13 +67,13 @@ Auto-invoked capabilities with scripts and templates.
 ### Code Review Skill (5 files)
 ```
 code-review/
-├── SKILL.md                          # Skill definition
+├── SKILL.md # Skill definition
 ├── scripts/
-│   ├── analyze-metrics.py            # Code metrics analyzer
-│   └── compare-complexity.py         # Complexity comparison
+│ ├── analyze-metrics.py # Code metrics analyzer
+│ └── compare-complexity.py # Complexity comparison
 └── templates/
-    ├── review-checklist.md           # Review checklist
-    └── finding-template.md           # Finding documentation
+    ├── review-checklist.md # Review checklist
+    └── finding-template.md # Finding documentation
 ```
 
 **Purpose**: Comprehensive code review with security, performance, and quality analysis
@@ -85,11 +85,11 @@ code-review/
 ### Brand Voice Skill (4 files)
 ```
 brand-voice/
-├── SKILL.md                          # Skill definition
+├── SKILL.md # Skill definition
 ├── templates/
-│   ├── email-template.txt            # Email format
-│   └── social-post-template.txt      # Social media format
-└── tone-examples.md                  # Example messages
+│ ├── email-template.txt # Email format
+│ └── social-post-template.txt # Social media format
+└── tone-examples.md # Example messages
 ```
 
 **Purpose**: Ensure consistent brand voice in communications
@@ -101,8 +101,8 @@ brand-voice/
 ### Documentation Generator Skill (2 files)
 ```
 doc-generator/
-├── SKILL.md                          # Skill definition
-└── generate-docs.py                  # Python doc extractor
+├── SKILL.md # Skill definition
+└── generate-docs.py # Python doc extractor
 ```
 
 **Purpose**: Generate comprehensive API documentation from source code
@@ -114,15 +114,15 @@ doc-generator/
 ### Refactor Skill (5 files)
 ```
 refactor/
-├── SKILL.md                          # Skill definition
+├── SKILL.md # Skill definition
 ├── scripts/
-│   ├── analyze-complexity.py         # Complexity analyzer
-│   └── detect-smells.py              # Code smell detector
+│ ├── analyze-complexity.py # Complexity analyzer
+│ └── detect-smells.py # Code smell detector
 ├── references/
-│   ├── code-smells.md                # Code smells catalog
-│   └── refactoring-catalog.md        # Refactoring patterns
+│ ├── code-smells.md # Code smells catalog
+│ └── refactoring-catalog.md # Refactoring patterns
 └── templates/
-    └── refactoring-plan.md           # Refactoring plan template
+    └── refactoring-plan.md # Refactoring plan template
 ```
 
 **Purpose**: Systematic code refactoring with complexity analysis
@@ -134,7 +134,7 @@ refactor/
 ### Claude MD Skill (1 file)
 ```
 claude-md/
-└── SKILL.md                          # Skill definition
+└── SKILL.md # Skill definition
 ```
 
 **Purpose**: Manage and optimize CLAUDE.md files
@@ -144,10 +144,10 @@ claude-md/
 ### Blog Draft Skill (3 files)
 ```
 blog-draft/
-├── SKILL.md                          # Skill definition
+├── SKILL.md # Skill definition
 └── templates/
-    ├── draft-template.md             # Blog draft template
-    └── outline-template.md           # Blog outline template
+    ├── draft-template.md # Blog draft template
+    └── outline-template.md # Blog outline template
 ```
 
 **Purpose**: Draft blog posts with consistent structure
@@ -234,20 +234,20 @@ Bundled collections of features.
 ```
 pr-review/
 ├── .claude-plugin/
-│   └── plugin.json                   # Plugin manifest
+│ └── plugin.json # Plugin manifest
 ├── commands/
-│   ├── review-pr.md                  # Comprehensive review
-│   ├── check-security.md             # Security check
-│   └── check-tests.md                # Test coverage check
+│ ├── review-pr.md # Comprehensive review
+│ ├── check-security.md # Security check
+│ └── check-tests.md # Test coverage check
 ├── agents/
-│   ├── security-reviewer.md          # Security specialist
-│   ├── test-checker.md               # Test specialist
-│   └── performance-analyzer.md       # Performance specialist
+│ ├── security-reviewer.md # Security specialist
+│ ├── test-checker.md # Test specialist
+│ └── performance-analyzer.md # Performance specialist
 ├── mcp/
-│   └── github-config.json            # GitHub integration
+│ └── github-config.json # GitHub integration
 ├── hooks/
-│   └── pre-review.js                 # Pre-review validation
-└── README.md                         # Plugin documentation
+│ └── pre-review.js # Pre-review validation
+└── README.md # Plugin documentation
 ```
 
 **Features**: Security analysis, test coverage, performance impact
@@ -262,26 +262,26 @@ pr-review/
 ```
 devops-automation/
 ├── .claude-plugin/
-│   └── plugin.json                   # Plugin manifest
+│ └── plugin.json # Plugin manifest
 ├── commands/
-│   ├── deploy.md                     # Deployment
-│   ├── rollback.md                   # Rollback
-│   ├── status.md                     # System status
-│   └── incident.md                   # Incident response
+│ ├── deploy.md # Deployment
+│ ├── rollback.md # Rollback
+│ ├── status.md # System status
+│ └── incident.md # Incident response
 ├── agents/
-│   ├── deployment-specialist.md      # Deployment expert
-│   ├── incident-commander.md         # Incident coordinator
-│   └── alert-analyzer.md             # Alert analyzer
+│ ├── deployment-specialist.md # Deployment expert
+│ ├── incident-commander.md # Incident coordinator
+│ └── alert-analyzer.md # Alert analyzer
 ├── mcp/
-│   └── kubernetes-config.json        # Kubernetes integration
+│ └── kubernetes-config.json # Kubernetes integration
 ├── hooks/
-│   ├── pre-deploy.js                 # Pre-deployment checks
-│   └── post-deploy.js                # Post-deployment tasks
+│ ├── pre-deploy.js # Pre-deployment checks
+│ └── post-deploy.js # Post-deployment tasks
 ├── scripts/
-│   ├── deploy.sh                     # Deployment automation
-│   ├── rollback.sh                   # Rollback automation
-│   └── health-check.sh               # Health checks
-└── README.md                         # Plugin documentation
+│ ├── deploy.sh # Deployment automation
+│ ├── rollback.sh # Rollback automation
+│ └── health-check.sh # Health checks
+└── README.md # Plugin documentation
 ```
 
 **Features**: Kubernetes deployment, rollback, monitoring, incident response
@@ -296,23 +296,23 @@ devops-automation/
 ```
 documentation/
 ├── .claude-plugin/
-│   └── plugin.json                   # Plugin manifest
+│ └── plugin.json # Plugin manifest
 ├── commands/
-│   ├── generate-api-docs.md          # API docs generation
-│   ├── generate-readme.md            # README creation
-│   ├── sync-docs.md                  # Doc synchronization
-│   └── validate-docs.md              # Doc validation
+│ ├── generate-api-docs.md # API docs generation
+│ ├── generate-readme.md # README creation
+│ ├── sync-docs.md # Doc synchronization
+│ └── validate-docs.md # Doc validation
 ├── agents/
-│   ├── api-documenter.md             # API doc specialist
-│   ├── code-commentator.md           # Code comment specialist
-│   └── example-generator.md          # Example creator
+│ ├── api-documenter.md # API doc specialist
+│ ├── code-commentator.md # Code comment specialist
+│ └── example-generator.md # Example creator
 ├── mcp/
-│   └── github-docs-config.json       # GitHub integration
+│ └── github-docs-config.json # GitHub integration
 ├── templates/
-│   ├── api-endpoint.md               # API endpoint template
-│   ├── function-docs.md              # Function doc template
-│   └── adr-template.md               # ADR template
-└── README.md                         # Plugin documentation
+│ ├── api-endpoint.md # API endpoint template
+│ ├── function-docs.md # Function doc template
+│ └── adr-template.md # ADR template
+└── README.md # Plugin documentation
 ```
 
 **Features**: API docs, README generation, doc sync, validation
@@ -489,167 +489,167 @@ Command-line interface usage patterns and reference.
 
 ```
 claude-howto/
-├── README.md                                    # Main overview
-├── INDEX.md                                     # This file
-├── QUICK_REFERENCE.md                           # Quick reference card
-├── claude_concepts_guide.md                     # Original guide
+├── README.md # Main overview
+├── INDEX.md # This file
+├── QUICK_REFERENCE.md # Quick reference card
+├── claude_concepts_guide.md # Original guide
 │
-├── 01-slash-commands/                           # Slash Commands
-│   ├── optimize.md
-│   ├── pr.md
-│   ├── generate-api-docs.md
-│   ├── commit.md
-│   ├── setup-ci-cd.md
-│   ├── push-all.md
-│   ├── unit-test-expand.md
-│   ├── doc-refactor.md
-│   ├── pr-slash-command.png
-│   └── README.md
+├── 01-slash-commands/ # Slash Commands
+│ ├── optimize.md
+│ ├── pr.md
+│ ├── generate-api-docs.md
+│ ├── commit.md
+│ ├── setup-ci-cd.md
+│ ├── push-all.md
+│ ├── unit-test-expand.md
+│ ├── doc-refactor.md
+│ ├── pr-slash-command.png
+│ └── README.md
 │
-├── 02-memory/                                   # Memory
-│   ├── project-CLAUDE.md
-│   ├── directory-api-CLAUDE.md
-│   ├── personal-CLAUDE.md
-│   ├── memory-saved.png
-│   ├── memory-ask-claude.png
-│   └── README.md
+├── 02-memory/ # Memory
+│ ├── project-CLAUDE.md
+│ ├── directory-api-CLAUDE.md
+│ ├── personal-CLAUDE.md
+│ ├── memory-saved.png
+│ ├── memory-ask-claude.png
+│ └── README.md
 │
-├── 03-skills/                                   # Skills
-│   ├── code-review/
-│   │   ├── SKILL.md
-│   │   ├── scripts/
-│   │   │   ├── analyze-metrics.py
-│   │   │   └── compare-complexity.py
-│   │   └── templates/
-│   │       ├── review-checklist.md
-│   │       └── finding-template.md
-│   ├── brand-voice/
-│   │   ├── SKILL.md
-│   │   ├── templates/
-│   │   │   ├── email-template.txt
-│   │   │   └── social-post-template.txt
-│   │   └── tone-examples.md
-│   ├── doc-generator/
-│   │   ├── SKILL.md
-│   │   └── generate-docs.py
-│   ├── refactor/
-│   │   ├── SKILL.md
-│   │   ├── scripts/
-│   │   │   ├── analyze-complexity.py
-│   │   │   └── detect-smells.py
-│   │   ├── references/
-│   │   │   ├── code-smells.md
-│   │   │   └── refactoring-catalog.md
-│   │   └── templates/
-│   │       └── refactoring-plan.md
-│   ├── claude-md/
-│   │   └── SKILL.md
-│   ├── blog-draft/
-│   │   ├── SKILL.md
-│   │   └── templates/
-│   │       ├── draft-template.md
-│   │       └── outline-template.md
-│   └── README.md
+├── 03-skills/ # Skills
+│ ├── code-review/
+│ │ ├── SKILL.md
+│ │ ├── scripts/
+│ │ │ ├── analyze-metrics.py
+│ │ │ └── compare-complexity.py
+│ │ └── templates/
+│ │ ├── review-checklist.md
+│ │ └── finding-template.md
+│ ├── brand-voice/
+│ │ ├── SKILL.md
+│ │ ├── templates/
+│ │ │ ├── email-template.txt
+│ │ │ └── social-post-template.txt
+│ │ └── tone-examples.md
+│ ├── doc-generator/
+│ │ ├── SKILL.md
+│ │ └── generate-docs.py
+│ ├── refactor/
+│ │ ├── SKILL.md
+│ │ ├── scripts/
+│ │ │ ├── analyze-complexity.py
+│ │ │ └── detect-smells.py
+│ │ ├── references/
+│ │ │ ├── code-smells.md
+│ │ │ └── refactoring-catalog.md
+│ │ └── templates/
+│ │ └── refactoring-plan.md
+│ ├── claude-md/
+│ │ └── SKILL.md
+│ ├── blog-draft/
+│ │ ├── SKILL.md
+│ │ └── templates/
+│ │ ├── draft-template.md
+│ │ └── outline-template.md
+│ └── README.md
 │
-├── 04-subagents/                                # Subagents
-│   ├── code-reviewer.md
-│   ├── test-engineer.md
-│   ├── documentation-writer.md
-│   ├── secure-reviewer.md
-│   ├── implementation-agent.md
-│   ├── debugger.md
-│   ├── data-scientist.md
-│   ├── clean-code-reviewer.md
-│   └── README.md
+├── 04-subagents/ # Subagents
+│ ├── code-reviewer.md
+│ ├── test-engineer.md
+│ ├── documentation-writer.md
+│ ├── secure-reviewer.md
+│ ├── implementation-agent.md
+│ ├── debugger.md
+│ ├── data-scientist.md
+│ ├── clean-code-reviewer.md
+│ └── README.md
 │
-├── 05-mcp/                                      # MCP Protocol
-│   ├── github-mcp.json
-│   ├── database-mcp.json
-│   ├── filesystem-mcp.json
-│   ├── multi-mcp.json
-│   └── README.md
+├── 05-mcp/ # MCP Protocol
+│ ├── github-mcp.json
+│ ├── database-mcp.json
+│ ├── filesystem-mcp.json
+│ ├── multi-mcp.json
+│ └── README.md
 │
-├── 06-hooks/                                    # Hooks
-│   ├── format-code.sh
-│   ├── pre-commit.sh
-│   ├── security-scan.sh
-│   ├── log-bash.sh
-│   ├── validate-prompt.sh
-│   ├── notify-team.sh
-│   ├── context-tracker.py
-│   ├── context-tracker-tiktoken.py
-│   └── README.md
+├── 06-hooks/ # Hooks
+│ ├── format-code.sh
+│ ├── pre-commit.sh
+│ ├── security-scan.sh
+│ ├── log-bash.sh
+│ ├── validate-prompt.sh
+│ ├── notify-team.sh
+│ ├── context-tracker.py
+│ ├── context-tracker-tiktoken.py
+│ └── README.md
 │
-├── 07-plugins/                                  # Plugins
-│   ├── pr-review/
-│   │   ├── .claude-plugin/
-│   │   │   └── plugin.json
-│   │   ├── commands/
-│   │   │   ├── review-pr.md
-│   │   │   ├── check-security.md
-│   │   │   └── check-tests.md
-│   │   ├── agents/
-│   │   │   ├── security-reviewer.md
-│   │   │   ├── test-checker.md
-│   │   │   └── performance-analyzer.md
-│   │   ├── mcp/
-│   │   │   └── github-config.json
-│   │   ├── hooks/
-│   │   │   └── pre-review.js
-│   │   └── README.md
-│   ├── devops-automation/
-│   │   ├── .claude-plugin/
-│   │   │   └── plugin.json
-│   │   ├── commands/
-│   │   │   ├── deploy.md
-│   │   │   ├── rollback.md
-│   │   │   ├── status.md
-│   │   │   └── incident.md
-│   │   ├── agents/
-│   │   │   ├── deployment-specialist.md
-│   │   │   ├── incident-commander.md
-│   │   │   └── alert-analyzer.md
-│   │   ├── mcp/
-│   │   │   └── kubernetes-config.json
-│   │   ├── hooks/
-│   │   │   ├── pre-deploy.js
-│   │   │   └── post-deploy.js
-│   │   ├── scripts/
-│   │   │   ├── deploy.sh
-│   │   │   ├── rollback.sh
-│   │   │   └── health-check.sh
-│   │   └── README.md
-│   ├── documentation/
-│   │   ├── .claude-plugin/
-│   │   │   └── plugin.json
-│   │   ├── commands/
-│   │   │   ├── generate-api-docs.md
-│   │   │   ├── generate-readme.md
-│   │   │   ├── sync-docs.md
-│   │   │   └── validate-docs.md
-│   │   ├── agents/
-│   │   │   ├── api-documenter.md
-│   │   │   ├── code-commentator.md
-│   │   │   └── example-generator.md
-│   │   ├── mcp/
-│   │   │   └── github-docs-config.json
-│   │   ├── templates/
-│   │   │   ├── api-endpoint.md
-│   │   │   ├── function-docs.md
-│   │   │   └── adr-template.md
-│   │   └── README.md
-│   └── README.md
+├── 07-plugins/ # Plugins
+│ ├── pr-review/
+│ │ ├── .claude-plugin/
+│ │ │ └── plugin.json
+│ │ ├── commands/
+│ │ │ ├── review-pr.md
+│ │ │ ├── check-security.md
+│ │ │ └── check-tests.md
+│ │ ├── agents/
+│ │ │ ├── security-reviewer.md
+│ │ │ ├── test-checker.md
+│ │ │ └── performance-analyzer.md
+│ │ ├── mcp/
+│ │ │ └── github-config.json
+│ │ ├── hooks/
+│ │ │ └── pre-review.js
+│ │ └── README.md
+│ ├── devops-automation/
+│ │ ├── .claude-plugin/
+│ │ │ └── plugin.json
+│ │ ├── commands/
+│ │ │ ├── deploy.md
+│ │ │ ├── rollback.md
+│ │ │ ├── status.md
+│ │ │ └── incident.md
+│ │ ├── agents/
+│ │ │ ├── deployment-specialist.md
+│ │ │ ├── incident-commander.md
+│ │ │ └── alert-analyzer.md
+│ │ ├── mcp/
+│ │ │ └── kubernetes-config.json
+│ │ ├── hooks/
+│ │ │ ├── pre-deploy.js
+│ │ │ └── post-deploy.js
+│ │ ├── scripts/
+│ │ │ ├── deploy.sh
+│ │ │ ├── rollback.sh
+│ │ │ └── health-check.sh
+│ │ └── README.md
+│ ├── documentation/
+│ │ ├── .claude-plugin/
+│ │ │ └── plugin.json
+│ │ ├── commands/
+│ │ │ ├── generate-api-docs.md
+│ │ │ ├── generate-readme.md
+│ │ │ ├── sync-docs.md
+│ │ │ └── validate-docs.md
+│ │ ├── agents/
+│ │ │ ├── api-documenter.md
+│ │ │ ├── code-commentator.md
+│ │ │ └── example-generator.md
+│ │ ├── mcp/
+│ │ │ └── github-docs-config.json
+│ │ ├── templates/
+│ │ │ ├── api-endpoint.md
+│ │ │ ├── function-docs.md
+│ │ │ └── adr-template.md
+│ │ └── README.md
+│ └── README.md
 │
-├── 08-checkpoints/                              # Checkpoints
-│   ├── checkpoint-examples.md
-│   └── README.md
+├── 08-checkpoints/ # Checkpoints
+│ ├── checkpoint-examples.md
+│ └── README.md
 │
-├── 09-advanced-features/                        # Advanced Features
-│   ├── config-examples.json
-│   ├── planning-mode-examples.md
-│   └── README.md
+├── 09-advanced-features/ # Advanced Features
+│ ├── config-examples.json
+│ ├── planning-mode-examples.md
+│ └── README.md
 │
-└── 10-cli/                                      # CLI Usage
+└── 10-cli/ # CLI Usage
     └── README.md
 ```
 
@@ -740,9 +740,9 @@ chmod +x ~/.claude/hooks/*.sh
 /plan Implement feature X
 
 # Use permission modes
-claude --permission-mode plan          # For code review (read-only)
-claude --permission-mode acceptEdits   # Auto-accept edits
-claude --permission-mode auto          # Auto-approve safe actions
+claude --permission-mode plan # For code review (read-only)
+claude --permission-mode acceptEdits # Auto-accept edits
+claude --permission-mode auto # Auto-approve safe actions
 
 # Run in headless mode for CI/CD
 claude -p "Run tests and report results"
@@ -775,31 +775,31 @@ Run tests in background
 ## Learning Path
 
 ### Beginner (Week 1)
-1. ✅ Read `README.md`
-2. ✅ Install 1-2 slash commands
-3. ✅ Create project memory file
-4. ✅ Try basic commands
+1. Read `README.md`
+2. Install 1-2 slash commands
+3. Create project memory file
+4. Try basic commands
 
 ### Intermediate (Week 2-3)
-1. ✅ Set up GitHub MCP
-2. ✅ Install a subagent
-3. ✅ Try delegating tasks
-4. ✅ Install a skill
+1. Set up GitHub MCP
+2. Install a subagent
+3. Try delegating tasks
+4. Install a skill
 
 ### Advanced (Week 4+)
-1. ✅ Install complete plugin
-2. ✅ Create custom slash commands
-3. ✅ Create custom subagent
-4. ✅ Create custom skill
-5. ✅ Build your own plugin
+1. Install complete plugin
+2. Create custom slash commands
+3. Create custom subagent
+4. Create custom skill
+5. Build your own plugin
 
 ### Expert (Week 5+)
-1. ✅ Set up hooks for automation
-2. ✅ Use checkpoints for experimentation
-3. ✅ Configure planning mode
-4. ✅ Use permission modes effectively
-5. ✅ Set up headless mode for CI/CD
-6. ✅ Master session management
+1. Set up hooks for automation
+2. Use checkpoints for experimentation
+3. Configure planning mode
+4. Use permission modes effectively
+5. Set up headless mode for CI/CD
+6. Master session management
 
 ---
 

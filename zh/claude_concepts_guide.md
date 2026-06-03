@@ -57,19 +57,19 @@ graph LR
 
 | 位置 | 作用域 | 可用范围 | 适用场景 | Git 跟踪 |
 |------|--------|----------|----------|-----------|
-| `.claude/commands/` | 项目级 | 团队成员 | 团队工作流、共享标准 | ✅ 是 |
-| `~/.claude/commands/` | 个人级 | 当前用户 | 跨项目的个人快捷命令 | ❌ 否 |
-| 子目录 | 命名空间 | 取决于父目录 | 按类别组织命令 | ✅ 是 |
+| `.claude/commands/` | 项目级 | 团队成员 | 团队工作流、共享标准 | 是 |
+| `~/.claude/commands/` | 个人级 | 当前用户 | 跨项目的个人快捷命令 | 否 |
+| 子目录 | 命名空间 | 取决于父目录 | 按类别组织命令 | 是 |
 
 ### 功能与能力
 
 | 功能 | 示例 | 是否支持 |
 |------|------|----------|
-| Shell 脚本执行 | `bash scripts/deploy.sh` | ✅ 是 |
-| 文件引用 | `@path/to/file.js` | ✅ 是 |
-| Bash 集成 | `$(git log --oneline)` | ✅ 是 |
-| 参数 | `/pr --verbose` | ✅ 是 |
-| MCP 命令 | `/mcp__github__list_prs` | ✅ 是 |
+| Shell 脚本执行 | `bash scripts/deploy.sh` | 是 |
+| 文件引用 | `@path/to/file.js` | 是 |
+| Bash 集成 | `$(git log --oneline)` | 是 |
+| 参数 | `/pr --verbose` | 是 |
+| MCP 命令 | `/mcp__github__list_prs` | 是 |
 
 ### 实践示例
 
@@ -200,7 +200,7 @@ sequenceDiagram
 
 ### 最佳实践
 
-| ✅ 建议 | ❌ 不建议 |
+| 建议 | 不建议 |
 |------|---------|
 | 使用清晰、面向动作的命名 | 为一次性任务创建命令 |
 | 在描述中写清触发场景 | 在命令里堆复杂逻辑 |
@@ -221,11 +221,11 @@ Subagents 是带有隔离上下文窗口和自定义系统提示词的专门化 
 
 ```mermaid
 graph TB
-    User["👤 用户"]
-    Main["🎯 主 Agent<br/>(协调者)"]
-    Reviewer["🔍 代码审查<br/>Subagent"]
-    Tester["✅ 测试工程师<br/>Subagent"]
-    Docs["📝 文档编写<br/>Subagent"]
+    User[" 用户"]
+    Main[" 主 Agent<br/>(协调者)"]
+    Reviewer[" 代码审查<br/>Subagent"]
+    Tester[" 测试工程师<br/>Subagent"]
+    Docs[" 文档编写<br/>Subagent"]
 
     User -->|提出请求| Main
     Main -->|委派| Reviewer
@@ -451,12 +451,12 @@ graph TB
 
 | 场景 | 是否使用 Subagent | 原因 |
 |------|------------------|------|
-| 多步骤复杂功能 | ✅ 是 | 分离关注点，防止上下文污染 |
-| 快速代码审查 | ❌ 否 | 开销不值得 |
-| 并行任务执行 | ✅ 是 | 每个 subagent 都有自己的上下文 |
-| 需要专业化角色 | ✅ 是 | 可以用自定义系统提示词 |
-| 长时间分析任务 | ✅ 是 | 防止主上下文耗尽 |
-| 单一步骤任务 | ❌ 否 | 只会增加延迟 |
+| 多步骤复杂功能 | 是 | 分离关注点，防止上下文污染 |
+| 快速代码审查 | 否 | 开销不值得 |
+| 并行任务执行 | 是 | 每个 subagent 都有自己的上下文 |
+| 需要专业化角色 | 是 | 可以用自定义系统提示词 |
+| 长时间分析任务 | 是 | 防止主上下文耗尽 |
+| 单一步骤任务 | 否 | 只会增加延迟 |
 
 ### Agent Teams
 
@@ -632,7 +632,7 @@ Claude: 我会把它加入记忆。你希望写入哪个记忆文件？
 
 User: 项目记忆
 
-Claude: ✅ 记忆已保存！
+Claude: 记忆已保存！
 ```
 
 ### Claude Web/Desktop 中的记忆综合
@@ -650,13 +650,13 @@ graph LR
 
 | 功能 | Claude Web/Desktop | Claude Code (`CLAUDE.md`) |
 |------|--------------------|---------------------------|
-| 自动综合 | ✅ 每 24 小时 | ❌ 手动 |
-| 跨项目 | ✅ 共享 | ❌ 项目级 |
-| 团队访问 | ✅ 共享项目 | ✅ Git 跟踪 |
-| 可搜索 | ✅ 内建 | ✅ 通过 `/memory` |
-| 可编辑 | ✅ 聊天中 | ✅ 直接改文件 |
-| 导入/导出 | ✅ 支持 | ✅ 复制粘贴 |
-| 持久性 | ✅ 24h+ | ✅ 长期 |
+| 自动综合 | 每 24 小时 | 手动 |
+| 跨项目 | 共享 | 项目级 |
+| 团队访问 | 共享项目 | Git 跟踪 |
+| 可搜索 | 内建 | 通过 `/memory` |
+| 可编辑 | 聊天中 | 直接改文件 |
+| 导入/导出 | 支持 | 复制粘贴 |
+| 持久性 | 24h+ | 长期 |
 
 ---
 
@@ -708,21 +708,21 @@ sequenceDiagram
     Config->>Claude: 激活连接
     Claude->>Service: 测试连接
     Service-->>Claude: 认证成功
-    Claude->>User: ✅ MCP 已连接
+    Claude->>User: MCP 已连接
 ```
 
 ### 可用 MCP Server 表
 
 | MCP Server | 用途 | 常见工具 | 认证 | 实时 |
 |------------|------|----------|------|------|
-| Filesystem | 文件操作 | read, write, delete | 操作系统权限 | ✅ 是 |
-| GitHub | 仓库管理 | list_prs, create_issue, push | OAuth | ✅ 是 |
-| Slack | 团队沟通 | send_message, list_channels | Token | ✅ 是 |
-| Database | SQL 查询 | query, insert, update | 凭据 | ✅ 是 |
-| Google Docs | 文档访问 | read, write, share | OAuth | ✅ 是 |
-| Asana | 项目管理 | create_task, update_status | API Key | ✅ 是 |
-| Stripe | 支付数据 | list_charges, create_invoice | API Key | ✅ 是 |
-| Memory | 持久记忆 | store, retrieve, delete | Local | ❌ 否 |
+| Filesystem | 文件操作 | read, write, delete | 操作系统权限 | 是 |
+| GitHub | 仓库管理 | list_prs, create_issue, push | OAuth | 是 |
+| Slack | 团队沟通 | send_message, list_channels | Token | 是 |
+| Database | SQL 查询 | query, insert, update | 凭据 | 是 |
+| Google Docs | 文档访问 | read, write, share | OAuth | 是 |
+| Asana | 项目管理 | create_task, update_status | API Key | 是 |
+| Stripe | 支付数据 | list_charges, create_invoice | API Key | 是 |
+| Memory | 持久记忆 | store, retrieve, delete | Local | 否 |
 
 ### 实践示例
 
@@ -882,8 +882,8 @@ Claude Code 现在内置了 5 个 bundled skills，可直接使用：
 ~/.claude/skills/code-review/
 ├── SKILL.md
 ├── templates/
-│   ├── review-checklist.md
-│   └── finding-template.md
+│ ├── review-checklist.md
+│ └── finding-template.md
 └── scripts/
     ├── analyze-metrics.py
     └── compare-complexity.py
@@ -1039,7 +1039,7 @@ license: MIT
 ```text
 my-plugin/
 ├── .claude-plugin/
-│   └── plugin.json
+│ └── plugin.json
 ├── commands/
 ├── agents/
 ├── skills/
@@ -1143,9 +1143,9 @@ graph LR
 **使用 Plugin：**
 ```bash
 /plugin install pr-review
-# ✅ 一次安装完成
-# ✅ 即刻可用
-# ✅ 团队可复现
+# 一次安装完成
+# 即刻可用
+# 团队可复现
 ```
 
 ---
@@ -1349,13 +1349,13 @@ Claude Code 支持 **25 个 hook 事件**，分布在四类钩子中：
 
 ### 最佳实践
 
-✅ 建议：
+ 建议：
 - 让 hooks 尽量快（最好 < 1 秒）
 - 用 hooks 做校验和自动化
 - 优雅处理错误
 - 使用绝对路径
 
-❌ 不建议：
+ 不建议：
 - 让 hooks 进入交互式流程
 - 把长时间任务放在 hooks 里
 - 硬编码凭据

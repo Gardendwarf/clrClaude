@@ -25,7 +25,7 @@ The memory system operates at multiple levels, from global personal preferences 
 |---------|---------|-------|-------------|
 | `/init` | Initialize project memory | `/init` | Starting new project, first-time CLAUDE.md setup |
 | `/memory` | Edit memory files in editor | `/memory` | Extensive updates, reorganization, reviewing content |
-| `#` prefix | ~~Quick single-line memory add~~ **Discontinued** | — | Use `/memory` or ask conversationally instead |
+| `#` prefix | ~~Quick single-line memory add~~ **Discontinued** | - | Use `/memory` or ask conversationally instead |
 | `@path/to/file` | Import external content | `@README.md` or `@docs/api.md` | Referencing existing documentation in CLAUDE.md |
 
 ## Quick Start: Initializing Memory
@@ -108,7 +108,7 @@ Claude will update the appropriate CLAUDE.md file based on your request.
 The `#` prefix shortcut previously allowed adding rules inline:
 
 ```markdown
-# Always use TypeScript strict mode in this project  ← no longer works
+# Always use TypeScript strict mode in this project ← no longer works
 ```
 
 If you relied on this pattern, switch to the `/memory` command or conversational requests.
@@ -317,18 +317,18 @@ Create organized, path-specific rules using the `.claude/rules/` directory struc
 ```
 your-project/
 ├── .claude/
-│   ├── CLAUDE.md
-│   └── rules/
-│       ├── code-style.md
-│       ├── testing.md
-│       ├── security.md
-│       └── api/                  # Subdirectories supported
-│           ├── conventions.md
-│           └── validation.md
+│ ├── CLAUDE.md
+│ └── rules/
+│ ├── code-style.md
+│ ├── testing.md
+│ ├── security.md
+│ └── api/ # Subdirectories supported
+│ ├── conventions.md
+│ └── validation.md
 
 ~/.claude/
 ├── CLAUDE.md
-└── rules/                        # User-level rules (all projects)
+└── rules/ # User-level rules (all projects)
     ├── personal-style.md
     └── preferred-patterns.md
 ```
@@ -443,10 +443,10 @@ graph TD
 
 ```
 ~/.claude/projects/<project>/memory/
-├── MEMORY.md              # Entrypoint (first 200 lines / 25KB loaded at startup)
-├── debugging.md           # Topic file (loaded on demand)
-├── api-conventions.md     # Topic file (loaded on demand)
-└── testing-patterns.md    # Topic file (loaded on demand)
+├── MEMORY.md # Entrypoint (first 200 lines / 25KB loaded at startup)
+├── debugging.md # Topic file (loaded on demand)
+├── api-conventions.md # Topic file (loaded on demand)
+└── testing-patterns.md # Topic file (loaded on demand)
 ```
 
 ### Version Requirement
@@ -485,9 +485,9 @@ All worktrees and subdirectories within the same git repository share a single a
 Subagents (spawned via tools like Task or parallel execution) can have their own memory context. Use the `memory` frontmatter field in the subagent definition to specify which memory scopes to load:
 
 ```yaml
-memory: user      # Load user-level memory only
-memory: project   # Load project-level memory only
-memory: local     # Load local memory only
+memory: user # Load user-level memory only
+memory: project # Load project-level memory only
+memory: local # Load local memory only
 ```
 
 This allows subagents to operate with focused context rather than inheriting the full memory hierarchy.
@@ -745,10 +745,10 @@ I organize my projects as:
 
    project/
    ├── src/
-   │   ├── api/
-   │   ├── services/
-   │   ├── models/
-   │   └── utils/
+   │ ├── api/
+   │ ├── services/
+   │ ├── models/
+   │ └── utils/
    ├── tests/
    ├── docs/
    └── docker/
@@ -785,7 +785,7 @@ Claude: I'm adding that to your memory. Which memory file should this go in?
 
 User: Project memory
 
-Claude: ✅ Memory saved!
+Claude: Memory saved!
 
 Added to ./CLAUDE.md:
 ---
@@ -812,7 +812,7 @@ Claude: I'm saving this rule to memory. Which memory file should I use?
 
 User: Project memory
 
-Claude: ✅ Memory saved!
+Claude: Memory saved!
 
 Added to ./CLAUDE.md:
 ---
@@ -834,13 +834,13 @@ Added to ./CLAUDE.md:
 
 | Feature | Claude Web/Desktop | Claude Code (CLAUDE.md) |
 |---------|-------------------|------------------------|
-| Auto-synthesis | ✅ Every 24h | ✅ Auto memory |
-| Cross-project | ✅ Shared | ❌ Project-specific |
-| Team access | ✅ Shared projects | ✅ Git-tracked |
-| Searchable | ✅ Built-in | ✅ Through `/memory` |
-| Editable | ✅ In-chat | ✅ Direct file edit |
-| Import/Export | ✅ Yes | ✅ Copy/paste |
-| Persistent | ✅ 24h+ | ✅ Indefinite |
+| Auto-synthesis | Every 24h | Auto memory |
+| Cross-project | Shared | Project-specific |
+| Team access | Shared projects | Git-tracked |
+| Searchable | Built-in | Through `/memory` |
+| Editable | In-chat | Direct file edit |
+| Import/Export | Yes | Copy/paste |
+| Persistent | 24h+ | Indefinite |
 
 ### Memory in Claude Web/Desktop
 
@@ -890,8 +890,8 @@ graph LR
 ### Do's - What To Include
 
 - **Be specific and detailed**: Use clear, detailed instructions rather than vague guidance
-  - ✅ Good: "Use 2-space indentation for all JavaScript files"
-  - ❌ Avoid: "Follow best practices"
+  - Good: "Use 2-space indentation for all JavaScript files"
+  - Avoid: "Follow best practices"
 
 - **Keep organized**: Structure memory files with clear markdown sections and headings
 

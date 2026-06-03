@@ -11,7 +11,7 @@
 
 ## Огляд
 
-Claude Code CLI (інтерфейс командного рядка — основний інструмент для роботи з терміналом) — це головний спосіб взаємодії з Claude Code. Він надає потужні опції для виконання запитів, управління сесіями, конфігурації моделей та інтеграції Claude у ваші робочі процеси розробки.
+Claude Code CLI (інтерфейс командного рядка - основний інструмент для роботи з терміналом) - це головний спосіб взаємодії з Claude Code. Він надає потужні опції для виконання запитів, управління сесіями, конфігурації моделей та інтеграції Claude у ваші робочі процеси розробки.
 
 ## Архітектура
 
@@ -34,7 +34,7 @@ graph TD
 |---------|------|---------|
 | `claude` | Запуск інтерактивного REPL (циклу читання-виконання-виводу) | `claude` |
 | `claude "query"` | Запуск REPL з початковим промптом | `claude "explain this project"` |
-| `claude -p "query"` | Print-режим — запит і вихід | `claude -p "explain this function"` |
+| `claude -p "query"` | Print-режим - запит і вихід | `claude -p "explain this function"` |
 | `cat file \| claude -p "query"` | Обробка вмісту через pipe (конвеєр) | `cat logs.txt \| claude -p "explain"` |
 | `claude -c` | Продовжити останню розмову | `claude -c` |
 | `claude -c -p "query"` | Продовжити в print-режимі | `claude -c -p "check for type errors"` |
@@ -160,9 +160,9 @@ claude -p --system-prompt-file ./prompts/code-reviewer.txt "review main.py"
 
 | Прапорець | Поведінка | Інтерактивний | Print |
 |-----------|----------|---------------|-------|
-| `--system-prompt` | Замінює весь стандартний системний промпт | ✅ | ✅ |
-| `--system-prompt-file` | Замінює промптом з файлу | ❌ | ✅ |
-| `--append-system-prompt` | Додає до стандартного системного промпта | ✅ | ✅ |
+| `--system-prompt` | Замінює весь стандартний системний промпт | | |
+| `--system-prompt-file` | Замінює промптом з файлу | | |
+| `--append-system-prompt` | Додає до стандартного системного промпта | | |
 
 **Використовуйте `--system-prompt-file` лише в print-режимі. Для інтерактивного режиму використовуйте `--system-prompt` або `--append-system-prompt`.**
 
@@ -181,7 +181,7 @@ claude -p --system-prompt-file ./prompts/code-reviewer.txt "review main.py"
 ### Приклади дозволів
 
 ```bash
-# Режим тільки для читання — код-рев'ю
+# Режим тільки для читання - код-рев'ю
 claude --permission-mode plan "review this codebase"
 
 # Обмеження до безпечних інструментів
@@ -255,7 +255,7 @@ claude --settings '{"model":"opus","verbose":true}' "complex task"
 # Завантаження GitHub MCP-сервера
 claude --mcp-config ./github-mcp.json "list open PRs"
 
-# Суворий режим — тільки вказані сервери
+# Суворий режим - тільки вказані сервери
 claude --strict-mcp-config --mcp-config ./production-mcp.json "deploy to staging"
 ```
 
@@ -354,13 +354,13 @@ claude --ide "help me with this file"
 ```
 
 **Обовʼязкові поля:**
-- `description` — опис природною мовою, коли використовувати цього агента
-- `prompt` — системний промпт, що визначає роль та поведінку агента
+- `description` - опис природною мовою, коли використовувати цього агента
+- `prompt` - системний промпт, що визначає роль та поведінку агента
 
 **Необовʼязкові поля:**
-- `tools` — масив доступних інструментів (якщо не вказано, успадковує всі)
+- `tools` - масив доступних інструментів (якщо не вказано, успадковує всі)
   - Формат: `["Read", "Grep", "Glob", "Bash"]`
-- `model` — модель: `sonnet`, `opus` або `haiku`
+- `model` - модель: `sonnet`, `opus` або `haiku`
 
 ### Повний приклад агентів
 
@@ -410,9 +410,9 @@ claude -p --agents "$(cat agents.json)" --model sonnet "analyze performance"
 ### Пріоритет агентів
 
 При наявності кількох визначень агентів вони завантажуються в такому порядку пріоритету:
-1. **CLI-визначені** (прапорець `--agents`) — для конкретної сесії
-2. **Рівень користувача** (`~/.claude/agents/`) — для всіх проєктів
-3. **Рівень проєкту** (`.claude/agents/`) — для поточного проєкту
+1. **CLI-визначені** (прапорець `--agents`) - для конкретної сесії
+2. **Рівень користувача** (`~/.claude/agents/`) - для всіх проєктів
+3. **Рівень проєкту** (`.claude/agents/`) - для поточного проєкту
 
 CLI-визначені агенти перевизначають агентів рівня користувача та проєкту на час сесії.
 
@@ -519,7 +519,7 @@ grep -r "TODO" src/ | claude -p "prioritize these TODOs by importance"
 # Запуск сесії для гілки функції
 claude -r "feature-auth" "let's implement user authentication"
 
-# Пізніше — продовження сесії
+# Пізніше - продовження сесії
 claude -r "feature-auth" "add password reset functionality"
 
 # Форк для альтернативного підходу
@@ -692,10 +692,10 @@ claude --effort high "complex review"
 /effort high
 
 # Через змінну оточення
-export CLAUDE_CODE_EFFORT_LEVEL=high   # low, medium, high або max (лише Opus 4.6)
+export CLAUDE_CODE_EFFORT_LEVEL=high # low, medium, high або max (лише Opus 4.6)
 ```
 
-Ключове слово "ultrathink" у промптах активує глибоке міркування. Рівень `max` — ексклюзивний для Opus 4.6.
+Ключове слово "ultrathink" у промптах активує глибоке міркування. Рівень `max` - ексклюзивний для Opus 4.6.
 
 ---
 
@@ -823,13 +823,13 @@ claude -p --output-format json "query"
 
 ## Додаткові ресурси
 
-- **[Офіційний довідник CLI](https://code.claude.com/docs/en/cli-reference)** — повний довідник команд
-- **[Документація Headless Mode](https://code.claude.com/docs/en/headless)** — автоматизоване виконання
-- **[Слеш-команди](../01-slash-commands/)** — кастомні ярлики в Claude
-- **[Посібник з памʼяті](../02-memory/)** — постійний контекст через CLAUDE.md
-- **[Протокол MCP](../05-mcp/)** — інтеграція зовнішніх інструментів
-- **[Розширені функції](../09-advanced-features/)** — режим планування, розширене мислення
-- **[Посібник субагентів](../04-subagents/)** — делеговане виконання завдань
+- **[Офіційний довідник CLI](https://code.claude.com/docs/en/cli-reference)** - повний довідник команд
+- **[Документація Headless Mode](https://code.claude.com/docs/en/headless)** - автоматизоване виконання
+- **[Слеш-команди](../01-slash-commands/)** - кастомні ярлики в Claude
+- **[Посібник з памʼяті](../02-memory/)** - постійний контекст через CLAUDE.md
+- **[Протокол MCP](../05-mcp/)** - інтеграція зовнішніх інструментів
+- **[Розширені функції](../09-advanced-features/)** - режим планування, розширене мислення
+- **[Посібник субагентів](../04-subagents/)** - делеговане виконання завдань
 
 ---
 

@@ -2,7 +2,7 @@
 <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
   <!-- Logo Mark: Compass-bracket symbol
        A compass rose with a code bracket at center, representing
-       "guided path through code" — the essence of Claude How-To -->
+       "guided path through code" - the essence of Claude How-To -->
 
   <!-- Outer compass ring -->
   <circle cx="60" cy="60" r="52" fill="none" stroke="#000000" stroke-width="3"/>
@@ -19,10 +19,10 @@
   <line x1="23.2" y1="96.8" x2="30.3" y2="89.7" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"/>
   <line x1="89.7" y1="89.7" x2="96.8" y2="96.8" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"/>
 
-  <!-- Compass needle — north (green accent = direction/guidance) -->
+  <!-- Compass needle - north (green accent = direction/guidance) -->
   <polygon points="60,20 54,58 60,52 66,58" fill="#22C55E"/>
 
-  <!-- Compass needle — south (dark) -->
+  <!-- Compass needle - south (dark) -->
   <polygon points="60,100 54,62 60,68 66,62" fill="#000000"/>
 
   <!-- Center code bracket: > symbol (represents "how-to", next step, terminal prompt) -->

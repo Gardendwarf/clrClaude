@@ -227,7 +227,7 @@ svg {
 }
 ```
 
-SVGs scale automatically via viewBox — no transforms needed.
+SVGs scale automatically via viewBox - no transforms needed.
 
 ---
 

@@ -22,7 +22,7 @@ User: Run the tests
       [Checkpoint B created automatically]
 
 Claude: Running tests...
-❌ 15 tests failing - connection pool issues
+ 15 tests failing - connection pool issues
 
 User: This approach has issues. Let's try the dual-write pattern instead.
 [User presses Esc+Esc, selects Checkpoint A, chooses "Restore code and conversation"]
@@ -35,7 +35,7 @@ Claude: I'll implement dual-write migration...
 User: Run the tests
 
 Claude: Running tests...
-✅ All tests passing
+ All tests passing
 
 User: The dual-write approach is clearly safer. Let's commit this.
 ```
@@ -91,7 +91,7 @@ Claude: [Adds Redis caching on top of optimized queries]
 
 User: Run performance tests
 
-Claude: Results: 95ms average response time (79% improvement) 🎉
+Claude: Results: 95ms average response time (79% improvement)
 
 User: Perfect! This is the winner. Let's commit this.
 ```
@@ -187,7 +187,7 @@ Claude: [Finds and fixes circular references in cache]
 
 User: Run memory profiler
 
-Claude: ✅ Memory leak fixed! The circular references in the caching layer were the culprit.
+Claude: Memory leak fixed! The circular references in the caching layer were the culprit.
 
 User: Excellent! Let's commit this fix.
 ```
@@ -252,7 +252,7 @@ Claude: [Implements YAML config with JSON schema validation]
 
 User: Test in development
 
-Claude: ✅ Works well, good validation errors
+Claude: Works well, good validation errors
 
 User: Can we also support env vars for sensitive values?
 
@@ -260,7 +260,7 @@ Claude: [Adds env var override for secrets]
 
 User: Test deployment
 
-Claude: ✅ All environments working correctly
+Claude: All environments working correctly
 
 User: Perfect! This is production-ready.
 ```
@@ -296,7 +296,7 @@ Claude: [Optimizes test setup, adds parallel execution]
 
 User: Run tests
 
-Claude: 89 tests passing, 92% coverage, 35 seconds ✅
+Claude: 89 tests passing, 92% coverage, 35 seconds
 
 User: Great! Now add E2E tests for critical paths
 

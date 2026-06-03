@@ -104,7 +104,7 @@ Các hooks chạy trên mỗi commit là:
 
 ---
 
-Thank you for contributing! 🙏
+Thank you for contributing!
 
 ---
 **Cập Nhật Lần Cuối**: Tháng 4 năm 2026

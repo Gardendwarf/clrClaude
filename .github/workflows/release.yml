@@ -10,7 +10,7 @@ jobs:
     name: Build EPUB (${{ matrix.lang }})
     runs-on: ubuntu-latest
     strategy:
-      # Don't cancel other languages if one fails — we still want to release
+      # Don't cancel other languages if one fails - we still want to release
       # whichever languages built successfully.
       fail-fast: false
       matrix:
@@ -53,7 +53,7 @@ jobs:
   release:
     name: Publish GitHub Release
     needs: build
-    # Release even if some language builds failed — we still publish the
+    # Release even if some language builds failed - we still publish the
     # artifacts that did build. `needs.build.result != 'cancelled'` guards
     # against manually cancelled runs.
     if: ${{ always() && needs.build.result != 'cancelled' }}

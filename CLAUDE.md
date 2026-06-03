@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Claude How To is a tutorial repository for Claude Code features. This is **documentation-as-code** — the primary output is markdown files organized into numbered learning modules, not an executable application.
+Claude How To is a tutorial repository for Claude Code features. This is **documentation-as-code** - the primary output is markdown files organized into numbered learning modules, not an executable application.
 
 **Architecture**: Each module (01-10) covers a specific Claude Code feature with copy-paste templates, Mermaid diagrams, and examples. The build system validates documentation quality and generates an EPUB ebook.
 
@@ -23,11 +23,11 @@ pre-commit run --all-files
 ```
 
 The four checks are:
-1. **markdown-lint** — Markdown structure and formatting via `markdownlint`
-2. **cross-references** — Internal links, anchors, code fence syntax (Python script)
-3. **mermaid-syntax** — Validates all Mermaid diagrams parse correctly (Python script)
-4. **link-check** — External URLs are reachable (Python script)
-5. **build-epub** — EPUB generates without errors (on `.md` changes)
+1. **markdown-lint** - Markdown structure and formatting via `markdownlint`
+2. **cross-references** - Internal links, anchors, code fence syntax (Python script)
+3. **mermaid-syntax** - Validates all Mermaid diagrams parse correctly (Python script)
+4. **link-check** - External URLs are reachable (Python script)
+5. **build-epub** - EPUB generates without errors (on `.md` changes)
 
 ### Development Environment Setup
 
@@ -115,8 +115,8 @@ uv run scripts/build_epub.py --verbose --output custom-name.epub --max-concurren
 
 ### Module Structure
 Each numbered folder follows the pattern:
-- **README.md** — Overview of the feature with examples
-- **Example files** — Copy-paste templates (`.md` for commands, `.json` for configs, `.sh` for hooks)
+- **README.md** - Overview of the feature with examples
+- **Example files** - Copy-paste templates (`.md` for commands, `.json` for configs, `.sh` for hooks)
 - Files are organized by feature complexity and dependencies
 
 ### Mermaid Diagrams
@@ -136,15 +136,15 @@ Each numbered folder follows the pattern:
 
 ## Key Architecture Points
 
-1. **Numbered folders indicate learning order** — The 01-10 prefix represents the recommended sequence for learning Claude Code features. This numbering is intentional; do not reorganize alphabetically.
+1. **Numbered folders indicate learning order** - The 01-10 prefix represents the recommended sequence for learning Claude Code features. This numbering is intentional; do not reorganize alphabetically.
 
-2. **Scripts are utilities, not the product** — The Python scripts in `scripts/` support documentation quality and EPUB generation. The actual content is in the numbered module folders.
+2. **Scripts are utilities, not the product** - The Python scripts in `scripts/` support documentation quality and EPUB generation. The actual content is in the numbered module folders.
 
-3. **Pre-commit is the gatekeeper** — All four quality checks must pass before a PR is accepted. The CI pipeline runs these same checks as a second pass.
+3. **Pre-commit is the gatekeeper** - All four quality checks must pass before a PR is accepted. The CI pipeline runs these same checks as a second pass.
 
-4. **Mermaid rendering requires network** — The EPUB build calls Kroki.io API to render diagrams. Build failures here are typically network issues or invalid Mermaid syntax.
+4. **Mermaid rendering requires network** - The EPUB build calls Kroki.io API to render diagrams. Build failures here are typically network issues or invalid Mermaid syntax.
 
-5. **This is a tutorial, not a library** — When adding content, focus on clear explanations, copy-paste examples, and visual diagrams. The value is in teaching concepts, not providing reusable code.
+5. **This is a tutorial, not a library** - When adding content, focus on clear explanations, copy-paste examples, and visual diagrams. The value is in teaching concepts, not providing reusable code.
 
 ## Commit Conventions
 

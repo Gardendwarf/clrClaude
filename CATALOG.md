@@ -437,7 +437,7 @@ cp 02-memory/personal-CLAUDE.md ~/.claude/CLAUDE.md
 |---------|-------------|------------|
 | **Monitor Tool** | Watch a background command's stdout stream and react to events instead of polling (v2.1.98+) | Use the Monitor tool via [Advanced Features](09-advanced-features/) |
 | **/team-onboarding** | Auto-generate a teammate ramp-up guide from the project's Claude Code setup (v2.1.101) | Run `/team-onboarding` in your project |
-| **Ultraplan auto-create** | Cloud environment created automatically on first `/ultraplan` invocation — no manual setup required (v2.1.101) | Use `/ultraplan <prompt>` |
+| **Ultraplan auto-create** | Cloud environment created automatically on first `/ultraplan` invocation - no manual setup required (v2.1.101) | Use `/ultraplan <prompt>` |
 | **Remote Control** | Control Claude Code sessions remotely via API | Use the remote control API to send prompts and receive responses programmatically |
 | **Web Sessions** | Run Claude Code in a browser-based environment | Access via `claude web` or through the Anthropic Console |
 | **Desktop App** | Native desktop application for Claude Code | Use `/desktop` or download from Anthropic website |

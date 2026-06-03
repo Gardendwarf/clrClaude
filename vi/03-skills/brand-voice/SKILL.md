@@ -26,7 +26,7 @@ Giúp các đội tự động hóa workflows phát triển của họ với AI
 
 ## Hướng Dẫn Viết
 
-### Nên Làm ✅
+### Nên Làm
 - Sử dụng "bạn" khi người đọc
 - Sử dụng chủ động: "Claude tạo báo cáo" không "Báo cáo được tạo bởi Claude"
 - Bắt đầu với giá trị
@@ -35,7 +35,7 @@ Giúp các đội tự động hóa workflows phát triển của họ với AI
 - Sử dụng danh sách để rõ ràng
 - Bao gồm các lời kêu gọi hành động
 
-### Không Nên Làm ❌
+### Không Nên Làm
 - Đừng sử dụng thuật ngữ công ty
 - Đừng cư xử như trên hoặc đơn giản hóa quá mức
 - Đừng sử dụng "chúng tôi tin" hoặc "chúng tôi nghĩ"
@@ -45,14 +45,14 @@ Giúp các đội tự động hóa workflows phát triển của họ với AI
 
 ## Từ Vựng
 
-### ✅ Thuật Ngữ Ưu Tiên
+### Thuật Ngữ Ưu Tiên
 - Claude (not "the Claude AI")
 - Code generation (not "auto-coding")
 - Agent (not "bot")
 - Streamline (not "revolutionize")
 - Integrate (not "synergize")
 
-### ❌ Tránh Thuật Ngữ
+### Tránh Thuật Ngữ
 - "Cutting-edge" (bị lạm dụng)
 - "Game-changer" (mơ hồ)
 - "Leverage" (ngôn ngữ công ty)
@@ -61,12 +61,12 @@ Giúp các đội tự động hóa workflows phát triển của họ với AI
 
 ## Ví Dụ
 
-### ✅ Ví Dụ Tốt
-"Claude tự động hóa quy trình review code của bạn. Thay vì kiểm tra thủ công từng PR, Claude review bảo mật, hiệu suất, và chất lượng—tiết kiệm cho đội của bạn hàng mỗi tuần."
+### Ví Dụ Tốt
+"Claude tự động hóa quy trình review code của bạn. Thay vì kiểm tra thủ công từng PR, Claude review bảo mật, hiệu suất, và chất lượng-tiết kiệm cho đội của bạn hàng mỗi tuần."
 
 Tại sao nó hoạt động: Giá trị rõ ràng, lợi ích cụ thể, hướng hành động
 
-### ❌ Ví Dụ Xấu
+### Ví Dụ Xấu
 "Claude leverages cutting-edge AI to provide comprehensive software development solutions."
 
 Tại sao nó không hoạt động: Mơ hồ, thuật ngữ công ty, không có giá trị cụ thể

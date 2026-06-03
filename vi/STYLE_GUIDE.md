@@ -133,7 +133,7 @@ Mỗi README.md bài học theo thứ tự này:
 - Sử dụng in đậm cho nhấn mạnh quan trọng
 - Sử dụng in nghiêng cho các thuật ngữ kỹ thuật
 - Không sử dụng cả hai trừ khi cực kỳ cần thiết
-- Đừng lạm dụng — mất tác động khi quá nhiều
+- Đừng lạm dụng - mất tác động khi quá nhiều
 
 ---
 

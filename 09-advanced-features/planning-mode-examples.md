@@ -476,10 +476,10 @@ Claude: Let me create a comprehensive performance optimization plan.
 **Estimated Time**: 50 hours (2 weeks)
 
 **Target Metrics** (90th percentile):
-- LCP: <2.0s (from 4.2s) ✅
-- FID: <50ms (from 280ms) ✅
-- CLS: <0.05 (from 0.25) ✅
-- Page Load: <2.5s (from 8.3s) ✅
+- LCP: <2.0s (from 4.2s)
+- FID: <50ms (from 280ms)
+- CLS: <0.05 (from 0.25)
+- Page Load: <2.5s (from 8.3s)
 
 **Expected Revenue Impact**:
 - 100ms faster = 1% conversion increase
@@ -509,14 +509,14 @@ Proceed with this plan? (yes/no/modify)
 
 ### When to Use Planning Mode
 
-✅ **Always use for**:
+ **Always use for**:
 - Multi-day projects
 - Team collaborations
 - Critical system changes
 - Learning new concepts
 - Complex refactoring
 
-❌ **Don't use for**:
+ **Don't use for**:
 - Bug fixes
 - Small tweaks
 - Simple queries

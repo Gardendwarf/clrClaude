@@ -78,14 +78,14 @@ Planning mode is a two-phase approach:
 
 ### When to Use Planning Mode
 
-✅ Use planning mode for:
+ Use planning mode for:
 - Complex multi-file refactoring
 - New feature implementations
 - Architectural changes
 - Database migrations
 - Major API redesigns
 
-❌ Don't use planning mode for:
+ Don't use planning mode for:
 - Simple bug fixes
 - Formatting changes
 - Single-file edits
@@ -203,17 +203,17 @@ claude --model opusplan "design and implement the new API"
 
 ## Ultraplan (Cloud Plan Drafting)
 
-> **New in v2.1.101**: Ultraplan now auto-creates a Claude Code on the web cloud environment the first time you invoke it — no manual setup, no waiting for a container to warm up before the draft starts.
+> **New in v2.1.101**: Ultraplan now auto-creates a Claude Code on the web cloud environment the first time you invoke it - no manual setup, no waiting for a container to warm up before the draft starts.
 
 > **Note**: Ultraplan is a research preview and requires Claude Code v2.1.91 or newer.
 
-`/ultraplan` hands a planning task from your local CLI to a Claude Code on the web session running in plan mode. Claude drafts the plan in the cloud while your terminal stays free for other work, then you review the draft in the browser and choose where to execute — in the same cloud session or teleported back to your terminal.
+`/ultraplan` hands a planning task from your local CLI to a Claude Code on the web session running in plan mode. Claude drafts the plan in the cloud while your terminal stays free for other work, then you review the draft in the browser and choose where to execute - in the same cloud session or teleported back to your terminal.
 
 ### When to Use Ultraplan
 
 - You want a richer review surface than the terminal: inline comments, emoji reactions, an outline sidebar, and persistent history.
-- You want hands-off drafting while you keep coding locally — the cloud session researches the repo and writes the plan without blocking your CLI.
-- The plan needs stakeholder review before execution — a shareable web URL beats pasting terminal scrollback.
+- You want hands-off drafting while you keep coding locally - the cloud session researches the repo and writes the plan without blocking your CLI.
+- The plan needs stakeholder review before execution - a shareable web URL beats pasting terminal scrollback.
 
 ### Requirements
 
@@ -223,7 +223,7 @@ claude --model opusplan "design and implement the new API"
 
 ### Three Ways to Launch
 
-- **Command**: `/ultraplan <prompt>` — explicit invocation.
+- **Command**: `/ultraplan <prompt>` - explicit invocation.
 - **Keyword**: include the word `ultraplan` anywhere in a normal prompt and Claude routes the request to the cloud.
 - **From a local plan**: after Claude finishes a plan locally, pick "No, refine with Ultraplan on Claude Code on the web" in the approval dialog to hand the draft off for deeper research.
 
@@ -245,11 +245,11 @@ Claude acknowledges, spins up the cloud environment (auto-created on first run i
 
 ### Execution Options
 
-Once the plan is ready, you have two execution paths. Approve the plan in the browser to execute in the same cloud session — Claude implements the changes remotely and opens a pull request from the web UI. Or choose "Approve plan and teleport back to terminal" to implement locally. The terminal teleport dialog offers three choices:
+Once the plan is ready, you have two execution paths. Approve the plan in the browser to execute in the same cloud session - Claude implements the changes remotely and opens a pull request from the web UI. Or choose "Approve plan and teleport back to terminal" to implement locally. The terminal teleport dialog offers three choices:
 
-- **Implement here** — run the approved plan in your current terminal session.
-- **Start new session** — open a fresh session in the same working directory and implement there.
-- **Cancel** — saves the plan to a file so you can pick it up later.
+- **Implement here** - run the approved plan in your current terminal session.
+- **Start new session** - open a fresh session in the same working directory and implement there.
+- **Cancel** - saves the plan to a file so you can pick it up later.
 
 > **Warning**: Remote Control disconnects when ultraplan starts. Both features share the claude.ai/code interface, so only one can be active at a time.
 
@@ -289,7 +289,7 @@ export MAX_THINKING_TOKENS=1024
 
 **Effort level** (Opus 4.6 only):
 ```bash
-export CLAUDE_CODE_EFFORT_LEVEL=high   # low (○), medium (◐), high (●), or max (Opus 4.6 only)
+export CLAUDE_CODE_EFFORT_LEVEL=high # low (○), medium (◐), high (●), or max (Opus 4.6 only)
 ```
 
 **CLI flag**:
@@ -369,10 +369,10 @@ Start with a **modular monolith**:
 - Prepare for future extraction to microservices if needed
 
 This gives you:
-✓ Fast initial development
-✓ Low operational complexity
-✓ Option to extract services later
-✓ Clear architecture
+ Fast initial development
+ Low operational complexity
+ Option to extract services later
+ Clear architecture
 
 Migration path: When you reach 50k+ users or specific modules need independent scaling, extract those modules into microservices.
 </extended_thinking>
@@ -514,7 +514,7 @@ The script adds rules across these categories:
 | Common shell | `Bash(ls:*)`, `Bash(cat:*)`, `Bash(find:*)`, `Bash(cp:*)`, `Bash(mv:*)` |
 | GitHub CLI | `Bash(gh pr view:*)`, `Bash(gh pr create:*)`, `Bash(gh issue list:*)` |
 
-Dangerous operations (`rm -rf`, `sudo`, force push, `DROP TABLE`, `terraform destroy`, etc.) are intentionally excluded. The script is idempotent — running it twice won't duplicate rules.
+Dangerous operations (`rm -rf`, `sudo`, force push, `DROP TABLE`, `terraform destroy`, etc.) are intentionally excluded. The script is idempotent - running it twice won't duplicate rules.
 
 ---
 
@@ -537,9 +537,9 @@ User: Run tests in background
 
 Claude: Started task bg-1234
 
-/task list           # Show all tasks
+/task list # Show all tasks
 /task status bg-1234 # Check progress
-/task show bg-1234   # View output
+/task show bg-1234 # View output
 /task cancel bg-1234 # Cancel task
 ```
 
@@ -559,9 +559,9 @@ Claude: [Works on auth module while tests run in background]
 
 [Later, when tests complete]
 
-Claude: 📢 Background task bg-1234 completed:
-✅ 245 tests passed
-❌ 3 tests failed
+Claude: Background task bg-1234 completed:
+ 245 tests passed
+ 3 tests failed
 View results: /task show bg-1234
 ```
 
@@ -619,8 +619,8 @@ Claude: [Implements API endpoint while build and linter run]
 
 [10 minutes later]
 
-Claude: 📢 Build completed successfully (bg-5001)
-📢 Linter found 12 issues (bg-5002)
+Claude: Build completed successfully (bg-5001)
+ Linter found 12 issues (bg-5002)
 
 User: Show me the linter issues
 
@@ -645,13 +645,13 @@ Claude: [Shows linter output from bg-5002]
 
 ## Monitor Tool (Event-Driven Streams)
 
-> **New in v2.1.98**: The Monitor tool lets Claude watch a background command's stdout and react the moment a matching event appears — replacing polling loops and `sleep` for waiting on long-running processes.
+> **New in v2.1.98**: The Monitor tool lets Claude watch a background command's stdout and react the moment a matching event appears - replacing polling loops and `sleep` for waiting on long-running processes.
 
 Monitor attaches to any shell command that writes to stdout. Each stdout line from the command becomes a notification that wakes the session. Claude specifies the command; the harness streams output and delivers events as they fire. See the related [Background Tasks](#background-tasks) section for launching the underlying processes.
 
 ### Why It Matters
 
-Polling with `/loop` or `sleep` burns a full API round-trip every cycle, whether or not anything changed. Monitor stays silent until an event fires, consuming **zero tokens** while the command is quiet. When an event does occur, Claude reacts immediately — no delayed discovery waiting for the next poll tick. For anything that runs longer than a few minutes, this is both cheaper and faster than poll loops.
+Polling with `/loop` or `sleep` burns a full API round-trip every cycle, whether or not anything changed. Monitor stays silent until an event fires, consuming **zero tokens** while the command is quiet. When an event does occur, Claude reacts immediately - no delayed discovery waiting for the next poll tick. For anything that runs longer than a few minutes, this is both cheaper and faster than poll loops.
 
 ### Two Common Patterns
 
@@ -674,15 +674,15 @@ done
 
 ### Concrete Example
 
-"Start my dev server and monitor it for errors." Claude launches the server as a background task, attaches a Monitor filter (`tail -F server.log | grep --line-buffered -E "ERROR|FATAL"`), and the session goes quiet. The moment an error line appears in the log, Claude wakes up, reads the error, and can react — restart the server, fix the bug, or surface it to you — without you having to check in.
+"Start my dev server and monitor it for errors." Claude launches the server as a background task, attaches a Monitor filter (`tail -F server.log | grep --line-buffered -E "ERROR|FATAL"`), and the session goes quiet. The moment an error line appears in the log, Claude wakes up, reads the error, and can react - restart the server, fix the bug, or surface it to you - without you having to check in.
 
-> **Warning**: When piping into `grep`, **always** use `grep --line-buffered`. Without it, grep buffers stdout in 4KB chunks, which can delay events by minutes on low-traffic streams. This is the #1 way Monitor breaks in practice — if your filter seems silent when it shouldn't be, check for the `--line-buffered` flag first.
+> **Warning**: When piping into `grep`, **always** use `grep --line-buffered`. Without it, grep buffers stdout in 4KB chunks, which can delay events by minutes on low-traffic streams. This is the #1 way Monitor breaks in practice - if your filter seems silent when it shouldn't be, check for the `--line-buffered` flag first.
 
 ---
 
 ## Scheduled Tasks
 
-Scheduled Tasks let you run prompts automatically on a recurring schedule or as one-time reminders. Tasks are session-scoped — they run while Claude Code is active and are cleared when the session ends. Available since v2.1.72+.
+Scheduled Tasks let you run prompts automatically on a recurring schedule or as one-time reminders. Tasks are session-scoped - they run while Claude Code is active and are cleared when the session ends. Available since v2.1.72+.
 
 ### The `/loop` command
 
@@ -715,9 +715,9 @@ in 45 minutes, run the integration tests
 
 **Limits and behavior**:
 - Up to **50 scheduled tasks** per session
-- Session-scoped — cleared when the session ends
+- Session-scoped - cleared when the session ends
 - Recurring tasks auto-expire after **3 days**
-- Tasks only fire while Claude Code is running — no catch-up for missed fires
+- Tasks only fire while Claude Code is running - no catch-up for missed fires
 
 ### Behavior details
 
@@ -725,7 +725,7 @@ in 45 minutes, run the integration tests
 |--------|--------|
 | **Recurring jitter** | Up to 10% of the interval (max 15 minutes) |
 | **One-shot jitter** | Up to 90 seconds on :00/:30 boundaries |
-| **Missed fires** | No catch-up — skipped if Claude Code was not running |
+| **Missed fires** | No catch-up - skipped if Claude Code was not running |
 | **Persistence** | Not persisted across restarts |
 
 ### Cloud Scheduled Tasks
@@ -777,12 +777,12 @@ Cycle through modes with `Shift+Tab` in the CLI. Set a default with the `--permi
 
 **Keyboard shortcut**:
 ```bash
-Shift + Tab  # Cycle through all 6 modes
+Shift + Tab # Cycle through all 6 modes
 ```
 
 **Slash command**:
 ```bash
-/plan                  # Enter plan mode
+/plan # Enter plan mode
 ```
 
 **CLI flag**:
@@ -1118,8 +1118,8 @@ There are 18 contexts total including `Transcript`, `Task`, `ThemePicker`, `Atta
 Keybindings support chord sequences (multi-key combinations):
 
 ```
-"ctrl+k ctrl+s"   → Two-key sequence: press ctrl+k, then ctrl+s
-"ctrl+shift+p"    → Simultaneous modifier keys
+"ctrl+k ctrl+s" → Two-key sequence: press ctrl+k, then ctrl+s
+"ctrl+shift+p" → Simultaneous modifier keys
 ```
 
 **Keystroke syntax**:
@@ -1161,9 +1161,9 @@ User: /plugin <TAB>
 Access previous commands:
 
 ```
-User: <↑>  # Previous command
-User: <↓>  # Next command
-User: Ctrl+R  # Search history
+User: <↑> # Previous command
+User: <↓> # Next command
+User: Ctrl+R # Search history
 
 (reverse-i-search)`test': run all tests
 ```
@@ -1304,7 +1304,7 @@ The `allowedChannelPlugins` managed setting controls which channel plugins are p
 2. Incoming messages and events are pushed into the active Claude Code session
 3. Claude can read and respond to messages within the session context
 4. Channel plugins must be approved via the `allowedChannelPlugins` managed setting
-5. No polling required — events are pushed in real time
+5. No polling required - events are pushed in real time
 
 ---
 
@@ -1317,8 +1317,8 @@ Chrome Integration connects Claude Code to your Chrome or Microsoft Edge browser
 **At startup**:
 
 ```bash
-claude --chrome      # Enable Chrome connection
-claude --no-chrome   # Disable Chrome connection
+claude --chrome # Enable Chrome connection
+claude --no-chrome # Disable Chrome connection
 ```
 
 **Within a session**:
@@ -1346,11 +1346,11 @@ The Chrome extension manages per-site access. Grant or revoke access for specifi
 
 ### How it works
 
-Claude Code controls the browser in a visible window — you can watch actions happen in real time. When the browser encounters a login page or CAPTCHA, Claude pauses and waits for you to handle it manually before continuing.
+Claude Code controls the browser in a visible window - you can watch actions happen in real time. When the browser encounters a login page or CAPTCHA, Claude pauses and waits for you to handle it manually before continuing.
 
 ### Known limitations
 
-- **Browser support**: Chrome and Edge only — Brave, Arc, and other Chromium browsers are not supported
+- **Browser support**: Chrome and Edge only - Brave, Arc, and other Chromium browsers are not supported
 - **WSL**: Not available in Windows Subsystem for Linux
 - **Third-party providers**: Not supported with Bedrock, Vertex, or Foundry API providers
 - **Service worker idle**: The Chrome extension service worker may go idle during extended sessions
@@ -1361,7 +1361,7 @@ Claude Code controls the browser in a visible window — you can watch actions h
 
 ## Remote Control
 
-Remote Control lets you continue a locally running Claude Code session from your phone, tablet, or any browser. Your local session keeps running on your machine — nothing moves to the cloud. Available on Pro, Max, Team, and Enterprise plans (v2.1.51+).
+Remote Control lets you continue a locally running Claude Code session from your phone, tablet, or any browser. Your local session keeps running on your machine - nothing moves to the cloud. Available on Pro, Max, Team, and Enterprise plans (v2.1.51+).
 
 ### Starting Remote Control
 
@@ -1395,16 +1395,16 @@ claude remote-control --name "Auth Refactor"
 
 Three ways to connect from another device:
 
-1. **Session URL** — Printed to the terminal when the session starts; open in any browser
-2. **QR code** — Press `spacebar` after starting to display a scannable QR code
-3. **Find by name** — Browse your sessions at claude.ai/code or in the Claude mobile app (iOS/Android)
+1. **Session URL** - Printed to the terminal when the session starts; open in any browser
+2. **QR code** - Press `spacebar` after starting to display a scannable QR code
+3. **Find by name** - Browse your sessions at claude.ai/code or in the Claude mobile app (iOS/Android)
 
 ### Security
 
 - **No inbound ports** opened on your machine
 - **Outbound HTTPS only** over TLS
-- **Scoped credentials** — multiple short-lived, narrowly scoped tokens
-- **Session isolation** — each remote session is independent
+- **Scoped credentials** - multiple short-lived, narrowly scoped tokens
+- **Session isolation** - each remote session is independent
 
 ### Remote Control vs Claude Code on the web
 
@@ -1656,8 +1656,8 @@ Sandboxing provides OS-level filesystem and network isolation for Bash commands 
 
 **CLI flags**:
 ```bash
-claude --sandbox       # Enable sandboxing
-claude --no-sandbox    # Disable sandboxing
+claude --sandbox # Enable sandboxing
+claude --no-sandbox # Disable sandboxing
 ```
 
 ### Configuration Settings
@@ -1850,7 +1850,7 @@ export CLAUDE_CODE_DISABLE_1M_CONTEXT=true
 export CLAUDE_CODE_DISABLE_NONSTREAMING_FALLBACK=true
 export CLAUDE_CODE_ENABLE_PROMPT_SUGGESTION=false
 export CLAUDE_CODE_ENABLE_TASKS=true
-export CLAUDE_CODE_SIMPLE=true              # Set by --bare flag
+export CLAUDE_CODE_SIMPLE=true # Set by --bare flag
 
 # MCP configuration
 export MAX_MCP_OUTPUT_TOKENS=50000
@@ -1974,35 +1974,35 @@ claude --teammate-mode in-process
 ## Best Practices
 
 ### Planning Mode
-- ✅ Use for complex multi-step tasks
-- ✅ Review plans before approving
-- ✅ Modify plans when needed
-- ❌ Don't use for simple tasks
+- Use for complex multi-step tasks
+- Review plans before approving
+- Modify plans when needed
+- Don't use for simple tasks
 
 ### Extended Thinking
-- ✅ Use for architectural decisions
-- ✅ Use for complex problem-solving
-- ✅ Review the thinking process
-- ❌ Don't use for simple queries
+- Use for architectural decisions
+- Use for complex problem-solving
+- Review the thinking process
+- Don't use for simple queries
 
 ### Background Tasks
-- ✅ Use for long-running operations
-- ✅ Monitor task progress
-- ✅ Handle task failures gracefully
-- ❌ Don't start too many concurrent tasks
+- Use for long-running operations
+- Monitor task progress
+- Handle task failures gracefully
+- Don't start too many concurrent tasks
 
 ### Permissions
-- ✅ Use `plan` for code review (read-only)
-- ✅ Use `default` for interactive development
-- ✅ Use `acceptEdits` for automation workflows
-- ✅ Use `auto` for autonomous work with safety guardrails
-- ❌ Don't use `bypassPermissions` unless absolutely necessary
+- Use `plan` for code review (read-only)
+- Use `default` for interactive development
+- Use `acceptEdits` for automation workflows
+- Use `auto` for autonomous work with safety guardrails
+- Don't use `bypassPermissions` unless absolutely necessary
 
 ### Sessions
-- ✅ Use separate sessions for different tasks
-- ✅ Save important session states
-- ✅ Clean up old sessions
-- ❌ Don't mix unrelated work in one session
+- Use separate sessions for different tasks
+- Save important session states
+- Clean up old sessions
+- Don't mix unrelated work in one session
 
 ---
 

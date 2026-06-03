@@ -156,9 +156,9 @@ claude -p --system-prompt-file ./prompts/code-reviewer.txt "review main.py"
 
 | Flag | Behavior | Interactive | Print |
 |------|----------|-------------|-------|
-| `--system-prompt` | Replaces entire default system prompt | ✅ | ✅ |
-| `--system-prompt-file` | Replaces with prompt from file | ❌ | ✅ |
-| `--append-system-prompt` | Appends to default system prompt | ✅ | ✅ |
+| `--system-prompt` | Replaces entire default system prompt | | |
+| `--system-prompt-file` | Replaces with prompt from file | | |
+| `--append-system-prompt` | Appends to default system prompt | | |
 
 **Use `--system-prompt-file` only in print mode. For interactive mode, use `--system-prompt` or `--append-system-prompt`.**
 
@@ -688,7 +688,7 @@ claude --effort high "complex review"
 /effort high
 
 # Set effort level via environment variable
-export CLAUDE_CODE_EFFORT_LEVEL=high   # low, medium, high, or max (Opus 4.6 only)
+export CLAUDE_CODE_EFFORT_LEVEL=high # low, medium, high, or max (Opus 4.6 only)
 ```
 
 The "ultrathink" keyword in prompts activates deep reasoning. The `max` effort level is exclusive to Opus 4.6.

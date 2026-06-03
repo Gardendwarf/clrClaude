@@ -138,10 +138,10 @@ Place them after the introductory blockquote and between logically distinct part
 
 ### Rules
 
-- **One H1 per document** — the page title only
-- **Never skip levels** — don't jump from H2 to H4
-- **Keep headings concise** — aim for 2-5 words
-- **Use sentence case** — capitalize first word and proper nouns only (exception: feature names stay as-is)
+- **One H1 per document** - the page title only
+- **Never skip levels** - don't jump from H2 to H4
+- **Keep headings concise** - aim for 2-5 words
+- **Use sentence case** - capitalize first word and proper nouns only (exception: feature names stay as-is)
 - **Add emoji prefixes only on root README** section headers (see [Emoji Usage](#emoji-usage))
 
 ---
@@ -232,7 +232,7 @@ Use bold labels for key-value style lists:
 ```markdown
 | Column 1 | Column 2 | Column 3 |
 |----------|----------|----------|
-| Data     | Data     | Data     |
+| Data | Data | Data |
 ```
 
 ### Common Table Patterns
@@ -387,9 +387,9 @@ End lessons with a related guides section:
 
 Use Mermaid for all diagrams. Supported types:
 
-- `graph TB` / `graph LR` — architecture, hierarchy, flow
-- `sequenceDiagram` — interaction flows
-- `timeline` — chronological sequences
+- `graph TB` / `graph LR` - architecture, hierarchy, flow
+- `sequenceDiagram` - interaction flows
+- `timeline` - chronological sequences
 
 ### Style Conventions
 
@@ -429,37 +429,37 @@ graph TB
 
 ### Where Emojis Are Used
 
-Emojis are used **sparingly and purposefully** — only in specific contexts:
+Emojis are used **sparingly and purposefully** - only in specific contexts:
 
 | Context | Emojis | Example |
 |---------|--------|---------|
-| Root README section headers | Category icons | `## 📚 Learning Path` |
-| Skill level indicators | Colored circles | 🟢 Beginner, 🔵 Intermediate, 🔴 Advanced |
-| Do's and Don'ts | Check/cross marks | ✅ Do this, ❌ Don't do this |
-| Complexity ratings | Stars | ⭐⭐⭐ |
+| Root README section headers | Category icons | `## Learning Path` |
+| Skill level indicators | Colored circles | Beginner, Intermediate, Advanced |
+| Do's and Don'ts | Check/cross marks | Do this, Don't do this |
+| Complexity ratings | Stars | |
 
 ### Standard Emoji Set
 
 | Emoji | Meaning |
 |-------|---------|
-| 📚 | Learning, guides, documentation |
-| ⚡ | Getting started, quick reference |
-| 🎯 | Features, quick reference |
-| 🎓 | Learning paths |
-| 📊 | Statistics, comparisons |
-| 🚀 | Installation, quick commands |
-| 🟢 | Beginner level |
-| 🔵 | Intermediate level |
-| 🔴 | Advanced level |
-| ✅ | Recommended practice |
-| ❌ | Avoid / anti-pattern |
-| ⭐ | Complexity rating unit |
+| | Learning, guides, documentation |
+| | Getting started, quick reference |
+| | Features, quick reference |
+| | Learning paths |
+| | Statistics, comparisons |
+| | Installation, quick commands |
+| | Beginner level |
+| | Intermediate level |
+| | Advanced level |
+| | Recommended practice |
+| | Avoid / anti-pattern |
+| | Complexity rating unit |
 
 ### Rules
 
 - **Never use emojis in body text** or paragraphs
 - **Only use emojis in headers** on the root README (not in lesson READMEs)
-- **Do not add decorative emojis** — every emoji should convey meaning
+- **Do not add decorative emojis** - every emoji should convey meaning
 - Keep emoji usage consistent with the table above
 
 ---
@@ -484,11 +484,11 @@ name: my-feature
 description: Brief description
 argument-hint: "[file-path] [options]"
 allowed-tools: Bash, Read, Grep, Write, Edit
-model: opus                        # opus, sonnet, or haiku
-disable-model-invocation: true     # User-only invocation
-user-invocable: false              # Hidden from user menu
-context: fork                      # Run in isolated subagent
-agent: Explore                     # Agent type for context: fork
+model: opus # opus, sonnet, or haiku
+disable-model-invocation: true # User-only invocation
+user-invocable: false # Hidden from user menu
+context: fork # Run in isolated subagent
+agent: Explore # Agent type for context: fork
 ---
 ```
 
@@ -534,10 +534,10 @@ All documents that start with a logo use the `<picture>` element for dark/light 
 
 ### Writing Style
 
-- **Professional but approachable** — technical accuracy without jargon overload
-- **Active voice** — "Create a file" not "A file should be created"
-- **Direct instructions** — "Run this command" not "You might want to run this command"
-- **Beginner-friendly** — assume the reader is new to Claude Code, not new to programming
+- **Professional but approachable** - technical accuracy without jargon overload
+- **Active voice** - "Create a file" not "A file should be created"
+- **Direct instructions** - "Run this command" not "You might want to run this command"
+- **Beginner-friendly** - assume the reader is new to Claude Code, not new to programming
 
 ### Content Principles
 
@@ -552,7 +552,7 @@ All documents that start with a logo use the `<picture>` element for dark/light 
 ### Vocabulary
 
 - Use "Claude Code" (not "Claude CLI" or "the tool")
-- Use "skill" (not "custom command" — legacy term)
+- Use "skill" (not "custom command" - legacy term)
 - Use "lesson" or "guide" for the numbered sections
 - Use "example" for individual feature files
 

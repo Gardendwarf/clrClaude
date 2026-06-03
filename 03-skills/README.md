@@ -25,7 +25,7 @@ Skills follow the [Agent Skills](https://agentskills.io) open standard, which wo
 
 ## How Skills Work: Progressive Disclosure
 
-Skills leverage a **progressive disclosure** architecture—Claude loads information in stages as needed, rather than consuming context upfront. This enables efficient context management while maintaining unlimited scalability.
+Skills leverage a **progressive disclosure** architecture-Claude loads information in stages as needed, rather than consuming context upfront. This enables efficient context management while maintaining unlimited scalability.
 
 ### Three Levels of Loading
 
@@ -59,7 +59,7 @@ graph TB
 | **Level 2: Instructions** | When Skill is triggered | Under 5k tokens | SKILL.md body with instructions and guidance |
 | **Level 3+: Resources** | As needed | Effectively unlimited | Bundled files executed via bash without loading contents into context |
 
-This means you can install many Skills without context penalty—Claude only knows each Skill exists and when to use it until actually triggered.
+This means you can install many Skills without context penalty-Claude only knows each Skill exists and when to use it until actually triggered.
 
 ## Skill Loading Process
 
@@ -108,12 +108,12 @@ When skills share the same name across levels, higher-priority locations win: **
 
 ```
 my-skill/
-├── SKILL.md           # Main instructions (required)
-├── template.md        # Template for Claude to fill in
+├── SKILL.md # Main instructions (required)
+├── template.md # Template for Claude to fill in
 ├── examples/
-│   └── sample.md      # Example output showing expected format
+│ └── sample.md # Example output showing expected format
 └── scripts/
-    └── validate.sh    # Script Claude can execute
+    └── validate.sh # Script Claude can execute
 ```
 
 ### SKILL.md Format
@@ -144,22 +144,22 @@ Show concrete examples of using this Skill.
 ---
 name: my-skill
 description: What this skill does and when to use it
-argument-hint: "[filename] [format]"        # Hint for autocomplete
-disable-model-invocation: true              # Only user can invoke
-user-invocable: false                       # Hide from slash menu
-allowed-tools: Read, Grep, Glob             # Restrict tool access
-model: opus                                 # Specific model to use
-effort: high                                # Effort level override (low, medium, high, max)
-context: fork                               # Run in isolated subagent
-agent: Explore                              # Which agent type (with context: fork)
-shell: bash                                 # Shell for commands: bash (default) or powershell
-hooks:                                      # Skill-scoped hooks
+argument-hint: "[filename] [format]" # Hint for autocomplete
+disable-model-invocation: true # Only user can invoke
+user-invocable: false # Hide from slash menu
+allowed-tools: Read, Grep, Glob # Restrict tool access
+model: opus # Specific model to use
+effort: high # Effort level override (low, medium, high, max)
+context: fork # Run in isolated subagent
+agent: Explore # Which agent type (with context: fork)
+shell: bash # Shell for commands: bash (default) or powershell
+hooks: # Skill-scoped hooks
   PreToolUse:
     - matcher: "Bash"
       hooks:
         - type: command
           command: "./scripts/validate.sh"
-paths: "src/api/**/*.ts"               # Glob patterns limiting when skill activates
+paths: "src/api/**/*.ts" # Glob patterns limiting when skill activates
 ---
 ```
 
@@ -185,7 +185,7 @@ Skills can contain two types of content, each suited for different purposes:
 
 ### Reference Content
 
-Adds knowledge Claude applies to your current work—conventions, patterns, style guides, domain knowledge. Runs inline with your conversation context.
+Adds knowledge Claude applies to your current work-conventions, patterns, style guides, domain knowledge. Runs inline with your conversation context.
 
 ```yaml
 ---
@@ -229,7 +229,7 @@ By default, both you and Claude can invoke any skill. Two frontmatter fields con
 
 **Use `disable-model-invocation: true`** for workflows with side effects: `/commit`, `/deploy`, `/send-slack-message`. You don't want Claude deciding to deploy because your code looks ready.
 
-**Use `user-invocable: false`** for background knowledge that isn't actionable as a command. A `legacy-system-context` skill explains how an old system works—useful for Claude, but not a meaningful action for users.
+**Use `user-invocable: false`** for background knowledge that isn't actionable as a command. A `legacy-system-context` skill explains how an old system works-useful for Claude, but not a meaningful action for users.
 
 ## String Substitutions
 
@@ -241,7 +241,7 @@ Skills support dynamic values that are resolved before the skill content reaches
 | `$ARGUMENTS[N]` or `$N` | Access specific argument by index (0-based) |
 | `${CLAUDE_SESSION_ID}` | Current session ID |
 | `${CLAUDE_SKILL_DIR}` | Directory containing the skill's SKILL.md file |
-| `` !`command` `` | Dynamic context injection — runs a shell command and inlines the output |
+| `` !`command` `` | Dynamic context injection - runs a shell command and inlines the output |
 
 **Example:**
 
@@ -331,8 +331,8 @@ Research $ARGUMENTS thoroughly:
 ~/.claude/skills/code-review/
 ├── SKILL.md
 ├── templates/
-│   ├── review-checklist.md
-│   └── finding-template.md
+│ ├── review-checklist.md
+│ └── finding-template.md
 └── scripts/
     ├── analyze-metrics.py
     └── compare-complexity.py
@@ -518,10 +518,10 @@ description: Create or update CLAUDE.md files following best practices for optim
 refactor/
 ├── SKILL.md
 ├── references/
-│   ├── code-smells.md
-│   └── refactoring-catalog.md
+│ ├── code-smells.md
+│ └── refactoring-catalog.md
 ├── templates/
-│   └── refactoring-plan.md
+│ └── refactoring-plan.md
 └── scripts/
     ├── analyze-complexity.py
     └── detect-smells.py
@@ -562,14 +562,14 @@ Skills can include multiple files in their directory beyond `SKILL.md`. These su
 
 ```
 my-skill/
-├── SKILL.md              # Main instructions (required, keep under 500 lines)
-├── templates/            # Templates for Claude to fill in
-│   └── output-format.md
-├── examples/             # Example outputs showing expected format
-│   └── sample-output.md
-├── references/           # Domain knowledge and specifications
-│   └── api-spec.md
-└── scripts/              # Scripts Claude can execute
+├── SKILL.md # Main instructions (required, keep under 500 lines)
+├── templates/ # Templates for Claude to fill in
+│ └── output-format.md
+├── examples/ # Example outputs showing expected format
+│ └── sample-output.md
+├── references/ # Domain knowledge and specifications
+│ └── api-spec.md
+└── scripts/ # Scripts Claude can execute
     └── validate.sh
 ```
 
@@ -655,8 +655,8 @@ Skill(deploy *)
 ### 2. Keep Skills Focused
 
 - One Skill = one capability
-- ✅ "PDF form filling"
-- ❌ "Document processing" (too broad)
+- "PDF form filling"
+- "Document processing" (too broad)
 
 ### 3. Include Trigger Terms
 
@@ -730,7 +730,7 @@ Skill descriptions are loaded at **1% of the context window** (fallback: **8,000
 
 ## Security Considerations
 
-**Only use Skills from trusted sources.** Skills provide Claude with capabilities through instructions and code—a malicious Skill can direct Claude to invoke tools or execute code in harmful ways.
+**Only use Skills from trusted sources.** Skills provide Claude with capabilities through instructions and code-a malicious Skill can direct Claude to invoke tools or execute code in harmful ways.
 
 **Key security considerations:**
 
@@ -770,7 +770,7 @@ These skills are available out-of-the-box and do not need to be installed or con
 
 1. Create Skill in `.claude/skills/`
 2. Commit to git
-3. Team members pull changes — Skills available immediately
+3. Team members pull changes - Skills available immediately
 
 ### Personal Skills
 
@@ -790,9 +790,9 @@ Package skills in a plugin's `skills/` directory for broader distribution.
 
 Once you start building skills seriously, two things become essential: a library of proven skills and a tool to manage them.
 
-**[luongnv89/skills](https://github.com/luongnv89/skills)** — A collection of skills I use daily across almost all my projects. Highlights include `logo-designer` (generates project logos on the fly) and `ollama-optimizer` (tunes local LLM performance for your hardware). Great starting point if you want ready-to-use skills.
+**[luongnv89/skills](https://github.com/luongnv89/skills)** - A collection of skills I use daily across almost all my projects. Highlights include `logo-designer` (generates project logos on the fly) and `ollama-optimizer` (tunes local LLM performance for your hardware). Great starting point if you want ready-to-use skills.
 
-**[luongnv89/asm](https://github.com/luongnv89/asm)** — Agent Skill Manager. Handles skill development, duplicate detection, and testing. The `asm link` command lets you test a skill in any project without copying files around — essential once you have more than a handful of skills.
+**[luongnv89/asm](https://github.com/luongnv89/asm)** - Agent Skill Manager. Handles skill development, duplicate detection, and testing. The `asm link` command lets you test a skill in any project without copying files around - essential once you have more than a handful of skills.
 
 ## Additional Resources
 

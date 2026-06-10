@@ -1,0 +1,26 @@
+services:
+  clrclaude:
+    build:
+      context: .
+      dockerfile: Dockerfile.owned
+    image: clrclaude:owned
+    container_name: clrclaude
+    restart: unless-stopped
+    environment:
+      - PORT=8080
+      - CLRHUB_API_URL=http://clrhub-api-an6x6j:4050
+      - SUPABASE_JWT_SECRET=${SUPABASE_JWT_SECRET:?set SUPABASE_JWT_SECRET (sops core)}
+      - CLRCLAUDE_DATABASE_URL=postgres://clrclaude_app:${CLRCLAUDE_DB_PASSWORD:?set CLRCLAUDE_DB_PASSWORD (sops core)}@clr-postgres:5432/clrclaude
+    networks: [dokploy-network]
+    labels:
+      - "autoheal=true"
+      - "traefik.enable=true"
+      - "traefik.docker.network=dokploy-network"
+      - "traefik.http.routers.clrclaude.rule=Host(`clrclaude.clrtech.xyz`)"
+      - "traefik.http.routers.clrclaude.entrypoints=websecure"
+      - "traefik.http.routers.clrclaude.tls=true"
+      - "traefik.http.routers.clrclaude.tls.certresolver=letsencrypt"
+      - "traefik.http.services.clrclaude.loadbalancer.server.port=8080"
+networks:
+  dokploy-network:
+    external: true

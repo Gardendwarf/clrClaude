@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Save, Check } from 'lucide-react';
 import { useAuthStore, useProgressStore } from '../lib/store';
-import { supabase, isSupabaseConfigured } from '../lib/supabase';
+import { getProfile, saveProfile } from '../lib/api';
 import { modules, getAllLessonIds, getTotalEstimatedMinutes } from '../lib/courseData';
 import { GlassCard, ProgressBar, Button, Input } from '../components/ui';
 
@@ -10,23 +10,6 @@ interface UserProfile {
   jobTitle: string;
   aiInterest: string;
   toolsWanted: string;
-}
-
-const LS_PROFILE_KEY = 'clrclaude_profile';
-
-function loadLocalProfile(): UserProfile {
-  try {
-    const raw = localStorage.getItem(LS_PROFILE_KEY);
-    return raw ? JSON.parse(raw) : { displayName: '', jobTitle: '', aiInterest: '', toolsWanted: '' };
-  } catch {
-    return { displayName: '', jobTitle: '', aiInterest: '', toolsWanted: '' };
-  }
-}
-
-function saveLocalProfile(profile: UserProfile) {
-  try {
-    localStorage.setItem(LS_PROFILE_KEY, JSON.stringify(profile));
-  } catch { /* ignore */ }
 }
 
 export default function Profile() {
@@ -50,36 +33,22 @@ export default function Profile() {
 
   // Load profile on mount
   useEffect(() => {
-    const fetchProfile = async () => {
-      if (!isSupabaseConfigured || !supabase || !user) {
-        const local = loadLocalProfile();
-        setProfile((p) => ({
-          ...p,
-          ...local,
-          displayName: local.displayName || p.displayName,
-        }));
-        setLoading(false);
-        return;
-      }
-
-      const { data } = await supabase
-        .from('user_profiles')
-        .select('*')
-        .eq('user_id', user.id)
-        .single();
-
-      if (data) {
+    let active = true;
+    (async () => {
+      const data = await getProfile();
+      if (active && data) {
         setProfile({
-          displayName: data.display_name || user.user_metadata?.display_name || '',
-          jobTitle: data.job_title || '',
-          aiInterest: data.ai_interest || '',
-          toolsWanted: data.tools_wanted || '',
+          displayName: data.displayName || user?.user_metadata?.display_name || '',
+          jobTitle: data.jobTitle || '',
+          aiInterest: data.aiInterest || '',
+          toolsWanted: data.toolsWanted || '',
         });
       }
-      setLoading(false);
+      if (active) setLoading(false);
+    })();
+    return () => {
+      active = false;
     };
-
-    fetchProfile();
   }, [user]);
 
   const MAX_SHORT = 100;
@@ -98,23 +67,7 @@ export default function Profile() {
     };
     setProfile(trimmed);
 
-    if (!isSupabaseConfigured || !supabase || !user) {
-      saveLocalProfile(trimmed);
-      setSaving(false);
-      setSaved(true);
-      setTimeout(() => setSaved(false), 2000);
-      return;
-    }
-
-    await supabase
-      .from('user_profiles')
-      .upsert({
-        user_id: user.id,
-        display_name: trimmed.displayName,
-        job_title: trimmed.jobTitle,
-        ai_interest: trimmed.aiInterest,
-        tools_wanted: trimmed.toolsWanted,
-      }, { onConflict: 'user_id' });
+    await saveProfile(trimmed);
 
     setSaving(false);
     setSaved(true);

@@ -1,0 +1,23 @@
+services:
+  clrclaude:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: clrclaude:static
+    container_name: clrclaude
+    restart: unless-stopped
+    environment:
+      - VITE_SUPABASE_ANON_KEY=your-anon-key-here
+    networks: [dokploy-network]
+    labels:
+      - "autoheal=true"
+      - "traefik.enable=true"
+      - "traefik.docker.network=dokploy-network"
+      - "traefik.http.routers.clrclaude.rule=Host(`clrclaude.clrtech.xyz`)"
+      - "traefik.http.routers.clrclaude.entrypoints=websecure"
+      - "traefik.http.routers.clrclaude.tls=true"
+      - "traefik.http.routers.clrclaude.tls.certresolver=letsencrypt"
+      - "traefik.http.services.clrclaude.loadbalancer.server.port=80"
+networks:
+  dokploy-network:
+    external: true

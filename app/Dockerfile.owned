@@ -1,0 +1,23 @@
+# clrClaude -- owned build: Vite SPA + Node/Express backend (auth proxy to
+# clr-hub + progress/profile on clr-postgres). Server serves the built SPA.
+
+# Stage 1: build the SPA
+FROM node:22-alpine AS builder
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci --ignore-scripts
+COPY . .
+RUN npm run build
+
+# Stage 2: runtime (Node serves dist + API). express/pg/jose are pure JS.
+FROM node:22-alpine
+WORKDIR /app
+ENV NODE_ENV=production
+COPY package.json package-lock.json ./
+RUN npm ci --omit=dev --ignore-scripts
+COPY --from=builder /app/dist ./dist
+COPY server ./server
+EXPOSE 8080
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+  CMD node -e "require('http').get('http://127.0.0.1:8080/api/health',r=>process.exit(r.statusCode<400?0:1)).on('error',()=>process.exit(1))"
+CMD ["node", "server/index.js"]

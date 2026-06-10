@@ -8,10 +8,13 @@
     "build": "node scripts/build-content-manifest.js && tsc -b && vite build",
     "preview": "vite preview",
     "lint": "eslint .",
+    "start": "node server/index.js",
     "manifest": "node scripts/build-content-manifest.js"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.103.0",
+    "express": "^5.1.0",
+    "pg": "^8.13.1",
+    "jose": "^5.9.6",
     "gray-matter": "^4.0.3",
     "lucide-react": "^1.8.0",
     "react": "^19.2.4",

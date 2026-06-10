@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { X } from 'lucide-react';
 import { useAuthStore } from '../../lib/store';
-import { supabase, isSupabaseConfigured } from '../../lib/supabase';
+import { forgotPassword } from '../../lib/api';
 import { Button, Input, GlassCard } from '../ui';
 
 export function LoginForm() {
@@ -47,20 +47,16 @@ export function LoginForm() {
 
   const handlePasswordReset = async (event: React.FormEvent) => {
     event.preventDefault();
-    if (!isSupabaseConfigured || !supabase) return;
-
     setResetSubmitting(true);
     setResetError(null);
     setResetMessage(null);
 
-    const { error } = await supabase.auth.resetPasswordForEmail(resetEmail, {
-      redirectTo: `${window.location.origin}/auth/reset`,
-    });
+    const ok = await forgotPassword(resetEmail);
 
     setResetSubmitting(false);
 
-    if (error) {
-      setResetError(error.message);
+    if (!ok) {
+      setResetError('Could not send a reset link right now. Please try again.');
     } else {
       setResetMessage('If an account exists with that email, a password reset link has been sent.');
     }

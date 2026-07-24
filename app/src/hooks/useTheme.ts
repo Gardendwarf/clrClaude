@@ -11,8 +11,13 @@ function getInitialTheme(): Theme {
   } catch {
     // localStorage unavailable
   }
-  // Default to dark for clrClaude training platform
-  return 'dark';
+  // No stored preference: honour the OS setting, defaulting to light.
+  try {
+    if (window.matchMedia?.('(prefers-color-scheme: dark)').matches) return 'dark';
+  } catch {
+    // matchMedia unavailable
+  }
+  return 'light';
 }
 
 export function useTheme() {

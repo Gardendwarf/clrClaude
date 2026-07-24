@@ -85,19 +85,11 @@ export function Sidebar({ onSignOut }: SidebarProps) {
         <NavLink to="/" style={{ textDecoration: 'none' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-sm)' }}>
             <img
-              src="/favicon.png"
+              src="https://assets.clrtech.xyz/clr-group/logo.svg"
               alt="clrClaude"
-              width={28}
-              height={28}
+              height={32}
+              style={{ height: 32, width: 'auto' }}
             />
-            <span style={{
-              fontSize: '1.25rem',
-              fontWeight: 100,
-              color: 'var(--text-primary)',
-              letterSpacing: '-0.01em',
-            }}>
-              clrClaude
-            </span>
           </div>
         </NavLink>
       </div>

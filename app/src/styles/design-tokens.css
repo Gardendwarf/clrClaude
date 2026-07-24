@@ -1,5 +1,5 @@
 /* -- clrClaude Design System Tokens -- */
-/* Based on clr Design System v1.3 -- Liquid Glass aesthetic */
+/* Based on clr Design System v1.6 -- Liquid Glass aesthetic */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
@@ -72,9 +72,9 @@
 [data-theme="dark"] {
   --surface-base: #131C26;
   --surface-glass: rgba(105, 133, 158, 0.08);
-  --surface-elevated: rgba(105, 133, 158, 0.12);
   --surface-raised: #1C2533;
-  --surface-azure: #252F3D;
+  --surface-elevated: #252F3D;
+  --surface-azure: rgba(105, 133, 158, 0.12);
   --border: rgba(105, 133, 158, 0.18);
   --border-strong: rgba(105, 133, 158, 0.32);
   --glass-border: rgba(105, 133, 158, 0.18);

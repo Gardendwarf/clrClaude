@@ -55,10 +55,12 @@ export function Header() {
         title={theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme'}
         style={{
           marginLeft: 'var(--space-md)',
+          width: 36,
+          height: 36,
           background: 'none',
           border: 'none',
           cursor: 'pointer',
-          padding: 6,
+          padding: 0,
           borderRadius: 'var(--radius-sm)',
           color: 'var(--text-secondary)',
           display: 'flex',
@@ -75,7 +77,7 @@ export function Header() {
           e.currentTarget.style.color = 'var(--text-secondary)';
         }}
       >
-        {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
+        {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
       </button>
 
       {/* User greeting */}

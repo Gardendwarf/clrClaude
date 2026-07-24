@@ -92,18 +92,11 @@ export function LoginForm() {
             marginBottom: 'var(--space-md)',
           }}>
             <img
-              src="/favicon.png"
+              src="https://assets.clrtech.xyz/clr-group/logo.svg"
               alt="clrClaude"
-              width={40}
               height={40}
+              style={{ height: 40, width: 'auto' }}
             />
-            <span style={{
-              fontSize: '1.875rem',
-              fontWeight: 100,
-              color: 'var(--text-primary)',
-            }}>
-              clrClaude
-            </span>
           </div>
           <p style={{ color: 'var(--text-secondary)', fontWeight: 300, fontSize: '0.9375rem' }}>
             Master Claude Code -- from basics to advanced agents

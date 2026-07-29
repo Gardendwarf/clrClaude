@@ -1,5 +1,6 @@
 /* -- clrClaude Design System Tokens -- */
-/* Based on clr Design System v1.6 -- Liquid Glass aesthetic */
+/* Based on clr Design System v1.7 -- Liquid Glass aesthetic */
+/* v1.7 -- softened buttons; coral demoted to ring/accent + soft pastel fills; added --coral-soft/-hover/-text + --azure-soft/-hover/-text; new .btn-emphasis (one-per-screen solid coral) */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
@@ -25,6 +26,14 @@
   --azure: #69859E;
   --azure-tint: rgba(105, 133, 158, 0.08);
   --azure-light: #EDF2F5;
+
+  /* Button pastel fills (v1.7) */
+  --coral-soft:        #FFEAE5;
+  --coral-soft-hover:  #FFDDD3;
+  --coral-text:        #993C1D;
+  --azure-soft:        #EDF2F5;
+  --azure-soft-hover:  #E4EBEF;
+  --azure-text:        #3E5464;
 
   /* -- Semantic -- */
   --success: #059669;
@@ -85,6 +94,14 @@
 
   --coral-tint: rgba(255, 79, 40, 0.15);
   --azure-tint: rgba(105, 133, 158, 0.12);
+
+  /* Button pastel fills (v1.7) */
+  --coral-soft:        rgba(255, 79, 40, 0.15);
+  --coral-soft-hover:  rgba(255, 79, 40, 0.24);
+  --coral-text:        #FF4F28;
+  --azure-soft:        rgba(105, 133, 158, 0.15);
+  --azure-soft-hover:  rgba(105, 133, 158, 0.24);
+  --azure-text:        #9DB2C1;
 
   --success: #34D399;
   --warning: #FBBF24;

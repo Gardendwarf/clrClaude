@@ -1,26 +1,36 @@
 import type { ButtonHTMLAttributes, ReactNode, CSSProperties } from 'react';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'ghost';
+  variant?: 'primary' | 'secondary' | 'ghost' | 'emphasis';
   size?: 'sm' | 'md' | 'lg';
   children: ReactNode;
   fullWidth?: boolean;
 }
 
+// v1.7: coral steps back from solid fills to ring/border + text accent.
+// primary = coral-soft fill + coral-text + 1.5px coral ring
+// secondary = azure-soft fill + azure-text + 1.5px azure ring
+// ghost = coral-text + coral-soft hover
+// emphasis = solid coral + white (one-per-screen high-emphasis only)
 const variantStyles: Record<string, CSSProperties> = {
   primary: {
-    background: 'var(--coral)',
-    color: '#ffffff',
-    border: 'none',
+    background: 'var(--coral-soft)',
+    color: 'var(--coral-text)',
+    border: '1.5px solid var(--coral)',
   },
   secondary: {
-    background: 'var(--surface-glass)',
-    color: 'var(--text-primary)',
-    border: '1px solid var(--border)',
+    background: 'var(--azure-soft)',
+    color: 'var(--azure-text)',
+    border: '1.5px solid var(--azure)',
   },
   ghost: {
     background: 'transparent',
-    color: 'var(--text-secondary)',
+    color: 'var(--coral-text)',
+    border: 'none',
+  },
+  emphasis: {
+    background: 'var(--coral)',
+    color: '#FFFFFF',
     border: 'none',
   },
 };
@@ -64,17 +74,16 @@ export function Button({
       </button>
       <style>{`
         .clr-button-primary:hover:not(:disabled) {
-          background: var(--coral-dim) !important;
-          transform: translateY(-1px);
-          box-shadow: var(--shadow-sm);
+          background: var(--coral-soft-hover) !important;
         }
         .clr-button-secondary:hover:not(:disabled) {
-          border-color: var(--azure) !important;
-          color: var(--azure) !important;
+          background: var(--azure-soft-hover) !important;
         }
         .clr-button-ghost:hover:not(:disabled) {
-          background: var(--coral-tint) !important;
-          color: var(--coral) !important;
+          background: var(--coral-soft) !important;
+        }
+        .clr-button-emphasis:hover:not(:disabled) {
+          background: var(--coral-dim) !important;
         }
         .clr-button:disabled {
           opacity: 0.5;

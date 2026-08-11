@@ -1,0 +1,40 @@
+# Automated dependency updates.
+#
+# WHY THIS EXISTS
+#
+# On 2026-08-09 this portfolio was compromised by CVE-2025-55182 ("React2Shell"),
+# an unauthenticated RCE in Next.js. The fix had been available since 15.0.5 in
+# December 2025 — roughly eight months. Nothing failed except that no one was
+# told a patch existed.
+#
+# The root cause was a single exact version pin. Every other dependency in that
+# manifest floated on ^ and updated normally; the one that did not is the one
+# that sat vulnerable and got exploited.
+#
+# security-updates run regardless of the open-PR limit, so a critical advisory
+# is never queued behind routine version bumps.
+
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    labels: ["dependencies"]
+    # Group routine bumps into one PR so the noise stays reviewable; security
+    # fixes are deliberately NOT grouped, so each arrives alone and legible.
+    groups:
+      minor-and-patch:
+        update-types: ["minor", "patch"]
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels: ["dependencies", "docker"]
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    labels: ["dependencies"]

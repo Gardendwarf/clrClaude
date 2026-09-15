@@ -111,39 +111,8 @@ export async function login(email: string, password: string): Promise<{ user: Ap
   }
 }
 
-export async function register(
-  email: string,
-  password: string,
-  displayName: string
-): Promise<{ user: AppUser | null; error: string | null }> {
-  try {
-    const r = await fetch('/api/auth/register', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password, name: displayName }),
-    });
-    const body = await r.json().catch(() => null);
-    const { access, refresh } = extractTokens(body);
-    if (!r.ok || !access) return { user: null, error: errorFrom(body, 'Registration failed.') };
-    setTokens(access, refresh);
-    return { user: decodeUser(access), error: null };
-  } catch {
-    return { user: null, error: 'Network error. Please try again.' };
-  }
-}
-
-export async function forgotPassword(email: string): Promise<boolean> {
-  try {
-    const r = await fetch('/api/auth/forgot-password', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email }),
-    });
-    return r.ok;
-  } catch {
-    return false;
-  }
-}
+// Public self-registration and in-app password reset were removed: the public
+// site is interest capture only and team accounts are provisioned in clr-hub.
 
 export function logout(): void {
   clearTokens();

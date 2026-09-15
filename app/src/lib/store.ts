@@ -3,7 +3,6 @@ import type { UserProgress } from '../types';
 import {
   type AppUser,
   login as apiLogin,
-  register as apiRegister,
   logout as apiLogout,
   getSessionUser,
   fetchProgress as apiFetchProgress,
@@ -21,7 +20,6 @@ interface AuthState {
   setUser: (user: AppUser | null) => void;
   setLoading: (loading: boolean) => void;
   signIn: (email: string, password: string) => Promise<{ error: string | null }>;
-  signUp: (email: string, password: string, displayName: string) => Promise<{ error: string | null }>;
   signOut: () => Promise<void>;
   initialize: () => Promise<void>;
 }
@@ -36,13 +34,6 @@ export const useAuthStore = create<AuthState>((set) => ({
 
   signIn: async (email, password) => {
     const { user, error } = await apiLogin(email, password);
-    if (error) return { error };
-    set({ user });
-    return { error: null };
-  },
-
-  signUp: async (email, password, displayName) => {
-    const { user, error } = await apiRegister(email, password, displayName);
     if (error) return { error };
     set({ user });
     return { error: null };

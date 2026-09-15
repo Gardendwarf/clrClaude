@@ -8,6 +8,8 @@
     "build": "node scripts/build-content-manifest.js && tsc -b && vite build",
     "preview": "vite preview",
     "lint": "eslint .",
+    "typecheck": "tsc -b",
+    "test": "node --test tests/*.test.mjs",
     "start": "node server/index.js",
     "manifest": "node scripts/build-content-manifest.js"
   },

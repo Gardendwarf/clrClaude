@@ -39,11 +39,26 @@ async function proxyAuth(action, req, res) {
     res.status(502).json({ success: false, error: "Auth service unreachable. Please try again." });
   }
 }
+// Public self-registration is closed: the public site is interest capture only
+// and team accounts are provisioned in clr-hub. Set ALLOW_PUBLIC_SIGNUP=1 to
+// re-open the proxy (clr-hub's gated signup then requires name, note and
+// requestedApp in the body).
+const ALLOW_PUBLIC_SIGNUP = process.env.ALLOW_PUBLIC_SIGNUP === "1";
+function signupGate(req, res) {
+  if (!ALLOW_PUBLIC_SIGNUP) return res.status(403).json({ error: "Registration is closed" });
+  return proxyAuth("register", req, res);
+}
+
 app.post("/api/auth/login", (req, res) => proxyAuth("login", req, res));
-app.post("/api/auth/register", (req, res) => proxyAuth("register", req, res));
+app.post("/api/auth/register", signupGate);
+app.post("/api/auth/signup", signupGate);
 app.post("/api/auth/refresh", (req, res) => proxyAuth("refresh", req, res));
 app.post("/api/auth/logout", (req, res) => proxyAuth("logout", req, res));
-app.post("/api/auth/forgot-password", (req, res) => proxyAuth("forgot-password", req, res));
+// Password reset is closed with the same switch as sign-up (one flag).
+app.post("/api/auth/forgot-password", (req, res) => {
+  if (!ALLOW_PUBLIC_SIGNUP) return res.status(403).json({ error: "Password reset is closed" });
+  return proxyAuth("forgot-password", req, res);
+});
 
 // ---- token verify (matches clr-hub: plain HS256 verify, read sub+email) ----
 async function authMw(req, res, next) {
@@ -144,8 +159,13 @@ app.get(/.*/, (req, res, next) => {
   res.sendFile(join(DIST, "index.html"));
 });
 
-app.listen(PORT, () => {
-  console.log(
-    `clrclaude backend on :${PORT} (hub=${CLRHUB}, db=${process.env.CLRCLAUDE_DATABASE_URL ? "set" : "MISSING"}, secret=${process.env.SUPABASE_JWT_SECRET ? "set" : "MISSING"})`
-  );
-});
+export { app };
+
+// Listen only when run directly (`node server/index.js`), so tests can import.
+if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
+  app.listen(PORT, () => {
+    console.log(
+      `clrclaude backend on :${PORT} (hub=${CLRHUB}, db=${process.env.CLRCLAUDE_DATABASE_URL ? "set" : "MISSING"}, secret=${process.env.SUPABASE_JWT_SECRET ? "set" : "MISSING"}, publicSignup=${ALLOW_PUBLIC_SIGNUP ? "open" : "closed"})`
+    );
+  });
+}

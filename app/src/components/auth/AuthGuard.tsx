@@ -1,6 +1,6 @@
-import { Navigate } from 'react-router-dom';
 import type { ReactNode } from 'react';
 import { useAuthStore } from '../../lib/store';
+import Interest from '../../pages/Interest';
 
 interface AuthGuardProps {
   children: ReactNode;
@@ -31,8 +31,9 @@ export function AuthGuard({ children }: AuthGuardProps) {
     return <>{children}</>;
   }
 
+  // Signed out: show the public interest page in place (no redirect, URL kept).
   if (!user) {
-    return <Navigate to="/login" replace />;
+    return <Interest />;
   }
 
   return <>{children}</>;

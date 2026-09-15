@@ -32,6 +32,12 @@ for (const path of ['/api/auth/register', '/api/auth/signup']) {
   });
 }
 
+test('/api/auth/forgot-password is closed by default', async () => {
+  const r = await post('/api/auth/forgot-password', { email: 'a@example.com' });
+  assert.equal(r.status, 403);
+  assert.deepEqual(await r.json(), { error: 'Password reset is closed' });
+});
+
 test('login is still proxied (not gated)', async () => {
   const r = await post('/api/auth/login', { email: 'a@example.com', password: 'x' });
   assert.equal(r.status, 502);
@@ -47,14 +53,18 @@ test('me still requires a token', async () => {
   assert.equal(r.status, 401);
 });
 
-test('ALLOW_PUBLIC_SIGNUP=1 re-opens the register proxy', () => {
+test('ALLOW_PUBLIC_SIGNUP=1 re-opens the register and forgot-password proxies', () => {
   const script = `
     process.env.CLRHUB_API_URL = 'http://127.0.0.1:9';
     const { app } = await import(${JSON.stringify(fileURLToPath(new URL('../server/index.js', import.meta.url)))});
     const s = app.listen(0, '127.0.0.1', async () => {
-      const r = await fetch('http://127.0.0.1:' + s.address().port + '/api/auth/register', {
-        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}' });
-      console.log(r.status);
+      const codes = [];
+      for (const p of ['/api/auth/register', '/api/auth/forgot-password']) {
+        const r = await fetch('http://127.0.0.1:' + s.address().port + p, {
+          method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}' });
+        codes.push(r.status);
+      }
+      console.log(codes.join(','));
       s.close();
     });
   `;
@@ -62,5 +72,5 @@ test('ALLOW_PUBLIC_SIGNUP=1 re-opens the register proxy', () => {
     env: { ...process.env, ALLOW_PUBLIC_SIGNUP: '1' },
     encoding: 'utf8',
   });
-  assert.equal(out.stdout.trim(), '502');
+  assert.equal(out.stdout.trim(), '502,502');
 });

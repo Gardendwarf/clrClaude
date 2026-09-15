@@ -54,7 +54,11 @@ app.post("/api/auth/register", signupGate);
 app.post("/api/auth/signup", signupGate);
 app.post("/api/auth/refresh", (req, res) => proxyAuth("refresh", req, res));
 app.post("/api/auth/logout", (req, res) => proxyAuth("logout", req, res));
-app.post("/api/auth/forgot-password", (req, res) => proxyAuth("forgot-password", req, res));
+// Password reset is closed with the same switch as sign-up (one flag).
+app.post("/api/auth/forgot-password", (req, res) => {
+  if (!ALLOW_PUBLIC_SIGNUP) return res.status(403).json({ error: "Password reset is closed" });
+  return proxyAuth("forgot-password", req, res);
+});
 
 // ---- token verify (matches clr-hub: plain HS256 verify, read sub+email) ----
 async function authMw(req, res, next) {
